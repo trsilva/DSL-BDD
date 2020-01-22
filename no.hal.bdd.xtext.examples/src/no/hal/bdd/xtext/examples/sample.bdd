@@ -1,0 +1,60 @@
+model sample1
+
+entity widget {
+	states: enabled/disabled
+}
+
+entity "account view" is widget {
+	actions: open account in
+}
+
+entity button is widget {
+	actions: click [on], select
+}
+
+entity checkbox is widget {
+	states: checked/unchecked, selected/unselected
+}
+
+entity selectable {
+	actions: select
+}
+
+entity list is widget, selectable {
+	properties: items
+}
+
+entity "text field" is widget {
+	actions: type // $text into
+	properties: text
+}
+
+// select <list or checkbox or calendar> 
+Scenario: ex1
+given the checkbox "option" is checked
+when I click "Submit"
+then the checkbox "fjdkslf" is unchecked
+
+Scenario: ex2
+given the text of "text field" is "Hallvard"
+when I select the list "items"
+then the items of the list "selection" is "Hallvard"
+
+//
+
+entity account {
+	actions: withdraw amount from, transfer amount from
+	properties: balance
+}
+
+Scenario: ex3
+given the balance of "account 1" is 1000 and
+the balance of "account 2" is 10
+when I transfer 50 from "account 1"
+then the balance of "account 1" is 950 and
+	the balance of "account 2" is 60
+
+Scenario: ex4
+given the balance of "account" is 1000
+when I open "account" in "account view"
+then the text of "balance field" is 1000
