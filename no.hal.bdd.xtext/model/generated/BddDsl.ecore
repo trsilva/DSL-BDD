@@ -83,11 +83,23 @@
         eType="#//PropertyValue" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PropertyValue"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StringValue" eSuperTypes="#//PropertyValue">
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleValue" eSuperTypes="#//PropertyValue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ListValue" eSuperTypes="#//PropertyValue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
+        eType="#//SimpleValue" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SetValue" eSuperTypes="#//PropertyValue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="values" upperBound="-1"
+        eType="#//SimpleValue" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringValue" eSuperTypes="#//SimpleValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntValue" eSuperTypes="#//PropertyValue">
+  <eClassifiers xsi:type="ecore:EClass" name="IntValue" eSuperTypes="#//SimpleValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanValue" eSuperTypes="#//SimpleValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActionPhrase"/>
   <eClassifiers xsi:type="ecore:EClass" name="VerbAction" eSuperTypes="#//ActionPhrase">

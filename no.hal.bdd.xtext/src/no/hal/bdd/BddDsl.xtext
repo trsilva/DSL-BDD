@@ -29,7 +29,7 @@ ActionDef:
 	name = WORD (argument = WORD)? ((preposition = PREP)? | (optionalPref ?= '[' preposition = PREP ']'))	
 ;
 
-PREP: ('on' | 'in' | 'from');
+PREP: ('on' | 'in' | 'from' | 'to');
 WORD: ID;
 
 
@@ -78,7 +78,17 @@ EntityPropertyStatePhrase:
 	(('is' value = PropertyValue) | ('are' (values += PropertyValue) (',' values += PropertyValue)*)) 
 ;
 
-PropertyValue: IntValue | StringValue;
+PropertyValue: SimpleValue | ListValue | SetValue;
+
+SimpleValue: IntValue | BooleanValue | StringValue;
+
+ListValue:
+	{ListValue} '[' (values += SimpleValue (',' values += SimpleValue)*)? ']'
+;
+
+SetValue:
+	{SetValue} '{' (values += SimpleValue (',' values += SimpleValue)*)? '}'
+;
 
 StringValue:
 	value = STRING
@@ -86,6 +96,13 @@ StringValue:
 
 IntValue:
 	value = INT
+;
+
+TRUE: ('true' | 'yes');
+FALSE: ('false' | 'no');
+
+BooleanValue:
+	value = (TRUE | FALSE)
 ;
 
 ActionPhrase: VerbAction | VerifyAction;

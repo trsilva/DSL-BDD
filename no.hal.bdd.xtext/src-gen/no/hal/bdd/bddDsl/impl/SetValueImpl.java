@@ -5,9 +5,9 @@ package no.hal.bdd.bddDsl.impl;
 
 import java.util.Collection;
 
-import no.hal.bdd.bddDsl.ActionPhrase;
 import no.hal.bdd.bddDsl.BddDslPackage;
-import no.hal.bdd.bddDsl.ScenarioAction;
+import no.hal.bdd.bddDsl.SetValue;
+import no.hal.bdd.bddDsl.SimpleValue;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -16,42 +16,40 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Scenario Action</b></em>'.
+ * An implementation of the model object '<em><b>Set Value</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link no.hal.bdd.bddDsl.impl.ScenarioActionImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link no.hal.bdd.bddDsl.impl.SetValueImpl#getValues <em>Values</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ScenarioActionImpl extends MinimalEObjectImpl.Container implements ScenarioAction
+public class SetValueImpl extends PropertyValueImpl implements SetValue
 {
   /**
-   * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
+   * The cached value of the '{@link #getValues() <em>Values</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getActions()
+   * @see #getValues()
    * @generated
    * @ordered
    */
-  protected EList<ActionPhrase> actions;
+  protected EList<SimpleValue> values;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ScenarioActionImpl()
+  protected SetValueImpl()
   {
     super();
   }
@@ -64,7 +62,7 @@ public class ScenarioActionImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return BddDslPackage.Literals.SCENARIO_ACTION;
+    return BddDslPackage.Literals.SET_VALUE;
   }
 
   /**
@@ -73,13 +71,13 @@ public class ScenarioActionImpl extends MinimalEObjectImpl.Container implements 
    * @generated
    */
   @Override
-  public EList<ActionPhrase> getActions()
+  public EList<SimpleValue> getValues()
   {
-    if (actions == null)
+    if (values == null)
     {
-      actions = new EObjectContainmentEList<ActionPhrase>(ActionPhrase.class, this, BddDslPackage.SCENARIO_ACTION__ACTIONS);
+      values = new EObjectContainmentEList<SimpleValue>(SimpleValue.class, this, BddDslPackage.SET_VALUE__VALUES);
     }
-    return actions;
+    return values;
   }
 
   /**
@@ -92,8 +90,8 @@ public class ScenarioActionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case BddDslPackage.SCENARIO_ACTION__ACTIONS:
-        return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
+      case BddDslPackage.SET_VALUE__VALUES:
+        return ((InternalEList<?>)getValues()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -108,8 +106,8 @@ public class ScenarioActionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case BddDslPackage.SCENARIO_ACTION__ACTIONS:
-        return getActions();
+      case BddDslPackage.SET_VALUE__VALUES:
+        return getValues();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,9 +123,9 @@ public class ScenarioActionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case BddDslPackage.SCENARIO_ACTION__ACTIONS:
-        getActions().clear();
-        getActions().addAll((Collection<? extends ActionPhrase>)newValue);
+      case BddDslPackage.SET_VALUE__VALUES:
+        getValues().clear();
+        getValues().addAll((Collection<? extends SimpleValue>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -143,8 +141,8 @@ public class ScenarioActionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case BddDslPackage.SCENARIO_ACTION__ACTIONS:
-        getActions().clear();
+      case BddDslPackage.SET_VALUE__VALUES:
+        getValues().clear();
         return;
     }
     super.eUnset(featureID);
@@ -160,10 +158,10 @@ public class ScenarioActionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case BddDslPackage.SCENARIO_ACTION__ACTIONS:
-        return actions != null && !actions.isEmpty();
+      case BddDslPackage.SET_VALUE__VALUES:
+        return values != null && !values.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ScenarioActionImpl
+} //SetValueImpl

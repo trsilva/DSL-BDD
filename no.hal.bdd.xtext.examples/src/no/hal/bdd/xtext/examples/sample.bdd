@@ -38,12 +38,12 @@ then the checkbox "fjdkslf" is unchecked
 Scenario: ex2
 given the text of "text field" is "Hallvard"
 when I select the list "items"
-then the items of the list "selection" is "Hallvard"
+then the items of the list "selection" is ["Hallvard"]
 
 //
 
 entity account {
-	actions: withdraw amount from, transfer amount from
+	actions: withdraw amount from, transfer amount to
 	properties: balance
 }
 

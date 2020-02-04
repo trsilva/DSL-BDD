@@ -4,47 +4,55 @@
 package no.hal.bdd.bddDsl.impl;
 
 import no.hal.bdd.bddDsl.BddDslPackage;
-import no.hal.bdd.bddDsl.Scenario;
-import no.hal.bdd.bddDsl.ScenarioRef;
+import no.hal.bdd.bddDsl.BooleanValue;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Scenario Ref</b></em>'.
+ * An implementation of the model object '<em><b>Boolean Value</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link no.hal.bdd.bddDsl.impl.ScenarioRefImpl#getScenarioRef <em>Scenario Ref</em>}</li>
+ *   <li>{@link no.hal.bdd.bddDsl.impl.BooleanValueImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ScenarioRefImpl extends StatePhraseImpl implements ScenarioRef
+public class BooleanValueImpl extends SimpleValueImpl implements BooleanValue
 {
   /**
-   * The cached value of the '{@link #getScenarioRef() <em>Scenario Ref</em>}' reference.
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getScenarioRef()
+   * @see #getValue()
    * @generated
    * @ordered
    */
-  protected Scenario scenarioRef;
+  protected static final String VALUE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected String value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ScenarioRefImpl()
+  protected BooleanValueImpl()
   {
     super();
   }
@@ -57,7 +65,7 @@ public class ScenarioRefImpl extends StatePhraseImpl implements ScenarioRef
   @Override
   protected EClass eStaticClass()
   {
-    return BddDslPackage.Literals.SCENARIO_REF;
+    return BddDslPackage.Literals.BOOLEAN_VALUE;
   }
 
   /**
@@ -66,29 +74,9 @@ public class ScenarioRefImpl extends StatePhraseImpl implements ScenarioRef
    * @generated
    */
   @Override
-  public Scenario getScenarioRef()
+  public String getValue()
   {
-    if (scenarioRef != null && scenarioRef.eIsProxy())
-    {
-      InternalEObject oldScenarioRef = (InternalEObject)scenarioRef;
-      scenarioRef = (Scenario)eResolveProxy(oldScenarioRef);
-      if (scenarioRef != oldScenarioRef)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, BddDslPackage.SCENARIO_REF__SCENARIO_REF, oldScenarioRef, scenarioRef));
-      }
-    }
-    return scenarioRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Scenario basicGetScenarioRef()
-  {
-    return scenarioRef;
+    return value;
   }
 
   /**
@@ -97,12 +85,12 @@ public class ScenarioRefImpl extends StatePhraseImpl implements ScenarioRef
    * @generated
    */
   @Override
-  public void setScenarioRef(Scenario newScenarioRef)
+  public void setValue(String newValue)
   {
-    Scenario oldScenarioRef = scenarioRef;
-    scenarioRef = newScenarioRef;
+    String oldValue = value;
+    value = newValue;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BddDslPackage.SCENARIO_REF__SCENARIO_REF, oldScenarioRef, scenarioRef));
+      eNotify(new ENotificationImpl(this, Notification.SET, BddDslPackage.BOOLEAN_VALUE__VALUE, oldValue, value));
   }
 
   /**
@@ -115,9 +103,8 @@ public class ScenarioRefImpl extends StatePhraseImpl implements ScenarioRef
   {
     switch (featureID)
     {
-      case BddDslPackage.SCENARIO_REF__SCENARIO_REF:
-        if (resolve) return getScenarioRef();
-        return basicGetScenarioRef();
+      case BddDslPackage.BOOLEAN_VALUE__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -132,8 +119,8 @@ public class ScenarioRefImpl extends StatePhraseImpl implements ScenarioRef
   {
     switch (featureID)
     {
-      case BddDslPackage.SCENARIO_REF__SCENARIO_REF:
-        setScenarioRef((Scenario)newValue);
+      case BddDslPackage.BOOLEAN_VALUE__VALUE:
+        setValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -149,8 +136,8 @@ public class ScenarioRefImpl extends StatePhraseImpl implements ScenarioRef
   {
     switch (featureID)
     {
-      case BddDslPackage.SCENARIO_REF__SCENARIO_REF:
-        setScenarioRef((Scenario)null);
+      case BddDslPackage.BOOLEAN_VALUE__VALUE:
+        setValue(VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -166,10 +153,27 @@ public class ScenarioRefImpl extends StatePhraseImpl implements ScenarioRef
   {
     switch (featureID)
     {
-      case BddDslPackage.SCENARIO_REF__SCENARIO_REF:
-        return scenarioRef != null;
+      case BddDslPackage.BOOLEAN_VALUE__VALUE:
+        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
   }
 
-} //ScenarioRefImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (value: ");
+    result.append(value);
+    result.append(')');
+    return result.toString();
+  }
+
+} //BooleanValueImpl

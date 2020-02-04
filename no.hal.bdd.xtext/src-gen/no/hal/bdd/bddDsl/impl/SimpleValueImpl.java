@@ -4,27 +4,25 @@
 package no.hal.bdd.bddDsl.impl;
 
 import no.hal.bdd.bddDsl.BddDslPackage;
-import no.hal.bdd.bddDsl.PropertyValue;
+import no.hal.bdd.bddDsl.SimpleValue;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Property Value</b></em>'.
+ * An implementation of the model object '<em><b>Simple Value</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class PropertyValueImpl extends MinimalEObjectImpl.Container implements PropertyValue
+public class SimpleValueImpl extends PropertyValueImpl implements SimpleValue
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected PropertyValueImpl()
+  protected SimpleValueImpl()
   {
     super();
   }
@@ -37,7 +35,7 @@ public class PropertyValueImpl extends MinimalEObjectImpl.Container implements P
   @Override
   protected EClass eStaticClass()
   {
-    return BddDslPackage.Literals.PROPERTY_VALUE;
+    return BddDslPackage.Literals.SIMPLE_VALUE;
   }
 
-} //PropertyValueImpl
+} //SimpleValueImpl
