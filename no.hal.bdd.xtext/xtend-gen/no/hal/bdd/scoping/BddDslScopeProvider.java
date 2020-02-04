@@ -5,7 +5,7 @@ package no.hal.bdd.scoping;
 
 import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 import no.hal.bdd.bddDsl.ActionDef;
@@ -13,9 +13,11 @@ import no.hal.bdd.bddDsl.BddDslPackage;
 import no.hal.bdd.bddDsl.EntityDef;
 import no.hal.bdd.bddDsl.EntityRef;
 import no.hal.bdd.bddDsl.Model;
+import no.hal.bdd.bddDsl.ModelRef;
 import no.hal.bdd.bddDsl.PropertyDef;
 import no.hal.bdd.bddDsl.StateName;
 import no.hal.bdd.scoping.AbstractBddDslScopeProvider;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;
 import org.eclipse.emf.ecore.EObject;
@@ -43,23 +45,32 @@ public class BddDslScopeProvider extends AbstractBddDslScopeProvider {
     EClass _stateName = BddDslPackage.eINSTANCE.getStateName();
     boolean _equals = Objects.equal(_eType, _stateName);
     if (_equals) {
-      _xifexpression = this.<StateName>scopeForWidgetModelElements(context, StateName.class);
+      _xifexpression = this.<StateName>scopeForEntityModelElements(context, StateName.class);
     } else {
       IScope _xifexpression_1 = null;
       EClassifier _eType_1 = reference.getEType();
       EClass _actionDef = BddDslPackage.eINSTANCE.getActionDef();
       boolean _equals_1 = Objects.equal(_eType_1, _actionDef);
       if (_equals_1) {
-        _xifexpression_1 = this.<ActionDef>scopeForWidgetModelElements(context, ActionDef.class);
+        _xifexpression_1 = this.<ActionDef>scopeForEntityModelElements(context, ActionDef.class);
       } else {
         IScope _xifexpression_2 = null;
         EClassifier _eType_2 = reference.getEType();
         EClass _propertyDef = BddDslPackage.eINSTANCE.getPropertyDef();
         boolean _equals_2 = Objects.equal(_eType_2, _propertyDef);
         if (_equals_2) {
-          _xifexpression_2 = this.<PropertyDef>scopeForWidgetModelElements(context, PropertyDef.class);
+          _xifexpression_2 = this.<PropertyDef>scopeForEntityModelElements(context, PropertyDef.class);
         } else {
-          _xifexpression_2 = super.getScope(context, reference);
+          IScope _xifexpression_3 = null;
+          EClassifier _eType_3 = reference.getEType();
+          EClass _entityDef = BddDslPackage.eINSTANCE.getEntityDef();
+          boolean _equals_3 = Objects.equal(_eType_3, _entityDef);
+          if (_equals_3) {
+            _xifexpression_3 = Scopes.scopeFor(this.getAllEntityDefs(this.<Model>findAncestorOfType(context, Model.class)));
+          } else {
+            _xifexpression_3 = super.getScope(context, reference);
+          }
+          _xifexpression_2 = _xifexpression_3;
         }
         _xifexpression_1 = _xifexpression_2;
       }
@@ -68,44 +79,60 @@ public class BddDslScopeProvider extends AbstractBddDslScopeProvider {
     return _xifexpression;
   }
   
-  public <T extends EObject> IScope scopeForWidgetModelElements(final EObject context, final Class<T> clazz) {
-    IScope _xblockexpression = null;
+  public Iterable<? extends EntityDef> getAllEntityDefs(final Model model) {
+    ArrayList<EntityDef> _xblockexpression = null;
     {
-      final EntityDef widgetDef = this.findWEntityDef(context);
-      Iterable<? extends EObject> _xifexpression = null;
-      if ((widgetDef != null)) {
-        _xifexpression = this.getAllInheritedContentsOfType(widgetDef, clazz);
-      } else {
-        EObject _elvis = null;
-        if (widgetDef != null) {
-          _elvis = widgetDef;
-        } else {
-          Model _findAncestorOfType = this.<Model>findAncestorOfType(context, Model.class);
-          _elvis = _findAncestorOfType;
-        }
-        _xifexpression = EcoreUtil2.<T>getAllContentsOfType(_elvis, clazz);
+      final ArrayList<EntityDef> allEntityDefs = CollectionLiterals.<EntityDef>newArrayList();
+      EList<EntityDef> _entityDefs = model.getEntityDefs();
+      Iterables.<EntityDef>addAll(allEntityDefs, _entityDefs);
+      EList<ModelRef> _modelRefs = model.getModelRefs();
+      for (final ModelRef modelRef : _modelRefs) {
+        Iterable<? extends EntityDef> _allEntityDefs = this.getAllEntityDefs(modelRef.getModelRef());
+        Iterables.<EntityDef>addAll(allEntityDefs, _allEntityDefs);
       }
-      Iterable<? extends EObject> all = _xifexpression;
-      _xblockexpression = Scopes.scopeFor(all);
+      _xblockexpression = allEntityDefs;
     }
     return _xblockexpression;
   }
   
-  public Iterable<? extends EObject> getAllInheritedContentsOfType(final EntityDef widgetDef, final Class<? extends EObject> clazz) {
-    Iterable<EObject> _xblockexpression = null;
+  public <T extends EObject> IScope scopeForEntityModelElements(final EObject context, final Class<T> clazz) {
+    IScope _xblockexpression = null;
     {
-      final Collection<EObject> all = CollectionLiterals.<EObject>newArrayList();
-      List<? extends EObject> _allContentsOfType = EcoreUtil2.getAllContentsOfType(widgetDef, clazz);
-      Iterables.<EObject>addAll(all, _allContentsOfType);
+      final ArrayList<T> allModelElements = CollectionLiterals.<T>newArrayList();
+      final ArrayList<EntityDef> entityDefs = CollectionLiterals.<EntityDef>newArrayList();
+      final EntityDef contextEntityDef = this.findWEntityDef(context);
+      if ((contextEntityDef != null)) {
+        entityDefs.add(contextEntityDef);
+      } else {
+        Iterable<? extends EntityDef> _allEntityDefs = this.getAllEntityDefs(this.<Model>findAncestorOfType(context, Model.class));
+        Iterables.<EntityDef>addAll(entityDefs, _allEntityDefs);
+      }
+      for (final EntityDef entityDef : entityDefs) {
+        Iterable<T> _allInheritedContentsOfType = this.<T>getAllInheritedContentsOfType(entityDef, clazz);
+        for (final T modelElement : _allInheritedContentsOfType) {
+          allModelElements.add(modelElement);
+        }
+      }
+      _xblockexpression = Scopes.scopeFor(allModelElements);
+    }
+    return _xblockexpression;
+  }
+  
+  public <T extends EObject> Iterable<T> getAllInheritedContentsOfType(final EntityDef entityDef, final Class<T> clazz) {
+    Iterable<T> _xblockexpression = null;
+    {
+      final ArrayList<T> all = CollectionLiterals.<T>newArrayList();
+      List<T> _allContentsOfType = EcoreUtil2.<T>getAllContentsOfType(entityDef, clazz);
+      Iterables.<T>addAll(all, _allContentsOfType);
       final Consumer<EntityDef> _function = (EntityDef it) -> {
-        Iterable<? extends EObject> _allInheritedContentsOfType = this.getAllInheritedContentsOfType(it, clazz);
-        Iterables.<EObject>addAll(all, _allInheritedContentsOfType);
+        Iterable<T> _allInheritedContentsOfType = this.<T>getAllInheritedContentsOfType(it, clazz);
+        Iterables.<T>addAll(all, _allInheritedContentsOfType);
       };
-      widgetDef.getSuperEntities().forEach(_function);
-      final Function1<EObject, Boolean> _function_1 = (EObject it) -> {
+      entityDef.getSuperEntities().forEach(_function);
+      final Function1<T, Boolean> _function_1 = (T it) -> {
         return Boolean.valueOf(clazz.isInstance(it));
       };
-      _xblockexpression = IterableExtensions.<EObject>filter(all, _function_1);
+      _xblockexpression = IterableExtensions.<T>filter(all, _function_1);
     }
     return _xblockexpression;
   }

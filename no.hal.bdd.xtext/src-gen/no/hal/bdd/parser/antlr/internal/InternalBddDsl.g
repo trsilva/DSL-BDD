@@ -611,6 +611,12 @@ rulePREP returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
 			$current.merge(kw);
 			newLeafNode(kw, grammarAccess.getPREPAccess().getToKeyword_3());
 		}
+		    |
+		kw='into'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getPREPAccess().getIntoKeyword_4());
+		}
 	)
 ;
 

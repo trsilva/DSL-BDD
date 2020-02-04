@@ -1,0 +1,30 @@
+model widgets
+
+entity widget {
+	states: enabled/disabled
+}
+
+entity "account view" is widget {
+	actions: open account in
+}
+
+entity button is widget {
+	actions: click [on], select
+}
+
+entity checkbox is widget {
+	states: checked/unchecked, selected/unselected
+}
+
+entity selectable {
+	actions: select
+}
+
+entity list is widget, selectable {
+	properties: items
+}
+
+entity "text field" is widget {
+	actions: type // $text into
+	properties: text
+}

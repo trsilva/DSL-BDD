@@ -946,6 +946,12 @@ rule__PREP__Alternatives
 		'to'
 		{ after(grammarAccess.getPREPAccess().getToKeyword_3()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getPREPAccess().getIntoKeyword_4()); }
+		'into'
+		{ after(grammarAccess.getPREPAccess().getIntoKeyword_4()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);

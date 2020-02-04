@@ -1,38 +1,9 @@
-model sample1
-
-entity widget {
-	states: enabled/disabled
-}
-
-entity "account view" is widget {
-	actions: open account in
-}
-
-entity button is widget {
-	actions: click [on], select
-}
-
-entity checkbox is widget {
-	states: checked/unchecked, selected/unselected
-}
-
-entity selectable {
-	actions: select
-}
-
-entity list is widget, selectable {
-	properties: items
-}
-
-entity "text field" is widget {
-	actions: type // $text into
-	properties: text
-}
+model sample1 using widgets
 
 // select <list or checkbox or calendar> 
 Scenario: ex1
 given the checkbox "option" is checked
-when I click "Submit"
+when I  click "Submit"
 then the checkbox "fjdkslf" is unchecked
 
 Scenario: ex2
@@ -43,7 +14,7 @@ then the items of the list "selection" is ["Hallvard"]
 //
 
 entity account {
-	actions: withdraw amount from, transfer amount to
+	actions: withdraw amount from, transfer amount into
 	properties: balance
 }
 

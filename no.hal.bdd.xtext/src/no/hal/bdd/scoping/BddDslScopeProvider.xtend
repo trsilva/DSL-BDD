@@ -3,7 +3,6 @@
  */
 package no.hal.bdd.scoping
 
-import java.util.Collection
 import no.hal.bdd.bddDsl.ActionDef
 import no.hal.bdd.bddDsl.BddDslPackage
 import no.hal.bdd.bddDsl.EntityDef
@@ -27,30 +26,48 @@ class BddDslScopeProvider extends AbstractBddDslScopeProvider {
 
 	override IScope getScope(EObject context, EReference reference) {
 		if (reference.EType == BddDslPackage.eINSTANCE.stateName) {
-			scopeForWidgetModelElements(context, StateName);
+			scopeForEntityModelElements(context, StateName);
 		} else if (reference.EType == BddDslPackage.eINSTANCE.actionDef) {
-			scopeForWidgetModelElements(context, ActionDef);
+			scopeForEntityModelElements(context, ActionDef);
 		} else if (reference.EType == BddDslPackage.eINSTANCE.propertyDef) {
-			scopeForWidgetModelElements(context, PropertyDef);
+			scopeForEntityModelElements(context, PropertyDef);
+		} else if (reference.EType == BddDslPackage.eINSTANCE.entityDef) {
+			Scopes.scopeFor(getAllEntityDefs(findAncestorOfType(context, Model)));
 		} else {
 			super.getScope(context, reference)		
 		}
 	}
 
-	def <T extends EObject> IScope scopeForWidgetModelElements(EObject context, Class<T> clazz) {
-		val widgetDef = findWEntityDef(context)
-		var all = if (widgetDef !== null) {
-			getAllInheritedContentsOfType(widgetDef, clazz)
-		} else {
-			EcoreUtil2.getAllContentsOfType(widgetDef ?: findAncestorOfType(context, Model), clazz);
+	def Iterable<? extends EntityDef> getAllEntityDefs(Model model) {
+		val allEntityDefs = <EntityDef>newArrayList
+		allEntityDefs += model.entityDefs
+		for (modelRef : model.modelRefs) {
+			allEntityDefs += getAllEntityDefs(modelRef.modelRef)			
 		}
-		Scopes.scopeFor(all);
+		allEntityDefs
 	}
 
-	def Iterable<? extends EObject> getAllInheritedContentsOfType(EntityDef widgetDef, Class<? extends EObject> clazz) {
-		val Collection<EObject> all = newArrayList
-		all += EcoreUtil2.getAllContentsOfType(widgetDef, clazz)
-		widgetDef.superEntities.forEach[all += getAllInheritedContentsOfType(it, clazz)]
+	def <T extends EObject> IScope scopeForEntityModelElements(EObject context, Class<T> clazz) {
+		val allModelElements = <T>newArrayList
+		val entityDefs = <EntityDef>newArrayList
+		val contextEntityDef = findWEntityDef(context)
+		if (contextEntityDef !== null) {
+			entityDefs += contextEntityDef
+		} else {
+			entityDefs += getAllEntityDefs(findAncestorOfType(context, Model))
+		}
+		for (entityDef : entityDefs) {
+			for (T modelElement : getAllInheritedContentsOfType(entityDef, clazz)) {
+				allModelElements += modelElement;
+			}
+		}
+		Scopes.scopeFor(allModelElements);
+	}
+
+	def <T extends EObject> Iterable<T> getAllInheritedContentsOfType(EntityDef entityDef, Class<T> clazz) {
+		val  all = <T>newArrayList
+		all += EcoreUtil2.getAllContentsOfType(entityDef, clazz)
+		entityDef.superEntities.forEach[all += getAllInheritedContentsOfType(it, clazz)]
 		all.filter[clazz.isInstance(it)]
 	}
 	

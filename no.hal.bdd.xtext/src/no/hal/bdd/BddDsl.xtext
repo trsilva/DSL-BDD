@@ -29,7 +29,7 @@ ActionDef:
 	name = WORD (argument = WORD)? ((preposition = PREP)? | (optionalPref ?= '[' preposition = PREP ']'))	
 ;
 
-PREP: ('on' | 'in' | 'from' | 'to');
+PREP: ('on' | 'in' | 'from' | 'to' | 'into');
 WORD: ID;
 
 

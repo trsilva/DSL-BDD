@@ -2,4 +2,5 @@ bin/
 target/
 **/.polyglot.build.properties
 **/*.xtendbin
+**/*.xtextbin
 **/*._trace

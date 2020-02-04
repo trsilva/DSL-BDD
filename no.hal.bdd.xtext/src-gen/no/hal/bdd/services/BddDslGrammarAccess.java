@@ -356,12 +356,13 @@ public class BddDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cInKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
 		private final Keyword cFromKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
 		private final Keyword cToKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cIntoKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
 		
 		//PREP:
-		//	'on' | 'in' | 'from' | 'to';
+		//	'on' | 'in' | 'from' | 'to' | 'into';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'on' | 'in' | 'from' | 'to'
+		//'on' | 'in' | 'from' | 'to' | 'into'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'on'
@@ -375,6 +376,9 @@ public class BddDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'to'
 		public Keyword getToKeyword_3() { return cToKeyword_3; }
+		
+		//'into'
+		public Keyword getIntoKeyword_4() { return cIntoKeyword_4; }
 	}
 	public class WORDElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "no.hal.bdd.BddDsl.WORD");
@@ -1361,7 +1365,7 @@ public class BddDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//PREP:
-	//	'on' | 'in' | 'from' | 'to';
+	//	'on' | 'in' | 'from' | 'to' | 'into';
 	public PREPElements getPREPAccess() {
 		return pPREP;
 	}
