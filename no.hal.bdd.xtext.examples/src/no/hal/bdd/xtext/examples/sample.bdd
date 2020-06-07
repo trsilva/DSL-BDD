@@ -29,3 +29,5 @@ Scenario: ex4
 given the balance of "account" is 1000
 when I open "account" in "account view"
 then the text of "balance field" is 1000
+
+//Changes made
