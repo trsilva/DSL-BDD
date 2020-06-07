@@ -45,8 +45,8 @@ ID_OR_STRING: (ID | STRING);
 Scenario:
 	'Scenario:' name = ID_OR_STRING
 	'given' preState = ScenarioState
-	'when' 'I' action = ScenarioAction
-	'then' postState = ScenarioState
+	'when' 'I' | 'when' 'the' | 'given' 'I' action = ScenarioAction
+	'then'|'which' 'means' postState = ScenarioState
 ;
 
 ScenarioState:
