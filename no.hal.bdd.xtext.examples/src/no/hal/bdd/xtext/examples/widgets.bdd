@@ -14,16 +14,20 @@ entity button is widget {
 }
 
 entity checkbox is widget {
+	actions: check,uncheck
 	states: checked/unchecked, selected/unselected
+	
 }
+
+
 
 
 entity selectable {
-	actions: select
+	actions: select,choose,set,goto
 }
 
 entity list is widget, selectable {
-	properties: items
+	properties: items,index
 }
 
 entity "text field" is widget {
@@ -107,10 +111,7 @@ entity option {
 	properties: text
 }
 
-entity select is widget {
-	states: selected/unselected
+entity webpage {
+	properties: text
 }
 
-entity choose is widget {
-	states: checked/unchecked
-}
