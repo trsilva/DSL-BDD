@@ -30,7 +30,7 @@ entity list is widget, selectable {
 	properties: items,index
 }
 
-entity "text field" is widget {
+entity textfield is widget {
 	actions: type // $text into
 	properties: text
 }
@@ -112,6 +112,6 @@ entity option {
 }
 
 entity webpage {
-	properties: text
+	states: shown,displayed
 }
 
