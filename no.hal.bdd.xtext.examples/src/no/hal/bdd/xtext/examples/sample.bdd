@@ -71,15 +71,15 @@ when I choose "value" from #"fieldname"
 then the text of #"fieldname" is "value"
 
 Scenario: ex12
-given the checkbox "label" is unchecked
+given #"label" is selected
 when I click #"label"
 then the checkbox "label" is checked
 
 
 Scenario: ex13
-given the webpage "webpage"
-when I goto "webpage"
-then I goto "webpage"
+given the webpage  "google search" is shown
+when I goto #"webpage"
+then the webpage " " is displayed
 
 given I go to "webpage" with the parameters "parameters"
 when I go to "webpage" with the parameters "parameters"
@@ -105,7 +105,7 @@ when I type "value 1" and choose "value 2" in the field "fieldname"
 then I type "value 1" and choose "value 2" in the field "fieldname"
 
 Scenario: ex19
-given "fieldname" is not visible
+given field "fieldname" is not visible
 when "fieldname" is not visible
 then "fieldname" is not visible
 
@@ -239,4 +239,9 @@ then new balance will be 900
 		then will be displayed 900 
 		
 		
-
+Scenario: ex3232
+given the app has already loaded the question "what is your age?"
+	which means
+		when I go to "question page"
+		and I click "list of questions"
+		then will be displayed "what is your age?"
