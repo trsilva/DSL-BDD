@@ -2,15 +2,14 @@ model sample1 using widgets
 
 // select list or checkbox or calendar 
 Scenario: ex1
-given the checkbox "option" is checked
+given the checkbox #"option" is checked
 when I click #"Submit"
-then the checkbox "fjdkslf" is unchecked
+then the checkbox #"fjdkslf" is unchecked
 
 Scenario: ex2
-given the text of #"text field" is "Hallvard"
-when I select the list "items"
-then the items of the list "selection" is ["Hallvard"]
-
+given the text of #"text field" is "Vishal"
+when I select the list #"items"
+then the items of the list #"selection" is ["Vishal"]
 //
 
 entity account {
@@ -24,224 +23,291 @@ the balance of #"account 2" is 10
 when I transfer 50 from #"account 1"
 then the balance of #"account 1" is 950 and
 	the balance of #"account 2" is 60
-
+	
 Scenario: ex4
 given the balance of #"account" is 1000
 when I open "account" in #"account view"
 then the text of #"balance field" is 1000
 
 Scenario: ex5
-given the field "fieldname" is unchecked
-when I uncheck the checkbox  "fieldname"
-then the field "fieldname" is unchecked
+given the field #"fieldname" is unchecked
+when I uncheck the checkbox  #"fieldname"
+then the field #"fieldname" is unchecked
 
 Scenario: ex767
-given the field "fieldname" is checked
-when I check the checkbox  "fieldname"
-then the field "fieldname" is checked
+given the field #"fieldname" is checked
+when I check the checkbox  #"fieldname"
+then the field #"fieldname" is checked
 
 Scenario: ex6
-given the field "fieldname" is unchecked
-when I assure the field "fieldname" is unchecked
-then the field "fieldname" is checked
+given the field #"fieldname" is unchecked
+when I assure the field #"fieldname" is unchecked
+then the field #"fieldname" is checked
 
 
 Scenario: ex7
-given the items of the list "fruit list" is ["apple", "orange"]
+given the items of the list #"fruit list" is ["apple", "orange"]
 when I select "apple" from #'fruit list'
 then the text of #"fruit field" is "apple"
 
 
 Scenario: ex8
 //given the index of the list "index" is ["1"] 
-given the items of the list "fruit list" is ["apple"]
-when I choose "1" from the list "index"
+given the items of the list #"fruit list" is ["apple"]
+when I choose "1" from the list #"index"
 then the text of #"fruit field" is "apple"
 
 
 Scenario: ex9
-given the items of the list "fruit list" is ["apple", "orange"]
+given the items of the list #"fruit list" is ["apple", "orange"]
 when I choose "option" from #"fieldname"
 then the text of #"fruit field" is "option"
 
 Scenario: ex11
 //given the "fieldname"
-given the items of the list "fieldname" is []
+given the items of the list #"fieldname" is []
 when I choose "value" from #"fieldname"
 then the text of #"fieldname" is "value"
 
 Scenario: ex12
 given #"label" is selected
 when I click #"label"
-then the checkbox "label" is checked
+then the checkbox #"label" is checked
 
 
 Scenario: ex13
-given the webpage  "google search" is shown
+given the webpage  #"google search" is shown
 when I goto #"webpage"
-then the webpage " " is displayed
+then the webpage #"google search" is displayed
 
-given I go to "webpage" with the parameters "parameters"
-when I go to "webpage" with the parameters "parameters"
-then I go to "webpage" with the parameters "parameters"
+Scenario: val1
+given the server #"" is shown
+when I request #"valid generateChallenge() request"
+then the server #"202 Accepted" is displayed
+//text #"202 Accepted" is displayed
+//then the server #"202 Accepted" is displayed
 
-given "webpage" is displayed //select
-when "webpage" is displayed
-then "webpage" is displayed
+Scenario: val2
+given the webpage  #"forecasts page" is shown
+when I click #"specific day tab"
+then the webpage #"3 hourly forecast data" is displayed
 
-Scenario: ex15
-when I set "value" in the field "fieldname"
-then I set "value" in the field "fieldname"
+Scenario: N1
+given the field #"I agree to the terms and conditions" is unchecked
+when I check the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is checked
 
-when I try to set "value" in the field "fieldname"
-then I try to set "value" in the field "fieldname"
+Scenario: N2
+given #"I agree to the terms and conditions" is unchecked
+when I check #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is checked
 
-Scenario: ex16
-when I set "value" in the field referring to "fieldname"
-then I set "value" in the field referring to "fieldname"
+Scenario: N3
+given the field #"I agree to the terms and conditions" is unchecked
+when I uncheck the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is unchecked
 
-Scenario: ex17
-when I type "value 1" and choose "value 2" in the field "fieldname"
-then I type "value 1" and choose "value 2" in the field "fieldname"
+Scenario: N4 
+given #"I agree to the terms and conditions" is unchecked
+when I uncheck #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-Scenario: ex19
-given field "fieldname" is not visible
-when "fieldname" is not visible
-then "fieldname" is not visible
+Scenario: N5
+given the checkbox #"I agree to the terms and conditions" is unchecked
+when I check the checkbox #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is checked
 
-given "value" referring to "fieldname" is not visible
-when "value" referring to "fieldname" is not visible
-then "value" referring to "fieldname" is not visible
+Scenario: N6
+given #"I agree to the terms and conditions" is unchecked
+when I check #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is checked
 
-given I wait the field "fieldname" be visible, clickable and enable
-when I wait the field "fieldname" be visible, clickable and enable
-then I wait the field "fieldname" be visible, clickable and enable
+Scenario: N7
+given the checkbox #"I agree to the terms and conditions" is unchecked
+when I uncheck the checkbox #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is unchecked
 
-given I wait the field "fieldname" referring to "another fieldname" be visible, clickable and enable
-when I wait the field "fieldname" referring to "another fieldname" be visible, clickable and enable
-then I wait the field "fieldname" referring to "another fieldname" be visible, clickable and enable
+Scenario: N8
+given #"I agree to the terms and conditions" is unchecked
+when I uncheck #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-given the element "fieldname" is visible and disable
-when the element "fieldname" is visible and disable
-then the element "fieldname" is visible and disable
+Scenario: N9
+given the field #"I agree to the terms and conditions" is unchecked
+when I pick the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is picked
 
-given the element "fieldname" referring to "another fieldname" is visible and disable
-when the element "fieldname" referring to "another fieldname" is visible and disable
-then the element "fieldname" referring to "another fieldname" is visible and disable
+Scenario: N10
+given #"I agree to the terms and conditions" is unchecked
+when I pick #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is picked
 
-when I set the value of the field "fieldname"
-then I set the value of the field "fieldname"
+Scenario: N11 
+given the field #"I agree to the terms and conditions" is notpicked
+when I do not pick the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is unchecked
 
-given I obtain the value from the field "fieldname"
-when I obtain the value from the field "fieldname"
-then I obtain the value from the field "fieldname"
+Scenario: N12 
+given #"I agree to the terms and conditions" is notpicked
+when I do not pick #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-Scenario: ex20
-when I set "value" in the field "fieldname" and trigger the event "event"
-then I set "value" in the field "fieldname" and trigger the event "event"
+Scenario: N13
+given the checkbox #"I agree to the terms and conditions" is unchecked
+when I pick the checkbox #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is picked
 
-when I type a random number in the field "fieldname"
+Scenario: N14 
+given #"I agree to the terms and conditions" is unchecked
+when I pick #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is picked
 
-Scenario: ex21
-given I click on the row "row" of the tree "fieldname"
-when I click on the row "row" of the tree "fieldname"
-then I click on the row "row" of the tree "fieldname"
+Scenario: N15
+given the checkbox #"I agree to the terms and conditions" is notpicked
+when I do not pick the checkbox #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is unchecked
 
-Scenario: ex22
-given I type a random number with the prefix "prefix" in the field "fieldname"
-when I type a random number with the prefix "prefix" in the field "fieldname"
-then I type a random number with the prefix "prefix" in the field "fieldname"
+Scenario: N16 
+given #"I agree to the terms and conditions" is notpicked
+when I do not pick #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-Scenario: ex23
-given I set "value"
-when I set "value"
+Scenario: N17
+given the field #"I agree to the terms and conditions" is unchecked
+when I select the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is selected
 
-when I set the field "fieldname"
+Scenario: N18
+given #"I agree to the terms and conditions" is unchecked
+when I select #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is selected
 
-when I set the fields "fieldnames"
+Scenario: N19 
+given the field #"I agree to the terms and conditions" is unselected
+when I do not select the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is unchecked
 
-Scenario: ex24
-given I select from the dataset "dataset"
-when I select from the dataset "dataset"
+Scenario: N20
+given #"I agree to the terms and conditions" is unselected
+when I do not select #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-Scenario: ex25
-given I set the key "key" with the value "value"
-when I set the key "key" with the value "value"
-then I set the key "key" with the value "value"
+Scenario: N21
+given the checkbox #"I agree to the terms and conditions" is unchecked
+when I select the checkbox #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is selected
 
-Scenario: ex26
-given I define the variable "variable" with the value "value"
-when I define the variable "variable" with the value "value"
-then I define the variable "variable" with the value "value"
+Scenario: N22
+given #"I agree to the terms and conditions" is unchecked
+when I select #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is selected
 
-when I print on the console the value of the variable "variable"
-then I print on the console the value of the variable "variable"
+Scenario: N23 
+given the checkbox #"I agree to the terms and conditions" is unselected
+when I do not select the checkbox #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is unchecked
 
-when I print on the console the value of the variable "variable"
+Scenario: N24
+given #"I agree to the terms and conditions" is unselected
+when I do not select #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-Scenario: ex27
-given I set the value "value" in the dialog box
-when I set the value "value" in the dialog box
-then I set the value "value" in the dialog box
+Scenario: N25
+given the field #"I agree to the terms and conditions" is unchecked
+when I choose the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is chosen
 
-then will be displayed "message" in the dialog box
+Scenario: N26
+given #"I agree to the terms and conditions" is unchecked
+when I choose #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is chosen
 
-Scenario: ex28
+Scenario: N27 
+given the field #"I agree to the terms and conditions" is notChosen
+when I do not choose the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is unchecked
 
-when I move the mouse over "fieldname"
+Scenario: N28 
+given #"I agree to the terms and conditions" is notChosen
+when I do not choose #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-Scenario: ex29
-when I click on the row "row" of the table "table" referring to "fieldname"
-then I click on the row "row" of the table "table" referring to "fieldname"
+Scenario: N29 
+given the checkbox #"I agree to the terms and conditions" is unchecked
+when I choose the checkbox #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is chosen
 
-when I store the cell "cell" of the table "table" in "place"
-then I store the cell "cell" of the table "table" in "place"
+Scenario: N30
+given #"I agree to the terms and conditions" is unchecked
+when I choose #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is chosen
 
-when I store the column "column" of the table "table" in "place"
-then I store the column "column" of the table "table" in "place"
+Scenario: N31 
+given the checkbox #"I agree to the terms and conditions" is notChosen
+when I do not choose the checkbox #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is unchecked
 
-when I compare the text of the table cell "table text" with "text"
-then I compare the text of the table cell "table text" with "text"
+Scenario: N32 
+given #"I agree to the terms and conditions" is notChosen
+when I do not choose #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-when I compare the text of the table column "table text" with "text"
-then I compare the text of the table column "table text" with "text"
+Scenario: N33
+given the field #"I agree to the terms and conditions" is checked
+when I uncheck the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is unchecked
 
-when I click on the cell "cell" of the table "table"
-then I click on the cell "cell" of the table "table"
+Scenario: N34
+given #"I agree to the terms and conditions" is checked
+when I uncheck #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-when I click on the column "column" of the table "table"
-then I click on the column "column" of the table "table"
+Scenario: N35
+given the field #"I agree to the terms and conditions" is checked
+when I do not uncheck the field #"I agree to the terms and conditions"
+then the field #"I agree to the terms and conditions" is checked
 
-when I choose the option "option" in the cell of the table "table"
-then I choose the option "option" in the cell of the table "table"
+Scenario: N36
+given #"I agree to the terms and conditions" is checked
+when I do not uncheck #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is checked
 
-when I choose the option "option" in the column of the table "table"
-then I choose the option "option" in the column of the table "table"
+Scenario: N37
+given the checkbox #"I agree to the terms and conditions" is checked
+when I uncheck the checkbox #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is unchecked
 
-when I type the text "text" in the cell of the table "table"
-then I type the text "text" in the cell of the table "table"
+Scenario: N38
+given #"I agree to the terms and conditions" is checked
+when I uncheck #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is unchecked
 
-when I type the text "text" in the column of the table "table"
-then I type the text "text" in the column of the table "table"
+Scenario: N39 
+given the checkbox #"I agree to the terms and conditions" is checked
+when I do not uncheck the field #"I agree to the terms and conditions"
+then the checkbox #"I agree to the terms and conditions" is checked
 
+Scenario: N40 
+given #"I agree to the terms and conditions" is checked
+when I do not uncheck #"I agree to the terms and conditions"
+then #"I agree to the terms and conditions" is checked
 
-Scenario: ex7667
-when I withdraw 100
-	which means
-		when I go to "transaction type"
-		and I select "withdraw money"
-		and I select "Current" reffering to "Account type"
-		and I type 100 in the field "Amount"
-		and I click "validate"
-then new balance will be 900
-	which means
-		when I go to "check balance"
-		then will be displayed 900 
-		
-		
-Scenario: ex3232
-given the app has already loaded the question "what is your age?"
-	which means
-		when I go to "question page"
-		and I click "list of questions"
-		then will be displayed "what is your age?"
+Scenario: N41 
+given all the options are not checked for the field "Availability"
+when I check the option "Morning" for the field "Availability"
+then the option "Morning" is checked for the field "Availability"
+
+Scenario: N42 Option-Check
+Given all the options are not checked for #"Availability"
+When I check the option "Morning" for #"Availability"
+Then the option "Morning" is checked for #"Availability"
+
+Scenario: N43 Field-Check
+Given all the options are not checked for the field "Availability"
+When I check #"Morning" for the field "Availability"
+Then #"Morning" is checked for the field "Availability"
+
+Scenario: N44 Check
+Given all the options are not checked for #"Availability"
+When I check #"Morning" for #"Availability"
+Then #"Morning" is checked for #"Availability"
