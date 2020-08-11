@@ -14,21 +14,19 @@ entity button is widget {
 }
 
 entity checkbox is widget {
-	actions: check,uncheck
-	states: checked/unchecked, selected/unselected
+	actions: check,uncheck,pick,choose,options,option
+	states: checked/unchecked, selected/unselected, notpicked/picked,chosen/notChosen
 	
 }
 
-
-
-
 entity selectable {
-	actions: select,choose,set,goto
+	actions: select,choose,set,goto,request,options
 }
 
 entity list is widget, selectable {
 	properties: items,index
 }
+
 
 entity textfield is widget {
 	actions: type // $text into
@@ -36,7 +34,7 @@ entity textfield is widget {
 }
 
 entity field is widget, selectable {
-	states: checked/unchecked, selected/unselected
+	states: checked/unchecked, selected/unselected , picked/notpicked, chosen/notChosen
 }
 
 entity index {
@@ -115,3 +113,11 @@ entity webpage {
 	states: shown,displayed
 }
 
+entity server {
+	states: shown,displayed,text
+}
+
+entity content {
+	states: shown  
+	//properties: text
+}
