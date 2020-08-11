@@ -45,7 +45,7 @@ ID_OR_STRING: (ID | STRING);
 Scenario:
        'Scenario:' name = ID_OR_STRING
        'given' preState = ScenarioState
-       (('when' 'I') | ('when' 'the') | ('given' 'I')) action = ScenarioAction
+       (('when' 'I') |('when' 'I' 'do' 'not')| ('when' 'the') | ('given' 'I')) action = ScenarioAction
        ('then'| ('which' 'means')) postState = ScenarioState
 ;
 
@@ -76,9 +76,11 @@ EntityStatePhrase:
 ;
 
 EntityPropertyStatePhrase:
-	'the' property = [PropertyDef | WORD] 'of' entity = EntityRef
-	(('is' value = PropertyValue) | ('are' (values += PropertyValue) (',' values += PropertyValue)*)) 
+	('the'|'all' 'the') property = [PropertyDef | WORD] 'of' entity = EntityRef
+	((('is'|'is' 'not') value = PropertyValue) | (('are'|'are' 'not') (values += PropertyValue)  | (',' values += PropertyValue)*)) 
 ;
+
+//terminal UNCLOSED_STRING : '"' (!'"')* EOF;
 
 PropertyValue: SimpleValue | ListValue | SetValue;
 
@@ -118,3 +120,4 @@ ActionRef: verb = [ActionDef | WORD] (argument = PropertyValue)? (preposition = 
 VerifyAction:
 	'assure' state = StatePhrase
 ;
+
