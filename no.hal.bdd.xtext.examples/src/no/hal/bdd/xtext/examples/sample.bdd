@@ -1,313 +1,1513 @@
-model sample1 using widgets
-
-// select list or checkbox or calendar 
-Scenario: ex1
-given the checkbox #"option" is checked
-when I click #"Submit"
-then the checkbox #"fjdkslf" is unchecked
-
-Scenario: ex2
-given the text of #"text field" is "Vishal"
-when I select the list #"items"
-then the items of the list #"selection" is ["Vishal"]
-//
-
-entity account {
-	actions: withdraw amount from, transfer amount into
-	properties: balance
-}
-
-Scenario: ex3
-given the balance of #"account 1" is 1000 and
-the balance of #"account 2" is 10
-when I transfer 50 from #"account 1"
-then the balance of #"account 1" is 950 and
-	the balance of #"account 2" is 60
-	
-Scenario: ex4
-given the balance of #"account" is 1000
-when I open "account" in #"account view"
-then the text of #"balance field" is 1000
-
-Scenario: ex5
-given the field #"fieldname" is unchecked
-when I uncheck the checkbox  #"fieldname"
-then the field #"fieldname" is unchecked
-
-Scenario: ex767
-given the field #"fieldname" is checked
-when I check the checkbox  #"fieldname"
-then the field #"fieldname" is checked
-
-Scenario: ex6
-given the field #"fieldname" is unchecked
-when I assure the field #"fieldname" is unchecked
-then the field #"fieldname" is checked
-
-
-Scenario: ex7
-given the items of the list #"fruit list" is ["apple", "orange"]
-when I select "apple" from #'fruit list'
-then the text of #"fruit field" is "apple"
-
-
-Scenario: ex8
-//given the index of the list "index" is ["1"] 
-given the items of the list #"fruit list" is ["apple"]
-when I choose "1" from the list #"index"
-then the text of #"fruit field" is "apple"
-
-
-Scenario: ex9
-given the items of the list #"fruit list" is ["apple", "orange"]
-when I choose "option" from #"fieldname"
-then the text of #"fruit field" is "option"
-
-Scenario: ex11
-//given the "fieldname"
-given the items of the list #"fieldname" is []
-when I choose "value" from #"fieldname"
-then the text of #"fieldname" is "value"
-
-Scenario: ex12
-given #"label" is selected
-when I click #"label"
-then the checkbox #"label" is checked
-
-
-Scenario: ex13
-given the webpage  #"google search" is shown
-when I goto #"webpage"
-then the webpage #"google search" is displayed
-
-Scenario: val1
-given the server #"" is shown
-when I request #"valid generateChallenge() request"
-then the server #"202 Accepted" is displayed
-//text #"202 Accepted" is displayed
-//then the server #"202 Accepted" is displayed
-
-Scenario: val2
-given the webpage  #"forecasts page" is shown
-when I click #"specific day tab"
-then the webpage #"3 hourly forecast data" is displayed
+model CheckBox using widgets
 
 Scenario: N1
-given the field #"I agree to the terms and conditions" is unchecked
-when I check the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is checked
+Given the field #"I agree to the terms and conditions" is unchecked
+When I check the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is checked
 
 Scenario: N2
-given #"I agree to the terms and conditions" is unchecked
-when I check #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is checked
+Given #"I agree to the terms and conditions" is unchecked
+When I check #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is checked
 
 Scenario: N3
-given the field #"I agree to the terms and conditions" is unchecked
-when I uncheck the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is unchecked
+Given the field #"I agree to the terms and conditions" is not checked
+When I do not check the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is unchecked
 
 Scenario: N4 
-given #"I agree to the terms and conditions" is unchecked
-when I uncheck #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is not checked
+When I do not check #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N5
-given the checkbox #"I agree to the terms and conditions" is unchecked
-when I check the checkbox #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is checked
+Given the CheckBox #"I agree to the terms and conditions" is unchecked
+When I check the CheckBox #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is checked
 
 Scenario: N6
-given #"I agree to the terms and conditions" is unchecked
-when I check #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is checked
+Given #"I agree to the terms and conditions" is unchecked
+When I check #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is checked
 
 Scenario: N7
-given the checkbox #"I agree to the terms and conditions" is unchecked
-when I uncheck the checkbox #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is unchecked
+Given the CheckBox #"I agree to the terms and conditions" is not checked
+When I do not check the CheckBox #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is unchecked
 
 Scenario: N8
-given #"I agree to the terms and conditions" is unchecked
-when I uncheck #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is not checked
+When I do not check #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N9
-given the field #"I agree to the terms and conditions" is unchecked
-when I pick the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is picked
+Given the field #"I agree to the terms and conditions" is unchecked
+When I pick the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is picked
 
 Scenario: N10
-given #"I agree to the terms and conditions" is unchecked
-when I pick #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is picked
+Given #"I agree to the terms and conditions" is unchecked
+When I pick #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is picked
 
 Scenario: N11 
-given the field #"I agree to the terms and conditions" is notpicked
-when I do not pick the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is unchecked
+Given the field #"I agree to the terms and conditions" is not picked
+When I do not pick the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is unchecked
 
 Scenario: N12 
-given #"I agree to the terms and conditions" is notpicked
-when I do not pick #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is not picked
+When I do not pick #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N13
-given the checkbox #"I agree to the terms and conditions" is unchecked
-when I pick the checkbox #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is picked
+Given the CheckBox #"I agree to the terms and conditions" is unchecked
+When I pick the CheckBox #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is picked
 
 Scenario: N14 
-given #"I agree to the terms and conditions" is unchecked
-when I pick #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is picked
+Given #"I agree to the terms and conditions" is unchecked
+When I pick #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is picked
 
 Scenario: N15
-given the checkbox #"I agree to the terms and conditions" is notpicked
-when I do not pick the checkbox #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is unchecked
+Given the CheckBox #"I agree to the terms and conditions" is not picked
+When I do not pick the CheckBox #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is unchecked
 
 Scenario: N16 
-given #"I agree to the terms and conditions" is notpicked
-when I do not pick #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is not picked
+When I do not pick #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N17
-given the field #"I agree to the terms and conditions" is unchecked
-when I select the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is selected
+Given the field #"I agree to the terms and conditions" is unchecked
+When I select the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is selected
 
 Scenario: N18
-given #"I agree to the terms and conditions" is unchecked
-when I select #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is selected
+Given #"I agree to the terms and conditions" is unchecked
+When I select #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is selected
 
 Scenario: N19 
-given the field #"I agree to the terms and conditions" is unselected
-when I do not select the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is unchecked
+Given the field #"I agree to the terms and conditions" is not selected
+When I do not select the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is unchecked
 
 Scenario: N20
-given #"I agree to the terms and conditions" is unselected
-when I do not select #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is not selected
+When I do not select #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N21
-given the checkbox #"I agree to the terms and conditions" is unchecked
-when I select the checkbox #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is selected
+Given the CheckBox #"I agree to the terms and conditions" is unchecked
+When I select the CheckBox #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is selected
 
 Scenario: N22
-given #"I agree to the terms and conditions" is unchecked
-when I select #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is selected
+Given #"I agree to the terms and conditions" is unchecked 
+When I select #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is selected
 
 Scenario: N23 
-given the checkbox #"I agree to the terms and conditions" is unselected
-when I do not select the checkbox #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is unchecked
+Given the CheckBox #"I agree to the terms and conditions" is not selected
+When I do not select the CheckBox #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is unchecked
 
 Scenario: N24
-given #"I agree to the terms and conditions" is unselected
-when I do not select #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is not selected
+When I do not select #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N25
-given the field #"I agree to the terms and conditions" is unchecked
-when I choose the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is chosen
+Given the field #"I agree to the terms and conditions" is unchecked
+When I choose the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is chosen
 
 Scenario: N26
-given #"I agree to the terms and conditions" is unchecked
-when I choose #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is chosen
+Given #"I agree to the terms and conditions" is unchecked
+When I choose #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is chosen
 
 Scenario: N27 
-given the field #"I agree to the terms and conditions" is notChosen
-when I do not choose the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is unchecked
+Given the field #"I agree to the terms and conditions" is not chosen
+When I do not choose the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is unchecked
 
 Scenario: N28 
-given #"I agree to the terms and conditions" is notChosen
-when I do not choose #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is not chosen
+When I do not choose #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N29 
-given the checkbox #"I agree to the terms and conditions" is unchecked
-when I choose the checkbox #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is chosen
+Given the CheckBox #"I agree to the terms and conditions" is unchecked
+When I choose the CheckBox #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is chosen
 
 Scenario: N30
-given #"I agree to the terms and conditions" is unchecked
-when I choose #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is chosen
+Given #"I agree to the terms and conditions" is unchecked
+When I choose #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is chosen
 
 Scenario: N31 
-given the checkbox #"I agree to the terms and conditions" is notChosen
-when I do not choose the checkbox #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is unchecked
+Given the CheckBox #"I agree to the terms and conditions" is not chosen
+When I do not choose the CheckBox #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is unchecked
 
 Scenario: N32 
-given #"I agree to the terms and conditions" is notChosen
-when I do not choose #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is not chosen
+When I do not choose #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N33
-given the field #"I agree to the terms and conditions" is checked
-when I uncheck the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is unchecked
+Given the field #"I agree to the terms and conditions" is checked
+When I uncheck the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is unchecked
 
 Scenario: N34
-given #"I agree to the terms and conditions" is checked
-when I uncheck #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is checked
+When I uncheck #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N35
-given the field #"I agree to the terms and conditions" is checked
-when I do not uncheck the field #"I agree to the terms and conditions"
-then the field #"I agree to the terms and conditions" is checked
+Given the field #"I agree to the terms and conditions" is not unchecked
+When I do not uncheck the field #"I agree to the terms and conditions"
+Then the field #"I agree to the terms and conditions" is checked
 
 Scenario: N36
-given #"I agree to the terms and conditions" is checked
-when I do not uncheck #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is checked
+Given #"I agree to the terms and conditions" is not checked
+When I do not uncheck #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is checked
 
 Scenario: N37
-given the checkbox #"I agree to the terms and conditions" is checked
-when I uncheck the checkbox #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is unchecked
+Given the CheckBox #"I agree to the terms and conditions" is checked
+When I uncheck the CheckBox #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is unchecked
 
 Scenario: N38
-given #"I agree to the terms and conditions" is checked
-when I uncheck #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is unchecked
+Given #"I agree to the terms and conditions" is checked
+When I uncheck #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is unchecked
 
 Scenario: N39 
-given the checkbox #"I agree to the terms and conditions" is checked
-when I do not uncheck the field #"I agree to the terms and conditions"
-then the checkbox #"I agree to the terms and conditions" is checked
+Given the CheckBox #"I agree to the terms and conditions" is not checked
+When I do not uncheck the field #"I agree to the terms and conditions"
+Then the CheckBox #"I agree to the terms and conditions" is checked
 
 Scenario: N40 
-given #"I agree to the terms and conditions" is checked
-when I do not uncheck #"I agree to the terms and conditions"
-then #"I agree to the terms and conditions" is checked
+Given #"I agree to the terms and conditions" is not unchecked
+When I do not uncheck #"I agree to the terms and conditions"
+Then #"I agree to the terms and conditions" is checked
+
+Scenario: Nx
+Given the options of the list #"Availability" is ""
+When I check "Morning" for the field #"Availability"
+Then #"Morning" is checked 
 
 Scenario: N41 
-given all the options are not checked for the field "Availability"
-when I check the option "Morning" for the field "Availability"
-then the option "Morning" is checked for the field "Availability"
+Given all the options for the field #"Availability" is not checked 
+When I check the option #"Morning" for the field #"Availability" 
+Then the option #"Morning" is checked 	
 
-Scenario: N42 Option-Check
-Given all the options are not checked for #"Availability"
-When I check the option "Morning" for #"Availability"
-Then the option "Morning" is checked for #"Availability"
+Scenario: N42
+Given all the options for #"Availability" are not checked
+When I check the option #"Morning" for #"Availability"
+Then the option #"Morning" is checked 
 
-Scenario: N43 Field-Check
-Given all the options are not checked for the field "Availability"
-When I check #"Morning" for the field "Availability"
-Then #"Morning" is checked for the field "Availability"
+Scenario: N42X
+Given all the options for the field  #"Availability" are checked
+When I check the option #"Morning" 
+Then the option #"Morning" is checked 
 
-Scenario: N44 Check
-Given all the options are not checked for #"Availability"
+Scenario: N43
+Given all the options for the field #"Availability" are not checked 
+When I check #"Morning" for the field #"Availability"
+Then #"Morning" is checked 
+
+Scenario: N44
+Given all the options for #"Availability" are not checked 
 When I check #"Morning" for #"Availability"
-Then #"Morning" is checked for #"Availability"
+Then #"Morning" is checked 
+
+Scenario: N45
+Given all the options for the field #"Availability" are not checked 
+When I do not check the option #"Morning" for the field #"Availability"
+Then the option #"Morning" is not checked 
+
+Scenario: N46
+Given all the options for #"Availability" are not checked 
+When I do not check the option "Morning" for #"Availability"
+Then the option #"Morning" is not checked 
+
+Scenario: N47
+Given all the options for the field  #"Availability" are not checked
+When I do not check "Morning" for the field #"Availability"
+Then #"Morning" is not checked
+
+Scenario: N48
+Given all the options for #"Availability" are not checked 
+When I do not check "Morning" for #"Availability"
+Then #"Morning" is not checked 
+
+Scenario: N49 
+Given the option "Morning" for the field #"Availability" is not checked
+When I check the option "Morning" for the field #"Availability"
+Then the option #"Morning" is checked 
+
+Scenario: N50
+Given the option "Morning" for #"Availability" is not checked
+When I check the option "Morning" for #"Availability"
+Then the option #"Morning" is checked
+
+Scenario: N51
+Given "Morning" for the field #"Availability" is not checked 
+When I check #"Morning" for the field #"Availability"
+Then #"Morning" is checked 
+
+Scenario: N52 
+Given #"Morning" for #"Availability" is not checked 
+When I check "Morning" for #"Availability"
+Then #"Morning" is checked 
+
+Scenario: N53 
+Given the option "Morning" for the field #"Availability" is not checked 
+When I do not check the option "Morning" for the field #"Availability"
+Then the option #"Morning" is not checked 
+
+Scenario: N54 
+Given the option "Morning" for #"Availability" is not checked 
+When I do not check the option #"Morning" 
+Then the option #"Morning" is not checked 
+
+Scenario: N55 
+Given #"Morning" for the field "Availability" is not checked 
+When I do not check "Morning" for the field #"Availability"
+Then #"Morning" is not checked 
+
+Scenario: N56 
+Given #"Morning" for #"Availability" is not checked 
+When I do not check #"Morning" for #"Availability"
+Then the option #"Morning" is not checked 
+
+Scenario: N57 
+Given all the options for the CheckBox #"Availability" are not checked 
+When I check the option #"Morning" for the CheckBox #"Availability"
+Then the option #"Morning" is checked 
+
+Scenario: N58 
+Given all the options for the CheckBox #"Availability" are not checked 
+When I check the option "Morning" for #"Availability"
+Then the option #"Morning" is checked 
+
+Scenario: N59 
+Given all the options for the CheckBox #"Availability" are not checked 
+When I check #"Morning" for the CheckBox #"Availability"
+Then the option #"Morning" is checked 
+
+Scenario: N60 
+Given all the options for #"Availability" are not checked 
+When I check #"Morning" for #"Availability"
+Then #"Morning" is checked
+
+Scenario: N61 
+Given all the options for the CheckBox #"Availability" are not checked 
+When I do not check the option "Morning" for the CheckBox #"Availability"
+Then the option #"Morning" is not checked 
+
+Scenario: N62 
+Given all the options for #"Availability" are not checked 
+When I do not check the option "Morning" for #"Availability"
+Then the option #"Morning" is not checked 
+
+Scenario: N63 
+Given all the options for the CheckBox #"Availability" are not checked 
+When I do not check #"Morning" for the CheckBox #"Availability"
+Then #"Morning" is not checked 
+
+Scenario: N64 
+Given all the options for #"Availability" are not checked 
+When I do not check #"Morning" for #"Availability"
+Then #"Morning" is not checked 
+
+Scenario: N65 
+Given the option "Morning" for the  #"Availability" is not checked 
+When I check the option "Morning" for the CheckBox #"Availability"
+Then the option #"Morning" is checked 
+
+Scenario: N66
+Given the option "Morning" for #"Availability" is not checked 
+When I check the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is checked 
+
+
+Scenario: N67 
+Given #"Morning" for the CheckBox "Availability" is not checked 
+When I check #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is checked 
+
+Scenario: N68 
+Given #"Morning" for #"Availability" is not checked 
+When I check #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is checked
+
+/*
+Scenario: CheckBox-Option-DoNotCheck
+Given the option "<option>" is not checked for the CheckBox "<fieldname>"
+When I do not check the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is not checked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N69 
+Given the option "Morning" for the CheckBox "Availability" is not checked 
+When I do not check the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is not checked 
+
+Scenario: N70 
+Given the option "Morning" for #"Availability" is not checked 
+When I do not check the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not checked 
+
+Scenario: N71 
+Given #"Morning"  for the CheckBox "Availability" is not checked 
+When I do not check #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is not checked 
+
+Scenario: N72 
+Given #"Morning" for #"Availability" is not checked 
+When I do not check #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not checked 
+
+/*
+Scenario: Field-AllOptions-Pick
+Given all the options are not picked for the field "<fieldname>"
+When I pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is picked for the field "<fieldname>"
+*/
+
+Scenario: N73 
+Given all the options for the field "Availability" are not picked 
+When I pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is picked 
+
+Scenario: N74 
+Given all the options for #"Availability" are not picked 
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked 
+
+Scenario: N75 
+Given all the options for the field "Availability" are not picked 
+When I pick #"Morning" for the field "Availability"
+Then #"Morning"  for the field "Availability" is picked 
+
+Scenario: N76 
+Given all the options for #"Availability" are not picked 
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked 
+
+/*
+Scenario: Field-AllOptions-DoNotPick
+Given all the options are not picked for the field "<fieldname>"
+When I do not pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not picked for the field "<fieldname>"
+*/
+
+Scenario: N77 
+Given all the options for the field "Availability" are not picked 
+When I do not pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not picked 
+
+Scenario: N78 
+Given all the options for #"Availability" are not picked 
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked 
+
+Scenario: N79 
+Given all the options for the field "Availability" are not picked 
+When I do not pick #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not picked 
+
+Scenario: N90 
+Given all the options for #"Availability" are not picked 
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked 
+
+/*
+Scenario: Field-Option-Pick
+Given the option "<option>" is not picked for the field "<fieldname>"
+When I pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is picked for the field "<fieldname>"
+*/
+
+Scenario: N91 
+Given the option "Morning" for the field "Availability" is not picked 
+When I pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is picked 
+
+Scenario: N92 
+Given the option "Morning" for #"Availability" is not picked 
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked 
+
+Scenario: N93 
+Given #"Morning" for the field "Availability" is not picked 
+When I pick #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is picked 
+
+Scenario: N94 
+Given #"Morning" for #"Availability" is not picked 
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked 
+
+/*
+Scenario: Field-Option-DoNotPick
+Given the option "<option>" is not picked for the field "<fieldname>"
+When I do not pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not picked for the field "<fieldname>"
+*/
+
+Scenario: N95 
+Given the option "Morning" for the field "Availability" is not picked 
+When I do not pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not picked 
+
+Scenario: N96 
+Given the option "Morning" for #"Availability" is not picked 
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked 
+
+Scenario: N97 
+Given #"Morning" for the field "Availability" is not picked 
+When I do not pick #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not picked 
+
+Scenario: N98 
+Given #"Morning" for #"Availability" is not picked 
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked 
+
+/*
+Scenario: CheckBox-AllOptions-Pick
+Given all the options are not picked for the CheckBox "<fieldname>"
+When I pick the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is picked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N99 
+Given all the options for the CheckBox "Availability" are not picked 
+When I pick the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is picked 
+
+Scenario: N100 
+Given all the options for #"Availability" are not picked 
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked 
+
+Scenario: N101 
+Given all the options for the CheckBox "Availability" are not picked 
+When I pick #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is picked 
+
+Scenario: N102 
+Given all the options for #"Availability" are not picked 
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked 
+
+/*
+Scenario: CheckBox-AllOptions-DoNotPick
+Given all the options are not picked for the CheckBox "<fieldname>"
+When I do not pick the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is not picked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N103 
+Given all the options for the CheckBox "Availability" are not picked 
+When I do not pick the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is not picked 
+
+Scenario: N104 
+Given all the options for #"Availability" are not picked 
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked 
+
+Scenario: N105 
+Given all the options for the CheckBox "Availability" are not picked 
+When I do not pick #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is not picked 
+
+Scenario: N106 
+Given all the options for #"Availability" are not picked 
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked 
+
+/*
+Scenario: CheckBox-Option-Pick
+Given the option "<option>" is not picked for the CheckBox "<fieldname>"
+When I pick the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is picked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N107 
+Given the option "Morning" for the CheckBox "Availability" is not picked 
+When I pick the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is picked 
+
+Scenario: N108 
+Given the option "Morning" for #"Availability" is not picked 
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked 
+
+Scenario: N109 
+Given #"Morning" for the CheckBox "Availability" is not picked 
+When I pick #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is picked 
+
+Scenario: N110 
+Given #"Morning" for #"Availability" is not picked 
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked 
+
+/*
+Scenario: CheckBox-Option-DoNotPick
+Given the option "<option>" is not picked for the CheckBox "<fieldname>"
+When I do not pick the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is not picked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N111 
+Given the option "Morning" for the CheckBox "Availability" is not picked 
+When I do not pick the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is not picked 
+
+Scenario: N112 
+Given the option "Morning" for #"Availability" is not picked 
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked 
+
+Scenario: N113 
+Given #"Morning" for the CheckBox "Availability" is not picked 
+When I do not pick #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is not picked 
+
+Scenario: N114 
+Given #"Morning" for #"Availability" is not picked 
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked 
+
+/*
+Scenario: Field-AllOptions-Select
+Given all the options are not selected for the field "<fieldname>"
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is selected for the field "<fieldname>"
+*/
+
+Scenario: N115 
+Given all the options for the field "Availability" are not selected 
+When I select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is selected 
+
+Scenario: N116 
+Given all the options for #"Availability" are not selected 
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected 
+
+Scenario: N117 
+Given all the options for the field "Availability" are not selected 
+When I select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is selected 
+
+Scenario: N118 
+Given all the options for #"Availability" are not selected 
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected 
+
+/*
+Scenario: Field-AllOptions-DoNotSelect
+Given all the options are not selected for the field "<fieldname>"
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not selected for the field "<fieldname>"
+*/
+
+Scenario: N119 
+Given all the options for the field "Availability" are not selected 
+When I do not select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not selected 
+
+Scenario: N120 
+Given all the options for #"Availability" are not selected 
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected 
+
+Scenario: N121 
+Given all the options for the field "Availability" are not selected 
+When I do not select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not  selected 
+
+Scenario: N122 
+Given all the options for #"Availability" are not selected 
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected 
+
+/*
+Scenario: Field-Option-Select
+Given the option "<option>" is not selected for the field "<fieldname>"
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is selected for the field "<fieldname>"
+*/
+
+Scenario: N123 
+Given the option "Morning" for the field "Availability" is not selected 
+When I select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is selected 
+
+Scenario: N124 
+Given the option "Morning" for #"Availability" is not selected 
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected 
+
+Scenario: N125 
+Given #"Morning" for the field "Availability" is not selected 
+When I select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is selected 
+
+Scenario: N126 
+Given #"Morning" for #"Availability" is not selected 
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected 
+
+/*
+Scenario: Field-Option-DoNotSelect
+Given the option "<option>" is not selected for the field "<fieldname>"
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not selected for the field "<fieldname>"
+*/
+
+Scenario: N127 
+Given the option "Morning" for the field "Availability" is not selected 
+When I do not select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not selected 
+
+Scenario: N128 
+Given the option "Morning" for #"Availability" is not selected 
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected 
+
+Scenario: N129 
+Given #"Morning" for the field "Availability" is not selected 
+When I do not select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not selected 
+
+Scenario: N130 
+Given #"Morning" for #"Availability" is not selected 
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected 
+
+/*
+Scenario: CheckBox-AllOptions-Select
+Given all the options are not selected for the CheckBox "<fieldname>"
+When I select the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is selected for the CheckBox "<fieldname>"
+*/
+
+Scenario: N131 
+Given all the options for the CheckBox "Availability" are not selected 
+When I select the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is selected 
+
+Scenario: N132 
+Given all the options for #"Availability" are not selected 
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected 
+
+Scenario: N133 
+Given all the options for the CheckBox "Availability" are not selected 
+When I select #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is selected 
+
+Scenario: N134 
+Given all the options for #"Availability" are not selected 
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected 
+
+/*
+Scenario: CheckBox-AllOptions-DoNotSelect
+Given all the options are not selected for the CheckBox "<fieldname>"
+When I do not select the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is not selected for the CheckBox "<fieldname>"
+*/
+
+Scenario: N135 
+Given all the options for the CheckBox "Availability" are not selected 
+When I do not select the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is not selected 
+
+Scenario: N136 
+Given all the options for #"Availability" are not selected 
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected 
+
+Scenario: N137 
+Given all the options for the CheckBox "Availability" are not selected 
+When I do not select #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is not selected 
+
+Scenario: N138 
+Given all the options for #"Availability" are not selected 
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected 
+
+/*
+Scenario: CheckBox-Option-Select
+Given the option "<option>" is not selected for the CheckBox "<fieldname>"
+When I select the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is selected for the CheckBox "<fieldname>"
+*/
+
+Scenario: N139 
+Given the option "Morning" for the CheckBox "Availability" is not selected 
+When I select the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is selected 
+
+Scenario: N140 
+Given the option "Morning" for #"Availability" is not selected 
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected 
+
+Scenario: N141 
+Given #"Morning" for the CheckBox "Availability" is not selected 
+When I select #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is selected 
+
+Scenario: N142 
+Given #"Morning" for #"Availability" is not selected 
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected 
+
+/*
+Scenario: CheckBox-Option-DoNotSelect
+Given the option "<option>" is not selected for the CheckBox "<fieldname>"
+When I do not select the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is not selected for the CheckBox "<fieldname>"
+*/
+
+Scenario: N143 
+Given the option "Morning" for the CheckBox "Availability" is not selected 
+When I do not select the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is not selected 
+
+Scenario: N144 
+Given the option "Morning" for #"Availability" is not selected 
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected 
+
+Scenario: N145 
+Given #"Morning" for the CheckBox "Availability" is not selected 
+When I do not select #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is not selected 
+
+Scenario: N146 
+Given #"Morning" for #"Availability" is not selected 
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected 
+
+/*
+Scenario: Field-AllOptions-Choose
+Given all the options are not chosen for the field "<fieldname>"
+When I choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is chosen for the field "<fieldname>"
+*/
+
+Scenario: N147 
+Given all the options for the field "Availability" are not chosen 
+When I choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is chosen 
+
+Scenario: N148 
+Given all the options for #"Availability" are not chosen 
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen 
+
+Scenario: N149 
+Given all the options for the field "Availability" are not chosen 
+When I choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is chosen 
+
+Scenario: N150 
+Given all the options for #"Availability" are not chosen 
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen 
+
+/*
+Scenario: Field-AllOptions-DoNotChoose
+Given all the options are not chosen for the field "<fieldname>"
+When I do not choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not chosen for the field "<fieldname>"
+*/
+
+Scenario: N151 
+Given all the options for the field "Availability" are not chosen 
+When I do not choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not chosen 
+
+Scenario: N152 
+Given all the options for #"Availability" are not chosen 
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen 
+
+Scenario: N153 
+Given all the options for the field "Availability" are not chosen 
+When I do not choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not chosen 
+
+Scenario: N154 
+Given all the options for #"Availability" are not chosen 
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen 
+
+/*
+Scenario: Field-Option-Choose
+Given the option "<option>" is not chosen for the field "<fieldname>"
+When I choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is chosen for the field "<fieldname>"
+*/
+
+Scenario: N155 
+Given the option "Morning" for the field "Availability" is not chosen 
+When I choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is chosen 
+
+Scenario: N156 
+Given the option "Morning" for #"Availability" is not chosen 
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen 
+
+Scenario: N157 
+Given #"Morning" for the field "Availability" is not chosen 
+When I choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is chosen 
+
+Scenario: N158 
+Given #"Morning" for #"Availability" is not chosen 
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen 
+
+/*
+Scenario: Field-Option-DoNotChoose
+Given the option "<option>" is not chosen for the field "<fieldname>"
+When I do not choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not chosen for the field "<fieldname>"
+*/
+
+Scenario: N159 
+Given the option "Morning" for the field "Availability" is not chosen 
+When I do not choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not chosen 
+
+Scenario: N160 
+Given the option "Morning" for #"Availability" is not chosen 
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen 
+
+Scenario: N161 
+Given #"Morning" for the field "Availability" is not chosen 
+When I do not choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not chosen 
+
+Scenario: N162 
+Given #"Morning" for #"Availability" is not chosen 
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen 
+
+/*
+Scenario: CheckBox-AllOptions-Choose
+Given all the options are not chosen for the CheckBox "<fieldname>"
+When I choose the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is chosen for the CheckBox "<fieldname>"
+*/
+
+Scenario: N163 
+Given all the options for the CheckBox "Availability" are not chosen 
+When I choose the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is chosen 
+
+Scenario: N164 
+Given all the options for #"Availability" are not chosen 
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen 
+
+Scenario: N165 
+Given all the options for the CheckBox "Availability" are not chosen 
+When I choose #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is chosen 
+
+Scenario: N166 
+Given all the options for #"Availability" are not chosen 
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen 
+
+/*
+Scenario: CheckBox-AllOptions-DoNotChoose
+Given all the options are not chosen for the CheckBox "<fieldname>"
+When I do not choose the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is not chosen for the CheckBox "<fieldname>"
+*/
+
+Scenario: N167 
+Given all the options for the CheckBox "Availability" are not chosen 
+When I do not choose the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is not chosen 
+
+Scenario: N168 
+Given all the options for #"Availability" are not chosen 
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen 
+
+Scenario: N169 
+Given all the options for the CheckBox "Availability" are not chosen 
+When I do not choose #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is not chosen 
+
+Scenario: N170 
+Given all the options for #"Availability" are not chosen 
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen 
+
+/*
+Scenario: CheckBox-Option-Choose
+Given the option "<option>" is not chosen for the CheckBox "<fieldname>"
+When I choose the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is chosen for the CheckBox "<fieldname>"
+*/
+
+Scenario: N171 
+Given the option "Morning" for the CheckBox "Availability"  is not chosen 
+When I choose the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is chosen 
+
+Scenario: N172 
+Given the option "Morning" for #"Availability" is not chosen 
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen 
+
+Scenario: N173 
+Given #"Morning" for the CheckBox "Availability" is not chosen 
+When I choose #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is chosen 
+
+Scenario: N174 
+Given #"Morning" for #"Availability" is not chosen 
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen 
+
+/*
+Scenario: CheckBox-Option-DoNotChoose
+Given the option "<option>" is not chosen for the CheckBox "<fieldname>"
+When I do not choose the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is not chosen for the CheckBox "<fieldname>"
+*/
+
+Scenario: N175 
+Given the option "Morning" for the CheckBox "Availability" is not chosen 
+When I do not choose the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is not chosen 
+
+Scenario: N176 
+Given the option "Morning" for #"Availability" is not chosen 
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen 
+
+Scenario: N177 
+Given #"Morning" for the CheckBox "Availability" is not chosen 
+When I do not choose #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is not chosen 
+
+Scenario: N178 
+Given #"Morning" for #"Availability" is not chosen 
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen 
+
+/*
+Scenario: Field-AllOptions-Uncheck
+Given all the options are not unchecked for the field "<fieldname>"
+When I uncheck the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is unchecked for the field "<fieldname>"
+*/
+
+Scenario: N179 
+Given all the options for the field "Availability" are not unchecked 
+When I uncheck the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is unchecked 
+
+Scenario: N180 
+Given all the options for #"Availability" are not unchecked 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N181 
+Given all the options for the field "Availability" are not unchecked 
+When I uncheck #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is unchecked 
+
+Scenario: N182 
+Given all the options for #"Availability" are not unchecked 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: Field-AllOptions-DoNotUncheck
+Given all the options are not unchecked for the field "<fieldname>"
+When I do not uncheck the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not unchecked for the field "<fieldname>"
+*/
+
+Scenario: N183
+Given all the options for the field "Availability" are not unchecked 
+When I do not uncheck the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not unchecked 
+
+Scenario: N184 
+Given all the options for #"Availability" are not unchecked 
+When I do not uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not unchecked 
+
+Scenario: N185 
+Given all the options for the field "Availability" are not unchecked 
+When I do not uncheck #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not unchecked 
+
+Scenario: N186 
+Given all the options for #"Availability" are not unchecked 
+When I do not uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not unchecked 
+
+/*
+Scenario: Field-Option-Uncheck
+Given the option "<option>" is not unchecked for the field "<fieldname>"
+When I uncheck the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is unchecked for the field "<fieldname>"
+*/
+
+Scenario: N187 
+Given the option "Morning" for the field "Availability" is not unchecked 
+When I uncheck the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is unchecked 
+
+Scenario: N188 
+Given the option "Morning" for #"Availability" is not unchecked 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N189 
+Given #"Morning" for the field "Availability" is not unchecked 
+When I uncheck #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is unchecked 
+
+Scenario: N190 
+Given #"Morning" for #"Availability" is not unchecked 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: Field-Option-DoNotUncheck
+Given the option "<option>" is not unchecked for the field "<fieldname>"
+When I do not uncheck the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not unchecked for the field "<fieldname>"
+*/
+
+Scenario: N191 
+Given the option "Morning" for the field "Availability" is not unchecked 
+When I do not uncheck the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not unchecked 
+
+Scenario: N192 
+Given the option "Morning" for #"Availability" is not unchecked 
+When I do not uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not unchecked 
+
+Scenario: N193 
+Given #"Morning" for the field "Availability" is not unchecked 
+When I do not uncheck #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not unchecked 
+
+Scenario: N194 
+Given #"Morning" for #"Availability" is not unchecked 
+When I do not uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not unchecked 
+
+/*
+Scenario: CheckBox-AllOptions-Uncheck
+Given all the options are not unchecked for the CheckBox "<fieldname>"
+When I uncheck the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is unchecked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N195
+Given all the options for the CheckBox "Availability" are not unchecked 
+When I uncheck the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N196 
+Given all the options for #"Availability" are not unchecked 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N197 
+Given all the options for the CheckBox "Availability" are not unchecked 
+When I uncheck #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N198 
+Given all the options for #"Availability" are not unchecked 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: CheckBox-AllOptions-DoNotUncheck
+Given all the options are not unchecked for the CheckBox "<fieldname>"
+When I do not uncheck the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is not unchecked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N199 
+Given all the options for the CheckBox "Availability" are not unchecked 
+When I do not uncheck the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is not unchecked 
+
+Scenario: N200 
+Given all the options for #"Availability" are not unchecked 
+When I do not uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not unchecked 
+
+Scenario: N201 
+Given all the options for the CheckBox "Availability" are not unchecked 
+When I do not uncheck #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is not unchecked 
+
+Scenario: N202 
+Given all the options for #"Availability" are not unchecked 
+When I do not uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not unchecked 
+
+/*
+Scenario: CheckBox-Option-Uncheck
+Given the option "<option>" is not unchecked for the CheckBox "<fieldname>"
+When I uncheck the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is unchecked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N203 
+Given the option "Morning" for the CheckBox "Availability" is not unchecked 
+When I uncheck the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N204 
+Given the option "Morning" for #"Availability" is not unchecked 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N205 
+Given #"Morning" for the CheckBox "Availability" is not unchecked 
+When I uncheck #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N206
+Given #"Morning" for #"Availability" is not unchecked 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: CheckBox-Option-DoNotUncheck
+Given the option "<option>" is not unchecked for the CheckBox "<fieldname>"
+When I do not uncheck the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is not unchecked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N207 
+Given the option "Morning" for the CheckBox "Availability" is not unchecked 
+When I do not uncheck the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is not unchecked 
+
+Scenario: N208 
+Given the option "Morning" for #"Availability" is not unchecked 
+When I do not uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not unchecked 
+
+Scenario: N209 
+Given #"Morning" for the CheckBox "Availability" is not unchecked 
+When I do not uncheck #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is not unchecked 
+
+Scenario: N210 
+Given #"Morning" for #"Availability" is not unchecked 
+When I do not uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not unchecked 
+
+/*
+Scenario: Field-AllOptions-Uncheck
+Given all the options are checked for the field "<fieldname>"
+When I uncheck the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is unchecked for the field "<fieldname>"
+*/
+
+Scenario: N211 
+Given all the options for the field "Availability" are checked 
+When I uncheck the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is unchecked 
+
+Scenario: N212 
+Given all the options for #"Availability" are checked 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N213
+Given all the options for the field "Availability" are checked 
+When I uncheck #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is unchecked 
+
+Scenario: N214 
+Given all the options for #"Availability" are checked 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: CheckBox-AllOptions-Uncheck
+Given all the options are checked for the CheckBox "<fieldname>"
+When I uncheck the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is unchecked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N215 
+Given all the options for the CheckBox "Availability" are checked 
+When I uncheck the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N216 
+Given all the options for #"Availability" are checked 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N217 
+Given all the options for the CheckBox "Availability" are checked 
+When I uncheck #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N218 
+Given all the options for #"Availability" are checked 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: Field-AllOptions-Uncheck
+Given all the options are picked for the field "<fieldname>"
+When I uncheck the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is unchecked for the field "<fieldname>"
+*/
+
+Scenario: N219 
+Given all the options for the field "Availability" are picked 
+When I uncheck the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is unchecked 
+
+Scenario: N220 
+Given all the options for #"Availability" are picked 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N221 
+Given all the options for the field "Availability" are picked 
+When I uncheck #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is unchecked 
+
+Scenario: N222 
+Given all the options for #"Availability" are picked 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: CheckBox-AllOptions-Uncheck
+Given all the options are picked for the CheckBox "<fieldname>"
+When I uncheck the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is unchecked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N223 
+Given all the options for the CheckBox "Availability" are picked 
+When I uncheck the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N224 
+Given all the options for #"Availability" are picked 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N225 
+Given all the options for the CheckBox "Availability" are picked 
+When I uncheck #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N226 
+Given all the options for #"Availability" are picked 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: Field-AllOptions-Uncheck
+Given all the options are selected for the field "<fieldname>"
+When I uncheck the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is unchecked for the field "<fieldname>"
+*/
+
+Scenario: N227 
+Given all the options for the field "Availability" are selected 
+When I uncheck the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is unchecked 
+
+Scenario: N228 
+Given all the options for #"Availability" are selected 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N229 
+Given all the options for the field "Availability" are selected 
+When I uncheck #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is unchecked 
+
+Scenario: N230 
+Given all the options for #"Availability" are selected 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: CheckBox-AllOptions-Uncheck
+Given all the options are selected for the CheckBox "<fieldname>"
+When I uncheck the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is unchecked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N231
+Given all the options for the CheckBox "Availability" are selected 
+When I uncheck the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N232 
+Given all the options for #"Availability" are selected 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N233 
+Given all the options for the CheckBox "Availability" are selected 
+When I uncheck #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N234 
+Given all the options for #"Availability" are selected 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning"  for #"Availability" is unchecked 
+
+/*
+Scenario: Field-AllOptions-Uncheck
+Given all the options are chosen for the field "<fieldname>"
+When I uncheck the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is unchecked for the field "<fieldname>"
+*/
+
+Scenario: N235
+Given all the options for the field "Availability" are chosen 
+When I uncheck the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is unchecked 
+
+Scenario: N236 
+Given all the options for #"Availability" are chosen 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N237 
+Given all the options for the field "Availability" are chosen 
+When I uncheck #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is unchecked 
+
+Scenario: N238 
+Given all the options for #"Availability" are chosen 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: CheckBox-AllOptions-Uncheck
+Given all the options are chosen for the CheckBox "<fieldname>"
+When I uncheck the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is unchecked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N239 
+Given all the options for the CheckBox "Availability" are chosen 
+When I uncheck the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N240 
+Given all the options for #"Availability" are chosen 
+When I uncheck the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is unchecked 
+
+Scenario: N241 
+Given all the options for the CheckBox "Availability" are chosen 
+When I uncheck #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is unchecked 
+
+Scenario: N242 
+Given all the options for #"Availability" are chosen 
+When I uncheck #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is unchecked 
+
+/*
+Scenario: Field-AllOptions-Check
+Given all the options are unchecked for the field "<fieldname>"
+When I check the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is checked for the field "<fieldname>"
+*/
+
+Scenario: N243
+Given all the options for the field "Availability" are unchecked 
+When I check the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is checked 
+
+Scenario: N244
+Given all the options for #"Availability" are unchecked 
+When I check the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is checked 
+
+Scenario: N245 
+Given all the options for the field "Availability" are unchecked 
+When I check #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is checked 
+
+Scenario: N246 
+Given all the options for #"Availability" are unchecked 
+When I check #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is checked 
+
+/*
+Scenario: CheckBox-AllOptions-Check
+Given all the options are unchecked for the CheckBox "<fieldname>"
+When I check the option "<option>" for the CheckBox "<fieldname>"
+Then the option "<option>" is checked for the CheckBox "<fieldname>"
+*/
+
+Scenario: N247 
+Given all the options for the CheckBox "Availability" are unchecked 
+When I check the option "Morning" for the CheckBox "Availability"
+Then the option "Morning" for the CheckBox "Availability" is checked 
+
+Scenario: N248 
+Given all the options for #"Availability" are unchecked 
+When I check the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is checked 
+
+Scenario: N249 
+Given all the options for the CheckBox "Availability" are unchecked 
+When I check #"Morning" for the CheckBox "Availability"
+Then #"Morning" for the CheckBox "Availability" is checked 
+
+Scenario: N250 
+Given all the options for #"Availability" are unchecked 
+When I check #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is checked 
