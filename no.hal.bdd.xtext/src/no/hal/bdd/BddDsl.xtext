@@ -46,21 +46,26 @@ ID_OR_STRING: (ID | STRING);
 
 Scenario:
        'Scenario:' name = ID_OR_STRING WORD? ('out'|'off'|'on'|'in'|'-'|'the'|'to' 'the'|'to')? WORD? ('off'|'on'|'in'|'-'|'the')? WORD? ('on'|'in'|'-'|'the')? WORD? ('in'|'-'|'the')? WORD?
-       ((('Given''the'|'Given''I'|'Given') ('do' 'not')? ((OPTION)) | ('Given' ('the'|'all' 'the'|'I')? ('do' 'not')? preStateE = ScenarioState))
-       'which' 'means'
+       (((('Given''the'|'Given''I'|'Given') ('do' 'not')? ((OPTION)) | ('Given' ('the'|'all' 'the'|'I')? ('do' 'not')? preStateE = ScenarioState))
+       'which' 'means')?
+       (
        'Given' ('the'|'all' 'the')? preState = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in'? WORD?)) WORD?
        (('When' 'I') |('When' 'I' 'do' 'not')| ('When' 'the') | ('Given' 'I')) action = ScenarioAction 
        'Then' ('the'|'all' 'the')? (STRING)? postState = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in' WORD?)) WORD?
-       ((('When' 'I'|'When' 'the'|'When'|'And''I') ('do' 'not')? ((OPTION))) | ((('When' 'I') |('When' 'I' 'do' 'not')| ('When' 'the') | ('Given' 'I')) actionE = ScenarioAction ))
-       'which' 'means'
-       'Given' ('the'|'all' 'the')? preState1 = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in'? WORD?)) WORD?
+       )
+       (
+       	((('When' 'I'|'When' 'the'|'When'|'And''I') ('do' 'not')? ((OPTION))) | ((('When' 'I') |('When' 'I' 'do' 'not')| ('When' 'the') | ('Given' 'I')) actionE = ScenarioAction ))
+       'which' 'means')?
+      ( 'Given' ('the'|'all' 'the')? preState1 = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in'? WORD?)) WORD?
        (('When' 'I') |('When' 'I' 'do' 'not')| ('When' 'the') | ('Given' 'I')) action1 = ScenarioAction )
        'Then' ('the'|'all' 'the')? (STRING)? postState1 = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in' WORD?)) WORD?
-       ((('Then''the'|'Then''I'|'Then') ('do' 'not')? ((OPTION)) | ('Given' ('the'|'all' 'the'|'I')? ('do' 'not')? preStateE1 = ScenarioState))
-       'which' 'means'
-       'Given' ('the'|'all' 'the')? preState2 = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in'? WORD?)) WORD?
+       )?
+       (((('Then''the'|'Then''I'|'Then') ('do' 'not')? ((OPTION)) | ('Given' ('the'|'all' 'the'|'I')? ('do' 'not')? preStateE1 = ScenarioState))
+       'which' 'means')?
+       ('Given' ('the'|'all' 'the')? preState2 = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in'? WORD?)) WORD?
        (('When' 'I') |('When' 'I' 'do' 'not')| ('When' 'the') | ('Given' 'I')) action2 = ScenarioAction )
-       'Then' ('the'|'all' 'the')? (STRING)? postState2 = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in' WORD?)) WORD?
+       'Then' ('the'|'all' 'the')? (STRING)? postState2 = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in' WORD?)) WORD? 
+       )?
 ;
 
 
