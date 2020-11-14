@@ -1,7 +1,7 @@
 model widgets
 
 entity widget {
-	actions:move the mouse over
+	actions:move 
 	states: enabled/disabled,shown,available
 }
 
@@ -32,66 +32,76 @@ entity "account view" is widget {
 entity Button is widget {
 	actions: click [on], select,submit
 	states: clicked/unclicked, submitted,pressed
+	properties:value
 }
 
 entity CheckBox is widget {
 	actions: check,uncheck,pick,choose
 	states: checked/unchecked, selected/unselected, picked,chosen
+	properties:option,options
 	
 }
 
 entity RadioButton is widget {
 	actions: pick,choose,select
 	states: checked/unchecked, selected/unselected, picked,chosen
+	properties:option
 	
 }
 
 entity Calendar is widget {
 	actions: pick,choose,select,set
 	states: set, selected/unselected, picked,chosen
+	properties:date
 	
 }
 
 entity ListBox is widget {
 	actions: pick,choose,select
 	states: selected,picked,chosen
+	properties:option
 	
 }
 
 entity Link is widget {
 	actions: choose,click,select
 	states: set, selected/unselected, picked,clicked,chosen
+	properties:option
 	
 }
 
 entity DropdownList is widget {
 	actions: choose,select,pick
 	states: set, selected/unselected, picked,chosen
+	properties:option
 	
 }
 
 entity Menu is widget {
 	actions: choose,click,select 
 	states: selected/unselected, picked,clicked
+	properties:option
 	
 }
 
 entity MenuItem is widget {
 	actions: choose,click,select
 	states: set/notset, selected/unselected,picked,clicked
+	properties:option
 	
 }
 
 entity TimePicker is widget {
 	actions: pick,choose,select,set
 	states: selected,picked,chosen,set
+	properties:time
 	
 }
 
 entity VideoPlayer is widget {
 	actions: play,pause,fast forward,rewind,toggle,exit,turn
 	states: played, paused, fast forwarded,rewound,toggled,exited,turned up,turned down
-	//properties: volume
+	properties: volume
 	
 }
 
@@ -104,6 +114,7 @@ entity Map is widget {
 entity TagCloud is widget {
 	actions: pick,choose,select,click
 	states: checked/unchecked, selected,picked,chosen,clicked
+	properties:word
 	
 }
 
@@ -116,30 +127,34 @@ entity Splitter is widget {
 entity ScrollBar is widget {
 	actions: scroll,scroll to the right,scroll to the left,scroll up,scroll down,scroll the page to the right,scroll the page to the left,scroll the page up,scroll the page down
 	states: scrolled
+	properties:page
 	
 }
 
 entity Slider is widget {
 	actions: set,set to,adjust,adjust the value to
 	states: set,adjusted
-	
+	properties:value
 }
 
 entity SearchBox is widget {
 	actions: set,type,fill
 	states: set,typed,filled
+	properties:value
 	
 }
 
 entity Pagination is widget {
 	actions: go
 	states: go
+	properties:page
 	
 }
 
 entity ImageCarousel is widget {
 	actions: pick,choose,select,click,scroll
 	states: scrolled, selected,picked,chosen,clicked
+	properties:image
 	
 }
 
@@ -158,6 +173,7 @@ entity Icon is widget {
 entity Breadcrumbs is widget {
 	actions: choose,select,click
 	states: selected,chosen,clicked
+	properties:option
 	
 }
 
@@ -169,42 +185,50 @@ entity ToggleButton is widget {
 entity NumericStepper is widget {
 	actions: type,set,fill,increase,decrease
 	states: typed,set,filled,increased,decreased
+	properties:value
 	
 }
 
 entity Notification is widget {
 	actions: open,close,click on
 	states: opened,closed,clicked,displayed
+	properties:content
+	
 	
 }
 
 entity TabBar is widget {
 	actions: select,click [on]
 	states: selected,clicked
+	properties:tab
 	
 }
 
 entity Accordion is widget {
 	actions: show,hide,click [on]
 	states: shown,hidden,clicked
+	properties:item
 	
 }
 
 entity ModalWindow is widget {
 	actions: confirm,cancel,close
 	states: confirmed,canceled,closed,displayed
+	properties:content
 	
 }
 
 entity WindowDialog is widget {
 	actions: confirm,cancel,close
 	states: confirmed,canceled,closed,displayed
+	properties:content
 	
 }
 
 entity Tree is widget {
 	actions: select,click [on]
 	states: selected,clicked
+	properties:Row,tree
 	
 }
 
@@ -217,20 +241,15 @@ entity Autocomplete is widget {
 entity BrowserWindow is widget {
 	actions: go
 	states: go
+	properties:page,title
 	
 }
-
-entity WebPage is widget {
-	actions: purchase,sell,register
-	states: purchased,sold,registered
-	
-}
-
 
 
 entity TextArea is widget {
 	actions: type,set, fill [in]
 	states: typed,set,filled
+	properties:text
 	
 }
 
@@ -243,174 +262,6 @@ entity TextField is widget {
 entity Grid is widget {
 	actions: type,compare,select,click [on]
 	states: typed,compared,selected,clicked
+	properties:column,cell,table,Row
 	
 }
-
-entity selectable {
-	actions: select,choose,set,goto,request,options,option,visit,value
-}
-
-entity list is widget, selectable {
-	//states: checked
-	properties: typed value,items,index,options,option,value,date,time,row,table,column,cell,text,page,title,row,tree,content,item,tab,message,image,page,word,video,volume
-	
-}
-
-
-entity textfield is widget {
-	actions: type // $text into
-	properties: text
-}
-
-entity field is widget, selectable {
-	states: checked/unchecked, selected/unselected , picked/notpicked, chosen/notChosen, check/uncheck,clicked/notclicked
-}
-
-entity option is widget, selectable {
-	states: checked/unchecked, selected/unselected , picked/notpicked, chosen/notChosen, check/uncheck,clicked/notclicked
-}
-
-entity options is widget, selectable {
-	states: checked/unchecked, selected/unselected , picked/notpicked, chosen/notChosen, check/uncheck,clicked/notclicked
-}
-
-
-entity value {
-	properties: text
-}
-
-entity fieldname {
-	properties: text
-}
-
-entity volume {
-	properties: text
-}
-
-entity item {
-	properties: text
-}
-
-
-entity full-screener {
-	properties: text
-}
-	
-entity row {
-	properties: text
-}
-
-entity image {
-	properties: text
-}
-
-entity date {
-	properties: text
-}
-
-entity key {
-	properties: text
-}
-
-entity variable {
-	properties: text
-}
-
-entity tree {
-	properties: text
-}
-
-entity tab {
-	properties: text
-}
-
-entity column {
-	properties: text
-}
-
-entity word {
-	properties: text
-}
-
-entity text {
-	properties: text
-}
-
-entity time {
-	properties: text
-}
-
-entity video {
-	properties: text
-}
-
-entity message {
-	properties: text
-}
-
-entity message {
-	properties: text
-}
-
-entity right {
-	properties: text
-}
-
-entity left {
-	properties: text
-}
-
-entity choose {
-	properties: text
-}
-
-entity page {
-	properties: text
-}
-
-entity scroll {
-	properties: text
-}
-
-entity down {
-	properties: text
-}
-
-entity table {
-	properties: text
-}
-
-entity cell {
-	properties: text
-}
-
-entity title {
-	properties: text
-}
-
-entity items {
-	properties: text
-}
-
-entity location{
-	properties: text
-}
-
-entity "typed value" {
-	properties: text
-}
-
-entity webpage {
-	states: shown,displayed
-}
-
-entity server {
-	states: shown,displayed,text
-}
-
-entity content {
-	states: shown  
-	properties: text
-}
-
-
