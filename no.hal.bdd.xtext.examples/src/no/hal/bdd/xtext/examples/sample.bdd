@@ -1,76 +1,24 @@
-model sample1 using widgets
+model sample using widgets
 
-Scenario: The server 
-    When I visit the Home Page
-		which means 
-		Given the page "Web Page" is displayed
-		When I click "Home Page"
-		Then the page "Home Page" is displayed
-    Then I should see Products in the title
-		which means 
-		Given "Home page" is displayed
-		When I click "products"
-		Then the title "products" is displayed
-    And shouldnot see error
-		which means 
-		Given "Home page" is displayed
-		When I click  "products"
-		Then the title "404 Not Found" is not displayed
+entity animal{
+	actions: walk
+	states:alive
+	properties: name
+}
 
-Scenario:P4
-    Given a valid user named Alice
+Scenario: The server running
+    Given the animal " " is alive 
 		which means 
-		Given the name "Alice" is displayed
-		When I click "Log in Page"
-		and When I enter "user name and password"
-		Then the page "logged in as Alice" is displayed
-    And some regulations
+		Given the CheckBox " " is checked
+		When I check " "
+		Then the CheckBox " " is checked
+    When I  "check the field"
 		which means 
-		Given "Home page" is displayed
-		When I search  "regulation" 
-		Then #"regulation" is selected
-    And regulation C2000000
+		Given " " is displayed
+		When I check " "
+		Then the CheckBox " " is checked
+    Then the "field is checked"
 		which means 
-		Given "Home page" is displayed
-		When I select  "regulation" 
-		Then "C2000000" for "regulation" is displayed
-		
-Scenario: List All Products
-    When I visit the Home Page
-		which means 
-		Given the page "Web Page" is displayed
-		When I click "Home Page"
-		Then the page "Home Page" is displayed
-    And  press the Search button
-		which means 
-		Given "Home page" is displayed
-		When I click "Search"
-		Then #"Search button" is clicked
-    Then I should see Nike in the results
-		which means 
-		Given "Search button" is clicked
-		When I click "Search"
-		Then #"Nike" is displayed
-    And I should see Scott in the results
-		which means 
-		Given "Search button" is clicked
-		When I click "Search"
-		Then #"Scott" is not displayed
-		
-Scenario:P4
-    Given a valid user named Alice
-		which means 
-		Given the name "Alice" is displayed
-		When I click "Log in Page"
-		and When I enter "user name and password"
-		Then the page "logged in as Alice" is displayed
-    And some regulations
-		which means 
-		Given "Home page" is displayed
-		When I search  "regulation" 
-		Then #"regulation" is selected
-    And regulation C2000000
-		which means 
-		Given "Home page" is displayed
-		When I select  "regulation" 
-		Then "C2000000" for "regulation" is displayed
+		Given " " is displayed
+		When I check  " "
+		Then the CheckBox " " is checked
