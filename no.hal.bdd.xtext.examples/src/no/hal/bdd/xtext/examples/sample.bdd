@@ -7,7 +7,7 @@ entity animal{
 }
 
 Scenario: The server running
-    Given the name " " for the animal " " is alive 
+    Given the name " " of the animal " " is alive 
 		which means 
 		Given the option for the CheckBox " " is checked
 		When I check " "
@@ -24,6 +24,6 @@ Scenario: The server running
 		Then the CheckBox " " is checked
 		
 Scenario: The server running		
-Given " " is displayed
-When I check " "
-Then the CheckBox " " is checked		
+Given the name of  " " for the animal " " is alive
+When I walk " "
+Then the name of  " " for the animal " " is not alive
