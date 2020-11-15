@@ -89,17 +89,17 @@ ENTITY_IDENTITY: '#'? (INT | STRING);
 OPTION:'#'? (INT | STRING) ;
 
 EntityRef:
-	(WORD OPTION 'for' 'the')? ('for'|'of')? (('the'|'all' 'the') entity = [EntityDef | WORD] name = ENTITY_IDENTITY) | (name = ENTITY_IDENTITY)
+	 (WORD OPTION 'for' 'the')? ('for'|'of')? (('the'|'all' 'the') entity = [EntityDef | WORD] name = ENTITY_IDENTITY) | (name = ENTITY_IDENTITY)
 ;
 
 EntityStatePhrase:
-	(property = [PropertyDef | WORD]? OPTION? ('for'|'for' 'the')? ('of'|'of' 'the'|'for' 'the'|'for'))? 
+	(property = [PropertyDef | WORD]? ('of'|'of' 'the')? OPTION? ('for'|'for' 'the')? ('of'|'of' 'the'|'for' 'the'|'for'))? 
 	entity = EntityRef ('is'|'are') 'not'? state = [StateName] WORD?
 	 
 ;
 
 EntityPropertyStatePhrase:
-	 property = [PropertyDef | WORD]? OPTION? ('of'|'for' |'from'|'for' 'the'|'of' 'the')  entity = EntityRef
+	 property = [PropertyDef | WORD]? ('of'|'of' 'the')? OPTION? ('of'|'for' |'from'|'for' 'the'|'of' 'the')  entity = EntityRef
 	((('is'|'is' 'not') value = PropertyValue WORD?) WORD? | (('are'|'are' 'not') (values += PropertyValue) WORD? | (',' values += PropertyValue)*) WORD?) 
 ;
 
