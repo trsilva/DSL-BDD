@@ -60,7 +60,7 @@ Scenario:
        (('When' 'I') |('When' 'I' 'do' 'not')| ('When' 'the') | ('Given' 'I')) action1 = ScenarioAction )
        'Then' ('the'|'all' 'the')? (STRING)? postState1 = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in' WORD?)) WORD?
        )?
-       (((('Then''the'|'Then''I'|'Then') ('do' 'not')? ((OPTION)) | ('Given' ('the'|'all' 'the'|'I')? ('do' 'not')? preStateE1 = ScenarioState))
+       (((('Then''the'|'Then''I'|'Then') ('do' 'not')? ((OPTION)) | ('Then' ('the'|'all' 'the'|'I')? ('do' 'not')? preStateE1 = ScenarioState))
        'which' 'means')?
        ('Given' ('the'|'all' 'the')? preState2 = ScenarioState ('out'|'off'|'on'|'in'|'to' 'the'|'to')? (WORD? | WORD?('-'|'the')?WORD? | (WORD? 'in'? WORD?)) WORD?
        (('When' 'I') |('When' 'I' 'do' 'not')| ('When' 'the') | ('Given' 'I')) action2 = ScenarioAction )
@@ -70,11 +70,11 @@ Scenario:
 
 
 ScenarioState:
-	states += StatePhrase (('and'|'and' 'When' 'I') states += StatePhrase)*
+	states += StatePhrase (('And' 'I'|'And') states += StatePhrase)*
 ;
 
 ScenarioAction:
-	actions += ActionPhrase (('and'|'and' 'When' 'I') actions += ActionPhrase)*
+	actions += ActionPhrase (('And' 'I'|'And') actions += ActionPhrase)*
 ;
 
 StatePhrase: ScenarioRef | EntityPropertyStatePhrase | EntityStatePhrase;
