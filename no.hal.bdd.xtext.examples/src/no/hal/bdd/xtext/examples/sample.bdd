@@ -17,7 +17,7 @@ Scenario: The server running
 		Given " " is displayed
 		When I check " "
 		Then the CheckBox " " is checked
-    Then the "field is checked"
+    Then the animal " " is not alive
 		which means 
 		Given " " is displayed
 		When I check  " "
@@ -26,4 +26,6 @@ Scenario: The server running
 Scenario: The server running		
 Given the name of  " " for the animal " " is alive
 When I walk " "
+And I click " "
+And I check " "
 Then the name of  " " for the animal " " is not alive
