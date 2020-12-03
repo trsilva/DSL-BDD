@@ -15,10 +15,9 @@ Given the balance for the account "1787461" is 1000
 When I transfer 50 from the account "1787461"
 	which means
 		Given the BrowserWindow "SEPA Transfer" is displayed
-		When I type "1000" into the field "Amount" and
 		When I type "1000" into the field "Amount"
 		Then the Notification "Your transfer has been successfully processed" is displayed
-Then the "field 1787461"
+Then the account "1787461" is void
 	which means
 		Given the BrowserWindow "Account Balance" is displayed
 		When I click on "See the balance"
