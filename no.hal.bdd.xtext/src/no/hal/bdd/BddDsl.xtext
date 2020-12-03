@@ -70,7 +70,7 @@ Scenario:
 
 
 ScenarioState:
-	states += StatePhrase (('And' 'I'|'And') states += StatePhrase)*
+	states += StatePhrase (('And'|'And' 'the') states += StatePhrase)*
 ;
 
 ScenarioAction:
