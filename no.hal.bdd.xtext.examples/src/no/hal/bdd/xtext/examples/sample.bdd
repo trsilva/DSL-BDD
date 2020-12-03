@@ -1,31 +1,75 @@
 model sample using widgets
 
-entity animal{
-	actions: walk
-	states:alive
-	properties: name
+entity account {
+	actions: withdraw amount from, transfer amount into
+	states: void
+	properties: balance
 }
 
-Scenario: The server running
-    Given the name " " of the animal " " is alive 
-		which means 
-		Given the option for the CheckBox " " is checked
-		When I check " "
-		Then the CheckBox " " is checked
-    When I  "check the field"
-		which means 
-		Given " " is displayed
-		When I check " "
-		Then the CheckBox " " is checked
-    Then the animal " " is not alive
-		which means 
-		Given " " is displayed
-		When I check  " "
-		Then the CheckBox " " is checked
+Scenario: Withdrawing money - transaction succeeded
+Given the balance for the account "1787461" is 1000
+	which means
+		Given the BrowserWindow "Account Balance" is displayed
+		And the BrowserWindow "SEPA Transfer" is displayed		
+		When I click on "See the balance"
+		And I type "1000" into the field "Amount"		
+		Then the value for the TextField "Balance" is "1000"
+		And the Notification "Your transfer has been successfully processed" is displayed		
+When I transfer 50 from the account "1787461"
+	which means
+		Given the BrowserWindow "SEPA Transfer" is displayed
+		And the BrowserWindow "SEPA Transfer" is displayed
+		When I type "1000" into the field "Amount"
+		And I type "1000" into the field "Amount"
+		Then the Notification "Your transfer has been successfully processed" is displayed
+		And the Notification "Your transfer has been successfully processed" is displayed
+Then the account "1787461" is void
+	which means
+		Given the BrowserWindow "Account Balance" is displayed
+		And the BrowserWindow "SEPA Transfer" is displayed 
+		When I click on "See the balance"
+		And I type "1000" into the field "Amount"		
+		Then the value for the TextField "Balance" is "0"
+		And the Notification "Your transfer has been successfully processed" is displayed
 		
-Scenario: The server running		
-Given the name of  " " for the animal " " is alive
-When I walk " "
-And I click " "
-And I check " "
-Then the name of  " " for the animal " " is not alive
+Scenario: Test
+Given the balance for the account "1787461" is 1000
+When I transfer 50 from the account "1787461"
+Then the account "1787461" is void
+
+Scenario: Test2
+Given "the balance for the account 1787461 is 1000"
+	which means
+		Given the BrowserWindow "Account Balance" is displayed
+		And the BrowserWindow "SEPA Transfer" is displayed		
+		When I click on "See the balance"
+		And I type "1000" into the field "Amount"		
+		Then the value for the TextField "Balance" is "1000"
+		And the Notification "Your transfer has been successfully processed" is displayed		
+When "I transfer 50 from the account 1787461"
+	which means
+		Given the BrowserWindow "SEPA Transfer" is displayed
+		And the BrowserWindow "SEPA Transfer" is displayed
+		When I type "1000" into the field "Amount"
+		And I type "1000" into the field "Amount"
+		Then the Notification "Your transfer has been successfully processed" is displayed
+		And the Notification "Your transfer has been successfully processed" is displayed
+Then "the account 1787461 is void"
+	which means
+		Given the BrowserWindow "Account Balance" is displayed
+		And the BrowserWindow "SEPA Transfer" is displayed 
+		When I click on "See the balance"
+		And I type "1000" into the field "Amount"		
+		Then the value for the TextField "Balance" is "0"
+		And the Notification "Your transfer has been successfully processed" is displayed
+
+Scenario: XXX		
+Given the BrowserWindow "Account Balance" is displayed		
+When I click on "See the balance"
+And I type "1000" into the field "Amount"		
+Then the value for the TextField "Balance" is "1000"
+
+Scenario: YYY
+Given the BrowserWindow "Account Balance" is disabled		
+When I click on "See the balance"
+Then the Image " " is clicked 
