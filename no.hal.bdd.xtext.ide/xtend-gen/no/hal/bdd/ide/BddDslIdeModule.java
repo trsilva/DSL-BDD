@@ -3,8 +3,6 @@
  */
 package no.hal.bdd.ide;
 
-import no.hal.bdd.ide.AbstractBddDslIdeModule;
-
 /**
  * Use this class to register ide components.
  */

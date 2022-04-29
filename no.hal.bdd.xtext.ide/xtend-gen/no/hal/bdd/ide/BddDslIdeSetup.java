@@ -7,7 +7,6 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import no.hal.bdd.BddDslRuntimeModule;
 import no.hal.bdd.BddDslStandaloneSetup;
-import no.hal.bdd.ide.BddDslIdeModule;
 import org.eclipse.xtext.util.Modules2;
 
 /**

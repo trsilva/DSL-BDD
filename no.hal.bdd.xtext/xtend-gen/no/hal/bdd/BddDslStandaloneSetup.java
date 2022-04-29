@@ -3,8 +3,6 @@
  */
 package no.hal.bdd;
 
-import no.hal.bdd.BddDslStandaloneSetupGenerated;
-
 /**
  * Initialization support for running Xtext languages without Equinox extension registry.
  */

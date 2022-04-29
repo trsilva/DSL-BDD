@@ -3,8 +3,6 @@
  */
 package no.hal.bdd.validation;
 
-import no.hal.bdd.validation.AbstractBddDslValidator;
-
 /**
  * This class contains custom validation rules.
  * 

@@ -16,7 +16,6 @@ import no.hal.bdd.bddDsl.Model;
 import no.hal.bdd.bddDsl.ModelRef;
 import no.hal.bdd.bddDsl.PropertyDef;
 import no.hal.bdd.bddDsl.StateName;
-import no.hal.bdd.scoping.AbstractBddDslScopeProvider;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EClassifier;

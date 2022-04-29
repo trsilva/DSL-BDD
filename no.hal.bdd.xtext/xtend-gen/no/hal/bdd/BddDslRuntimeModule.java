@@ -3,8 +3,6 @@
  */
 package no.hal.bdd;
 
-import no.hal.bdd.AbstractBddDslRuntimeModule;
-
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
