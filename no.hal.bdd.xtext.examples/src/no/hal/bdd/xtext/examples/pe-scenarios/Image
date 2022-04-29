@@ -1,0 +1,138 @@
+model Image using widgets
+/*
+Scenario: click
+Given "Image" is clicked
+When I click "Image"
+Then "Image" is clicked
+*/
+
+Scenario: N1 click
+Given "Image" is clicked
+When I click "Image"
+Then #"Image" is clicked
+
+Scenario: N2 click
+Given #"Image" is clicked
+When I click #"Image"
+Then #"Image" is clicked
+
+/*
+Scenario: DoNotclick
+Given "Image" is not clicked
+When I do not click "Image"
+Then "Image" is not clicked
+*/
+
+Scenario: N3 DoNotclick
+Given "Image" is not clicked
+When I do not click "Image"
+Then #"Image" is not clicked
+
+Scenario: N4 DoNotclick
+Given #"Image" is not clicked
+When I do not click #"Image"
+Then #"Image" is not clicked
+
+/*
+Scenario: Image-click
+Given the Image "<tab name>" is clicked
+When I click the Image "<tab name>"
+Then the Image "<tab name>" is clicked
+*/
+
+Scenario: N5 Image-click
+Given the Image "Image" is clicked
+When I click the Image "Image"
+Then the Image "Image" is clicked
+
+Scenario: N6 click
+Given #"Image" is clicked
+When I click #"Image"
+Then #"Image" is clicked
+
+/*
+Scenario: Image-DoNotclick
+Given the Image "<tab name>" is not clicked
+When I do not click the Image "<tab name>"
+Then the Image "<tab name>" is clicked
+*/
+
+Scenario: N7 Image-click
+Given the Image "Image" is not clicked
+When I do not click the Image "Image"
+Then the Image "Image" is not clicked
+
+Scenario: N8 click
+Given #"Image" is not clicked
+When I do not click #"Image"
+Then #"Image" is not clicked
+
+//Negative Test cases
+
+/*
+Scenario: click
+Given "Image" is hit
+When I click "Image"
+Then "Image" is hit
+*/
+
+Scenario: N1 click
+Given "Image" is hit
+When I click "Image"
+Then #"Image" is hit
+
+Scenario: N2 click
+Given #"Image" is hit
+When I click #"Image"
+Then #"Image" is hit
+
+/*
+Scenario: DoNotclick
+Given "Image" is not hit
+When I do not click "Image"
+Then "Image" is not hit
+*/
+
+Scenario: N3 DoNotclick
+Given "Image" is not hit
+When I do not click "Image"
+Then #"Image" is not hit
+
+Scenario: N4 DoNotclick
+Given #"Image" is not hit
+When I do not click #"Image"
+Then #"Image" is not hit
+
+/*
+Scenario: Image-click
+Given the Image "<tab name>" is hit
+When I click the Image "<tab name>"
+Then the Image "<tab name>" is hit
+*/
+
+Scenario: N5 Image-click
+Given the Image "Image" is hit
+When I click the Image "Image"
+Then the Image "Image" is hit
+
+Scenario: N6 click
+Given #"Image" is hit
+When I click #"Image"
+Then #"Image" is hit
+
+/*
+Scenario: Image-DoNotclick
+Given the Image "<tab name>" is not hit
+When I do not click the Image "<tab name>"
+Then the Image "<tab name>" is hit
+*/
+
+Scenario: N7 Image-click
+Given the Image "Image" is not hit
+When I do not click the Image "Image"
+Then the Image "Image" is not hit
+
+Scenario: N8 click
+Given #"Image" is not hit
+When I do not click #"Image"
+Then #"Image" is not hit

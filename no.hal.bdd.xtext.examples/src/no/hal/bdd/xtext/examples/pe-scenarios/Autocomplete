@@ -1,0 +1,547 @@
+model AutoComplete using widgets
+
+/*
+Scenario: typed value-set
+Given the typed value "<typed value name>" is set
+When I type and choose "<typed value name>"
+Then the typed value "<typed value name>" is set
+*/
+
+Scenario: N1 typed value-set
+Given the typed value "Autocomplete" is set
+When I type and choose "Autocomplete"
+Then the typed value "Autocomplete" is set
+
+Scenario: N2 set
+Given #"Autocomplete" is set
+When I type and choose #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: typed value-DoNotset
+Given the typed value "<typed value name>" is not set
+When I do not type and choose "<typed value name>"
+Then the typed value "<typed value name>" is not set
+*/
+
+Scenario: N3 typed value-DoNotset
+Given the typed value "Autocomplete" is not set
+When I do not type and choose "Autocomplete"
+Then the typed value "Autocomplete" is not set
+
+Scenario: N4 DoNotset
+Given #"Autocomplete" is not set
+When I do not type and choose #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: Autocomplete-set
+Given the Autocomplete "<typed value name>" is set
+When I type and choose the Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is set
+*/
+
+Scenario: N5 Autocomplete-set
+Given the Autocomplete "Autocomplete" is set
+When I type and choose the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is set
+
+Scenario: N6 set
+Given #"Autocomplete" is set
+When I type and choose #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: Autocomplete-DoNotset
+Given the Autocomplete "<typed value name>" is not set
+When I do not type and choose Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is set
+*/
+
+Scenario: N7 Autocomplete-set
+Given the Autocomplete "Autocomplete" is not set
+When I do not type and choose the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is set
+
+Scenario: N8 set
+Given #"Autocomplete" is not set
+When I do not type and choose #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: typed value-set
+Given the typed value "<typed value name>" is set
+When I type and select "<typed value name>"
+Then the typed value "<typed value name>" is set
+*/
+
+Scenario: N9 typed value-set
+Given the typed value "Autocomplete" is set
+When I type and select "Autocomplete"
+Then the typed value "Autocomplete" is set
+
+Scenario: N10 set
+Given #"Autocomplete" is set
+When I type and select #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: typed value-DoNotset
+Given the typed value "<typed value name>" is not set
+When I do not type and select "<typed value name>"
+Then the typed value "<typed value name>" is not set
+*/
+
+Scenario: N11 typed value-DoNotset
+Given the typed value "Autocomplete" is not set
+When I do not type and select "Autocomplete"
+Then the typed value "Autocomplete" is not set
+
+Scenario: N12 DoNotset
+Given #"Autocomplete" is not set
+When I do not type and select #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: Autocomplete-set
+Given the Autocomplete "<typed value name>" is set
+When I type and select the Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is set
+*/
+
+Scenario: N13 Autocomplete-set
+Given the Autocomplete "Autocomplete" is set
+When I type and select the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is set
+
+Scenario: N14 set
+Given #"Autocomplete" is set
+When I type and select #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: Autocomplete-DoNotset
+Given the Autocomplete "<typed value name>" is not set
+When I do not type and select Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is set
+*/
+
+Scenario: N15 Autocomplete-set
+Given the Autocomplete "Autocomplete" is not set
+When I do not type and select the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is set
+
+Scenario: N16 set
+Given #"Autocomplete" is not set
+When I do not type and select #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: typed value-filled in
+Given the typed value "<typed value name>" is filled in
+When I type and choose "<typed value name>"
+Then the typed value "<typed value name>" is filled in
+*/
+
+Scenario: N17 typed value-filled in
+Given the typed value "Autocomplete" is filled in
+When I type and choose "Autocomplete"
+Then the typed value "Autocomplete" is filled in
+
+Scenario: N18 filled in
+Given #"Autocomplete" is filled in
+When I type and choose #"Autocomplete"
+Then #"Autocomplete" is filled in
+
+/*
+Scenario: typed value-DoNotfilled in
+Given the typed value "<typed value name>" is not filled in
+When I do not type and choose "<typed value name>"
+Then the typed value "<typed value name>" is not filled in
+*/
+
+Scenario: N19 typed value-DoNotfilled in
+Given the typed value "Autocomplete" is not filled in
+When I do not type and choose "Autocomplete"
+Then the typed value "Autocomplete" is not filled in
+
+Scenario: N20 DoNotfilled in
+Given #"Autocomplete" is not filled in
+When I do not type and choose #"Autocomplete"
+Then #"Autocomplete" is filled in
+
+/*
+Scenario: Autocomplete-filled in
+Given the Autocomplete "<typed value name>" is filled in
+When I type and choose the Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is filled in
+*/
+
+Scenario: N21 Autocomplete-filled in
+Given the Autocomplete "Autocomplete" is filled in
+When I type and choose the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is filled in
+
+Scenario: N22 filled in
+Given #"Autocomplete" is filled in
+When I type and choose #"Autocomplete"
+Then #"Autocomplete" is filled in
+
+/*
+Scenario: Autocomplete-DoNotfilled in
+Given the Autocomplete "<typed value name>" is not filled in
+When I do not type and choose Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is filled in
+*/
+
+Scenario: N23 Autocomplete-filled in
+Given the Autocomplete "Autocomplete" is not filled in
+When I do not type and choose the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is filled in
+
+Scenario: N24 filled in
+Given #"Autocomplete" is not filled in
+When I do not type and choose #"Autocomplete"
+Then #"Autocomplete" is filled in
+
+/*
+Scenario: typed value-filled in
+Given the typed value "<typed value name>" is filled in
+When I type and select "<typed value name>"
+Then the typed value "<typed value name>" is filled in
+*/
+
+Scenario: N25 typed value-filled in
+Given the typed value "Autocomplete" is filled in
+When I type and select "Autocomplete"
+Then the typed value "Autocomplete" is filled in
+
+Scenario: N26 filled in
+Given #"Autocomplete" is filled in
+When I type and select #"Autocomplete"
+Then #"Autocomplete" is filled in
+
+/*
+Scenario: typed value-DoNotfilled in
+Given the typed value "<typed value name>" is not filled in
+When I do not type and select "<typed value name>"
+Then the typed value "<typed value name>" is not filled in
+*/
+
+Scenario: N27 typed value-DoNotfilled in
+Given the typed value "Autocomplete" is not filled in
+When I do not type and select "Autocomplete"
+Then the typed value "Autocomplete" is not filled in
+
+Scenario: N28 DoNotfilled in
+Given #"Autocomplete" is not filled in
+When I do not type and select #"Autocomplete"
+Then #"Autocomplete" is filled in
+
+/*
+Scenario: Autocomplete-filled in
+Given the Autocomplete "<typed value name>" is filled in
+When I type and select the Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is filled in
+*/
+
+Scenario: N29 Autocomplete-filled in
+Given the Autocomplete "Autocomplete" is filled in
+When I type and select the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is filled in
+
+Scenario: N30 filled in
+Given #"Autocomplete" is filled in
+When I type and select #"Autocomplete"
+Then #"Autocomplete" is filled in
+
+/*
+Scenario: Autocomplete-DoNotfilled in
+Given the Autocomplete "<typed value name>" is not filled in
+When I do not type and select Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is filled in
+*/
+
+Scenario: N31 Autocomplete-filled in
+Given the Autocomplete "Autocomplete" is not filled in
+When I do not type and select the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is filled in
+
+Scenario: N32 filled in
+Given #"Autocomplete" is not filled in
+When I do not type and select #"Autocomplete"
+Then #"Autocomplete" is filled in
+
+//Negative Test case
+
+/*
+Scenario: typed value-written
+Given the typed value "<typed value name>" is written
+When I type and choose "<typed value name>"
+Then the typed value "<typed value name>" is written
+*/
+
+Scenario: N1 typed value-written
+Given the typed value "Autocomplete" is written
+When I type and choose "Autocomplete"
+Then the typed value "Autocomplete" is written
+
+Scenario: N2 written
+Given #"Autocomplete" is written
+When I type and choose #"Autocomplete"
+Then #"Autocomplete" is written
+
+/*
+Scenario: typed value-DoNotwritten
+Given the typed value "<typed value name>" is not written
+When I do not type and choose "<typed value name>"
+Then the typed value "<typed value name>" is not written
+*/
+
+Scenario: N3 typed value-DoNotwritten
+Given the typed value "Autocomplete" is not written
+When I do not type and choose "Autocomplete"
+Then the typed value "Autocomplete" is not written
+
+Scenario: N4 DoNotwritten
+Given #"Autocomplete" is not written
+When I do not type and choose #"Autocomplete"
+Then #"Autocomplete" is written
+
+/*
+Scenario: Autocomplete-written
+Given the Autocomplete "<typed value name>" is written
+When I type and choose the Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is written
+*/
+
+Scenario: N5 Autocomplete-written
+Given the Autocomplete "Autocomplete" is written
+When I type and choose the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is written
+
+Scenario: N6 written
+Given #"Autocomplete" is written
+When I type and choose #"Autocomplete"
+Then #"Autocomplete" is written
+
+/*
+Scenario: Autocomplete-DoNotwritten
+Given the Autocomplete "<typed value name>" is not written
+When I do not type and choose Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is written
+*/
+
+Scenario: N7 Autocomplete-written
+Given the Autocomplete "Autocomplete" is not written
+When I do not type and choose the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is written
+
+Scenario: N8 written
+Given #"Autocomplete" is not written
+When I do not type and choose #"Autocomplete"
+Then #"Autocomplete" is written
+
+/*
+Scenario: typed value-written
+Given the typed value "<typed value name>" is written
+When I type and select "<typed value name>"
+Then the typed value "<typed value name>" is written
+*/
+
+Scenario: N9 typed value-written
+Given the typed value "Autocomplete" is written
+When I type and select "Autocomplete"
+Then the typed value "Autocomplete" is written
+
+Scenario: N10 written
+Given #"Autocomplete" is written
+When I type and select #"Autocomplete"
+Then #"Autocomplete" is written
+
+/*
+Scenario: typed value-DoNotwritten
+Given the typed value "<typed value name>" is not written
+When I do not type and select "<typed value name>"
+Then the typed value "<typed value name>" is not written
+*/
+
+Scenario: N11 typed value-DoNotwritten
+Given the typed value "Autocomplete" is not written
+When I do not type and select "Autocomplete"
+Then the typed value "Autocomplete" is not written
+
+Scenario: N12 DoNotwritten
+Given #"Autocomplete" is not written
+When I do not type and select #"Autocomplete"
+Then #"Autocomplete" is written
+
+/*
+Scenario: Autocomplete-written
+Given the Autocomplete "<typed value name>" is written
+When I type and select the Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is written
+*/
+
+Scenario: N13 Autocomplete-written
+Given the Autocomplete "Autocomplete" is written
+When I type and select the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is written
+
+Scenario: N14 written
+Given #"Autocomplete" is written
+When I type and select #"Autocomplete"
+Then #"Autocomplete" is written
+
+/*
+Scenario: Autocomplete-DoNotwritten
+Given the Autocomplete "<typed value name>" is not written
+When I do not type and select Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is written
+*/
+
+Scenario: N15 Autocomplete-written
+Given the Autocomplete "Autocomplete" is not written
+When I do not type and select the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is written
+
+Scenario: N16 written
+Given #"Autocomplete" is not written
+When I do not type and select #"Autocomplete"
+Then #"Autocomplete" is written
+
+/*
+Scenario: typed value-set
+Given the typed value "<typed value name>" is set
+When I write "<typed value name>"
+Then the typed value "<typed value name>" is set
+*/
+
+Scenario: N1 typed value-set
+Given the typed value "Autocomplete" is set
+When I write "Autocomplete"
+Then the typed value "Autocomplete" is set
+
+Scenario: N2 set
+Given #"Autocomplete" is set
+When I write #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: typed value-DoNotset
+Given the typed value "<typed value name>" is not set
+When I do not write "<typed value name>"
+Then the typed value "<typed value name>" is not set
+*/
+
+Scenario: N3 typed value-DoNotset
+Given the typed value "Autocomplete" is not set
+When I do not write "Autocomplete"
+Then the typed value "Autocomplete" is not set
+
+Scenario: N4 DoNotset
+Given #"Autocomplete" is not set
+When I do not write #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: Autocomplete-set
+Given the Autocomplete "<typed value name>" is set
+When I write the Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is set
+*/
+
+Scenario: N5 Autocomplete-set
+Given the Autocomplete "Autocomplete" is set
+When I write the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is set
+
+Scenario: N6 set
+Given #"Autocomplete" is set
+When I write #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: Autocomplete-DoNotset
+Given the Autocomplete "<typed value name>" is not set
+When I do not write Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is set
+*/
+
+Scenario: N7 Autocomplete-set
+Given the Autocomplete "Autocomplete" is not set
+When I do not write the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is set
+
+Scenario: N8 set
+Given #"Autocomplete" is not set
+When I do not write #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: typed value-set
+Given the typed value "<typed value name>" is set
+When I write "<typed value name>"
+Then the typed value "<typed value name>" is set
+*/
+
+Scenario: N9 typed value-set
+Given the typed value "Autocomplete" is set
+When I write "Autocomplete"
+Then the typed value "Autocomplete" is set
+
+Scenario: N10 set
+Given #"Autocomplete" is set
+When I write #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: typed value-DoNotset
+Given the typed value "<typed value name>" is not set
+When I do not write "<typed value name>"
+Then the typed value "<typed value name>" is not set
+*/
+
+Scenario: N11 typed value-DoNotset
+Given the typed value "Autocomplete" is not set
+When I do not write "Autocomplete"
+Then the typed value "Autocomplete" is not set
+
+Scenario: N12 DoNotset
+Given #"Autocomplete" is not set
+When I do not write #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: Autocomplete-set
+Given the Autocomplete "<typed value name>" is set
+When I write the Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is set
+*/
+
+Scenario: N13 Autocomplete-set
+Given the Autocomplete "Autocomplete" is set
+When I write the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is set
+
+Scenario: N14 set
+Given #"Autocomplete" is set
+When I write #"Autocomplete"
+Then #"Autocomplete" is set
+
+/*
+Scenario: Autocomplete-DoNotset
+Given the Autocomplete "<typed value name>" is not set
+When I do not write Autocomplete "<typed value name>"
+Then the Autocomplete "<typed value name>" is set
+*/
+
+Scenario: N15 Autocomplete-set
+Given the Autocomplete "Autocomplete" is not set
+When I do not write the Autocomplete "Autocomplete"
+Then the Autocomplete "Autocomplete" is set
+
+Scenario: N16 set
+Given #"Autocomplete" is not set
+When I do not write #"Autocomplete"
+Then #"Autocomplete" is set

@@ -1,0 +1,882 @@
+model TimePicker using widgets
+/*
+Scenario: time-select
+Given the time "<timename>" is unselected
+When I select the time "<timename>"
+Then the time "<timename>" is selected
+*/
+
+Scenario: N1 time-select
+Given the time "time of TimePicker" is unselected
+When I select the time "time of TimePicker"
+Then the time "time of TimePicker" is selected
+
+Scenario: N2 select
+Given #"time of TimePicker" is unselected
+When I select #"time of TimePicker"
+Then #"time of TimePicker" is selected
+
+/*
+Scenario: time-DoNotselect
+Given the time "<timename>" is not selected
+When I do not select the time "<timename>"
+Then the time "<timename>" is unselected
+*/
+
+Scenario: N3 time-DoNotselect
+Given the time "time of TimePicker" is not selected
+When I do not select the time "time of TimePicker"
+Then the time "time of TimePicker" is unselected
+
+Scenario: N4 DoNotselect
+Given #"time of TimePicker" is not selected
+When I do not select #"time of TimePicker"
+Then #"time of TimePicker" is unselected
+
+/*
+Scenario: TimePicker-select
+Given the TimePicker "<timename>" is unselected
+When I select the TimePicker "<timename>"
+Then the TimePicker "<timename>" is selected
+*/
+
+Scenario: N5 TimePicker-select
+Given the TimePicker "time of TimePicker" is unselected
+When I select the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is selected
+
+Scenario: N6 select
+Given #"time of TimePicker" is unselected
+When I select #"time of TimePicker"
+Then #"time of TimePicker" is selected
+
+/*
+Scenario: TimePicker-DoNotselect
+Given the TimePicker "<timename>" is not selected
+When I do not select the TimePicker "<timename>"
+Then the TimePicker "<timename>" is unselected
+*/
+
+Scenario: N7 TimePicker-select
+Given the TimePicker "time of TimePicker" is not selected
+When I do not select the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is unselected
+
+Scenario: N8 select
+Given #"time of TimePicker" is not selected
+When I do not select #"time of TimePicker"
+Then #"time of TimePicker" is unselected
+
+/*
+Scenario: time-choose
+Given the time "<timename>" is not chosen
+When I choose the time "<timename>"
+Then the time "<timename>" is chosen
+*/
+
+Scenario: N9 time-choose
+Given the time "time of TimePicker" is not chosen
+When I choose the time "time of TimePicker"
+Then the time "time of TimePicker" is chosen
+
+Scenario: N10 choose
+Given #"time of TimePicker" is not chosen
+When I choose #"time of TimePicker"
+Then #"time of TimePicker" is chosen
+
+/*
+Scenario: time-DoNotchoose
+Given the time "<timename>" is not chosen
+When I do not choose the time "<timename>"
+Then the time "<timename>" is not chosen
+*/
+
+Scenario: N11 time-DoNotchoose
+Given the time "time of TimePicker" is not chosen
+When I do not choose the time "time of TimePicker"
+Then the time "time of TimePicker" is not chosen
+
+Scenario: N12 DoNotchoose
+Given #"time of TimePicker" is not chosen
+When I do not choose #"time of TimePicker"
+Then #"time of TimePicker" is not chosen
+
+/*
+Scenario: TimePicker-choose
+Given the TimePicker "<timename>" is not chosen
+When I choose the TimePicker "<timename>"
+Then the TimePicker "<timename>" is chosen
+*/
+
+Scenario: N13 TimePicker-choose
+Given the TimePicker "time of TimePicker" is not chosen
+When I choose the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is chosen
+
+Scenario: N14 choose
+Given #"time of TimePicker" is not chosen
+When I choose #"time of TimePicker"
+Then #"time of TimePicker" is chosen
+
+/*
+Scenario: TimePicker-DoNotchoose
+Given the TimePicker "<timename>" is not chosen
+When I do not choose the TimePicker "<timename>"
+Then the TimePicker "<timename>" is not chosen
+*/
+
+Scenario: N15 TimePicker-choose
+Given the TimePicker "time of TimePicker" is not chosen
+When I do not choose the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is not chosen
+
+Scenario: N16 choose
+Given #"time of TimePicker" is not chosen
+When I do not choose #"time of TimePicker"
+Then #"time of TimePicker" is not chosen
+
+/*
+Scenario: time-pick
+Given the time "<timename>" is not picked
+When I pick the time "<timename>"
+Then the time "<timename>" is picked
+*/
+
+Scenario: N17 time-pick
+Given the time "time of TimePicker" is not picked
+When I pick the time "time of TimePicker"
+Then the time "time of TimePicker" is picked
+
+Scenario: N18 pick
+Given #"time of TimePicker" is not picked
+When I pick #"time of TimePicker"
+Then #"time of TimePicker" is picked
+
+/*
+Scenario: time-DoNotpick
+Given the time "<timename>" is not picked
+When I do not picked the time "<timename>"
+Then the time "<timename>" is not picked
+*/
+
+Scenario: N19 time-DoNotpick
+Given the time "time of TimePicker" is not picked
+When I do not pick the time "time of TimePicker"
+Then the time "time of TimePicker" is not picked
+
+Scenario: N20 DoNotpick
+Given #"time of TimePicker" is not picked
+When I do not pick #"time of TimePicker"
+Then #"time of TimePicker" is not picked
+
+/*
+Scenario: TimePicker-pick
+Given the TimePicker "<timename>" is not picked
+When I pick the TimePicker "<timename>"
+Then the TimePicker "<timename>" is picked
+*/
+
+Scenario: N21 TimePicker-pick
+Given the TimePicker "time of TimePicker" is not picked
+When I pick the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is picked
+
+Scenario: N22 pick
+Given #"time of TimePicker" is not picked
+When I pick #"time of TimePicker"
+Then #"time of TimePicker" is picked
+
+/*
+Scenario: TimePicker-DoNotpick
+Given the TimePicker "<timename>" is not picked
+When I do not picked the TimePicker "<timename>"
+Then the TimePicker "<timename>" is not picked
+*/
+
+Scenario: N23 TimePicker-pick
+Given the TimePicker "time of TimePicker" is not picked
+When I do not pick the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is not picked
+
+Scenario: N24 pick
+Given #"time of TimePicker" is not picked
+When I do not pick #"time of TimePicker"
+Then #"time of TimePicker" is not picked
+
+/*
+Scenario: time-set
+Given the time "<timename>" is not set
+When I set the time "<timename>"
+Then the time "<timename>" is set
+*/
+
+Scenario: N25 time-set
+Given the time "time of TimePicker" is not set
+When I set the time "time of TimePicker"
+Then the time "time of TimePicker" is set
+
+Scenario: N26 set
+Given #"time of TimePicker" is not set
+When I set #"time of TimePicker"
+Then #"time of TimePicker" is set
+
+/*
+Scenario: time-DoNotset
+Given the time "<timename>" is not set
+When I do not set the time "<timename>"
+Then the time "<timename>" is not set
+*/
+
+Scenario: N27 time-DoNotset
+Given the time "time of TimePicker" is not set
+When I do not set the time "time of TimePicker"
+Then the time "time of TimePicker" is not set
+
+Scenario: N28 DoNotset
+Given #"time of TimePicker" is not set
+When I do not set #"time of TimePicker"
+Then #"time of TimePicker" is not set
+
+/*
+Scenario: TimePicker-set
+Given the TimePicker "<timename>" is not set
+When I set the TimePicker "<timename>"
+Then the TimePicker "<timename>" is set
+*/
+
+Scenario: N29 TimePicker-set
+Given the TimePicker "time of TimePicker" is not set
+When I set the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is set
+
+Scenario: N30 set
+Given #"time of TimePicker" is not set
+When I set #"time of TimePicker"
+Then #"time of TimePicker" is set
+
+/*
+Scenario: TimePicker-DoNotset
+Given the TimePicker "<timename>" is not set
+When I do not set the TimePicker "<timename>"
+Then the TimePicker "<timename>" is not set
+*/
+
+Scenario: N31 TimePicker-set
+Given the TimePicker "time of TimePicker" is not set
+When I do not set the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is not set
+
+Scenario: N32 set
+Given #"time of TimePicker" is not set
+When I do not set #"time of TimePicker"
+Then #"time of TimePicker" is not set
+
+/*
+Scenario: Field-time-select
+Given the time "<time>" for the field "<fieldname>" is not selected
+When I select the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is selected
+*/
+
+Scenario: N33 Field-time-select
+Given the time "Time" for the field "Time Picker" is not selected
+When I select the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is selected
+
+Scenario: N34 time-select
+Given the time "Time" for #"Time Picker" is not selected
+When I select the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is selected
+
+Scenario: N35 Field-select
+Given #"Time" for the field "Time Picker" is not selected
+When I select #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is selected
+
+Scenario: N36 select
+Given #"Time" for #"Time Picker" is not selected
+When I select #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is selected
+
+/*
+Scenario: Field-time-DoNotselect
+Given the time "<time>" for the field "<fieldname>" is not selected
+When I do not select the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is not selected
+*/
+
+Scenario: N37 Field-time-DoNotselect
+Given the time "Time" for the field "Time Picker" is not selected
+When I do not select the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is not selected
+
+Scenario: N38 time-DoNotselect
+Given the time "Time" for #"Time Picker" is not selected
+When I do not select the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not selected
+
+Scenario: N39 Field-DoNotselect
+Given #"Time" for the field "Time Picker" is not selected
+When I do not select #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is not selected
+
+Scenario: N40 DoNotselect
+Given #"Time" for #"Time Picker" is not selected
+When I do not select #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not selected
+
+/*
+Scenario: Field-time-choose
+Given the time "<time>" for the field "<fieldname>" is not chosen
+When I choose the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is chosen
+*/
+
+Scenario: N41 Field-time-choose
+Given the time "Time" for the field "Time Picker" is not chosen
+When I choose the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is chosen
+
+Scenario: N42 time-choose
+Given the time "Time" for #"Time Picker" is not chosen
+When I choose the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is chosen
+
+Scenario: N43 Field-choose
+Given #"Time" for the field "Time Picker" is not chosen
+When I choose #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is chosen
+
+Scenario: N44 choose
+Given #"Time" for #"Time Picker" is not chosen
+When I choose #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is chosen
+
+/*
+Scenario: Field-time-DoNotchoose
+Given the time "<time>" for the field "<fieldname>" is not chosen
+When I do not choose the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is not chosen
+*/
+
+Scenario: N45 Field-time-DoNotchoose
+Given the time "Time" for the field "Time Picker" is not chosen
+When I do not choose the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is not chosen
+
+Scenario: N46 time-DoNotchoose
+Given the time "Time" for #"Time Picker" is not chosen
+When I do not choose the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not chosen
+
+Scenario: N47 Field-DoNotchoose
+Given #"Time" for the field "Time Picker" is not chosen
+When I do not choose #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is not chosen
+
+Scenario: N48 DoNotchoose
+Given #"Time" for #"Time Picker" is not chosen
+When I do not choose #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not chosen
+
+/*
+Scenario: Field-time-pick
+Given the time "<time>" for the field "<fieldname>" is not picked
+When I pick the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is picked
+*/
+
+Scenario: N49 Field-time-pick
+Given the time "Time" for the field "Time Picker" is not picked
+When I pick the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is picked
+
+Scenario: N50 time-pick
+Given the time "Time" for #"Time Picker" is not picked
+When I pick the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is picked
+
+Scenario: N51 Field-pick
+Given #"Time" for the field "Time Picker" is not picked
+When I pick #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is picked
+
+Scenario: N52 pick
+Given #"Time" for #"Time Picker" is not picked
+When I pick #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is picked
+
+/*
+Scenario: Field-time-DoNotpick
+Given the time "<time>" for the field "<fieldname>" is not picked
+When I do not pick the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is not picked
+*/
+
+Scenario: N53 Field-time-DoNotpick
+Given the time "Time" for the field "Time Picker" is not picked
+When I do not pick the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is not picked
+
+Scenario: N54 time-DoNotpick
+Given the time "Time" for #"Time Picker" is not picked
+When I do not pick the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not picked
+
+Scenario: N55 Field-DoNotpick
+Given #"Time" for the field "Time Picker" is not picked
+When I do not pick #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is not picked
+
+Scenario: N56 DoNotpick
+Given #"Time" for #"Time Picker" is not picked
+When I do not pick #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not picked
+
+/*
+Scenario: Field-time-set
+Given the time "<time>" for the field "<fieldname>" is not set
+When I set the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is set
+*/
+
+Scenario: N57 Field-time-set
+Given the time "Time" for the field "Time Picker" is not set
+When I set the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is set
+
+Scenario: N58 time-set
+Given the time "Time" for #"Time Picker" is not set
+When I set the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is set
+
+Scenario: N59 Field-set
+Given #"Time" for the field "Time Picker" is not set
+When I set #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is set
+
+Scenario: N60 set
+Given #"Time" for #"Time Picker" is not set
+When I set #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is set
+
+/*
+Scenario: Field-time-DoNotset
+Given the time "<time>" for the field "<fieldname>" is not set
+When I do not set the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is not set
+*/
+
+Scenario: N61 Field-time-DoNotset
+Given the time "Time" for the field "Time Picker" is not set
+When I do not set the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is not set
+
+Scenario: N62 time-DoNotset
+Given the time "Time" for #"Time Picker" is not set
+When I do not set the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not set
+
+Scenario: N63 Field-DoNotset
+Given #"Time" for the field "Time Picker" is not set
+When I do not set #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is not set
+
+Scenario: N64 DoNotset
+Given #"Time" for #"Time Picker" is not set
+When I do not set #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not set
+
+/*
+Scenario: TimePicker-time-select
+Given the time "<time>" for the TimePicker "<fieldname>" is not selected
+When I select the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is selected
+*/
+
+Scenario: N65 TimePicker-time-select
+Given the time "Time" for the TimePicker "Time Picker" is not selected
+When I select the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is selected
+
+Scenario: N66 time-select
+Given the time "Time" for #"Time Picker" is not selected
+When I select the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is selected
+
+Scenario: N67 TimePicker-select
+Given #"Time" for the TimePicker "Time Picker" is not selected
+When I select #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is selected
+
+Scenario: N68 select
+Given #"Time" for #"Time Picker" is not selected
+When I select #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is selected
+
+/*
+Scenario: TimePicker-time-DoNotselect
+Given the time "<time>" for the TimePicker "<fieldname>" is not selected
+When I do not select the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is not selected
+*/
+
+Scenario: N69 TimePicker-time-DoNotselect
+Given the time "Time" for the TimePicker "Time Picker" is not selected
+When I do not select the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is not selected
+
+Scenario: N70 time-DoNotselect
+Given the time "Time" for #"Time Picker" is not selected
+When I do not select the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not selected
+
+Scenario: N71 TimePicker-DoNotselect
+Given #"Time" for the TimePicker "Time Picker" is not selected
+When I do not select #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is not selected
+
+Scenario: N72 DoNotselect
+Given #"Time" for #"Time Picker" is not selected
+When I do not select #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not selected
+
+/*
+Scenario: TimePicker-time-choose
+Given the time "<time>" for the TimePicker "<fieldname>" is not chosen
+When I choose the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is chosen
+*/
+
+Scenario: N73 TimePicker-time-choose
+Given the time "Time" for the TimePicker "Time Picker" is not chosen
+When I choose the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is chosen
+
+Scenario: N74 time-choose
+Given the time "Time" for #"Time Picker" is not chosen
+When I choose the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is chosen
+
+Scenario: N75 TimePicker-choose
+Given #"Time" for the TimePicker "Time Picker" is not chosen
+When I choose #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is chosen
+
+Scenario: N76 choose
+Given #"Time" for #"Time Picker" is not chosen
+When I choose #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is chosen
+
+/*
+Scenario: TimePicker-time-DoNotchoose
+Given the time "<time>" for the TimePicker "<fieldname>" is not chosen
+When I do not choose the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is not chosen
+*/
+
+Scenario: N77 TimePicker-time-DoNotchoose
+Given the time "Time" for the TimePicker "Time Picker" is not chosen
+When I do not choose the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is not chosen
+
+Scenario: N78 time-DoNotchoose
+Given the time "Time" for #"Time Picker" is not chosen
+When I do not choose the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not chosen
+
+Scenario: N79 TimePicker-DoNotchoose
+Given #"Time" for the TimePicker "Time Picker" is not chosen
+When I do not choose #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is not chosen
+
+Scenario: N80 DoNotchoose
+Given #"Time" for #"Time Picker" is not chosen
+When I do not choose #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not chosen
+
+/*
+Scenario: TimePicker-time-pick
+Given the time "<time>" for the TimePicker "<fieldname>" is not picked
+When I pick the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is picked
+*/
+
+Scenario: N81 TimePicker-time-pick
+Given the time "Time" for the TimePicker "Time Picker" is not picked
+When I pick the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is picked
+
+Scenario: N82 time-pick
+Given the time "Time" for #"Time Picker" is not picked
+When I pick the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is picked
+
+Scenario: N83 TimePicker-pick
+Given #"Time" for the TimePicker "Time Picker" is not picked
+When I pick #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is picked
+
+Scenario: N84 pick
+Given #"Time" for #"Time Picker" is not picked
+When I pick #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is picked
+
+/*
+Scenario: TimePicker-time-DoNotpick
+Given the time "<time>" for the TimePicker "<fieldname>" is not picked
+When I do not pick the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is not picked
+*/
+
+Scenario: N85 TimePicker-time-DoNotpick
+Given the time "Time" for the TimePicker "Time Picker" is not picked
+When I do not pick the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is not picked
+
+Scenario: N86 time-DoNotpick
+Given the time "Time" for #"Time Picker" is not picked
+When I do not pick the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not picked
+
+Scenario: N87 TimePicker-DoNotpick
+Given #"Time" for the TimePicker "Time Picker" is not picked
+When I do not pick #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is not picked
+
+Scenario: N88 DoNotpick
+Given #"Time" for #"Time Picker" is not picked
+When I do not pick #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not picked
+
+/*
+Scenario: TimePicker-time-set
+Given the time "<time>" for the TimePicker "<fieldname>" is not set
+When I set the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is set
+*/
+
+Scenario: N89 TimePicker-time-set
+Given the time "Time" for the TimePicker "Time Picker" is not set
+When I set the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is set
+
+Scenario: N90 time-set
+Given the time "Time" for #"Time Picker" is not set
+When I set the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is set
+
+Scenario: N91 TimePicker-set
+Given #"Time" for the TimePicker "Time Picker" is not set
+When I set #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is set
+
+Scenario: N92 set
+Given #"Time" for #"Time Picker" is not set
+When I set #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is set
+
+/*
+Scenario: TimePicker-time-DoNotset
+Given the time "<time>" for the TimePicker "<fieldname>" is not set
+When I do not set the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is not set
+*/
+
+Scenario: N93 TimePicker-time-DoNotset
+Given the time "Time" for the TimePicker "Time Picker" is not set
+When I do not set the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is not set
+
+Scenario: N94 time-DoNotset
+Given the time "Time" for #"Time Picker" is not set
+When I do not set the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not set
+
+Scenario: N95 TimePicker-DoNotset
+Given #"Time" for the TimePicker "Time Picker" is not set
+When I do not set #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is not set
+
+Scenario: N96 DoNotset
+Given #"Time" for #"Time Picker" is not set
+When I do not set #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not set
+
+//Negative Test cases
+
+/*
+Scenario: time-remove
+Given the time "<timename>" is not removed
+When I remove the time "<timename>"
+Then the time "<timename>" is removed
+*/
+
+Scenario: N1 time-remove
+Given the time "time of TimePicker" is not removed
+When I remove the time "time of TimePicker"
+Then the time "time of TimePicker" is removed
+
+Scenario: N2 remove
+Given #"time of TimePicker" is not removed
+When I remove #"time of TimePicker"
+Then #"time of TimePicker" is removed
+
+/*
+Scenario: time-DoNotremove
+Given the time "<timename>" is not removed
+When I do not removed the time "<timename>"
+Then the time "<timename>" is not removed
+*/
+
+Scenario: N3 time-DoNotremove
+Given the time "time of TimePicker" is not removed
+When I do not removed the time "time of TimePicker"
+Then the time "time of TimePicker" is not removed
+
+Scenario: N4 DoNotremove
+Given #"time of TimePicker" is not removed
+When I do not removed #"time of TimePicker"
+Then #"time of TimePicker" is not removed
+
+/*
+Scenario: TimePicker-remove
+Given the TimePicker "<timename>" is not removed
+When I remove the TimePicker "<timename>"
+Then the TimePicker "<timename>" is removed
+*/
+
+Scenario: N5 TimePicker-remove
+Given the TimePicker "time of TimePicker" is not removed
+When I remove the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is removed
+
+Scenario: N6 remove
+Given #"time of TimePicker" is not removed
+When I remove #"time of TimePicker"
+Then #"time of TimePicker" is removed
+
+/*
+Scenario: TimePicker-DoNotremove
+Given the TimePicker "<timename>" is not removed
+When I do not removed the TimePicker "<timename>"
+Then the TimePicker "<timename>" is not removed
+*/
+
+Scenario: N7 TimePicker-remove
+Given the TimePicker "time of TimePicker" is not removed
+When I do not removed the TimePicker "time of TimePicker"
+Then the TimePicker "time of TimePicker" is not removed
+
+Scenario: N8 remove
+Given #"time of TimePicker" is not removed
+When I do not removed #"time of TimePicker"
+Then #"time of TimePicker" is not removed
+
+/*
+Scenario: Field-time-remove
+Given the time "<time>" for the field "<fieldname>" is not removed
+When I remove the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is removed
+*/
+
+Scenario: N9 Field-time-remove
+Given the time "Time" for the field "Time Picker" is not removed
+When I remove the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is removed
+
+Scenario: N10 time-remove
+Given the time "Time" for #"Time Picker" is not removed
+When I remove the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is removed
+
+Scenario: N11 Field-remove
+Given #"Time" for the field "Time Picker" is not removed
+When I remove #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is removed
+
+Scenario: N12 remove
+Given #"Time" for #"Time Picker" is not removed
+When I remove #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is removed
+
+/*
+Scenario: Field-time-DoNotremove
+Given the time "<time>" for the field "<fieldname>" is not removed
+When I do not removed the time "<time>" for the field "<fieldname>"
+Then the time "<time>" for the field "<fieldname>" is not removed
+*/
+
+Scenario: N13 Field-time-DoNotremove
+Given the time "Time" for the field "Time Picker" is not removed
+When I do not removed the time "Time" for the field "Time Picker"
+Then the time "Time" for the field "Time Picker" is not removed
+
+Scenario: N14 time-DoNotremove
+Given the time "Time" for #"Time Picker" is not removed
+When I do not removed the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not removed
+
+Scenario: N15 Field-DoNotremove
+Given #"Time" for the field "Time Picker" is not removed
+When I do not removed #"Time" for the field "Time Picker"
+Then #"Time" for the field "Time Picker" is not removed
+
+Scenario: N16 DoNotremove
+Given #"Time" for #"Time Picker" is not removed
+When I do not removed #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not removed
+
+/*
+Scenario: TimePicker-time-remove
+Given the time "<time>" for the TimePicker "<fieldname>" is not removed
+When I remove the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is removed
+*/
+
+Scenario: N17 TimePicker-time-remove
+Given the time "Time" for the TimePicker "Time Picker" is not removed
+When I remove the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is removed
+
+Scenario: N18 time-remove
+Given the time "Time" for #"Time Picker" is not removed
+When I remove the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is removed
+
+Scenario: N19 TimePicker-remove
+Given #"Time" for the TimePicker "Time Picker" is not removed
+When I remove #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is removed
+
+Scenario: N20 remove
+Given #"Time" for #"Time Picker" is not removed
+When I remove #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is removed
+
+/*
+Scenario: TimePicker-time-DoNotremove
+Given the time "<time>" for the TimePicker "<fieldname>" is not removed
+When I do not removed the time "<time>" for the TimePicker "<fieldname>"
+Then the time "<time>" for the TimePicker "<fieldname>" is not removed
+*/
+
+Scenario: N21 TimePicker-time-DoNotremove
+Given the time "Time" for the TimePicker "Time Picker" is not removed
+When I do not removed the time "Time" for the TimePicker "Time Picker"
+Then the time "Time" for the TimePicker "Time Picker" is not removed
+
+Scenario: N22 time-DoNotremove
+Given the time "Time" for #"Time Picker" is not removed
+When I do not removed the time "Time" for #"Time Picker"
+Then the time "Time" for #"Time Picker" is not removed
+
+Scenario: N23 TimePicker-DoNotremove
+Given #"Time" for the TimePicker "Time Picker" is not removed
+When I do not removed #"Time" for the TimePicker "Time Picker"
+Then #"Time" for the TimePicker "Time Picker" is not removed
+
+Scenario: N24 DoNotremove
+Given #"Time" for #"Time Picker" is not removed
+When I do not removed #"Time" for #"Time Picker"
+Then #"Time" for #"Time Picker" is not removed

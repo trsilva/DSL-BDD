@@ -1,0 +1,1406 @@
+model VideoPlayer using widgets
+/*
+Scenario: video-play
+Given the video "<Bat Man>" is not played
+When I play the video "<Bat Man>"
+Then the video "<Bat Man>" is played
+*/
+
+Scenario: N1 video-play
+Given the video "Bat Man" is not played
+When I play the video "Bat Man"
+Then the video "Bat Man" is played
+
+Scenario: N2 play
+Given #"Bat Man" is not played
+When I play #"Bat Man"
+Then #"Bat Man" is played
+
+/*
+Scenario: video-DoNotplay
+Given the video "<Bat Man>" is not played
+When I do not play the video "<Bat Man>"
+Then the video "<Bat Man>" is not played
+*/
+
+Scenario: N3 video-DoNotplay
+Given the video "Bat Man" is not played
+When I do not play the video "Bat Man"
+Then the video "Bat Man" is not played
+
+Scenario: N4 DoNotplay
+Given #"Bat Man" is not played
+When I do not play #"Bat Man"
+Then #"Bat Man" is not played
+
+/*
+Scenario: VideoPlayer-play
+Given the VideoPlayer "<Bat Man>" is not played
+When I play the VideoPlayer "<Bat Man>"
+Then the VideoPlayer "<Bat Man>" is played
+*/
+
+Scenario: N5 VideoPlayer-play
+Given the VideoPlayer "Bat Man" is not played
+When I play the VideoPlayer "Bat Man"
+Then the VideoPlayer "Bat Man" is played
+
+Scenario: N6 play
+Given #"Bat Man" is not played
+When I play #"Bat Man"
+Then #"Bat Man" is played
+
+/*
+Scenario: VideoPlayer-DoNotplay
+Given the VideoPlayer "<Bat Man>" is not played
+When I do not play the VideoPlayer "<Bat Man>"
+Then the VideoPlayer "<Bat Man>" is not played
+*/
+
+Scenario: N7 VideoPlayer-play
+Given the VideoPlayer "Bat Man" is not played
+When I do not play the VideoPlayer "Bat Man"
+Then the VideoPlayer "Bat Man" is not played
+
+Scenario: N8 play
+Given #"Bat Man" is not played
+When I do not play #"Bat Man"
+Then #"Bat Man" is not played
+
+/*
+Scenario: video-pause
+Given the video "<Bat Man>" is not paused
+When I pause the video "<Bat Man>"
+Then the video "<Bat Man>" is paused
+*/
+
+Scenario: N9 video-pause
+Given the video "Bat Man" is not paused
+When I pause the video "Bat Man"
+Then the video "Bat Man" is paused
+
+Scenario: N10 pause
+Given #"Bat Man" is not paused
+When I pause #"Bat Man"
+Then #"Bat Man" is paused
+
+/*
+Scenario: video-DoNotpause
+Given the video "<Bat Man>" is not paused
+When I do not pause the video "<Bat Man>"
+Then the video "<Bat Man>" is not paused
+*/
+
+Scenario: N11 video-DoNotpause
+Given the video "Bat Man" is not paused
+When I do not pause the video "Bat Man"
+Then the video "Bat Man" is not paused
+
+Scenario: N12 DoNotpause
+Given #"Bat Man" is not paused
+When I do not pause #"Bat Man"
+Then #"Bat Man" is not paused
+
+/*
+Scenario: VideoPlayer-pause
+Given the VideoPlayer "<Bat Man>" is not paused
+When I pause the VideoPlayer "<Bat Man>"
+Then the VideoPlayer "<Bat Man>" is paused
+*/
+
+Scenario: N13 VideoPlayer-pause
+Given the VideoPlayer "Bat Man" is not paused
+When I pause the VideoPlayer "Bat Man"
+Then the VideoPlayer "Bat Man" is paused
+
+Scenario: N14 pause
+Given #"Bat Man" is not paused
+When I pause #"Bat Man"
+Then #"Bat Man" is paused
+
+/*
+Scenario: VideoPlayer-DoNotpause
+Given the VideoPlayer "<Bat Man>" is not paused
+When I do not pause the VideoPlayer "<Bat Man>"
+Then the VideoPlayer "<Bat Man>" is not paused
+*/
+
+Scenario: N15 VideoPlayer-pause
+Given the VideoPlayer "Bat Man" is not paused
+When I do not pause the VideoPlayer "Bat Man"
+Then the VideoPlayer "Bat Man" is not paused
+
+Scenario: N16 pause
+Given #"Bat Man" is not paused
+When I do not pause #"Bat Man"
+Then #"Bat Man" is not paused
+
+/*
+Scenario: video-fast forward
+Given the video "<Bat Man>" is not fast forwarded
+When I fast forward the video "<Bat Man>"
+Then the video "<Bat Man>" is fast forwarded
+*/
+
+Scenario: N17 video-fast forward
+Given the video "Bat Man" is not fast forwarded
+When I fast forward the video "Bat Man"
+Then the video "Bat Man" is fast forwarded
+
+Scenario: N18 fast forward
+Given #"Bat Man" is not fast forwarded
+When I fast forward #"Bat Man"
+Then #"Bat Man" is fast forwarded
+
+/*
+Scenario: video-DoNotfast forward
+Given the video "<Bat Man>" is not fast forwarded
+When I do not fast forward the video "<Bat Man>"
+Then the video "<Bat Man>" is not fast forwarded
+*/
+
+Scenario: N19 video-DoNotfast forward
+Given the video "Bat Man" is not fast forwarded
+When I do not fast forward the video "Bat Man"
+Then the video "Bat Man" is not fast forwarded
+
+Scenario: N20 DoNotfast forward
+Given #"Bat Man" is not fast forwarded
+When I do not fast forward #"Bat Man"
+Then #"Bat Man" is not fast forwarded
+
+/*
+Scenario: VideoPlayer-fast forward
+Given the VideoPlayer "<Bat Man>" is not fast forwarded
+When I fast forward the VideoPlayer "<Bat Man>"
+Then the VideoPlayer "<Bat Man>" is fast forwarded
+*/
+
+Scenario: N21 VideoPlayer-fast forward
+Given the VideoPlayer "Bat Man" is not fast forwarded
+When I fast forward the VideoPlayer "Bat Man"
+Then the VideoPlayer "Bat Man" is fast forwarded
+
+Scenario: N22 fast forward
+Given #"Bat Man" is not fast forwarded
+When I fast forward #"Bat Man"
+Then #"Bat Man" is fast forwarded
+
+/*
+Scenario: VideoPlayer-DoNotfast forward
+Given the VideoPlayer "<Bat Man>" is not fast forwarded
+When I do not fast forward the VideoPlayer "<Bat Man>"
+Then the VideoPlayer "<Bat Man>" is not fast forwarded
+*/
+
+Scenario: N23 VideoPlayer-fast forward
+Given the VideoPlayer "Bat Man" is not fast forwarded
+When I do not fast forward the VideoPlayer "Bat Man"
+Then the VideoPlayer "Bat Man" is not fast forwarded
+
+Scenario: N24 fast forward
+Given #"Bat Man" is not fast forwarded
+When I do not fast forward #"Bat Man"
+Then #"Bat Man" is not fast forwarded
+
+/*
+Scenario: video-rewind
+Given the video "<Bat Man>" is not rewound
+When I rewind the video "<Bat Man>"
+Then the video "<Bat Man>" rewound
+*/
+
+Scenario: N25 video-rewind
+Given the video "Bat Man" is not rewound
+When I rewind the video "Bat Man"
+Then the video "Bat Man" rewound
+
+Scenario: N26 rewind
+Given #"Bat Man" is not rewound
+When I rewind #"Bat Man"
+Then #"Bat Man" rewound
+
+/*
+Scenario: video-DoNotrewind
+Given the video "<Bat Man>" is not rewound
+When I do not rewound the video "<Bat Man>"
+Then the video "<Bat Man>" is not rewound
+*/
+
+Scenario: N27 video-DoNotrewind
+Given the video "Bat Man" is not rewound
+When I do not rewound the video "Bat Man"
+Then the video "Bat Man" is not rewound
+
+Scenario: N28 DoNotrewind
+Given #"Bat Man" is not rewound
+When I do not rewound #"Bat Man"
+Then #"Bat Man" is not rewound
+
+/*
+Scenario: VideoPlayer-rewind
+Given the VideoPlayer "<Bat Man>" is not rewound
+When I rewind the VideoPlayer "<Bat Man>"
+Then the VideoPlayer "<Bat Man>" rewound
+*/
+
+Scenario: N29 VideoPlayer-rewind
+Given the VideoPlayer "Bat Man" is not rewound
+When I rewind the VideoPlayer "Bat Man"
+Then the VideoPlayer "Bat Man" rewound
+
+Scenario: N30 rewind
+Given #"Bat Man" is not rewound
+When I rewind #"Bat Man"
+Then #"Bat Man" rewound
+
+/*
+Scenario: VideoPlayer-DoNotrewind
+Given the VideoPlayer "<Bat Man>" is not rewound
+When I do not rewound the VideoPlayer "<Bat Man>"
+Then the VideoPlayer "<Bat Man>" is not rewound
+*/
+
+Scenario: N31 VideoPlayer-rewind
+Given the VideoPlayer "Bat Man" is not rewound
+When I do not rewound the VideoPlayer "Bat Man"
+Then the VideoPlayer "Bat Man" is not rewound
+
+Scenario: N32 rewind
+Given #"Bat Man" is not rewound
+When I do not rewound #"Bat Man"
+Then #"Bat Man" is not rewound
+
+/*
+Scenario: Field-video-play
+Given the video "<video>" for the field "<fieldname>" is not played
+When I play the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is played
+*/
+
+Scenario: N33 Field-video-play
+Given the video "Bat Man" for the field "Super hero videos" is not played
+When I play the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is played
+
+Scenario: N34 video-play
+Given the video "Bat Man" for #"Super hero videos" is not played
+When I play the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is played
+
+Scenario: N35 Field-play
+Given #"Bat Man" for the field "Super hero videos" is not played
+When I play #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is played
+
+Scenario: N36 play
+Given #"Bat Man" for #"Super hero videos" is not played
+When I play #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is played
+
+/*
+Scenario: Field-video-DoNotplay
+Given the video "<video>" for the field "<fieldname>" is not played
+When I do not play the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is not played
+*/
+
+Scenario: N37 Field-video-DoNotplay
+Given the video "Bat Man" for the field "Super hero videos" is not played
+When I do not play the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is not played
+
+Scenario: N38 video-DoNotplay
+Given the video "Bat Man" for #"Super hero videos" is not played
+When I do not play the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not played
+
+Scenario: N39 Field-DoNotplay
+Given #"Bat Man" for the field "Super hero videos" is not played
+When I do not play #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is not played
+
+Scenario: N40 DoNotplay
+Given #"Bat Man" for #"Super hero videos" is not played
+When I do not play #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not played
+
+/*
+Scenario: Field-video-pause
+Given the video "<video>" for the field "<fieldname>" is not paused
+When I pause the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is paused
+*/
+
+Scenario: N41 Field-video-pause
+Given the video "Bat Man" for the field "Super hero videos" is not paused
+When I pause the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is paused
+
+Scenario: N42 video-pause
+Given the video "Bat Man" for #"Super hero videos" is not paused
+When I pause the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is paused
+
+Scenario: N43 Field-pause
+Given #"Bat Man" for the field "Super hero videos" is not paused
+When I pause #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is paused
+
+Scenario: N44 pause
+Given #"Bat Man" for #"Super hero videos" is not paused
+When I pause #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is paused
+
+/*
+Scenario: Field-video-DoNotpause
+Given the video "<video>" for the field "<fieldname>" is not paused
+When I do not pause the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is not paused
+*/
+
+Scenario: N45 Field-video-DoNotpause
+Given the video "Bat Man" for the field "Super hero videos" is not paused
+When I do not pause the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is not paused
+
+Scenario: N46 video-DoNotpause
+Given the video "Bat Man" for #"Super hero videos" is not paused
+When I do not pause the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not paused
+
+Scenario: N47 Field-DoNotpause
+Given #"Bat Man" for the field "Super hero videos" is not paused
+When I do not pause #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is not paused
+
+Scenario: N48 DoNotpause
+Given #"Bat Man" for #"Super hero videos" is not paused
+When I do not pause #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not paused
+
+/*
+Scenario: Field-video-fast forward
+Given the video "<video>" for the field "<fieldname>" is not fast forwarded
+When I fast forward the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is fast forwarded
+*/
+
+Scenario: N49 Field-video-fast forward
+Given the video "Bat Man" for the field "Super hero videos" is not fast forwarded
+When I fast forward the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is fast forwarded
+
+Scenario: N50 video-fast forward
+Given the video "Bat Man" for #"Super hero videos" is not fast forwarded
+When I fast forward the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is fast forwarded
+
+Scenario: N51 Field-fast forward
+Given #"Bat Man" for the field "Super hero videos" is not fast forwarded
+When I fast forward #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is fast forwarded
+
+Scenario: N52 fast forward
+Given #"Bat Man" for #"Super hero videos" is not fast forwarded
+When I fast forward #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is fast forwarded
+
+/*
+Scenario: Field-video-DoNotfast forward
+Given the video "<video>" for the field "<fieldname>" is not fast forwarded
+When I do not fast forward the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is not fast forwarded
+*/
+
+Scenario: N53 Field-video-DoNotfast forward
+Given the video "Bat Man" for the field "Super hero videos" is not fast forwarded
+When I do not fast forward the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is not fast forwarded
+
+Scenario: N54 video-DoNotfast forward
+Given the video "Bat Man" for #"Super hero videos" is not fast forwarded
+When I do not fast forward the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not fast forwarded
+
+Scenario: N55 Field-DoNotfast forward
+Given #"Bat Man" for the field "Super hero videos" is not fast forwarded
+When I do not fast forward #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is not fast forwarded
+
+Scenario: N56 DoNotfast forward
+Given #"Bat Man" for #"Super hero videos" is not fast forwarded
+When I do not fast forward #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not fast forwarded
+
+/*
+Scenario: Field-video-rewind
+Given the video "<video>" for the field "<fieldname>" is not rewound
+When I rewind the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" rewound
+*/
+
+Scenario: N57 Field-video-rewind
+Given the video "Bat Man" for the field "video rewind" is not rewound
+When I rewind the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "video rewind" is rewound
+
+Scenario: N58 video-rewind
+Given the video "Bat Man" for #"video rewind" is not rewound
+When I rewind the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"video rewind" is rewound
+
+Scenario: N59 Field-rewind
+Given #"Bat Man" for the field "video rewind" is not rewound
+When I rewind #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "video rewind" is rewound
+
+Scenario: N60 rewind
+Given #"Bat Man" for #"video rewind" is not rewound
+When I rewind #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"video rewind" is rewound
+/*
+Scenario: Field-video-DoNotrewind
+Given the video "<video>" for the field "<fieldname>" is not rewound
+When I do not rewound the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is not rewound
+*/
+
+Scenario: N61 Field-video-DoNotrewind
+Given the video "Bat Man" for the field "video rewind" is not rewound
+When I do not rewound the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "video rewind" is not rewound
+
+Scenario: N62 video-DoNotrewind
+Given the video "Bat Man" for #"video rewind" is not rewound
+When I do not rewound the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"video rewind" is not rewound
+
+Scenario: N63 Field-DoNotrewind
+Given #"Bat Man" for the field "video rewind" is not rewound
+When I do not rewound #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "video rewind" is not rewound
+
+Scenario: N64 DoNotrewind
+Given #"Bat Man" for #"video rewind" is not rewound
+When I do not rewound #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"video rewind" is not rewound
+
+/*
+Scenario: VideoPlayer-video-play
+Given the video "<video>" for the VideoPlayer "<fieldname>" is not played
+When I play the video "<video>" for the VideoPlayer "<fieldname>"
+Then the video "<video>" for the VideoPlayer "<fieldname>" is played
+*/
+
+Scenario: N65 VideoPlayer-video-play
+Given the video "Bat Man" for the VideoPlayer "Super hero videos" is not played
+When I play the video "Bat Man" for the VideoPlayer "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer "Super hero videos" is played
+
+Scenario: N66 video-play
+Given the video "Bat Man" for #"Super hero videos" is not played
+When I play the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is played
+
+Scenario: N67 VideoPlayer-play
+Given #"Bat Man" for the VideoPlayer "Super hero videos" is not played
+When I play #"Bat Man" for the VideoPlayer "Super hero videos"
+Then #"Bat Man" for the VideoPlayer "Super hero videos" is played
+
+Scenario: N68 play
+Given #"Bat Man" for #"Super hero videos" is not played
+When I play #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is played
+
+/*
+Scenario: VideoPlayer-video-DoNotplay
+Given the video "<video>" for the VideoPlayer "<fieldname>" is not played
+When I do not play the video "<video>" for the VideoPlayer "<fieldname>"
+Then the video "<video>" for the VideoPlayer "<fieldname>" is not played
+*/
+
+Scenario: N69 VideoPlayer-video-DoNotplay
+Given the video "Bat Man" for the VideoPlayer "Super hero videos" is not played
+When I do not play the video "Bat Man" for the VideoPlayer "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer "Super hero videos" is not played
+
+Scenario: N70 video-DoNotplay
+Given the video "Bat Man" for #"Super hero videos" is not played
+When I do not play the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not played
+
+Scenario: N71 VideoPlayer-DoNotplay
+Given #"Bat Man" for the VideoPlayer "Super hero videos" is not played
+When I do not play #"Bat Man" for the VideoPlayer "Super hero videos"
+Then #"Bat Man" for the VideoPlayer "Super hero videos" is not played
+
+Scenario: N72 DoNotplay
+Given #"Bat Man" for #"Super hero videos" is not played
+When I do not play #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not played
+
+/*
+Scenario: VideoPlayer-video-pause
+Given the video "<video>" for the VideoPlayer "<fieldname>" is not paused
+When I pause the video "<video>" for the VideoPlayer "<fieldname>"
+Then the video "<video>" for the VideoPlayer "<fieldname>" is paused
+*/
+
+Scenario: N73 VideoPlayer-video-pause
+Given the video "Bat Man" for the VideoPlayer "Super hero videos" is not paused
+When I pause the video "Bat Man" for the VideoPlayer "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer "Super hero videos" is paused
+
+Scenario: N74 video-pause
+Given the video "Bat Man" for #"Super hero videos" is not paused
+When I pause the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is paused
+
+Scenario: N75 VideoPlayer-pause
+Given #"Bat Man" for the VideoPlayer "Super hero videos" is not paused
+When I pause #"Bat Man" for the VideoPlayer "Super hero videos"
+Then #"Bat Man" for the VideoPlayer "Super hero videos" is paused
+
+Scenario: N76 pause
+Given #"Bat Man" for #"Super hero videos" is not paused
+When I pause #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is paused
+
+/*
+Scenario: VideoPlayer-video-DoNotpause
+Given the video "<video>" for the VideoPlayer "<fieldname>" is not paused
+When I do not pause the video "<video>" for the VideoPlayer "<fieldname>"
+Then the video "<video>" for the VideoPlayer "<fieldname>" is not paused
+*/
+
+Scenario: N77 VideoPlayer-video-DoNotpause
+Given the video "Bat Man" for the VideoPlayer "Super hero videos" is not paused
+When I do not pause the video "Bat Man" for the VideoPlayer "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer "Super hero videos" is not paused
+
+Scenario: N78 video-DoNotpause
+Given the video "Bat Man" for #"Super hero videos" is not paused
+When I do not pause the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not paused
+
+Scenario: N79 VideoPlayer-DoNotpause
+Given #"Bat Man" for the VideoPlayer "Super hero videos" is not paused
+When I do not pause #"Bat Man" for the VideoPlayer "Super hero videos"
+Then #"Bat Man" for the VideoPlayer "Super hero videos" is not paused
+
+Scenario: N80 DoNotpause
+Given #"Bat Man" for #"Super hero videos" is not paused
+When I do not pause #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not paused
+
+/*
+Scenario: VideoPlayer-video-fast forward
+Given the video "<video>" for the VideoPlayer "<fieldname>" is not fast forwarded
+When I fast forward the video "<video>" for the VideoPlayer "<fieldname>"
+Then the video "<video>" for the VideoPlayer "<fieldname>" is fast forwarded
+*/
+
+Scenario: N81 VideoPlayer-video-fast forward
+Given the video "Bat Man" for the VideoPlayer "Super hero videos" is not fast forwarded
+When I fast forward the video "Bat Man" for the VideoPlayer "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer "Super hero videos" is fast forwarded
+
+Scenario: N82 video-fast forward
+Given the video "Bat Man" for #"Super hero videos" is not fast forwarded
+When I fast forward the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is fast forwarded
+
+Scenario: N83 VideoPlayer-fast forward
+Given #"Bat Man" for the VideoPlayer "Super hero videos" is not fast forwarded
+When I fast forward #"Bat Man" for the VideoPlayer "Super hero videos"
+Then #"Bat Man" for the VideoPlayer "Super hero videos" is fast forwarded
+
+Scenario: N84 fast forward
+Given #"Bat Man" for #"Super hero videos" is not fast forwarded
+When I fast forward #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is fast forwarded
+
+/*
+Scenario: VideoPlayer-video-DoNotfast forward
+Given the video "<video>" for the VideoPlayer "<fieldname>" is not fast forwarded
+When I do not fast forward the video "<video>" for the VideoPlayer "<fieldname>"
+Then the video "<video>" for the VideoPlayer "<fieldname>" is not fast forwarded
+*/
+
+Scenario: N85 VideoPlayer-video-DoNotfast forward
+Given the video "Bat Man" for the VideoPlayer "Super hero videos" is not fast forwarded
+When I do not fast forward the video "Bat Man" for the VideoPlayer "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer "Super hero videos" is not fast forwarded
+
+Scenario: N86 video-DoNotfast forward
+Given the video "Bat Man" for #"Super hero videos" is not fast forwarded
+When I do not fast forward the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not fast forwarded
+
+Scenario: N87 VideoPlayer-DoNotfast forward
+Given #"Bat Man" for the VideoPlayer "Super hero videos" is not fast forwarded
+When I do not fast forward #"Bat Man" for the VideoPlayer "Super hero videos"
+Then #"Bat Man" for the VideoPlayer "Super hero videos" is not fast forwarded
+
+Scenario: N88 DoNotfast forward
+Given #"Bat Man" for #"Super hero videos" is not fast forwarded
+When I do not fast forward #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not fast forwarded
+
+/*
+Scenario: VideoPlayer-video-rewind
+Given the video "<video>" for the VideoPlayer "<fieldname>" is not rewound
+When I rewind the video "<video>" for the VideoPlayer "<fieldname>"
+Then the video "<video>" for the VideoPlayer "<fieldname>" rewound
+*/
+
+Scenario: N89 VideoPlayer-video-rewind
+Given the video "Bat Man" for the VideoPlayer "video rewind" is not rewound
+When I rewind the video "Bat Man" for the VideoPlayer "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer "video rewind" is rewound
+
+Scenario: N90 video-rewind
+Given the video "Bat Man" for #"video rewind" is not rewound
+When I rewind the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"video rewind" is rewound
+
+Scenario: N91 VideoPlayer-rewind
+Given #"Bat Man" for the VideoPlayer "video rewind" is not rewound
+When I rewind #"Bat Man" for the VideoPlayer "Super hero videos"
+Then #"Bat Man" for the VideoPlayer "video rewind" is rewound
+
+Scenario: N92 rewind
+Given #"Bat Man" for #"video rewind" is not rewound
+When I rewind #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"video rewind" is rewound
+/*
+Scenario: VideoPlayer-video-DoNotrewind
+Given the video "<video>" for the VideoPlayer "<fieldname>" is not rewound
+When I do not rewound the video "<video>" for the VideoPlayer "<fieldname>"
+Then the video "<video>" for the VideoPlayer "<fieldname>" is not rewound
+*/
+
+Scenario: N93 VideoPlayer-video-DoNotrewind
+Given the video "Bat Man" for the VideoPlayer "video rewind" is not rewound
+When I do not rewound the video "Bat Man" for the VideoPlayer "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer "video rewind" is not rewound
+
+Scenario: N94 video-DoNotrewind
+Given the video "Bat Man" for #"video rewind" is not rewound
+When I do not rewound the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"video rewind" is not rewound
+
+Scenario: N95 VideoPlayer-DoNotrewind
+Given #"Bat Man" for the VideoPlayer "video rewind" is not rewound
+When I do not rewound #"Bat Man" for the VideoPlayer "Super hero videos"
+Then #"Bat Man" for the VideoPlayer "video rewind" is not rewound
+
+Scenario: N96 DoNotrewind
+Given #"Bat Man" for #"video rewind" is not rewound
+When I do not rewound #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"video rewind" is not rewound
+
+/*
+Scenario: video-toggle full-screen
+Given the video "<Bat Man>" is not toggled full-screen
+When I toggle full-screen the video "<Bat Man>"
+Then the video "<Bat Man>" is toggled full-screen
+*/
+
+Scenario: N97 video-toggle full-screen
+Given the video "Bat Man full-screener" is not toggled full-screen
+When I toggle full-screen the video "Bat Man full-screener"
+Then the video "Bat Man full-screener" is toggled full-screen
+
+Scenario: N98 toggle full-screen
+Given #"Bat Man full-screener" is not toggled full-screen
+When I toggle full-screen #"Bat Man full-screener"
+Then #"Bat Man full-screener" is toggled full-screen
+
+/*
+Scenario: video-DoNottoggle full-screen
+Given the video "<Bat Man>" is not toggled full-screen
+When I do not toggle full-screen the video "<Bat Man>"
+Then the video "<Bat Man>" is not toggled full-screen
+*/
+
+Scenario: N99 video-DoNottoggle full-screen
+Given the video "Bat Man full-screener" is not toggled full-screen
+When I do not toggle full-screen the video "Bat Man full-screener"
+Then the video "Bat Man full-screener" is not toggled full-screen
+
+Scenario: N100 DoNottoggle full-screen
+Given #"Bat Man full-screener" is not toggled full-screen
+When I do not toggle full-screen #"Bat Man full-screener"
+Then #"Bat Man full-screener" is not toggled full-screen
+
+/*
+Scenario: VideoPlayer full-screener-toggle full-screen
+Given the VideoPlayer full-screener "<Bat Man>" is not toggled full-screen
+When I toggle full-screen the VideoPlayer full-screener "<Bat Man>"
+Then the VideoPlayer full-screener "<Bat Man>" is toggled full-screen
+*/
+
+Scenario: N101 VideoPlayer full-screener-toggle full-screen
+Given the VideoPlayer full-screener "Bat Man full-screener" is not toggled full-screen
+When I toggle full-screen the VideoPlayer full-screener "Bat Man full-screener"
+Then the VideoPlayer full-screener "Bat Man full-screener" is toggled full-screen
+
+Scenario: N102 toggle full-screen
+Given #"Bat Man full-screener" is not toggled full-screen
+When I toggle full-screen #"Bat Man full-screener"
+Then #"Bat Man full-screener" is toggled full-screen
+
+/*
+Scenario: VideoPlayer full-screener-DoNottoggle full-screen
+Given the VideoPlayer full-screener "<Bat Man>" is not toggled full-screen
+When I do not toggle full-screen the VideoPlayer full-screener "<Bat Man>"
+Then the VideoPlayer full-screener "<Bat Man>" is not toggled full-screen
+*/
+
+Scenario: N103 VideoPlayer full-screener-toggle full-screen
+Given the VideoPlayer full-screener "Bat Man full-screener" is not toggled full-screen
+When I do not toggle full-screen the VideoPlayer full-screener "Bat Man full-screener"
+Then the VideoPlayer full-screener "Bat Man full-screener" is not toggled full-screen
+
+Scenario: N104 toggle full-screen
+Given #"Bat Man full-screener" is not toggled full-screen
+When I do not toggle full-screen #"Bat Man full-screener"
+Then #"Bat Man full-screener" is not toggled full-screen
+
+/*
+Scenario: Field-video-toggle full-screen
+Given the video "<video>" for the field "<fieldname>" is not toggled full-screen
+When I toggle full-screen the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is toggled full-screen
+*/
+
+Scenario: N105 Field-video-toggle full-screen
+Given the video "Bat Man" for the field "Super hero videos" is not toggled full-screen
+When I toggle full-screen the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is toggled full-screen
+
+Scenario: N106 video-toggle full-screen
+Given the video "Bat Man" for #"Super hero videos" is not toggled full-screen
+When I toggle full-screen the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is toggled full-screen
+
+Scenario: N107 Field-toggle full-screen
+Given #"Bat Man" for the field "Super hero videos" is not toggled full-screen
+When I toggle full-screen #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is toggled full-screen
+
+Scenario: N108 toggle full-screen
+Given #"Bat Man" for #"Super hero videos" is not toggled full-screen
+When I toggle full-screen #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is toggled full-screen
+
+/*
+Scenario: Field-video-DoNottoggle full-screen
+Given the video "<video>" for the field "<fieldname>" is not toggled full-screen
+When I do not toggle full-screen the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is not toggled full-screen
+*/
+
+Scenario: N109 Field-video-DoNottoggle full-screen
+Given the video "Bat Man" for the field "Super hero videos" is not toggled full-screen
+When I do not toggle full-screen the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is not toggled full-screen
+
+Scenario: N110 video-DoNottoggle full-screen
+Given the video "Bat Man" for #"Super hero videos" is not toggled full-screen
+When I do not toggle full-screen the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not toggled full-screen
+
+Scenario: N111 Field-DoNottoggle full-screen
+Given #"Bat Man" for the field "Super hero videos" is not toggled full-screen
+When I do not toggle full-screen #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is not toggled full-screen
+
+Scenario: N112 DoNottoggle full-screen
+Given #"Bat Man" for #"Super hero videos" is not toggled full-screen
+When I do not toggle full-screen #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not toggled full-screen
+
+/*
+Scenario: VideoPlayer full-screener-video-toggle full-screen
+Given the video "<video>" for the VideoPlayer full-screener "<fieldname>" is not toggled full-screen
+When I toggle full-screen the video "<video>" for the VideoPlayer full-screener "<fieldname>"
+Then the video "<video>" for the VideoPlayer full-screener "<fieldname>" is toggled full-screen
+*/
+
+Scenario: N113 VideoPlayer full-screener-video-toggle full-screen
+Given the video "Bat Man" for the VideoPlayer full-screener "Super hero videos" is not toggled full-screen
+When I toggle full-screen the video "Bat Man" for the VideoPlayer full-screener "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer full-screener "Super hero videos" is toggled full-screen
+
+Scenario: N114 video-toggle full-screen
+Given the video "Bat Man" for #"Super hero videos" is not toggled full-screen
+When I toggle full-screen the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is toggled full-screen
+
+Scenario: N115 VideoPlayer full-screener-toggle full-screen
+Given #"Bat Man" for the VideoPlayer full-screener "Super hero videos" is not toggled full-screen
+When I toggle full-screen #"Bat Man" for the VideoPlayer full-screener "Super hero videos"
+Then #"Bat Man" for the VideoPlayer full-screener "Super hero videos" is toggled full-screen
+
+Scenario: N116 toggle full-screen
+Given #"Bat Man" for #"Super hero videos" is not toggled full-screen
+When I toggle full-screen #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is toggled full-screen
+
+/*
+Scenario: VideoPlayer full-screener-video-DoNottoggle full-screen
+Given the video "<video>" for the VideoPlayer full-screener "<fieldname>" is not toggled full-screen
+When I do not toggle full-screen the video "<video>" for the VideoPlayer full-screener "<fieldname>"
+Then the video "<video>" for the VideoPlayer full-screener "<fieldname>" is not toggled full-screen
+*/
+
+Scenario: N117 VideoPlayer full-screener-video-DoNottoggle full-screen
+Given the video "Bat Man" for the VideoPlayer full-screener "Super hero videos" is not toggled full-screen
+When I do not toggle full-screen the video "Bat Man" for the VideoPlayer full-screener "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer full-screener "Super hero videos" is not toggled full-screen
+
+Scenario: N118 video-DoNottoggle full-screen
+Given the video "Bat Man" for #"Super hero videos" is not toggled full-screen
+When I do not toggle full-screen the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not toggled full-screen
+
+Scenario: N119 VideoPlayer full-screener-DoNottoggle full-screen
+Given #"Bat Man" for the VideoPlayer full-screener "Super hero videos" is not toggled full-screen
+When I do not toggle full-screen #"Bat Man" for the VideoPlayer full-screener "Super hero videos"
+Then #"Bat Man" for the VideoPlayer full-screener "Super hero videos" is not toggled full-screen
+
+Scenario: N120 DoNottoggle full-screen
+Given #"Bat Man" for #"Super hero videos" is not toggled full-screen
+When I do not toggle full-screen #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not toggled full-screen
+
+/*
+Scenario: video-exit full-screen
+Given the video "<Bat Man>" is not exited full-screen
+When I exit full-screen the video "<Bat Man>"
+Then the video "<Bat Man>" is exited full-screen
+*/
+
+Scenario: N121 video-exit full-screen
+Given the video "Bat Man full-screener" is not exited full-screen
+When I exit full-screen the video "Bat Man full-screener"
+Then the video "Bat Man full-screener" is exited full-screen
+
+Scenario: N122 exit full-screen
+Given #"Bat Man full-screener" is not exited full-screen
+When I exit full-screen #"Bat Man full-screener"
+Then #"Bat Man full-screener" is exited full-screen
+
+/*
+Scenario: video-DoNotexit full-screen
+Given the video "<Bat Man>" is not exited full-screen
+When I do not exit full-screen the video "<Bat Man>"
+Then the video "<Bat Man>" is not exited full-screen
+*/
+
+Scenario: N123 video-DoNotexit full-screen
+Given the video "Bat Man full-screener" is not exited full-screen
+When I do not exit full-screen the video "Bat Man full-screener"
+Then the video "Bat Man full-screener" is not exited full-screen
+
+Scenario: N124 DoNotexit full-screen
+Given #"Bat Man full-screener" is not exited full-screen
+When I do not exit full-screen #"Bat Man full-screener"
+Then #"Bat Man full-screener" is not exited full-screen
+
+/*
+Scenario: VideoPlayer full-screener-exit full-screen
+Given the VideoPlayer full-screener "<Bat Man>" is not exited full-screen
+When I exit full-screen the VideoPlayer full-screener "<Bat Man>"
+Then the VideoPlayer full-screener "<Bat Man>" is exited full-screen
+*/
+
+Scenario: N125 VideoPlayer full-screener-exit full-screen
+Given the VideoPlayer full-screener "Bat Man full-screener" is not exited full-screen
+When I exit full-screen the VideoPlayer full-screener "Bat Man full-screener"
+Then the VideoPlayer full-screener "Bat Man full-screener" is exited full-screen
+
+Scenario: N126 exit full-screen
+Given #"Bat Man full-screener" is not exited full-screen
+When I exit full-screen #"Bat Man full-screener"
+Then #"Bat Man full-screener" is exited full-screen
+
+/*
+Scenario: VideoPlayer full-screener-DoNotexit full-screen
+Given the VideoPlayer full-screener "<Bat Man>" is not exited full-screen
+When I do not exit full-screen the VideoPlayer full-screener "<Bat Man>"
+Then the VideoPlayer full-screener "<Bat Man>" is not exited full-screen
+*/
+
+Scenario: N127 VideoPlayer full-screener-exit full-screen
+Given the VideoPlayer full-screener "Bat Man full-screener" is not exited full-screen
+When I do not exit full-screen the VideoPlayer full-screener "Bat Man full-screener"
+Then the VideoPlayer full-screener "Bat Man full-screener" is not exited full-screen
+
+Scenario: N128 exit full-screen
+Given #"Bat Man full-screener" is not exited full-screen
+When I do not exit full-screen #"Bat Man full-screener"
+Then #"Bat Man full-screener" is not exited full-screen
+
+/*
+Scenario: Field-video-exit full-screen
+Given the video "<video>" for the field "<fieldname>" is not exited full-screen
+When I exit full-screen the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is exited full-screen
+*/
+
+Scenario: N129 Field-video-exit full-screen
+Given the video "Bat Man" for the field "Super hero videos" is not exited full-screen
+When I exit full-screen the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is exited full-screen
+
+Scenario: N130 video-exit full-screen
+Given the video "Bat Man" for #"Super hero videos" is not exited full-screen
+When I exit full-screen the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is exited full-screen
+
+Scenario: N131 Field-exit full-screen
+Given #"Bat Man" for the field "Super hero videos" is not exited full-screen
+When I exit full-screen #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is exited full-screen
+
+Scenario: N132 exit full-screen
+Given #"Bat Man" for #"Super hero videos" is not exited full-screen
+When I exit full-screen #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is exited full-screen
+
+/*
+Scenario: Field-video-DoNotexit full-screen
+Given the video "<video>" for the field "<fieldname>" is not exited full-screen
+When I do not exit full-screen the video "<video>" for the field "<fieldname>"
+Then the video "<video>" for the field "<fieldname>" is not exited full-screen
+*/
+
+Scenario: N133 Field-video-DoNotexit full-screen
+Given the video "Bat Man" for the field "Super hero videos" is not exited full-screen
+When I do not exit full-screen the video "Bat Man" for the field "Super hero videos"
+Then the video "Bat Man" for the field "Super hero videos" is not exited full-screen
+
+Scenario: N132 video-DoNotexit full-screen
+Given the video "Bat Man" for #"Super hero videos" is not exited full-screen
+When I do not exit full-screen the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not exited full-screen
+
+Scenario: N133 Field-DoNotexit full-screen
+Given #"Bat Man" for the field "Super hero videos" is not exited full-screen
+When I do not exit full-screen #"Bat Man" for the field "Super hero videos"
+Then #"Bat Man" for the field "Super hero videos" is not exited full-screen
+
+Scenario: N134 DoNotexit full-screen
+Given #"Bat Man" for #"Super hero videos" is not exited full-screen
+When I do not exit full-screen #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not exited full-screen
+
+/*
+Scenario: VideoPlayer full-screener-video-exit full-screen
+Given the video "<video>" for the VideoPlayer full-screener "<fieldname>" is not exited full-screen
+When I exit full-screen the video "<video>" for the VideoPlayer full-screener "<fieldname>"
+Then the video "<video>" for the VideoPlayer full-screener "<fieldname>" is exited full-screen
+*/
+
+Scenario: N135 VideoPlayer full-screener-video-exit full-screen
+Given the video "Bat Man" for the VideoPlayer full-screener "Super hero videos" is not exited full-screen
+When I exit full-screen the video "Bat Man" for the VideoPlayer full-screener "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer full-screener "Super hero videos" is exited full-screen
+
+Scenario: N136 video-exit full-screen
+Given the video "Bat Man" for #"Super hero videos" is not exited full-screen
+When I exit full-screen the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is exited full-screen
+
+Scenario: N137 VideoPlayer full-screener-exit full-screen
+Given #"Bat Man" for the VideoPlayer full-screener "Super hero videos" is not exited full-screen
+When I exit full-screen #"Bat Man" for the VideoPlayer full-screener "Super hero videos"
+Then #"Bat Man" for the VideoPlayer full-screener "Super hero videos" is exited full-screen
+
+Scenario: N138 exit full-screen
+Given #"Bat Man" for #"Super hero videos" is not exited full-screen
+When I exit full-screen #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is exited full-screen
+
+/*
+Scenario: VideoPlayer full-screener-video-DoNotexit full-screen
+Given the video "<video>" for the VideoPlayer full-screener "<fieldname>" is not exited full-screen
+When I do not exit full-screen the video "<video>" for the VideoPlayer full-screener "<fieldname>"
+Then the video "<video>" for the VideoPlayer full-screener "<fieldname>" is not exited full-screen
+*/
+
+Scenario: N139 VideoPlayer full-screener-video-DoNotexit full-screen
+Given the video "Bat Man" for the VideoPlayer full-screener "Super hero videos" is not exited full-screen
+When I do not exit full-screen the video "Bat Man" for the VideoPlayer full-screener "Super hero videos"
+Then the video "Bat Man" for the VideoPlayer full-screener "Super hero videos" is not exited full-screen
+
+Scenario: N140 video-DoNotexit full-screen
+Given the video "Bat Man" for #"Super hero videos" is not exited full-screen
+When I do not exit full-screen the video "Bat Man" for #"Super hero videos"
+Then the video "Bat Man" for #"Super hero videos" is not exited full-screen
+
+Scenario: N141 VideoPlayer full-screener-DoNotexit full-screen
+Given #"Bat Man" for the VideoPlayer full-screener "Super hero videos" is not exited full-screen
+When I do not exit full-screen #"Bat Man" for the VideoPlayer full-screener "Super hero videos"
+Then #"Bat Man" for the VideoPlayer full-screener "Super hero videos" is not exited full-screen
+
+Scenario: N142 DoNotexit full-screen
+Given #"Bat Man" for #"Super hero videos" is not exited full-screen
+When I do not exit full-screen #"Bat Man" for #"Super hero videos"
+Then #"Bat Man" for #"Super hero videos" is not exited full-screen
+
+/*
+Scenario: volume-turn up
+Given the volume "<volumename>" is not turned up
+When I turn up the volume "<volumename>"
+Then the volume "<volumename>" is turned up
+*/
+
+Scenario: N143 volume-turn up
+Given the volume "volume of VideoPlayer volume" is not turned up
+When I turn up the volume "volume of VideoPlayer volume"
+Then the volume "volume of VideoPlayer volume" is turned up
+
+Scenario: N144 turn up
+Given #"volume of VideoPlayer volume" is not turned up
+When I turn up #"volume of VideoPlayer volume"
+Then #"volume of VideoPlayer volume" is turned up
+
+/*
+Scenario: volume-DoNotturn up
+Given the volume "<volumename>" is not turned up
+When I do not turn up the volume "<volumename>"
+Then the volume "<volumename>" is not turned up
+*/
+
+Scenario: N145 volume-DoNotturn up
+Given the volume "volume of VideoPlayer volume" is not turned up
+When I do not turn up the volume "volume of VideoPlayer volume"
+Then the volume "volume of VideoPlayer volume" is not turned up
+
+Scenario: N146 DoNotturn up
+Given #"volume of VideoPlayer volume" is not turned up
+When I do not turn up #"volume of VideoPlayer volume"
+Then #"volume of VideoPlayer volume" is not turned up
+
+/*
+Scenario: VideoPlayer volume-turn up
+Given the VideoPlayer volume "<volumename>" is not turned up
+When I turn up the VideoPlayer volume "<volumename>"
+Then the VideoPlayer volume "<volumename>" is turned up
+*/
+
+Scenario: N147 VideoPlayer volume-turn up
+Given the VideoPlayer volume "volume of VideoPlayer volume" is not turned up
+When I turn up the VideoPlayer volume "volume of VideoPlayer volume"
+Then the VideoPlayer volume "volume of VideoPlayer volume" is turned up
+
+Scenario: N148 turn up
+Given #"volume of VideoPlayer volume" is not turned up
+When I turn up #"volume of VideoPlayer volume"
+Then #"volume of VideoPlayer volume" is turned up
+
+/*
+Scenario: VideoPlayer volume-DoNotturn up
+Given the VideoPlayer volume "<volumename>" is not turned up
+When I do not turn up the VideoPlayer volume "<volumename>"
+Then the VideoPlayer volume "<volumename>" is not turned up
+*/
+
+Scenario: N149 VideoPlayer volume-turn up
+Given the VideoPlayer volume "volume of VideoPlayer volume" is not turned up
+When I do not turn up the VideoPlayer volume "volume of VideoPlayer volume"
+Then the VideoPlayer volume "volume of VideoPlayer volume" is not turned up
+
+Scenario: N150 turn up
+Given #"volume of VideoPlayer volume" is not turned up
+When I do not turn up #"volume of VideoPlayer volume"
+Then #"volume of VideoPlayer volume" is not turned up
+
+/*
+Scenario: Field-volume-turn up
+Given the volume "<volume>" for the field "<fieldname>" is not turned up
+When I turn up the volume "<volume>" for the field "<fieldname>"
+Then the volume "<volume>" for the field "<fieldname>" is turned up
+*/
+
+Scenario: N151 Field-volume-turn up
+Given the volume "volume" for the field "volume controller" is not turned up
+When I turn up the volume "volume" for the field "volume controller"
+Then the volume "volume" for the field "volume controller" is turned up
+
+Scenario: N152 volume-turn up
+Given the volume "volume" for #"volume controller" is not turned up
+When I turn up the volume "volume" for #"volume controller"
+Then the volume "volume" for #"volume controller" is turned up
+
+Scenario: N153 Field-turn up
+Given #"volume" for the field "volume controller" is not turned up
+When I turn up #"volume" for the field "volume controller"
+Then #"volume" for the field "volume controller" is turned up
+
+Scenario: N154 turn up
+Given #"volume" for #"volume controller" is not turned up
+When I turn up #"volume" for #"volume controller"
+Then #"volume" for #"volume controller" is turned up
+
+/*
+Scenario: Field-volume-DoNotturn up
+Given the volume "<volume>" for the field "<fieldname>" is not turned up
+When I do not turn up the volume "<volume>" for the field "<fieldname>"
+Then the volume "<volume>" for the field "<fieldname>" is not turned up
+*/
+
+Scenario: N155 Field-volume-DoNotturn up
+Given the volume "volume" for the field "volume controller" is not turned up
+When I do not turn up the volume "volume" for the field "volume controller"
+Then the volume "volume" for the field "volume controller" is not turned up
+
+Scenario: N156 volume-DoNotturn up
+Given the volume "volume" for #"volume controller" is not turned up
+When I do not turn up the volume "volume" for #"volume controller"
+Then the volume "volume" for #"volume controller" is not turned up
+
+Scenario: N157 Field-DoNotturn up
+Given #"volume" for the field "volume controller" is not turned up
+When I do not turn up #"volume" for the field "volume controller"
+Then #"volume" for the field "volume controller" is not turned up
+
+Scenario: N158 DoNotturn up
+Given #"volume" for #"volume controller" is not turned up
+When I do not turn up #"volume" for #"volume controller"
+Then #"volume" for #"volume controller" is not turned up
+
+/*
+Scenario: VideoPlayer volume-volume-turn up
+Given the volume "<volume>" for the VideoPlayer volume "<fieldname>" is not turned up
+When I turn up the volume "<volume>" for the VideoPlayer volume "<fieldname>"
+Then the volume "<volume>" for the VideoPlayer volume "<fieldname>" is turned up
+*/
+
+Scenario: N159 VideoPlayer volume-volume-turn up
+Given the volume "volume" for the VideoPlayer volume "volume controller" is not turned up
+When I turn up the volume "volume" for the VideoPlayer volume "volume controller"
+Then the volume "volume" for the VideoPlayer volume "volume controller" is turned up
+
+Scenario: N160 volume-turn up
+Given the volume "volume" for #"volume controller" is not turned up
+When I turn up the volume "volume" for #"volume controller"
+Then the volume "volume" for #"volume controller" is turned up
+
+Scenario: N161 VideoPlayer volume-turn up
+Given #"volume" for the VideoPlayer volume "volume controller" is not turned up
+When I turn up #"volume" for the VideoPlayer volume "volume controller"
+Then #"volume" for the VideoPlayer volume "volume controller" is turned up
+
+Scenario: N162 turn up
+Given #"volume" for #"volume controller" is not turned up
+When I turn up #"volume" for #"volume controller"
+Then #"volume" for #"volume controller" is turned up
+
+/*
+Scenario: VideoPlayer volume-volume-DoNotturn up
+Given the volume "<volume>" for the VideoPlayer volume "<fieldname>" is not turned up
+When I do not turn up the volume "<volume>" for the VideoPlayer volume "<fieldname>"
+Then the volume "<volume>" for the VideoPlayer volume "<fieldname>" is not turned up
+*/
+
+Scenario: N163 VideoPlayer volume-volume-DoNotturn up
+Given the volume "volume" for the VideoPlayer volume "volume controller" is not turned up
+When I do not turn up the volume "volume" for the VideoPlayer volume "volume controller"
+Then the volume "volume" for the VideoPlayer volume "volume controller" is not turned up
+
+Scenario: N164 volume-DoNotturn up
+Given the volume "volume" for #"volume controller" is not turned up
+When I do not turn up the volume "volume" for #"volume controller"
+Then the volume "volume" for #"volume controller" is not turned up
+
+Scenario: N165 VideoPlayer volume-DoNotturn up
+Given #"volume" for the VideoPlayer volume "volume controller" is not turned up
+When I do not turn up #"volume" for the VideoPlayer volume "volume controller"
+Then #"volume" for the VideoPlayer volume "volume controller" is not turned up
+
+Scenario: N166 DoNotturn up
+Given #"volume" for #"volume controller" is not turned up
+When I do not turn up #"volume" for #"volume controller"
+Then #"volume" for #"volume controller" is not turned up
+
+/*
+Scenario: volume-turn down
+Given the volume "<volumename>" is not turned down
+When I turn down the volume "<volumename>"
+Then the volume "<volumename>" is turned down
+*/
+
+Scenario: N167 volume-turn down
+Given the volume "volume of VideoPlayer volume" is not turned down
+When I turn down the volume "volume of VideoPlayer volume"
+Then the volume "volume of VideoPlayer volume" is turned down
+
+Scenario: N168 turn down
+Given #"volume of VideoPlayer volume" is not turned down
+When I turn down #"volume of VideoPlayer volume"
+Then #"volume of VideoPlayer volume" is turned down
+
+/*
+Scenario: volume-DoNotturn down
+Given the volume "<volumename>" is not turned down
+When I do not turn down the volume "<volumename>"
+Then the volume "<volumename>" is not turned down
+*/
+
+Scenario: N169 volume-DoNotturn down
+Given the volume "volume of VideoPlayer volume" is not turned down
+When I do not turn down the volume "volume of VideoPlayer volume"
+Then the volume "volume of VideoPlayer volume" is not turned down
+
+Scenario: N170 DoNotturn down
+Given #"volume of VideoPlayer volume" is not turned down
+When I do not turn down #"volume of VideoPlayer volume"
+Then #"volume of VideoPlayer volume" is not turned down
+
+/*
+Scenario: VideoPlayer volume-turn down
+Given the VideoPlayer volume "<volumename>" is not turned down
+When I turn down the VideoPlayer volume "<volumename>"
+Then the VideoPlayer volume "<volumename>" is turned down
+*/
+
+Scenario: N171 VideoPlayer volume-turn down
+Given the VideoPlayer volume "volume of VideoPlayer volume" is not turned down
+When I turn down the VideoPlayer volume "volume of VideoPlayer volume"
+Then the VideoPlayer volume "volume of VideoPlayer volume" is turned down
+
+Scenario: N172 turn down
+Given #"volume of VideoPlayer volume" is not turned down
+When I turn down #"volume of VideoPlayer volume"
+Then #"volume of VideoPlayer volume" is turned down
+
+/*
+Scenario: VideoPlayer volume-DoNotturn down
+Given the VideoPlayer volume "<volumename>" is not turned down
+When I do not turn down the VideoPlayer volume "<volumename>"
+Then the VideoPlayer volume "<volumename>" is not turned down
+*/
+
+Scenario: N173 VideoPlayer volume-turn down
+Given the VideoPlayer volume "volume of VideoPlayer volume" is not turned down
+When I do not turn down the VideoPlayer volume "volume of VideoPlayer volume"
+Then the VideoPlayer volume "volume of VideoPlayer volume" is not turned down
+
+Scenario: N174 turn down
+Given #"volume of VideoPlayer volume" is not turned down
+When I do not turn down #"volume of VideoPlayer volume"
+Then #"volume of VideoPlayer volume" is not turned down
+
+/*
+Scenario: Field-volume-turn down
+Given the volume "<volume>" for the field "<fieldname>" is not turned down
+When I turn down the volume "<volume>" for the field "<fieldname>"
+Then the volume "<volume>" for the field "<fieldname>" is turned down
+*/
+
+Scenario: N175 Field-volume-turn down
+Given the volume "volume" for the field "volume controller" is not turned down
+When I turn down the volume "volume" for the field "volume controller"
+Then the volume "volume" for the field "volume controller" is turned down
+
+Scenario: N176 volume-turn down
+Given the volume "volume" for #"volume controller" is not turned down
+When I turn down the volume "volume" for #"volume controller"
+Then the volume "volume" for #"volume controller" is turned down
+
+Scenario: N177 Field-turn down
+Given #"volume" for the field "volume controller" is not turned down
+When I turn down #"volume" for the field "volume controller"
+Then #"volume" for the field "volume controller" is turned down
+
+Scenario: N178 turn down
+Given #"volume" for #"volume controller" is not turned down
+When I turn down #"volume" for #"volume controller"
+Then #"volume" for #"volume controller" is turned down
+
+/*
+Scenario: Field-volume-DoNotturn down
+Given the volume "<volume>" for the field "<fieldname>" is not turned down
+When I do not turn down the volume "<volume>" for the field "<fieldname>"
+Then the volume "<volume>" for the field "<fieldname>" is not turned down
+*/
+
+Scenario: N179 Field-volume-DoNotturn down
+Given the volume "volume" for the field "volume controller" is not turned down
+When I do not turn down the volume "volume" for the field "volume controller"
+Then the volume "volume" for the field "volume controller" is not turned down
+
+Scenario: N180 volume-DoNotturn down
+Given the volume "volume" for #"volume controller" is not turned down
+When I do not turn down the volume "volume" for #"volume controller"
+Then the volume "volume" for #"volume controller" is not turned down
+
+Scenario: N181 Field-DoNotturn down
+Given #"volume" for the field "volume controller" is not turned down
+When I do not turn down #"volume" for the field "volume controller"
+Then #"volume" for the field "volume controller" is not turned down
+
+Scenario: N182 DoNotturn down
+Given #"volume" for #"volume controller" is not turned down
+When I do not turn down #"volume" for #"volume controller"
+Then #"volume" for #"volume controller" is not turned down
+
+/*
+Scenario: VideoPlayer volume-volume-turn down
+Given the volume "<volume>" for the VideoPlayer volume "<fieldname>" is not turned down
+When I turn down the volume "<volume>" for the VideoPlayer volume "<fieldname>"
+Then the volume "<volume>" for the VideoPlayer volume "<fieldname>" is turned down
+*/
+
+Scenario: N183 VideoPlayer volume-volume-turn down
+Given the volume "volume" for the VideoPlayer volume "volume controller" is not turned down
+When I turn down the volume "volume" for the VideoPlayer volume "volume controller"
+Then the volume "volume" for the VideoPlayer volume "volume controller" is turned down
+
+Scenario: N184 volume-turn down
+Given the volume "volume" for #"volume controller" is not turned down
+When I turn down the volume "volume" for #"volume controller"
+Then the volume "volume" for #"volume controller" is turned down
+
+Scenario: N185 VideoPlayer volume-turn down
+Given #"volume" for the VideoPlayer volume "volume controller" is not turned down
+When I turn down #"volume" for the VideoPlayer volume "volume controller"
+Then #"volume" for the VideoPlayer volume "volume controller" is turned down
+
+Scenario: N186 turn down
+Given #"volume" for #"volume controller" is not turned down
+When I turn down #"volume" for #"volume controller"
+Then #"volume" for #"volume controller" is turned down
+
+/*
+Scenario: VideoPlayer volume-volume-DoNotturn down
+Given the volume "<volume>" for the VideoPlayer volume "<fieldname>" is not turned down
+When I do not turn down the volume "<volume>" for the VideoPlayer volume "<fieldname>"
+Then the volume "<volume>" for the VideoPlayer volume "<fieldname>" is not turned down
+*/
+
+Scenario: N187 VideoPlayer volume-volume-DoNotturn down
+Given the volume "volume" for the VideoPlayer volume "volume controller" is not turned down
+When I do not turn down the volume "volume" for the VideoPlayer volume "volume controller"
+Then the volume "volume" for the VideoPlayer volume "volume controller" is not turned down
+
+Scenario: N189 volume-DoNotturn down
+Given the volume "volume" for #"volume controller" is not turned down
+When I do not turn down the volume "volume" for #"volume controller"
+Then the volume "volume" for #"volume controller" is not turned down
+
+Scenario: N190 VideoPlayer volume-DoNotturn down
+Given #"volume" for the VideoPlayer volume "volume controller" is not turned down
+When I do not turn down #"volume" for the VideoPlayer volume "volume controller"
+Then #"volume" for the VideoPlayer volume "volume controller" is not turned down
+
+Scenario: N191 DoNotturn down
+Given #"volume" for #"volume controller" is not turned down
+When I do not turn down #"volume" for #"volume controller"
+Then #"volume" for #"volume controller" is not turned down

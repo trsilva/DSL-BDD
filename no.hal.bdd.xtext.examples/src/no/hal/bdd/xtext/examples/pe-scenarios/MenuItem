@@ -1,0 +1,535 @@
+model MenuItem using widgets
+/*
+Scenario: option-select
+Given the option "<option name>" is unselected
+When I select the option "<option name>"
+Then the option "<option name>" is selected
+*/
+
+Scenario: N1 option-select
+Given the option "MenuItem" is unselected
+When I select the option "MenuItem"
+Then the option "MenuItem" is selected
+
+Scenario: N2 select
+Given #"MenuItem" is unselected
+When I select #"MenuItem"
+Then #"MenuItem" is selected
+
+/*
+Scenario: option-DoNotselect
+Given the option "<option name>" is not selected
+When I do not select the option "<option name>"
+Then the option "<option name>" is unselected
+*/
+
+Scenario: N3 option-DoNotselect
+Given the option "MenuItem" is not selected
+When I do not select the option "MenuItem"
+Then the option "MenuItem" is unselected
+
+Scenario: N4 DoNotselect
+Given #"MenuItem" is not selected
+When I do not select #"MenuItem"
+Then #"MenuItem" is unselected
+
+/*
+Scenario: MenuItem-select
+Given the MenuItem "<option name>" is unselected
+When I select the MenuItem "<option name>"
+Then the MenuItem "<option name>" is selected
+*/
+
+Scenario: N5 MenuItem-select
+Given the MenuItem "MenuItem" is unselected
+When I select the MenuItem "MenuItem"
+Then the MenuItem "MenuItem" is selected
+
+Scenario: N6 select
+Given #"MenuItem" is unselected
+When I select #"MenuItem"
+Then #"MenuItem" is selected
+
+/*
+Scenario: MenuItem-DoNotselect
+Given the MenuItem "<option name>" is not selected
+When I do not select the MenuItem "<option name>"
+Then the MenuItem "<option name>" is unselected
+*/
+
+Scenario: N7 MenuItem-select
+Given the MenuItem "MenuItem" is not selected
+When I do not select the MenuItem "MenuItem"
+Then the MenuItem "MenuItem" is unselected
+
+Scenario: N8 select
+Given #"MenuItem" is not selected
+When I do not select #"MenuItem"
+Then #"MenuItem" is unselected
+
+
+/*
+Scenario: option-click
+Given the option "<option name>" is not clicked
+When I click the option "<option name>"
+Then the option "<option name>" is clicked
+*/
+
+Scenario: N9 option-click
+Given the option "MenuItem" is not clicked
+When I click the option "MenuItem"
+Then the option "MenuItem" is clicked
+
+Scenario: N10 click
+Given #"MenuItem" is not clicked
+When I click #"MenuItem"
+Then #"MenuItem" is clicked
+
+/*
+Scenario: option-DoNotclick
+Given the option "<option name>" is not clicked
+When I do not clicked the option "<option name>"
+Then the option "<option name>" is not clicked
+*/
+
+Scenario: N11 option-DoNotclick
+Given the option "MenuItem" is not clicked
+When I do not click the option "MenuItem"
+Then the option "MenuItem" is not clicked
+
+Scenario: N12 DoNotclick
+Given #"MenuItem" is not clicked
+When I do not click #"MenuItem"
+Then #"MenuItem" is not clicked
+
+/*
+Scenario: MenuItem-click
+Given the MenuItem "<option name>" is not clicked
+When I click the MenuItem "<option name>"
+Then the MenuItem "<option name>" is clicked
+*/
+
+Scenario: N13 MenuItem-click
+Given the MenuItem "MenuItem" is not clicked
+When I click the MenuItem "MenuItem"
+Then the MenuItem "MenuItem" is clicked
+
+Scenario: N14 click
+Given #"MenuItem" is not clicked
+When I click #"MenuItem"
+Then #"MenuItem" is clicked
+
+/*
+Scenario: MenuItem-DoNotclick
+Given the MenuItem "<option name>" is not clicked
+When I do not clicked the MenuItem "<option name>"
+Then the MenuItem "<option name>" is not clicked
+*/
+
+Scenario: N15 MenuItem-click
+Given the MenuItem "MenuItem" is not clicked
+When I do not click the MenuItem "MenuItem"
+Then the MenuItem "MenuItem" is not clicked
+
+Scenario: N16 click
+Given #"MenuItem" is not clicked
+When I do not click #"MenuItem"
+Then #"MenuItem" is not clicked
+
+
+/*
+Scenario: Field-option-select
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is selected
+*/
+
+Scenario: N17 Field-option-select
+Given the option "Morning" for the field "Availability" is not selected
+When I select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is selected
+
+Scenario: N18 option-select
+Given the option "Morning" for #"Availability" is not selected
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected
+
+Scenario: N19 Field-select
+Given #"Morning" for the field "Availability" is not selected
+When I select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is selected
+
+Scenario: N20 select
+Given #"Morning" for #"Availability" is not selected
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected
+
+/*
+Scenario: Field-option-DoNotselect
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not selected
+*/
+
+Scenario: N21 Field-option-DoNotselect
+Given the option "Morning" for the field "Availability" is not selected
+When I do not select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not selected
+
+Scenario: N22 option-DoNotselect
+Given the option "Morning" for #"Availability" is not selected
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected
+
+Scenario: N23 Field-DoNotselect
+Given #"Morning" for the field "Availability" is not selected
+When I do not select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not selected
+
+Scenario: N24 DoNotselect
+Given #"Morning" for #"Availability" is not selected
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected
+
+
+/*
+Scenario: Field-option-click
+Given the option "<option>" for the field "<fieldname>" is not clicked
+When I click the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is clicked
+*/
+
+Scenario: N25 Field-option-click
+Given the option "Morning" for the field "Availability" is not clicked
+When I click the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is clicked
+
+Scenario: N26 option-click
+Given the option "Morning" for #"Availability" is not clicked
+When I click the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is clicked
+
+Scenario: N27 Field-click
+Given #"Morning" for the field "Availability" is not clicked
+When I click #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is clicked
+
+Scenario: N28 click
+Given #"Morning" for #"Availability" is not clicked
+When I click #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is clicked
+
+/*
+Scenario: Field-option-DoNotclick
+Given the option "<option>" for the field "<fieldname>" is not clicked
+When I do not click the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not clicked
+*/
+
+Scenario: N29 Field-option-DoNotclick
+Given the option "Morning" for the field "Availability" is not clicked
+When I do not click the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not clicked
+
+Scenario: N30 option-DoNotclick
+Given the option "Morning" for #"Availability" is not clicked
+When I do not click the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not clicked
+
+Scenario: N31 Field-DoNotclick
+Given #"Morning" for the field "Availability" is not clicked
+When I do not click #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not clicked
+
+Scenario: N32 DoNotclick
+Given #"Morning" for #"Availability" is not clicked
+When I do not click #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not clicked
+
+
+/*
+Scenario: MenuItem-option-select
+Given the option "<option>" for the MenuItem "<fieldname>" is not selected
+When I select the option "<option>" for the MenuItem "<fieldname>"
+Then the option "<option>" for the MenuItem "<fieldname>" is selected
+*/
+
+Scenario: N33 MenuItem-option-select
+Given the option "Morning" for the MenuItem "Availability" is not selected
+When I select the option "Morning" for the MenuItem "Availability"
+Then the option "Morning" for the MenuItem "Availability" is selected
+
+Scenario: N34 option-select
+Given the option "Morning" for #"Availability" is not selected
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected
+
+Scenario: N35 MenuItem-select
+Given #"Morning" for the MenuItem "Availability" is not selected
+When I select #"Morning" for the MenuItem "Availability"
+Then #"Morning" for the MenuItem "Availability" is selected
+
+Scenario: N36 select
+Given #"Morning" for #"Availability" is not selected
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected
+
+/*
+Scenario: MenuItem-option-DoNotselect
+Given the option "<option>" for the MenuItem "<fieldname>" is not selected
+When I do not select the option "<option>" for the MenuItem "<fieldname>"
+Then the option "<option>" for the MenuItem "<fieldname>" is not selected
+*/
+
+Scenario: N37 MenuItem-option-DoNotselect
+Given the option "Morning" for the MenuItem "Availability" is not selected
+When I do not select the option "Morning" for the MenuItem "Availability"
+Then the option "Morning" for the MenuItem "Availability" is not selected
+
+Scenario: N38 option-DoNotselect
+Given the option "Morning" for #"Availability" is not selected
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected
+
+Scenario: N39 MenuItem-DoNotselect
+Given #"Morning" for the MenuItem "Availability" is not selected
+When I do not select #"Morning" for the MenuItem "Availability"
+Then #"Morning" for the MenuItem "Availability" is not selected
+
+Scenario: N40 DoNotselect
+Given #"Morning" for #"Availability" is not selected
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected
+
+
+/*
+Scenario: MenuItem-option-click
+Given the option "<option>" for the MenuItem "<fieldname>" is not clicked
+When I click the option "<option>" for the MenuItem "<fieldname>"
+Then the option "<option>" for the MenuItem "<fieldname>" is clicked
+*/
+
+Scenario: N41 MenuItem-option-click
+Given the option "Morning" for the MenuItem "Availability" is not clicked
+When I click the option "Morning" for the MenuItem "Availability"
+Then the option "Morning" for the MenuItem "Availability" is clicked
+
+Scenario: N42 option-click
+Given the option "Morning" for #"Availability" is not clicked
+When I click the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is clicked
+
+Scenario: N43 MenuItem-click
+Given #"Morning" for the MenuItem "Availability" is not clicked
+When I click #"Morning" for the MenuItem "Availability"
+Then #"Morning" for the MenuItem "Availability" is clicked
+
+Scenario: N44 click
+Given #"Morning" for #"Availability" is not clicked
+When I click #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is clicked
+
+/*
+Scenario: MenuItem-option-DoNotclick
+Given the option "<option>" for the MenuItem "<fieldname>" is not clicked
+When I do not click the option "<option>" for the MenuItem "<fieldname>"
+Then the option "<option>" for the MenuItem "<fieldname>" is not clicked
+*/
+
+Scenario: N45 MenuItem-option-DoNotclick
+Given the option "Morning" for the MenuItem "Availability" is not clicked
+When I do not click the option "Morning" for the MenuItem "Availability"
+Then the option "Morning" for the MenuItem "Availability" is not clicked
+
+Scenario: N46 option-DoNotclick
+Given the option "Morning" for #"Availability" is not clicked
+When I do not click the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not clicked
+
+Scenario: N47 MenuItem-DoNotclick
+Given #"Morning" for the MenuItem "Availability" is not clicked
+When I do not click #"Morning" for the MenuItem "Availability"
+Then #"Morning" for the MenuItem "Availability" is not clicked
+
+Scenario: N48 DoNotclick
+Given #"Morning" for #"Availability" is not clicked
+When I do not click #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not clicked
+
+// Negative Test cases
+
+/*
+Scenario: option-remove
+Given the option "<option name>" is not removed
+When I remove the option "<option name>"
+Then the option "<option name>" is removed
+*/
+
+Scenario: N1 option-remove
+Given the option "MenuItem" is not removed
+When I remove the option "MenuItem"
+Then the option "MenuItem" is removed
+
+Scenario: N2 remove
+Given #"MenuItem" is not removed
+When I remove #"MenuItem"
+Then #"MenuItem" is removed
+
+/*
+Scenario: option-DoNotremove
+Given the option "<option name>" is not removed
+When I do not remove the option "<option name>"
+Then the option "<option name>" is not removed
+*/
+
+Scenario: N3 option-DoNotremove
+Given the option "MenuItem" is not removed
+When I do not remove the option "MenuItem"
+Then the option "MenuItem" is not removed
+
+Scenario: N4 DoNotremove
+Given #"MenuItem" is not removed
+When I do not remove #"MenuItem"
+Then #"MenuItem" is not removed
+
+/*
+Scenario: MenuItem-remove
+Given the MenuItem "<option name>" is not removed
+When I remove the MenuItem "<option name>"
+Then the MenuItem "<option name>" is removed
+*/
+
+Scenario: N5 MenuItem-remove
+Given the MenuItem "MenuItem" is not removed
+When I remove the MenuItem "MenuItem"
+Then the MenuItem "MenuItem" is removed
+
+Scenario: N6 remove
+Given #"MenuItem" is not removed
+When I remove #"MenuItem"
+Then #"MenuItem" is removed
+
+/*
+Scenario: MenuItem-DoNotremove
+Given the MenuItem "<option name>" is not removed
+When I do not remove the MenuItem "<option name>"
+Then the MenuItem "<option name>" is not removed
+*/
+
+Scenario: N7 MenuItem-remove
+Given the MenuItem "MenuItem" is not removed
+When I do not remove the MenuItem "MenuItem"
+Then the MenuItem "MenuItem" is not removed
+
+Scenario: N8 remove
+Given #"MenuItem" is not removed
+When I do not remove #"MenuItem"
+Then #"MenuItem" is not removed
+
+/*
+Scenario: Field-option-remove
+Given the option "<option>" for the field "<fieldname>" is not removed
+When I remove the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is removed
+*/
+
+Scenario: N9 Field-option-remove
+Given the option "Morning" for the field "Availability" is not removed
+When I remove the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is removed
+
+Scenario: N10 option-remove
+Given the option "Morning" for #"Availability" is not removed
+When I remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is removed
+
+Scenario: N11 Field-remove
+Given #"Morning" for the field "Availability" is not removed
+When I remove #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is removed
+
+Scenario: N12 remove
+Given #"Morning" for #"Availability" is not removed
+When I remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is removed
+
+/*
+Scenario: Field-option-DoNotremove
+Given the option "<option>" for the field "<fieldname>" is not removed
+When I do not remove the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not removed
+*/
+
+Scenario: N13 Field-option-DoNotremove
+Given the option "Morning" for the field "Availability" is not removed
+When I do not remove the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not removed
+
+Scenario: N14 option-DoNotremove
+Given the option "Morning" for #"Availability" is not removed
+When I do not remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not removed
+
+Scenario: N15 Field-DoNotremove
+Given #"Morning" for the field "Availability" is not removed
+When I do not remove #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not removed
+
+Scenario: N16 DoNotremove
+Given #"Morning" for #"Availability" is not removed
+When I do not remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not removed
+
+/*
+Scenario: MenuItem-option-remove
+Given the option "<option>" for the MenuItem "<fieldname>" is not removed
+When I remove the option "<option>" for the MenuItem "<fieldname>"
+Then the option "<option>" for the MenuItem "<fieldname>" is removed
+*/
+
+Scenario: N17 MenuItem-option-remove
+Given the option "Morning" for the MenuItem "Availability" is not removed
+When I remove the option "Morning" for the MenuItem "Availability"
+Then the option "Morning" for the MenuItem "Availability" is removed
+
+Scenario: N18 option-remove
+Given the option "Morning" for #"Availability" is not removed
+When I remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is removed
+
+Scenario: N19 MenuItem-remove
+Given #"Morning" for the MenuItem "Availability" is not removed
+When I remove #"Morning" for the MenuItem "Availability"
+Then #"Morning" for the MenuItem "Availability" is removed
+
+Scenario: N20 remove
+Given #"Morning" for #"Availability" is not removed
+When I remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is removed
+
+/*
+Scenario: MenuItem-option-DoNotremove
+Given the option "<option>" for the MenuItem "<fieldname>" is not removed
+When I do not remove the option "<option>" for the MenuItem "<fieldname>"
+Then the option "<option>" for the MenuItem "<fieldname>" is not removed
+*/
+
+Scenario: N21 MenuItem-option-DoNotremove
+Given the option "Morning" for the MenuItem "Availability" is not removed
+When I do not remove the option "Morning" for the MenuItem "Availability"
+Then the option "Morning" for the MenuItem "Availability" is not removed
+
+Scenario: N22 option-DoNotremove
+Given the option "Morning" for #"Availability" is not removed
+When I do not remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not removed
+
+Scenario: N23 MenuItem-DoNotremove
+Given #"Morning" for the MenuItem "Availability" is not removed
+When I do not remove #"Morning" for the MenuItem "Availability"
+Then #"Morning" for the MenuItem "Availability" is not removed
+
+Scenario: N24 DoNotremove
+Given #"Morning" for #"Availability" is not removed
+When I do not remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not removed

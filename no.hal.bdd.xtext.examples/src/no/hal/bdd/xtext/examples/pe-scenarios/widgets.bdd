@@ -1,0 +1,359 @@
+model widgets
+
+entity widget {
+	actions:move the mouse over
+	states: enabled/disabled,shown,available
+}
+
+entity FieldSet is widget{
+	
+}
+
+entity Text is widget{
+	
+}
+
+entity Label is widget{
+	
+}
+
+entity ProgressBar is widget{
+	
+}
+
+entity Tooltip is widget{
+	
+}
+
+
+entity Button is widget {
+	actions: click [on],submit
+	states: clicked/unclicked, submitted
+}
+
+entity checkbox is widget {
+	actions: check,uncheck,pick,choose,select
+	states: checked/unchecked, selected, picked,chosen
+	
+}
+
+entity RadioButton is widget {
+	actions: pick,choose,select
+	states: checked/unchecked, selected, picked,chosen
+	
+}
+
+entity Calendar is widget {
+	actions: pick,choose,select,set
+	states: set, selected, picked,chosen
+	
+}
+
+entity ListBox is widget {
+	actions: pick,choose,select
+	states: selected,picked,chosen
+	
+}
+
+entity Link is widget {
+	actions: choose,click,select
+	states: selected,clicked,chosen
+	
+}
+
+entity DropdownList is widget {
+	actions: choose,select,pick
+	states: selected, picked,chosen
+	
+}
+
+entity Menu is widget {
+	actions: click,select 
+	states: selected,clicked
+	
+}
+
+entity MenuItem is widget {
+	actions:click,select
+	states: selected,clicked
+	
+}
+
+entity TimePicker is widget {
+	actions: pick,choose,select,set
+	states: selected,picked,chosen,set
+	
+}
+
+entity VideoPlayer is widget {
+	actions: play,pause,fast forward,rewind,toggle,exit,turn
+	states: played, paused, fast forwarded,rewound,toggled,exited,turned up,turned down
+	
+}
+
+entity Map is widget {
+	actions: zoom [in], zoom [out],switch
+	states: zoomed,switched
+	
+}
+
+entity TagCloud is widget {
+	actions: pick,choose,select,click
+	states:  selected,picked,chosen,clicked
+	
+}
+
+entity Splitter is widget {
+	actions: drag, drag down,drag up,drag to the right,drag to the left
+	states: dragged,dragged up ,dragged down,dragged to the right,dragged to the right
+	
+}
+
+entity ScrollBar is widget {
+	actions: scroll,scroll to the right,scroll to the left,scroll up,scroll down
+	states: scrolled,scrolled to the right,scrolled to the left,scrolled up,scroll down
+	
+}
+
+entity Slider is widget {
+	actions: set,adjust
+	states: set,adjusted
+	
+}
+
+entity SearchBox is widget {
+	actions: set,type,fill
+	states: set,typed,filled
+	
+}
+
+entity Pagination is widget {
+	actions: go to
+	states: displayed
+	
+}
+
+entity ImageCarousel is widget {
+	actions: choose,select,click,scroll to the right,scroll to the left
+	states: scrolled to the right,scrolled to the right, selected,chosen,clicked
+	
+}
+
+entity Image is widget {
+	actions: click 
+	states: clicked
+	
+}
+
+entity Icon is widget {
+	actions: click
+	states: clicked
+	
+}
+
+entity Breadcrumbs is widget {
+	actions: choose,select,click
+	states: selected,chosen,clicked
+	
+}
+
+entity ToggleButton is widget {
+	actions: switch [on], switch [off]
+	states: switched [on],switched [off]
+}
+
+entity NumericStepper is widget {
+	actions: type,set,fill,increase,decrease
+	states: typed,set,filled,increased,decreased
+	
+}
+
+entity Notification is widget {
+	actions: open,close,click 
+	states: opened,closed,clicked,displayed
+	
+}
+
+entity TabBar is widget {
+	actions: select,click [on]
+	states: selected,clicked
+	
+}
+
+entity Accordion is widget {
+	actions: show,hide,click [on]
+	states: shown,hidden,clicked [on]
+	
+}
+
+entity ModalWindow is widget {
+	actions: confirm,cancel,close
+	states: confirmed,canceled,closed,displayed
+	
+}
+
+entity WindowDialog is widget {
+	actions: confirm,cancel,close
+	states: confirmed,canceled,closed,displayed
+	
+}
+
+entity Tree is widget {
+	actions: select,click [on]
+	states: selected,clicked [on]
+	
+}
+
+entity Autocomplete is widget {
+	actions: type and choose,type and select
+	states: set,filled,typed
+	
+}
+
+entity BrowserWindow is widget {
+	actions: go
+	states: displayed
+	
+}
+
+entity TextArea is widget {
+	actions: type,set, fill [in]
+	states: typed,set,filled [in]
+	
+}
+
+entity TextField is widget {
+	actions: type,set, fill [in]
+	states: typed,set,filled
+	
+}
+
+entity Grid is widget {
+	actions: type,compare,select,click
+	states: typed,compared,selected,clicked
+	
+}
+
+entity selectable {
+	actions: select,choose
+}
+
+entity textfield {
+	actions: type 
+	properties: text
+}
+
+entity field  {
+	properties: text
+}
+
+entity option {
+	properties: text
+}
+
+entity options {
+	properties: text
+}
+
+
+entity value {
+	properties: text
+}
+
+entity fieldname {
+	properties: text
+}
+
+entity volume {
+	properties: text
+}
+
+entity item {
+	properties: text
+}
+
+
+entity full-screener {
+	properties: text
+}
+	
+entity row {
+	properties: text
+}
+
+entity image {
+	properties: text
+}
+
+entity date {
+	properties: text
+}
+
+entity key {
+	properties: text
+}
+
+entity tree {
+	properties: text
+}
+
+entity tab {
+	properties: text
+}
+
+entity column {
+	properties: text
+}
+
+entity word {
+	properties: text
+}
+
+entity text {
+	properties: text
+}
+
+entity time {
+	properties: text
+}
+
+entity video {
+	properties: text
+}
+
+entity message {
+	properties: text
+}
+
+entity message {
+	properties: text
+}
+
+entity right {
+	properties: text
+}
+
+entity left {
+	properties: text
+}
+
+entity page {
+	properties: text
+}
+
+entity down {
+	properties: text
+}
+
+entity items {
+	properties: text
+}
+
+entity webpage {
+	states: shown,displayed
+}
+
+entity content {
+	states: shown  
+	properties: text
+}

@@ -1,0 +1,536 @@
+model TabBar using widgets
+
+/*
+Scenario: tab-select
+Given the tab "<tab name>" is unselected
+When I select the tab "<tab name>"
+Then the tab "<tab name>" is selected
+*/
+
+Scenario: N1 tab-select
+Given the tab "TabBar" is unselected
+When I select the tab "TabBar"
+Then the tab "TabBar" is selected
+
+Scenario: N2 select
+Given #"TabBar" is unselected
+When I select #"TabBar"
+Then #"TabBar" is selected
+
+/*
+Scenario: tab-DoNotselect
+Given the tab "<tab name>" is not selected
+When I do not select the tab "<tab name>"
+Then the tab "<tab name>" is unselected
+*/
+
+Scenario: N3 tab-DoNotselect
+Given the tab "TabBar" is not selected
+When I do not select the tab "TabBar"
+Then the tab "TabBar" is unselected
+
+Scenario: N4 DoNotselect
+Given #"TabBar" is not selected
+When I do not select #"TabBar"
+Then #"TabBar" is unselected
+
+/*
+Scenario: TabBar-select
+Given the TabBar "<tab name>" is unselected
+When I select the TabBar "<tab name>"
+Then the TabBar "<tab name>" is selected
+*/
+
+Scenario: N5 TabBar-select
+Given the TabBar "TabBar" is unselected
+When I select the TabBar "TabBar"
+Then the TabBar "TabBar" is selected
+
+Scenario: N6 select
+Given #"TabBar" is unselected
+When I select #"TabBar"
+Then #"TabBar" is selected
+
+/*
+Scenario: TabBar-DoNotselect
+Given the TabBar "<tab name>" is not selected
+When I do not select the TabBar "<tab name>"
+Then the TabBar "<tab name>" is unselected
+*/
+
+Scenario: N7 TabBar-select
+Given the TabBar "TabBar" is not selected
+When I do not select the TabBar "TabBar"
+Then the TabBar "TabBar" is unselected
+
+Scenario: N8 select
+Given #"TabBar" is not selected
+When I do not select #"TabBar"
+Then #"TabBar" is unselected
+
+
+/*
+Scenario: tab-click
+Given the tab "<tab name>" is not clicked
+When I click the tab "<tab name>"
+Then the tab "<tab name>" is clicked
+*/
+
+Scenario: N9 tab-click
+Given the tab "TabBar" is not clicked
+When I click the tab "TabBar"
+Then the tab "TabBar" is clicked
+
+Scenario: N10 click
+Given #"TabBar" is not clicked
+When I click #"TabBar"
+Then #"TabBar" is clicked
+
+/*
+Scenario: tab-DoNotclick
+Given the tab "<tab name>" is not clicked
+When I do not clicked the tab "<tab name>"
+Then the tab "<tab name>" is not clicked
+*/
+
+Scenario: N11 tab-DoNotclick
+Given the tab "TabBar" is not clicked
+When I do not click the tab "TabBar"
+Then the tab "TabBar" is not clicked
+
+Scenario: N12 DoNotclick
+Given #"TabBar" is not clicked
+When I do not click #"TabBar"
+Then #"TabBar" is not clicked
+
+/*
+Scenario: TabBar-click
+Given the TabBar "<tab name>" is not clicked
+When I click the TabBar "<tab name>"
+Then the TabBar "<tab name>" is clicked
+*/
+
+Scenario: N13 TabBar-click
+Given the TabBar "TabBar" is not clicked
+When I click the TabBar "TabBar"
+Then the TabBar "TabBar" is clicked
+
+Scenario: N14 click
+Given #"TabBar" is not clicked
+When I click #"TabBar"
+Then #"TabBar" is clicked
+
+/*
+Scenario: TabBar-DoNotclick
+Given the TabBar "<tab name>" is not clicked
+When I do not clicked the TabBar "<tab name>"
+Then the TabBar "<tab name>" is not clicked
+*/
+
+Scenario: N15 TabBar-click
+Given the TabBar "TabBar" is not clicked
+When I do not click the TabBar "TabBar"
+Then the TabBar "TabBar" is not clicked
+
+Scenario: N16 click
+Given #"TabBar" is not clicked
+When I do not click #"TabBar"
+Then #"TabBar" is not clicked
+
+
+/*
+Scenario: tab-tab-select
+Given the tab "<tab>" for the tab "<tabname>" is not selected
+When I select the tab "<tab>" for the tab "<tabname>"
+Then the tab "<tab>" for the tab "<tabname>" is selected
+*/
+
+Scenario: N17 tab-tab-select
+Given the tab "Home" for the tab "TabBar" is not selected
+When I select the tab "Home" for the tab "TabBar"
+Then the tab "Home" for the tab "TabBar" is selected
+
+Scenario: N18 tab-select
+Given the tab "Home" for #"TabBar" is not selected
+When I select the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is selected
+
+Scenario: N19 tab-select
+Given #"Home" for the tab "TabBar" is not selected
+When I select #"Home" for the tab "TabBar"
+Then #"Home" for the tab "TabBar" is selected
+
+Scenario: N20 select
+Given #"Home" for #"TabBar" is not selected
+When I select #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is selected
+
+/*
+Scenario: tab-tab-DoNotselect
+Given the tab "<tab>" for the tab "<tabname>" is not selected
+When I do not select the tab "<tab>" for the tab "<tabname>"
+Then the tab "<tab>" for the tab "<tabname>" is not selected
+*/
+
+Scenario: N21 tab-tab-DoNotselect
+Given the tab "Home" for the tab "TabBar" is not selected
+When I do not select the tab "Home" for the tab "TabBar"
+Then the tab "Home" for the tab "TabBar" is not selected
+
+Scenario: N22 tab-DoNotselect
+Given the tab "Home" for #"TabBar" is not selected
+When I do not select the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is not selected
+
+Scenario: N23 tab-DoNotselect
+Given #"Home" for the tab "TabBar" is not selected
+When I do not select #"Home" for the tab "TabBar"
+Then #"Home" for the tab "TabBar" is not selected
+
+Scenario: N24 DoNotselect
+Given #"Home" for #"TabBar" is not selected
+When I do not select #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is not selected
+
+
+/*
+Scenario: tab-tab-click
+Given the tab "<tab>" for the tab "<tabname>" is not clicked
+When I click the tab "<tab>" for the tab "<tabname>"
+Then the tab "<tab>" for the tab "<tabname>" is clicked
+*/
+
+Scenario: N25 tab-tab-click
+Given the tab "Home" for the tab "TabBar" is not clicked
+When I click the tab "Home" for the tab "TabBar"
+Then the tab "Home" for the tab "TabBar" is clicked
+
+Scenario: N26 tab-click
+Given the tab "Home" for #"TabBar" is not clicked
+When I click the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is clicked
+
+Scenario: N27 tab-click
+Given #"Home" for the tab "TabBar" is not clicked
+When I click #"Home" for the tab "TabBar"
+Then #"Home" for the tab "TabBar" is clicked
+
+Scenario: N28 click
+Given #"Home" for #"TabBar" is not clicked
+When I click #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is clicked
+
+/*
+Scenario: tab-tab-DoNotclick
+Given the tab "<tab>" for the tab "<tabname>" is not clicked
+When I do not click the tab "<tab>" for the tab "<tabname>"
+Then the tab "<tab>" for the tab "<tabname>" is not clicked
+*/
+
+Scenario: N29 tab-tab-DoNotclick
+Given the tab "Home" for the tab "TabBar" is not clicked
+When I do not click the tab "Home" for the tab "TabBar"
+Then the tab "Home" for the tab "TabBar" is not clicked
+
+Scenario: N30 tab-DoNotclick
+Given the tab "Home" for #"TabBar" is not clicked
+When I do not click the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is not clicked
+
+Scenario: N31 tab-DoNotclick
+Given #"Home" for the tab "TabBar" is not clicked
+When I do not click #"Home" for the tab "TabBar"
+Then #"Home" for the tab "TabBar" is not clicked
+
+Scenario: N32 DoNotclick
+Given #"Home" for #"TabBar" is not clicked
+When I do not click #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is not clicked
+
+
+/*
+Scenario: TabBar-tab-select
+Given the tab "<tab>" for the TabBar "<tabname>" is not selected
+When I select the tab "<tab>" for the TabBar "<tabname>"
+Then the tab "<tab>" for the TabBar "<tabname>" is selected
+*/
+
+Scenario: N33 TabBar-tab-select
+Given the tab "Home" for the TabBar "TabBar" is not selected
+When I select the tab "Home" for the TabBar "TabBar"
+Then the tab "Home" for the TabBar "TabBar" is selected
+
+Scenario: N34 tab-select
+Given the tab "Home" for #"TabBar" is not selected
+When I select the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is selected
+
+Scenario: N35 TabBar-select
+Given #"Home" for the TabBar "TabBar" is not selected
+When I select #"Home" for the TabBar "TabBar"
+Then #"Home" for the TabBar "TabBar" is selected
+
+Scenario: N36 select
+Given #"Home" for #"TabBar" is not selected
+When I select #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is selected
+
+/*
+Scenario: TabBar-tab-DoNotselect
+Given the tab "<tab>" for the TabBar "<tabname>" is not selected
+When I do not select the tab "<tab>" for the TabBar "<tabname>"
+Then the tab "<tab>" for the TabBar "<tabname>" is not selected
+*/
+
+Scenario: N37 TabBar-tab-DoNotselect
+Given the tab "Home" for the TabBar "TabBar" is not selected
+When I do not select the tab "Home" for the TabBar "TabBar"
+Then the tab "Home" for the TabBar "TabBar" is not selected
+
+Scenario: N38 tab-DoNotselect
+Given the tab "Home" for #"TabBar" is not selected
+When I do not select the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is not selected
+
+Scenario: N39 TabBar-DoNotselect
+Given #"Home" for the TabBar "TabBar" is not selected
+When I do not select #"Home" for the TabBar "TabBar"
+Then #"Home" for the TabBar "TabBar" is not selected
+
+Scenario: N40 DoNotselect
+Given #"Home" for #"TabBar" is not selected
+When I do not select #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is not selected
+
+
+/*
+Scenario: TabBar-tab-click
+Given the tab "<tab>" for the TabBar "<tabname>" is not clicked
+When I click the tab "<tab>" for the TabBar "<tabname>"
+Then the tab "<tab>" for the TabBar "<tabname>" is clicked
+*/
+
+Scenario: N41 TabBar-tab-click
+Given the tab "Home" for the TabBar "TabBar" is not clicked
+When I click the tab "Home" for the TabBar "TabBar"
+Then the tab "Home" for the TabBar "TabBar" is clicked
+
+Scenario: N42 tab-click
+Given the tab "Home" for #"TabBar" is not clicked
+When I click the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is clicked
+
+Scenario: N43 TabBar-click
+Given #"Home" for the TabBar "TabBar" is not clicked
+When I click #"Home" for the TabBar "TabBar"
+Then #"Home" for the TabBar "TabBar" is clicked
+
+Scenario: N44 click
+Given #"Home" for #"TabBar" is not clicked
+When I click #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is clicked
+
+/*
+Scenario: TabBar-tab-DoNotclick
+Given the tab "<tab>" for the TabBar "<tabname>" is not clicked
+When I do not click the tab "<tab>" for the TabBar "<tabname>"
+Then the tab "<tab>" for the TabBar "<tabname>" is not clicked
+*/
+
+Scenario: N45 TabBar-tab-DoNotclick
+Given the tab "Home" for the TabBar "TabBar" is not clicked
+When I do not click the tab "Home" for the TabBar "TabBar"
+Then the tab "Home" for the TabBar "TabBar" is not clicked
+
+Scenario: N46 tab-DoNotclick
+Given the tab "Home" for #"TabBar" is not clicked
+When I do not click the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is not clicked
+
+Scenario: N47 TabBar-DoNotclick
+Given #"Home" for the TabBar "TabBar" is not clicked
+When I do not click #"Home" for the TabBar "TabBar"
+Then #"Home" for the TabBar "TabBar" is not clicked
+
+Scenario: N48 DoNotclick
+Given #"Home" for #"TabBar" is not clicked
+When I do not click #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is not clicked
+
+//Negative Test cases
+
+/*
+Scenario: tab-read
+Given the tab "<tab name>" is read
+When I read the tab "<tab name>"
+Then the tab "<tab name>" is read
+*/
+
+Scenario: N1 tab-read
+Given the tab "TabBar" is read
+When I read the tab "TabBar"
+Then the tab "TabBar" is read
+
+Scenario: N2 read
+Given #"TabBar" is read
+When I read #"TabBar"
+Then #"TabBar" is read
+
+/*
+Scenario: tab-DoNotread
+Given the tab "<tab name>" is not read
+When I do not read the tab "<tab name>"
+Then the tab "<tab name>" is read
+*/
+
+Scenario: N3 tab-DoNotread
+Given the tab "TabBar" is not read
+When I do not read the tab "TabBar"
+Then the tab "TabBar" is read
+
+Scenario: N4 DoNotread
+Given #"TabBar" is not read
+When I do not read #"TabBar"
+Then #"TabBar" is read
+
+/*
+Scenario: TabBar-read
+Given the TabBar "<tab name>" is read
+When I read the TabBar "<tab name>"
+Then the TabBar "<tab name>" is read
+*/
+
+Scenario: N5 TabBar-read
+Given the TabBar "TabBar" is read
+When I read the TabBar "TabBar"
+Then the TabBar "TabBar" is read
+
+Scenario: N6 read
+Given #"TabBar" is read
+When I read #"TabBar"
+Then #"TabBar" is read
+
+/*
+Scenario: TabBar-DoNotread
+Given the TabBar "<tab name>" is not read
+When I do not read the TabBar "<tab name>"
+Then the TabBar "<tab name>" is read
+*/
+
+Scenario: N7 TabBar-read
+Given the TabBar "TabBar" is not read
+When I do not read the TabBar "TabBar"
+Then the TabBar "TabBar" is read
+
+Scenario: N8 read
+Given #"TabBar" is not read
+When I do not read #"TabBar"
+Then #"TabBar" is read
+
+/*
+Scenario: tab-tab-read
+Given the tab "<tab>" for the tab "<tabname>" is not read
+When I read the tab "<tab>" for the tab "<tabname>"
+Then the tab "<tab>" for the tab "<tabname>" is read
+*/
+
+Scenario: N9 tab-tab-read
+Given the tab "Home" for the tab "TabBar" is not read
+When I read the tab "Home" for the tab "TabBar"
+Then the tab "Home" for the tab "TabBar" is read
+
+Scenario: N10 tab-read
+Given the tab "Home" for #"TabBar" is not read
+When I read the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is read
+
+Scenario: N11 tab-read
+Given #"Home" for the tab "TabBar" is not read
+When I read #"Home" for the tab "TabBar"
+Then #"Home" for the tab "TabBar" is read
+
+Scenario: N12 read
+Given #"Home" for #"TabBar" is not read
+When I read #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is read
+
+/*
+Scenario: tab-tab-DoNotread
+Given the tab "<tab>" for the tab "<tabname>" is not read
+When I do not read the tab "<tab>" for the tab "<tabname>"
+Then the tab "<tab>" for the tab "<tabname>" is not read
+*/
+
+Scenario: N13 tab-tab-DoNotread
+Given the tab "Home" for the tab "TabBar" is not read
+When I do not read the tab "Home" for the tab "TabBar"
+Then the tab "Home" for the tab "TabBar" is not read
+
+Scenario: N14 tab-DoNotread
+Given the tab "Home" for #"TabBar" is not read
+When I do not read the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is not read
+
+Scenario: N15 tab-DoNotread
+Given #"Home" for the tab "TabBar" is not read
+When I do not read #"Home" for the tab "TabBar"
+Then #"Home" for the tab "TabBar" is not read
+
+Scenario: N16 DoNotread
+Given #"Home" for #"TabBar" is not read
+When I do not read #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is not read
+
+/*
+Scenario: TabBar-tab-read
+Given the tab "<tab>" for the TabBar "<tabname>" is not read
+When I read the tab "<tab>" for the TabBar "<tabname>"
+Then the tab "<tab>" for the TabBar "<tabname>" is read
+*/
+
+Scenario: N17 TabBar-tab-read
+Given the tab "Home" for the TabBar "TabBar" is not read
+When I read the tab "Home" for the TabBar "TabBar"
+Then the tab "Home" for the TabBar "TabBar" is read
+
+Scenario: N18 tab-read
+Given the tab "Home" for #"TabBar" is not read
+When I read the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is read
+
+Scenario: N19 TabBar-read
+Given #"Home" for the TabBar "TabBar" is not read
+When I read #"Home" for the TabBar "TabBar"
+Then #"Home" for the TabBar "TabBar" is read
+
+Scenario: N20 read
+Given #"Home" for #"TabBar" is not read
+When I read #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is read
+
+/*
+Scenario: TabBar-tab-DoNotread
+Given the tab "<tab>" for the TabBar "<tabname>" is not read
+When I do not read the tab "<tab>" for the TabBar "<tabname>"
+Then the tab "<tab>" for the TabBar "<tabname>" is not read
+*/
+
+Scenario: N21 TabBar-tab-DoNotread
+Given the tab "Home" for the TabBar "TabBar" is not read
+When I do not read the tab "Home" for the TabBar "TabBar"
+Then the tab "Home" for the TabBar "TabBar" is not read
+
+Scenario: N22 tab-DoNotread
+Given the tab "Home" for #"TabBar" is not read
+When I do not read the tab "Home" for #"TabBar"
+Then the tab "Home" for #"TabBar" is not read
+
+Scenario: N23 TabBar-DoNotread
+Given #"Home" for the TabBar "TabBar" is not read
+When I do not read #"Home" for the TabBar "TabBar"
+Then #"Home" for the TabBar "TabBar" is not read
+
+Scenario: N24 DoNotread
+Given #"Home" for #"TabBar" is not read
+When I do not read #"Home" for #"TabBar"
+Then #"Home" for #"TabBar" is not read

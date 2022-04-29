@@ -1,0 +1,274 @@
+model Pagination using widgets
+
+/*
+Scenario: go to
+Given "the next page" is displayed
+When I go to "the next page"
+Then "the next page" is displayed
+*/
+
+Scenario: N1 goto
+Given "the next page" is displayed
+When I go to #"the next page"
+Then #"the next page" is displayed
+
+Scenario: N2 goto
+Given #"the next page" is displayed
+When I go to #"the next page"
+Then #"the next page" is displayed
+
+/*
+Scenario: DoNotgo to
+Given "the next page" is not displayed
+When I do not go to "the next page"
+Then "the next page" is not displayed
+*/
+
+Scenario: N3 DoNot goto
+Given #"the next page" is not displayed
+When I do not go to "the next page"
+Then #"the next page" is not displayed
+
+Scenario: N4 DoNot goto
+Given #"the next page" is not displayed
+When I do not go to #"the next page"
+Then #"the next page" is not displayed
+
+/*
+Scenario: go to
+Given "the previous page" is displayed
+When I go to "the previous page"
+Then "the previous page" is displayed
+*/
+
+Scenario: N1 goto
+Given "the previous page" is displayed
+When I go to #"the previous page"
+Then #"the previous page" is displayed
+
+Scenario: N5 goto
+Given #"the previous page" is displayed
+When I go to #"the previous page"
+Then #"the previous page" is displayed
+
+/*
+Scenario: DoNotgo to
+Given "the previous page" is not displayed
+When I do not go to "the previous page"
+Then "the previous page" is not displayed
+*/
+
+Scenario: N6 DoNot goto
+Given "the previous page" is not displayed
+When I do not go to "the previous page"
+Then #"the previous page" is not displayed
+
+Scenario: N7 DoNot goto
+Given #"the previous page" is not displayed
+When I do not go to #"the previous page"
+Then #"the previous page" is not displayed
+
+/*
+Scenario: go to
+Given "the first page" is displayed
+When I go to "the first page"
+Then "the first page" is displayed
+*/
+
+Scenario: N8 goto
+Given "the first page" is displayed
+When I go to #"the first page"
+Then #"the first page" is displayed
+
+Scenario: N9 goto
+Given #"the first page" is displayed
+When I go to #"the first page"
+Then #"the first page" is displayed
+
+/*
+Scenario: DoNotgo to
+Given "the first page" is not displayed
+When I do not go to "the first page"
+Then "the first page" is not displayed
+*/
+
+Scenario: N10 DoNot goto
+Given "the first page" is not displayed
+When I do not go to "the first page"
+Then #"the first page" is not displayed
+
+Scenario: N11 DoNot goto
+Given #"the first page" is not displayed
+When I do not go to #"the first page"
+Then #"the first page" is not displayed
+
+/*
+Scenario: go to
+Given "the last page" is displayed
+When I go to "the last page"
+Then "the last page" is displayed
+*/
+
+Scenario: N12 goto
+Given "the last page" is displayed
+When I go to #"the last page"
+Then #"the last page" is displayed
+
+Scenario: N13 goto
+Given #"the last page" is displayed
+When I go to #"the last page"
+Then #"the last page" is displayed
+
+/*
+Scenario: DoNotgo to
+Given "the last page" is not displayed
+When I do not go to "the last page"
+Then "the last page" is not displayed
+*/
+
+Scenario: N14 DoNot goto
+Given "the last page" is not displayed
+When I do not go to "the last page"
+Then #"the last page" is not displayed
+
+Scenario: N15 DoNot goto
+Given #"the last page" is not displayed
+When I do not go to #"the last page"
+Then #"the last page" is not displayed
+
+//Negative Test cases
+/*
+Scenario: go to
+Given "the next page" is extended
+When I go to "the next page"
+Then "the next page" is extended
+*/
+
+Scenario: N1 goto
+Given "the next page" is extended
+When I go to #"the next page"
+Then #"the next page" is extended
+
+Scenario: N2 goto
+Given #"the next page" is extended
+When I go to #"the next page"
+Then #"the next page" is extended
+
+/*
+Scenario: DoNotgo to
+Given "the next page" is not extended
+When I do not go to "the next page"
+Then "the next page" is not extended
+*/
+
+Scenario: N3 DoNot goto
+Given #"the next page" is not extended
+When I do not go to "the next page"
+Then #"the next page" is not extended
+
+Scenario: N4 DoNot goto
+Given #"the next page" is not extended
+When I do not go to #"the next page"
+Then #"the next page" is not extended
+
+/*
+Scenario: go to
+Given "the previous page" is extended
+When I go to "the previous page"
+Then "the previous page" is extended
+*/
+
+Scenario: N1 goto
+Given "the previous page" is extended
+When I go to #"the previous page"
+Then #"the previous page" is extended
+
+Scenario: N5 goto
+Given #"the previous page" is extended
+When I go to #"the previous page"
+Then #"the previous page" is extended
+
+/*
+Scenario: DoNotgo to
+Given "the previous page" is not extended
+When I do not go to "the previous page"
+Then "the previous page" is not extended
+*/
+
+Scenario: N6 DoNot goto
+Given "the previous page" is not extended
+When I do not go to "the previous page"
+Then #"the previous page" is not extended
+
+Scenario: N7 DoNot goto
+Given #"the previous page" is not extended
+When I do not go to #"the previous page"
+Then #"the previous page" is not extended
+
+/*
+Scenario: go to
+Given "the first page" is extended
+When I go to "the first page"
+Then "the first page" is extended
+*/
+
+Scenario: N8 goto
+Given "the first page" is extended
+When I go to #"the first page"
+Then #"the first page" is extended
+
+Scenario: N9 goto
+Given #"the first page" is extended
+When I go to #"the first page"
+Then #"the first page" is extended
+
+/*
+Scenario: DoNotgo to
+Given "the first page" is not extended
+When I do not go to "the first page"
+Then "the first page" is not extended
+*/
+
+Scenario: N10 DoNot goto
+Given "the first page" is not extended
+When I do not go to "the first page"
+Then #"the first page" is not extended
+
+Scenario: N11 DoNot goto
+Given #"the first page" is not extended
+When I do not go to #"the first page"
+Then #"the first page" is not extended
+
+/*
+Scenario: go to
+Given "the last page" is extended
+When I go to "the last page"
+Then "the last page" is extended
+*/
+
+Scenario: N12 goto
+Given "the last page" is extended
+When I go to #"the last page"
+Then #"the last page" is extended
+
+Scenario: N13 goto
+Given #"the last page" is extended
+When I go to #"the last page"
+Then #"the last page" is extended
+
+/*
+Scenario: DoNotgo to
+Given "the last page" is not extended
+When I do not go to "the last page"
+Then "the last page" is not extended
+*/
+
+Scenario: N14 DoNot goto
+Given "the last page" is not extended
+When I do not go to "the last page"
+Then #"the last page" is not extended
+
+Scenario: N15 DoNot goto
+Given #"the last page" is not extended
+When I do not go to #"the last page"
+Then #"the last page" is not extended

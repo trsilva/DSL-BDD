@@ -1,0 +1,411 @@
+model Map using widgets
+/*
+Scenario: zoom ['in']
+Given "World Map" is zoomed in
+When I zoom ['in'] "World Map"
+Then "World Map" is zoomed in
+*/
+
+Scenario: N1 zoom in
+Given "World Map" is zoomed in
+When I zoom ['in']  "World Map"
+Then #"World Map" is zoomed in
+
+Scenario: N2 zoom in
+Given #"Map" is zoomed in
+When I zoom ['in'] #"Map"
+Then #"World Map" is zoomed in
+
+/*
+Scenario: DonotZoom ['in']
+Given "World Map" is not zoomed in
+When I do not zoom ['in'] "World Map"
+Then "World Map" is zoomed in
+*/
+
+Scenario: N3 DonotZoom in
+Given "World Map" is not zoomed in
+When I do not zoom ['in'] "World Map"
+Then #"World Map" is not zoomed in
+
+Scenario: N4 DonotZoom in
+Given #"Map" is not zoomed in
+When I do not zoom ['in'] #"Map"
+Then #"Map" is not zoomed in
+
+/*
+Scenario: Map-zoom ['in']
+Given the Map "<World Map>" is zoomed in
+When I zoom ['in'] the Map "<World Map>"
+Then the Map "<World Map>" is zoomed in
+*/
+
+Scenario: N5 Map-zoom in
+Given the Map "Map" is zoomed in
+When I zoom ['in'] the Map "Map"
+Then the Map "Map" is zoomed in
+
+Scenario: N6 zoom in
+Given #"Map" is zoomed in
+When I zoom ['in'] #"Map"
+Then #"Map" is zoomed in
+
+/*
+Scenario: Map-DonotZoom ['in']
+Given the Map "<World Map>" is not zoomed in
+When I do not zoom ['in'] the Map "<World Map>"
+Then the Map "<World Map>" is zoomed in
+*/
+
+Scenario: N7 Map-zoom in
+Given the Map "Map" is not zoomed in
+When I do not zoom ['in'] the Map "Map"
+Then the Map "Map" is zoomed in
+
+Scenario: N8 zoom in
+Given #"Map" is not zoomed in
+When I do not zoom ['in'] #"Map"
+Then #"Map" is zoomed in
+
+/*
+Scenario: zoom out
+Given "World Map" is zoomed out
+When I zoom out "World Map"
+Then "World Map" is zoomed out
+*/
+
+Scenario: N9 zoom Out
+Given "World Map" is zoomed out
+When I zoom ['out'] "World Map"
+Then #"World Map" is zoomed out
+
+Scenario: N10 zoom Out
+Given #"Map" is zoomed out
+When I zoom ['out'] #"Map"
+Then #"Map" is zoomed out
+
+/*
+Scenario: Dinot zoom out
+Given "World Map" is not zoomed out
+When I do not zoom out "World Map"
+Then "World Map" is zoomed out
+*/
+
+Scenario: N11 Dinot zoom Out
+Given "World Map" is not zoomed out
+When I do not zoom ['out'] "World Map"
+Then #"World Map" is zoomed out
+
+Scenario: N12 DDinot zoom Out
+Given #"Map" is not zoomed out
+When I do not zoom ['out'] #"Map"
+Then #"Map" is zoomed out
+
+/*
+Scenario: Map-zoom out
+Given the Map "<World Map>" is zoomed out
+When I zoom out the Map "<World Map>"
+Then the Map "<World Map>" is zoomed out
+*/
+
+Scenario: N13 Map-zoom Out
+Given the Map "Map" is zoomed out
+When I zoom ['out'] the Map "Map"
+Then the Map "Map" is zoomed out
+
+Scenario: N14 zoom Out
+Given #"Map" is zoomed out
+When I zoom ['out'] #"Map"
+Then #"Map" is zoomed out
+
+/*
+Scenario: Map-DonotZoom out
+Given the Map "<World Map>" is not zoomed out
+When I do not zoom out the Map "<World Map>"
+Then the Map "<World Map>" is zoomed out
+*/
+
+Scenario: N15 Map-zoom Out
+Given the Map "Map" is not zoomed out
+When I do not zoom ['out'] the Map "Map"
+Then the Map "Map" is zoomed out
+
+Scenario: N16 zoom Out
+Given #"Map" is not zoomed out
+When I do not zoom ['out'] #"Map"
+Then #"Map" is zoomed out
+
+/*
+Scenario: switch to satellite imagery
+Given "World Map" is switched to satellite imagery
+When I switch "to satellite imagery" 
+Then "World Map" is switched to satellite imagery
+*/
+
+Scenario: N1 switch to satellite imagery
+Given "World Map" is switched to satellite imagery
+When I switch "to satellite imagery"
+Then #"World Map" is switched to satellite imagery
+
+Scenario: N2 switch to satellite imagery
+Given #"Map" is switched to satellite imagery
+When I switch "to satellite imagery"
+Then #"World Map" is switched to satellite imagery
+
+/*
+Scenario: DoNotswitch to satellite imagery
+Given "World Map" is not switched to satellite imagery
+When I do not switch "to satellite imagery"
+Then "World Map" is switched to satellite imagery
+*/
+
+Scenario: N3 DoNotswitch to satellite imagery
+Given "World Map" is not switched to satellite imagery
+When I do not switch "to satellite imagery"
+Then #"World Map" is not switched to satellite imagery
+
+Scenario: N4 Donotswitch to satellite imagery
+Given #"Map" is not switched to satellite imagery
+When I do not switch "to satellite imagery"
+Then #"Map" is not switched to satellite imagery
+
+/*
+Scenario: Map-switch to satellite imagery
+Given the Map "<World Map>" is switched to satellite imagery
+When I switch "to satellite imagery"
+Then the Map "<World Map>" is switched to satellite imagery
+*/
+
+Scenario: N5 Map-switch  satellite imagery
+Given the Map "Map" is switched to satellite imagery
+When I switch "to satellite imagery"
+Then the Map "Map" is switched to satellite imagery
+
+Scenario: N6 switch to satellite imagery
+Given #"Map" is switched to satellite imagery
+When I switch "to satellite imagery"
+Then #"Map" is switched to satellite imagery
+
+/*
+Scenario: Map-DoNotswitch to satellite imagery
+Given the Map "<World Map>" is not switched to satellite imagery
+When I do not switch "to satellite imagery"
+Then the Map "<World Map>" is switched to satellite imagery
+*/
+
+Scenario: N7 Map-DoNotswitch  satellite imagery
+Given the Map "Map" is not switched to satellite imagery
+When I do not switch "to satellite imagery"
+Then the Map "Map" is switched to satellite imagery
+
+Scenario: N8 DoNotswitch to satellite imagery
+Given #"Map" is not switched to satellite imagery
+When I do not switch "to satellite imagery"
+Then #"Map" is switched to satellite imagery
+
+/*
+Scenario: switch to street map
+Given "World Map" is switched to street map
+When I switch "to street map" 
+Then "World Map" is switched to street map
+*/
+
+Scenario: N1 switch to street map
+Given "World Map" is switched to street map
+When I switch "to street map"
+Then #"World Map" is switched to street map
+
+Scenario: N2 switch to street map
+Given #"Map" is switched to street map
+When I switch "to street map"
+Then #"World Map" is switched to street map
+
+/*
+Scenario: DoNotswitch to street map
+Given "World Map" is not switched to street map
+When I do not switch "to street map"
+Then "World Map" is switched to street map
+*/
+
+Scenario: N3 DoNotswitch to street map
+Given "World Map" is not switched to street map
+When I do not switch "to street map"
+Then #"World Map" is not switched to street map
+
+Scenario: N4 Donotswitch to street map
+Given #"Map" is not switched to street map
+When I do not switch "to street map"
+Then #"Map" is not switched to street map
+
+/*
+Scenario: Map-switch to street map
+Given the Map "<World Map>" is switched to street map
+When I switch "to street map"
+Then the Map "<World Map>" is switched to street map
+*/
+
+Scenario: N5 Map-switch street map
+Given the Map "Map" is switched to street map
+When I switch "to street map"
+Then the Map "Map" is switched to street map
+
+Scenario: N6 switch to street map
+Given #"Map" is switched to street map
+When I switch "to street map"
+Then #"Map" is switched to street map
+
+/*
+Scenario: Map-DoNotswitch to street map
+Given the Map "<World Map>" is not switched to street map
+When I do not switch "to street map"
+Then the Map "<World Map>" is switched to street map
+*/
+
+Scenario: N7 Map-DoNotswitch street map
+Given the Map "Map" is not switched to street map
+When I do not switch "to street map"
+Then the Map "Map" is switched to street map
+
+Scenario: N8 DoNotswitch to street map
+Given #"Map" is not switched to street map
+When I do not switch "to street map"
+Then #"Map" is switched to street map
+
+//Negative Test cases
+
+/*
+Scenario: drag ['in']
+Given "World Map" is dragged in
+When I drag ['in'] "World Map"
+Then "World Map" is dragged in
+*/
+
+Scenario: N1 drag in
+Given "World Map" is dragged in
+When I drag ['in']  "World Map"
+Then #"World Map" is dragged in
+
+Scenario: N2 drag in
+Given #"Map" is dragged in
+When I drag ['in'] #"Map"
+Then #"World Map" is dragged in
+
+/*
+Scenario: Donotdrag ['in']
+Given "World Map" is not dragged in
+When I do not drag ['in'] "World Map"
+Then "World Map" is dragged in
+*/
+
+Scenario: N3 Donotdrag in
+Given "World Map" is not dragged in
+When I do not drag ['in'] "World Map"
+Then #"World Map" is not dragged in
+
+Scenario: N4 Donotdrag in
+Given #"Map" is not dragged in
+When I do not drag ['in'] #"Map"
+Then #"Map" is not dragged in
+
+/*
+Scenario: Map-drag ['in']
+Given the Map "<World Map>" is dragged in
+When I drag ['in'] the Map "<World Map>"
+Then the Map "<World Map>" is dragged in
+*/
+
+Scenario: N5 Map-drag in
+Given the Map "Map" is dragged in
+When I drag ['in'] the Map "Map"
+Then the Map "Map" is dragged in
+
+Scenario: N6 drag in
+Given #"Map" is dragged in
+When I drag ['in'] #"Map"
+Then #"Map" is dragged in
+
+/*
+Scenario: Map-Donotdrag ['in']
+Given the Map "<World Map>" is not dragged in
+When I do not drag ['in'] the Map "<World Map>"
+Then the Map "<World Map>" is dragged in
+*/
+
+Scenario: N7 Map-drag in
+Given the Map "Map" is not dragged in
+When I do not drag ['in'] the Map "Map"
+Then the Map "Map" is dragged in
+
+Scenario: N8 drag in
+Given #"Map" is not dragged in
+When I do not drag ['in'] #"Map"
+Then #"Map" is dragged in
+
+/*
+Scenario: drag out
+Given "World Map" is dragged out
+When I drag out "World Map"
+Then "World Map" is dragged out
+*/
+
+Scenario: N9 drag Out
+Given "World Map" is dragged out
+When I drag ['out'] "World Map"
+Then #"World Map" is dragged out
+
+Scenario: N10 drag Out
+Given #"Map" is dragged out
+When I drag ['out'] #"Map"
+Then #"Map" is dragged out
+
+/*
+Scenario: Dinot drag out
+Given "World Map" is not dragged out
+When I do not drag out "World Map"
+Then "World Map" is dragged out
+*/
+
+Scenario: N11 Dinot drag Out
+Given "World Map" is not dragged out
+When I do not drag ['out'] "World Map"
+Then #"World Map" is dragged out
+
+Scenario: N12 DDinot drag Out
+Given #"Map" is not dragged out
+When I do not drag ['out'] #"Map"
+Then #"Map" is dragged out
+
+/*
+Scenario: Map-drag out
+Given the Map "<World Map>" is dragged out
+When I drag out the Map "<World Map>"
+Then the Map "<World Map>" is dragged out
+*/
+
+Scenario: N13 Map-drag Out
+Given the Map "Map" is dragged out
+When I drag ['out'] the Map "Map"
+Then the Map "Map" is dragged out
+
+Scenario: N14 drag Out
+Given #"Map" is dragged out
+When I drag ['out'] #"Map"
+Then #"Map" is dragged out
+
+/*
+Scenario: Map-Donotdrag out
+Given the Map "<World Map>" is not dragged out
+When I do not drag out the Map "<World Map>"
+Then the Map "<World Map>" is dragged out
+*/
+
+Scenario: N15 Map-drag Out
+Given the Map "Map" is not dragged out
+When I do not drag ['out'] the Map "Map"
+Then the Map "Map" is dragged out
+
+Scenario: N16 drag Out
+Given #"Map" is not dragged out
+When I do not drag ['out'] #"Map"
+Then #"Map" is dragged out
+

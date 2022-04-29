@@ -1,0 +1,444 @@
+PROJECT 5
+Scenario: The server is running
+    When I visit the Home Page
+		which means 
+		Given the page "Web Page" is displayed
+		when I click "Home Page"
+		then the page "Home Page" is displayed
+    Then I should see Products in the title
+		which means 
+		Given "Home page" is displayed
+		when I click "products"
+		then the title "products" is displayed
+    And  I should not see ERROR
+		which means 
+		Given "Home page" is displayed
+		when I click  "products"
+		then the title "404 Not Found" is not displayed
+		
+Scenario: List All Products
+    When I visit the Home Page
+		which means 
+		Given the page "Web Page" is displayed
+		when I click "Home Page"
+		then the page "Home Page" is displayed
+    And I press the Search button
+		which means 
+		Given "Home page" is displayed
+		when I click "Search"
+		then #"Search button" is clicked
+    Then I should see Nike in the results
+		which means 
+		Given "Search button" is clicked
+		when I click "Search"
+		then #"Nike" is displayed
+    And I should not see Scott in the results
+		which means 
+		Given "Search button" is clicked
+		when I click "Search"
+		then #"Scott" is not displayed
+
+
+Scenario: Query a Product
+    When I visit the Home Page
+		which means 
+		Given the page "Web Page" is displayed
+		when I click "Home Page"
+		then the page "Home Page" is displayed
+    And I set the Category to Shirts
+		which means 
+		Given the field "shirt" for the "category" is set
+		when I set "shirt" for the "category"
+		then #"shirt" for the "category" is set
+    And I press the Search button
+		which means 
+		Given the field "shirt" for the "category" is set
+		when I click "search"
+		then #"search" is clicked
+    Then I should see Nike sweatshirt in the results
+		which means 
+		Given "Search button" is clicked
+		when I click "Search"
+		then "Nike sweatshirt" is displayed
+    And I should see Black t-shirt in the results
+		which means 
+		Given "Search button" is clicked
+		when I click "Search"
+		then "Black t-shirt" is displayed
+    And I should not see Pants in the results
+		which means 
+		Given "Search button" is clicked
+		when I click "Search"
+		then "Pants" is not displayed 
+		
+
+PROJECT 4
+
+Background:
+    Given a valid user named Alice
+		which means 
+		Given the name "Alice" is displayed
+		When I click "Log in Page"
+		and When I type "user name and password"
+		Then the page "logged in as Alice" is displayed
+    And some regulations
+		which means 
+		Given "Home page" is displayed
+		When I select  "regulation" 
+		Then "regulation" is displayed
+    And regulation C2000000
+		which means 
+		Given "Home page" is displayed
+		When I select  "regulation" 
+		Then "C2000000" for "regulation" is displayed
+
+
+Scenario: Searching by Regulation Number
+    Given I am logged in as Alice
+		which means 
+		Given the page "Web Page" is displayed
+		When I click "Log in Page"
+		and When I type "user name and password"
+		Then the page "logged in as Alice" is displayed
+    When I search for a regulation using a valid Regulation Number
+		which means 
+		Given "Home page" is displayed
+		when I select  "regulation" using "valid Regulation Number"
+		then "regulation" using "valid Regulation Number" is displayed
+    Then the search result should contain the regulation searched for
+		which means 
+		Given "regulation" using "valid Regulation Number" is selected
+		When I select  "regulation" using "valid Regulation Number"
+		Then "regulation" for "valid Regulation Number" is displayed
+		
+Scenario: View regulation core data
+    Given I am logged in as Alice
+		which means 
+		Given the page "Web Page" is displayed
+		When I click "Log in Page"
+		and When I type "user name and password"
+		then the page "logged in as Alice" is displayed
+    When I select regulation C2000000
+		which means 
+		Given "Home page" is displayed
+		When I search  "regulation" using "C2000000"
+		Then "regulation" using "C2000000" is searched
+    Then a summary of the core information should be presented
+		which means 
+		Given "regulation" using "C2000000" is searched
+		When I search  "regulation" using "C2000000"
+		Then "regulation summary" for "C2000000" is displayed 
+		
+PROJECT 3
+
+Scenario: The closest taxi rank 
+    Given Joe is at London Bridge Station
+		which means 
+		Given the location "My location" is not displayed
+		when I click "My location"
+		then the location "London Bridge Station" is displayed
+    When he looks for the closest taxi rank within some distance
+		which means 
+		Given the location "London Bridge Station" is displayed
+		when I search "taxi rank within 500 meters" for "Taxi available"
+		then the "taxi rank within 500 meters" for "Taxi available" is searched
+    Then the first taxi rank should be Tooley Street
+		which means 
+		Given the location "London Bridge Station" is displayed
+		when I search "taxi rank within 500 meters" for "Taxi available"
+		then the "Tooley Street (Duke Street Hill) " for "Taxi available" is displayed
+		
+Scenario: All the taxi ranks within a given distance should be shown
+    Given Joe is at London Bridge Station
+		which means 
+		Given the location "My location" is not displayed
+		when I click "My location"
+		then the location "London Bridge Station" is displayed
+    When he looks for the closest taxi rank within some distance
+		which means 
+		Given the location "London Bridge Station" is displayed
+		when I search "taxi rank within 500 meters" for "Taxi available"
+		then the "3" for "Taxi available" is searched
+    Then the first taxi rank should be Canary Wharf
+		which means 
+		Given the location "London Bridge Station" is displayed
+		when I search "taxi rank within 500 meters" for "Taxi available"
+		then the "Canary Wharf " for "Taxi available" is displayed
+	
+Scenario: Where there are no taxi stands nearby none should be found
+    Given Joe is at London Bridge Station
+		which means 
+		Given the location "My location" is not displayed
+		when I click "My location"
+		then the location "London Bridge Station" is displayed
+    When he looks for the closest taxi rank within some distance
+		which means 
+		Given the location "London Bridge Station" is displayed
+		when I search "taxi rank within 50 meters" for "Taxi available"
+		then the "taxi rank within 50 meters" for "Taxi available" is searched
+    Then taxi racks should be null
+		which means 
+		Given the location "London Bridge Station" is displayed
+		when I search "taxi rank within 50 meters" for "Taxi available"
+		then the "no taxi available" for "Taxi available" is displayed  
+		
+Scenario Outline: Provide useful practical information about each taxi rank at <Location>
+    Given Joe is planning a getaway from <Location>
+		which means 
+		Given the location "My location" is not displayed
+		when I click "My location"
+		then the location "Canary Wharf " is displayed
+    When he looks for the closest taxi rank within <Distance> meters
+		which means 
+		Given the location "Canary Wharf" is displayed
+		when I search "taxi rank within 500 meters" for "Taxi available"
+		then the "4" for "Taxi available" is searched
+    Then he should find the taxi ranks with the details
+		which means 
+		Given the location "London Bridge Station" is displayed
+		when I search "taxi rank within 500 meters" for "Taxi available"
+		then the "40 Bank Street " for "Taxi available within 500 meters" is displayed
+
+		
+PROJECT 2
+
+Scenario: Buying shares
+    Given Tom Smith is a registered trader
+		which means
+		Given the status "registered status" is not registered
+		When I register for "trading"
+		Then the status "registered status" is registered
+    When he purchases 5 AAPL shares at $100 each
+		which means
+		Given the status "registered status" for "trading" is registered
+		When I purchase "5 AAPL shares" for "$100 each"
+		Then the "5 AAPL shares" for "$100 each" is purchased
+    Then he should have the following positions "positions"
+		which means
+		Given the "5 AAPL shares" for "$100 each" is not purchased
+		When I purchase "5 AAPL shares" for "$100 each"
+		Then the postions "positions" is displayed
+		
+		
+	
+Scenario: Buying and selling shares
+	Given Tom Smith is a registered trader
+		which means
+		Given the status "registered status" for "trading" is not registered
+		When I register for "trading"
+		Then the status "registered status" is registered
+	When he purchases 5 AAPL shares at $100 each
+		which means
+		Given the status "registered status" for "trading" is registered
+		When I purchase "5 AAPL shares" for "$100 each"
+		Then the "5 AAPL shares" for "$100 each" is purchased
+	And he sells 3 AAPL shares for $150 each
+		which means
+		Given the "5 AAPL shares" for "$100 each" is  purchased
+		When I sell "3 AAPL shares" for "$150 each"
+		Then the "3 AAPL shares" for "$150 each" is  sold
+	Then he should have the following positions:
+		which means
+		Given the "3 AAPL shares" for "$150 each" is not sold
+		When I sell "3 AAPL shares" for "$150 each"
+		Then the postions "positions" is displayed
+		
+Scenario Outline: New clients need to provide their full name and email address
+    Given a trader with the following details:
+      | firstName   | lastName   | email   |
+      | <firstName> | <lastName> | <email> |
+		which means
+		Given the status "registered status" for "trading" is not registered
+		When I enter "firstname"
+		Then the field "firstname" is filled
+    When the trader attempts to register with BDD Trader
+		 which means 
+		 Given the  name for the field "first name" is filled
+		 When I register for "trading"
+		 Then the message "status of registration" is displayed
+    Then the registration should be rejected with the message '<message>'
+		which means 
+		 Given the  name for the field "first name" is filled
+		 When I register for "trading"
+		 Then the message "Missing mandatory fields for client: lastName" is displayed
+
+Scenario: New clients are given a portfolio with $1000 to start with
+    Given a trader with the following details:
+      | firstName | lastName | email          |
+      | Jake      | Smith    | jack@smith.com |
+		which means
+		Given the status "registered status" for "trading" is not registered
+		When I enter "my details"
+		Then the field "Person Details" are filled
+    When the trader registers with BDD Trader
+		which means 
+		 Given the  details for the field "my details" are filled
+		 When I register for "trading"
+		 Then the message "status of registration" is displayed
+    Then the trader should have a portfolio with $1000 in cash
+		Given the status "registered status" for "trading" is registered
+		When I click "my portfolio"
+		Then the "portfolio with $1000 in cash" is displayed
+
+	
+Scenario: Viewing news about a particular share
+    Given Tim is interested in Apple
+		which means
+		Given the product "Apple" is not shown
+		When I click on "Apple"
+		Then the product "Apple" is shown
+		
+    When Tim views the news about AAPL
+		which means
+		Given the page "About Apple" is displayed
+		When I click on "About Apple"
+		Then the news "About AAPL" is displayed
+    Then Tim should only see articles related to AAPL
+		Given the news "About AAPL" is displayed
+		When I view "About AAPL"
+		Then the "articles" of "AAPL" is displayed
+
+Scenario: Making a profit on a single share
+    Given Sarah Smith is a registered trader
+		which means
+		Given the status "registered status" is not registered
+		When I register for "trading"
+		Then the status "registered status" is registered
+    When Sarah has purchased 5 SNAP shares at $100 each
+		which means
+		Given the status "registered status" for "trading" is registered
+		When I purchase "5 SNAP shares" for "$100 each"
+		Then the "5 SNAP shares" for "$100 each" is purchased
+    Then she should have the following positions:
+		which means
+		Given the "5 SNAP shares" for "$100 each" is not purchased
+		When I purchase "5 SNAP shares" for "$100 each"
+		Then the postions "positions" is displayed
+
+PROJECT 1
+
+Scenario: List all books
+    When the customer wants to know all books in the library
+		which means 
+		Given "books available" for the "list of books" is not displayed
+		When I click "books available" for the "list of books"
+		Then "books available" for the "list of books" is displayed
+    Then 3 books should be found
+		which means
+		Given "books available" for the "list of books" is displayed
+		When I click "books available" for the "list of books"
+		Then "Name of 3 books" of the "list of books" is displayed
+      And Book 1 should have the title "How to be awesome"
+		which means
+		Given "Name of 3 books" of the "list of books" is displayed
+		When I click "titles" of the "list of books"
+		Then "How to be awesome" for "Book 1" is displayed
+      And Book 2 should have the title "My life as an awesome girl"
+		which means
+		Given "Name of 3 books" of the "list of books" is displayed
+		When I click "titles" of the "list of books"
+		Then "My life as an awesome girl" for "Book 2" is displayed
+      And Book 3 should have the title "I think my teacher is cool"
+		which means
+		Given "Name of 3 books" of the "list of books" is displayed
+		When I click "titles" of the "list of books"
+		Then "I think my teacher is cool" for "Book 3" is displayed
+
+Scenario: Search books by year
+    When the customer searches for books published in year 2016
+		which means 
+		Given "books available" for the "books published in year 2016" is not displayed
+		When I search "books available" for the "books published in year 2016"
+		Then "books available" for the "books published in year 2016" is displayed
+    Then 2 books should be found
+		which means
+		Given "books available" for the "books published in year 2016" is displayed
+		When I search "books available" for the "books published in year 2016"
+		Then "Name of 2 books" of the "books published in year 2016" is displayed
+      And Book 1 should have the title "How to be awesome"
+		which means
+		Given "Name of 2 books" of the "books published in year 2016" is displayed
+		When I click "titles" of the "Name of 2 books"
+		Then "How to be awesome" for "Book 1" is displayed
+      And Book 2 should have the title "My life as an awesome girl"
+		which means
+		Given "Name of 2 books" of the "books published in year 2016" is displayed
+		When I click "titles" of the "Name of 2 books"
+		Then "My life as an awesome girl" for "Book 2" is displayed
+
+
+Scenario Outline: Search books by author
+	When the customer searches for books by author <Author Search>
+		which means 
+		Given "books available" for the "books published by author" is not displayed
+		When I search "books available" for the "books published by author"
+		Then "books available" for the "books published by author" is displayed
+	Then 2 books should be found
+		which means
+		Given "books available" for the "books published by author" is displayed
+		When I search "books available" for the "books published by author"
+		Then "Name of 2 books" of the "books published by author" is displayed
+	  And Book 1 should have the title "How to be awesome"
+		which means
+		Given "Name of 2 books" for the "books published by author" is displayed
+		When I click "titles" of the "Name of 2 books"
+		Then "How to be awesome" for "Book 1" is displayed
+	  And Book 2 should have the title "My life as an awesome girl"
+		which means
+		Given "Name of 2 books" of the "books published by author" is displayed
+		When I click "titles" of the "Name of 2 books"
+		Then "My life as an awesome girl" for "Book 2" is displayed
+		
+Scenario Outline: Search books by title
+	When the customer searches for books by titles <Title>
+		which means 
+		Given "books available" for the "books published by titles" is not displayed
+		When I search "books available" for the "books published by titles"
+		Then "books available" for the "books published by titles" is displayed
+	Then 2 books should be found
+		which means
+		Given "books available" for the "books published by titles" is displayed
+		When I search "books available" for the "books published by titles"
+		Then "Name of 2 books" of the "books published by titles" is displayed
+	  And Book 1 should have the title "How to be awesome"
+		which means
+		Given "Name of 2 books" for the "books published by titles" is displayed
+		When I click "Awesome" of the "Name of 2 books"
+		Then "How to be awesome" for "Book 1" is displayed
+	  And Book 2 should have the title "My life as an awesome girl"
+		which means
+		Given "Name of 2 books" of the "books published by titles" is displayed
+		When I click "Awesome" of the "Name of 2 books"
+		Then "My life as an awesome girl" for "Book 2" is displayed
+		
+	When the customer searches for books by titles <Title>
+		which means 
+		Given "books available" for the "books published by titles" is not displayed
+		When I search "books available" for the "books published by titles"
+		Then "books available" for the "books published by titles" is displayed
+	Then 1 books should be found
+		which means
+		Given "books available" for the "books published by titles" is displayed
+		When I search "books available" for the "books published by titles"
+		Then "Name of 1 books" of the "books published by titles" is displayed
+	  And Book 1 should have the title "I think my teacher is cool"
+		which means
+		Given "Name of 2 books" for the "books published by titles" is displayed
+		When I click "cool" of the "Name of 2 books"
+		Then "I think my teacher is cool" for "Book 1" is displayed
+		
+	When the customer searches for books by titles <Title>
+		which means 
+		Given "books available" for the "books published by titles" is not displayed
+		When I search "books available" for the "books published by titles"
+		Then "books available" for the "books published by titles" is displayed
+	Then 1 books should be found
+		which means
+		Given "books available" for the "books published by titles" is displayed
+		When I search "books available" for the "books published by titles"
+		Then "Name of 1 books" of the "books published by titles" is displayed
+	  And Book 1 should have the title "How to be awesome"
+		which means
+		Given "Name of 2 books" for the "books published by titles" is displayed
+		When I click "How to be" of the "Name of 2 books"
+		Then "How to be awesome" for "Book 1" is displayed

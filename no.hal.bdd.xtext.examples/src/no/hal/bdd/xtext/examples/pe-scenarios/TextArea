@@ -1,0 +1,708 @@
+model TextArea using widgets
+/*
+Scenario: text-type
+Given the text "<any text>" is not typed
+When I type the text "<any text>"
+Then the text "<any text>" is typed
+*/
+
+Scenario: N1 text-type
+Given the text "TextArea" is not typed
+When I type the text "TextArea"
+Then the text "TextArea" is typed
+
+Scenario: N2 type
+Given #"TextArea" is not typed
+When I type #"TextArea"
+Then #"TextArea" is typed
+
+/*
+Scenario: text-DoNottype
+Given the text "<any text>" is not typed
+When I do not type the text "<any text>"
+Then the text "<any text>" is not typed
+*/
+
+Scenario: N3 text-DoNottype
+Given the text "TextArea" is not typed
+When I do not type the text "TextArea"
+Then the text "TextArea" is not typed
+
+Scenario: N4 DoNottype
+Given #"TextArea" is not typed
+When I do not type #"TextArea"
+Then #"TextArea" is not typed
+
+/*
+Scenario: TextArea-type
+Given the TextArea "<any text>" is not typed
+When I type the TextArea "<any text>"
+Then the TextArea "<any text>" is typed
+*/
+
+Scenario: N5 TextArea-type
+Given the TextArea "TextArea" is not typed
+When I type the TextArea "TextArea"
+Then the TextArea "TextArea" is typed
+
+Scenario: N6 type
+Given #"TextArea" is not typed
+When I type #"TextArea"
+Then #"TextArea" is typed
+
+/*
+Scenario: TextArea-DoNottype
+Given the TextArea "<any text>" is not typed
+When I do not type the TextArea "<any text>"
+Then the TextArea "<any text>" is not typed
+*/
+
+Scenario: N7 TextArea-type
+Given the TextArea "TextArea" is not typed
+When I do not type the TextArea "TextArea"
+Then the TextArea "TextArea" is not typed
+
+Scenario: N8 type
+Given #"TextArea" is not typed
+When I do not type #"TextArea"
+Then #"TextArea" is not typed
+
+/*
+Scenario: text-set
+Given the text "<any text>" is not set
+When I set the text "<any text>"
+Then the text "<any text>" is set
+*/
+
+Scenario: N9 text-set
+Given the text "TextArea" is not set
+When I set the text "TextArea"
+Then the text "TextArea" is set
+
+Scenario: N10 set
+Given #"TextArea" is not set
+When I set #"TextArea"
+Then #"TextArea" is set
+
+/*
+Scenario: text-DoNotset
+Given the text "<any text>" is not set
+When I do not set the text "<any text>"
+Then the text "<any text>" is not set
+*/
+
+Scenario: N11 text-DoNotset
+Given the text "TextArea" is not set
+When I do not set the text "TextArea"
+Then the text "TextArea" is not set
+
+Scenario: N12 DoNotset
+Given #"TextArea" is not set
+When I do not set #"TextArea"
+Then #"TextArea" is not set
+
+/*
+Scenario: TextArea-set
+Given the TextArea "<any text>" is not set
+When I set the TextArea "<any text>"
+Then the TextArea "<any text>" is set
+*/
+
+Scenario: N13 TextArea-set
+Given the TextArea "TextArea" is not set
+When I set the TextArea "TextArea"
+Then the TextArea "TextArea" is set
+
+Scenario: N14 set
+Given #"TextArea" is not set
+When I set #"TextArea"
+Then #"TextArea" is set
+
+/*
+Scenario: TextArea-DoNotset
+Given the TextArea "<any text>" is not set
+When I do not set the TextArea "<any text>"
+Then the TextArea "<any text>" is not set
+*/
+
+Scenario: N13 TextArea-set
+Given the TextArea "TextArea" is not set
+When I do not set the TextArea "TextArea"
+Then the TextArea "TextArea" is not set
+
+Scenario: N14 set
+Given #"TextArea" is not set
+When I do not set #"TextArea"
+Then #"TextArea" is not set
+
+/*
+Scenario: text-fill in with
+Given the text "<any text>" is not filled in
+When I fill in with the text "<any text>"
+Then the text "<any text>" is filled in
+*/
+
+Scenario: N15 text-fill in with
+Given the text "TextArea" is not filled in
+When I fill in with the text "TextArea"
+Then the text "TextArea" is filled in
+
+Scenario: N16 fill in with
+Given #"TextArea" is not filled in
+When I fill in with #"TextArea"
+Then #"TextArea" is filled in
+
+/*
+Scenario: text-DoNotfill in with
+Given the text "<any text>" is not filled in
+When I do not fill in the text "<any text>"
+Then the text "<any text>" is not filled in
+*/
+
+Scenario: N17 text-DoNotfill in with
+Given the text "TextArea" is not filled in
+When I do not fill in the text "TextArea"
+Then the text "TextArea" is not filled in
+
+Scenario: N18 DoNotfill in with
+Given #"TextArea" is not filled in
+When I do not fill in #"TextArea"
+Then #"TextArea" is not filled in
+
+/*
+Scenario: TextArea-fill in with
+Given the TextArea "<any text>" is not filled in
+When I fill in with the TextArea "<any text>"
+Then the TextArea "<any text>" is filled in
+*/
+
+Scenario: N19 TextArea-fill in with
+Given the TextArea "TextArea" is not filled in
+When I fill in with the TextArea "TextArea"
+Then the TextArea "TextArea" is filled in
+
+Scenario: N20 fill in with
+Given #"TextArea" is not filled in
+When I fill in with #"TextArea"
+Then #"TextArea" is filled in
+
+/*
+Scenario: TextArea-DoNotfill in with
+Given the TextArea "<any text>" is not filled in
+When I do not fill in the TextArea "<any text>"
+Then the TextArea "<any text>" is not filled in
+*/
+
+Scenario: N21 TextArea-fill in with
+Given the TextArea "TextArea" is not filled in
+When I do not fill in the TextArea "TextArea"
+Then the TextArea "TextArea" is not filled in
+
+Scenario: N22 fill in with
+Given #"TextArea" is not filled in
+When I do not fill in #"TextArea"
+Then #"TextArea" is not filled in
+
+
+/*
+Scenario: Field-text-type
+Given the text "<text>" for the field "<fieldname>" is not typed
+When I type the text "<text>" for the field "<fieldname>"
+Then the text "<text>" for the field "<fieldname>" is typed
+*/
+
+Scenario: N23 Field-text-type
+Given the text "Welcome" for the field "Text area" is not typed
+When I type the text "Welcome" for the field "Text area"
+Then the text "Welcome" for the field "Text area" is typed
+
+Scenario: N24 text-type
+Given the text "Welcome" for #"Text area" is not typed
+When I type the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is typed
+
+Scenario: N25 Field-type
+Given #"Welcome" for the field "Text area" is not typed
+When I type #"Welcome" for the field "Text area"
+Then #"Welcome" for the field "Text area" is typed
+
+Scenario: N26 type
+Given #"Welcome" for #"Text area" is not typed
+When I type #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is typed
+
+/*
+Scenario: Field-text-DoNottype
+Given the text "<text>" for the field "<fieldname>" is not typed
+When I do not type the text "<text>" for the field "<fieldname>"
+Then the text "<text>" for the field "<fieldname>" is not typed
+*/
+
+Scenario: N27 Field-text-DoNottype
+Given the text "Welcome" for the field "Text area" is not typed
+When I do not type the text "Welcome" for the field "Text area"
+Then the text "Welcome" for the field "Text area" is not typed
+
+Scenario: N28 text-DoNottype
+Given the text "Welcome" for #"Text area" is not typed
+When I do not type the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is not typed
+
+Scenario: N29 Field-DoNottype
+Given #"Welcome" for the field "Text area" is not typed
+When I do not type #"Welcome" for the field "Text area"
+Then #"Welcome" for the field "Text area" is not typed
+
+Scenario: N30 DoNottype
+Given #"Welcome" for #"Text area" is not typed
+When I do not type #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is not typed
+
+/*
+Scenario: Field-text-set
+Given the text "<text>" for the field "<fieldname>" is not set
+When I set the text "<text>" for the field "<fieldname>"
+Then the text "<text>" for the field "<fieldname>" is set
+*/
+
+Scenario: N31 Field-text-set
+Given the text "Welcome" for the field "Text area" is not set
+When I set the text "Welcome" for the field "Text area"
+Then the text "Welcome" for the field "Text area" is set
+
+Scenario: N32 text-set
+Given the text "Welcome" for #"Text area" is not set
+When I set the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is set
+
+Scenario: N33 Field-set
+Given #"Welcome" for the field "Text area" is not set
+When I set #"Welcome" for the field "Text area"
+Then #"Welcome" for the field "Text area" is set
+
+Scenario: N34 set
+Given #"Welcome" for #"Text area" is not set
+When I set #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is set
+
+/*
+Scenario: Field-text-DoNotset
+Given the text "<text>" for the field "<fieldname>" is not set
+When I do not set the text "<text>" for the field "<fieldname>"
+Then the text "<text>" for the field "<fieldname>" is not set
+*/
+
+Scenario: N35 Field-text-DoNotset
+Given the text "Welcome" for the field "Text area" is not set
+When I do not set the text "Welcome" for the field "Text area"
+Then the text "Welcome" for the field "Text area" is not set
+
+Scenario: N36 text-DoNotset
+Given the text "Welcome" for #"Text area" is not set
+When I do not set the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is not set
+
+Scenario: N37 Field-DoNotset
+Given #"Welcome" for the field "Text area" is not set
+When I do not set #"Welcome" for the field "Text area"
+Then #"Welcome" for the field "Text area" is not set
+
+Scenario: N38 DoNotset
+Given #"Welcome" for #"Text area" is not set
+When I do not set #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is not set
+
+/*
+Scenario: Field-text-fill in with
+Given the text "<text>" for the field "<fieldname>" is not filled in
+When I fill in with the text "<text>" for the field "<fieldname>"
+Then the text "<text>" for the field "<fieldname>" is filled in
+*/
+
+Scenario: N39 Field-text-fill in with
+Given the text "Welcome" for the field "Text area" is not filled in
+When I fill in with the text "Welcome" for the field "Text area"
+Then the text "Welcome" for the field "Text area" is filled in
+
+Scenario: N40 text-fill in with
+Given the text "Welcome" for #"Text area" is not filled in
+When I fill in with the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is filled in
+
+Scenario: N41 Field-fill in with
+Given #"Welcome" for the field "Text area" is not filled in
+When I fill in with #"Welcome" for the field "Text area"
+Then #"Welcome" for the field "Text area" is filled in
+
+Scenario: N42 fill in with
+Given #"Welcome" for #"Text area" is not filled in
+When I fill in with #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is filled in
+
+/*
+Scenario: Field-text-DoNotfill in with
+Given the text "<text>" for the field "<fieldname>" is not filled in
+When I do not fill in with the text "<text>" for the field "<fieldname>"
+Then the text "<text>" for the field "<fieldname>" is not filled in
+*/
+
+Scenario: N43 Field-text-DoNotfill in with
+Given the text "Welcome" for the field "Text area" is not filled in
+When I do not fill in with the text "Welcome" for the field "Text area"
+Then the text "Welcome" for the field "Text area" is not filled in
+
+Scenario: N44 text-DoNotfill in with
+Given the text "Welcome" for #"Text area" is not filled in
+When I do not fill in with the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is not filled in
+
+Scenario: N45 Field-DoNotfill in with
+Given #"Welcome" for the field "Text area" is not filled in
+When I do not fill in with #"Welcome" for the field "Text area"
+Then #"Welcome" for the field "Text area" is not filled in
+
+Scenario: N46 DoNotfill in with
+Given #"Welcome" for #"Text area" is not filled in
+When I do not fill in with #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is not filled in
+
+
+/*
+Scenario: TextArea-text-type
+Given the text "<text>" for the TextArea "<fieldname>" is not typed
+When I type the text "<text>" for the TextArea "<fieldname>"
+Then the text "<text>" for the TextArea "<fieldname>" is typed
+*/
+
+Scenario: N47 TextArea-text-type
+Given the text "Welcome" for the TextArea "Text area" is not typed
+When I type the text "Welcome" for the TextArea "Text area"
+Then the text "Welcome" for the TextArea "Text area" is typed
+
+Scenario: N48 text-type
+Given the text "Welcome" for #"Text area" is not typed
+When I type the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is typed
+
+Scenario: N49 TextArea-type
+Given #"Welcome" for the TextArea "Text area" is not typed
+When I type #"Welcome" for the TextArea "Text area"
+Then #"Welcome" for the TextArea "Text area" is typed
+
+Scenario: N50 type
+Given #"Welcome" for #"Text area" is not typed
+When I type #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is typed
+
+/*
+Scenario: TextArea-text-DoNottype
+Given the text "<text>" for the TextArea "<fieldname>" is not typed
+When I do not type the text "<text>" for the TextArea "<fieldname>"
+Then the text "<text>" for the TextArea "<fieldname>" is not typed
+*/
+
+Scenario: N51 TextArea-text-DoNottype
+Given the text "Welcome" for the TextArea "Text area" is not typed
+When I do not type the text "Welcome" for the TextArea "Text area"
+Then the text "Welcome" for the TextArea "Text area" is not typed
+
+Scenario: N52 text-DoNottype
+Given the text "Welcome" for #"Text area" is not typed
+When I do not type the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is not typed
+
+Scenario: N53 TextArea-DoNottype
+Given #"Welcome" for the TextArea "Text area" is not typed
+When I do not type #"Welcome" for the TextArea "Text area"
+Then #"Welcome" for the TextArea "Text area" is not typed
+
+Scenario: N54 DoNottype
+Given #"Welcome" for #"Text area" is not typed
+When I do not type #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is not typed
+
+/*
+Scenario: TextArea-text-set
+Given the text "<text>" for the TextArea "<fieldname>" is not set
+When I set the text "<text>" for the TextArea "<fieldname>"
+Then the text "<text>" for the TextArea "<fieldname>" is set
+*/
+
+Scenario: N55 TextArea-text-set
+Given the text "Welcome" for the TextArea "Text area" is not set
+When I set the text "Welcome" for the TextArea "Text area"
+Then the text "Welcome" for the TextArea "Text area" is set
+
+Scenario: N56 text-set
+Given the text "Welcome" for #"Text area" is not set
+When I set the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is set
+
+Scenario: N57 TextArea-set
+Given #"Welcome" for the TextArea "Text area" is not set
+When I set #"Welcome" for the TextArea "Text area"
+Then #"Welcome" for the TextArea "Text area" is set
+
+Scenario: N58 set
+Given #"Welcome" for #"Text area" is not set
+When I set #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is set
+
+/*
+Scenario: TextArea-text-DoNotset
+Given the text "<text>" for the TextArea "<fieldname>" is not set
+When I do not set the text "<text>" for the TextArea "<fieldname>"
+Then the text "<text>" for the TextArea "<fieldname>" is not set
+*/
+
+Scenario: N59 TextArea-text-DoNotset
+Given the text "Welcome" for the TextArea "Text area" is not set
+When I do not set the text "Welcome" for the TextArea "Text area"
+Then the text "Welcome" for the TextArea "Text area" is not set
+
+Scenario: N60 text-DoNotset
+Given the text "Welcome" for #"Text area" is not set
+When I do not set the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is not set
+
+Scenario: N61 TextArea-DoNotset
+Given #"Welcome" for the TextArea "Text area" is not set
+When I do not set #"Welcome" for the TextArea "Text area"
+Then #"Welcome" for the TextArea "Text area" is not set
+
+Scenario: N62 DoNotset
+Given #"Welcome" for #"Text area" is not set
+When I do not set #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is not set
+
+/*
+Scenario: TextArea-text-fill in with
+Given the text "<text>" for the TextArea "<fieldname>" is not filled in
+When I fill in with the text "<text>" for the TextArea "<fieldname>"
+Then the text "<text>" for the TextArea "<fieldname>" is filled in
+*/
+
+Scenario: N63 TextArea-text-fill in with
+Given the text "Welcome" for the TextArea "Text area" is not filled in
+When I fill in with the text "Welcome" for the TextArea "Text area"
+Then the text "Welcome" for the TextArea "Text area" is filled in
+
+Scenario: N64 text-fill in with
+Given the text "Welcome" for #"Text area" is not filled in
+When I fill in with the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is filled in
+
+Scenario: N65 TextArea-fill in with
+Given #"Welcome" for the TextArea "Text area" is not filled in
+When I fill in with #"Welcome" for the TextArea "Text area"
+Then #"Welcome" for the TextArea "Text area" is filled in
+
+Scenario: N66 fill in with
+Given #"Welcome" for #"Text area" is not filled in
+When I fill in with #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is filled in
+
+/*
+Scenario: TextArea-text-DoNotfill in with
+Given the text "<text>" for the TextArea "<fieldname>" is not filled in
+When I do not fill in with the text "<text>" for the TextArea "<fieldname>"
+Then the text "<text>" for the TextArea "<fieldname>" is not filled in
+*/
+
+Scenario: N67 TextArea-text-DoNotfill in with
+Given the text "Welcome" for the TextArea "Text area" is not filled in
+When I do not fill in with the text "Welcome" for the TextArea "Text area"
+Then the text "Welcome" for the TextArea "Text area" is not filled in
+
+Scenario: N68 text-DoNotfill in with
+Given the text "Welcome" for #"Text area" is not filled in
+When I do not fill in with the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is not filled in
+
+Scenario: N69 TextArea-DoNotfill in with
+Given #"Welcome" for the TextArea "Text area" is not filled in
+When I do not fill in with #"Welcome" for the TextArea "Text area"
+Then #"Welcome" for the TextArea "Text area" is not filled in
+
+Scenario: N70 DoNotfill in with
+Given #"Welcome" for #"Text area" is not filled in
+When I do not fill in with #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is not filled in
+
+//Negative Test cases
+
+/*
+Scenario: text-write
+Given the text "<any text>" is not written
+When I write the text "<any text>"
+Then the text "<any text>" is written
+*/
+
+Scenario: N1 text-write
+Given the text "TextArea" is not written
+When I write the text "TextArea"
+Then the text "TextArea" is written
+
+Scenario: N2 write
+Given #"TextArea" is not written
+When I write #"TextArea"
+Then #"TextArea" is written
+
+/*
+Scenario: text-DoNotwrite
+Given the text "<any text>" is not written
+When I do not write the text "<any text>"
+Then the text "<any text>" is not written
+*/
+
+Scenario: N3 text-DoNotwrite
+Given the text "TextArea" is not written
+When I do not write the text "TextArea"
+Then the text "TextArea" is not written
+
+Scenario: N4 DoNotwrite
+Given #"TextArea" is not written
+When I do not write #"TextArea"
+Then #"TextArea" is not written
+
+/*
+Scenario: TextArea-write
+Given the TextArea "<any text>" is not written
+When I write the TextArea "<any text>"
+Then the TextArea "<any text>" is written
+*/
+
+Scenario: N5 TextArea-write
+Given the TextArea "TextArea" is not written
+When I write the TextArea "TextArea"
+Then the TextArea "TextArea" is written
+
+Scenario: N6 write
+Given #"TextArea" is not written
+When I write #"TextArea"
+Then #"TextArea" is written
+
+/*
+Scenario: TextArea-DoNotwrite
+Given the TextArea "<any text>" is not written
+When I do not write the TextArea "<any text>"
+Then the TextArea "<any text>" is not written
+*/
+
+Scenario: N7 TextArea-write
+Given the TextArea "TextArea" is not written
+When I do not write the TextArea "TextArea"
+Then the TextArea "TextArea" is not written
+
+Scenario: N8 write
+Given #"TextArea" is not written
+When I do not write #"TextArea"
+Then #"TextArea" is not written
+
+/*
+Scenario: Field-text-write
+Given the text "<text>" for the field "<fieldname>" is not written
+When I write the text "<text>" for the field "<fieldname>"
+Then the text "<text>" for the field "<fieldname>" is written
+*/
+
+Scenario: N9 Field-text-write
+Given the text "Welcome" for the field "Text area" is not written
+When I write the text "Welcome" for the field "Text area"
+Then the text "Welcome" for the field "Text area" is written
+
+Scenario: N10 text-write
+Given the text "Welcome" for #"Text area" is not written
+When I write the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is written
+
+Scenario: N11 Field-write
+Given #"Welcome" for the field "Text area" is not written
+When I write #"Welcome" for the field "Text area"
+Then #"Welcome" for the field "Text area" is written
+
+Scenario: N12 write
+Given #"Welcome" for #"Text area" is not written
+When I write #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is written
+
+/*
+Scenario: Field-text-DoNotwrite
+Given the text "<text>" for the field "<fieldname>" is not written
+When I do not write the text "<text>" for the field "<fieldname>"
+Then the text "<text>" for the field "<fieldname>" is not written
+*/
+
+Scenario: N13 Field-text-DoNotwrite
+Given the text "Welcome" for the field "Text area" is not written
+When I do not write the text "Welcome" for the field "Text area"
+Then the text "Welcome" for the field "Text area" is not written
+
+Scenario: N14 text-DoNotwrite
+Given the text "Welcome" for #"Text area" is not written
+When I do not write the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is not written
+
+Scenario: N15 Field-DoNotwrite
+Given #"Welcome" for the field "Text area" is not written
+When I do not write #"Welcome" for the field "Text area"
+Then #"Welcome" for the field "Text area" is not written
+
+Scenario: N16 DoNotwrite
+Given #"Welcome" for #"Text area" is not written
+When I do not write #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is not written
+
+/*
+Scenario: TextArea-text-write
+Given the text "<text>" for the TextArea "<fieldname>" is not written
+When I write the text "<text>" for the TextArea "<fieldname>"
+Then the text "<text>" for the TextArea "<fieldname>" is written
+*/
+
+Scenario: N17 TextArea-text-write
+Given the text "Welcome" for the TextArea "Text area" is not written
+When I write the text "Welcome" for the TextArea "Text area"
+Then the text "Welcome" for the TextArea "Text area" is written
+
+Scenario: N18 text-write
+Given the text "Welcome" for #"Text area" is not written
+When I write the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is written
+
+Scenario: N19 TextArea-write
+Given #"Welcome" for the TextArea "Text area" is not written
+When I write #"Welcome" for the TextArea "Text area"
+Then #"Welcome" for the TextArea "Text area" is written
+
+Scenario: N20 write
+Given #"Welcome" for #"Text area" is not written
+When I write #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is written
+
+/*
+Scenario: TextArea-text-DoNotwrite
+Given the text "<text>" for the TextArea "<fieldname>" is not written
+When I do not write the text "<text>" for the TextArea "<fieldname>"
+Then the text "<text>" for the TextArea "<fieldname>" is not written
+*/
+
+Scenario: N21 TextArea-text-DoNotwrite
+Given the text "Welcome" for the TextArea "Text area" is not written
+When I do not write the text "Welcome" for the TextArea "Text area"
+Then the text "Welcome" for the TextArea "Text area" is not written
+
+Scenario: N22 text-DoNotwrite
+Given the text "Welcome" for #"Text area" is not written
+When I do not write the text "Welcome" for #"Text area"
+Then the text "Welcome" for #"Text area" is not written
+
+Scenario: N23 TextArea-DoNotwrite
+Given #"Welcome" for the TextArea "Text area" is not written
+When I do not write #"Welcome" for the TextArea "Text area"
+Then #"Welcome" for the TextArea "Text area" is not written
+
+Scenario: N24 DoNotwrite
+Given #"Welcome" for #"Text area" is not written
+When I do not write #"Welcome" for #"Text area"
+Then #"Welcome" for #"Text area" is not written

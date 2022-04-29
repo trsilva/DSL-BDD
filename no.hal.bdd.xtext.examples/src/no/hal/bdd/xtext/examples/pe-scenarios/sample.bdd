@@ -1,0 +1,241 @@
+model sample1 using widgets
+
+// select <list or checkbox or calendar> 
+Scenario: ex1
+given the checkbox "option" is checked
+when I click "Submit"
+then the checkbox "fjdkslf" is unchecked
+
+Scenario: ex2
+given the text of "text field" is "Hallvard"
+when I select the list "items"
+then the items of the list "selection" is ["Hallvard"]
+
+//
+
+entity account {
+	actions: withdraw amount from, transfer amount into
+	properties: balance
+}
+
+Scenario: ex3
+given the balance of "account 1" is 1000 and
+the balance of "account 2" is 10
+when I transfer 50 from "account 1"
+then the balance of "account 1" is 950 and
+	the balance of "account 2" is 60
+
+Scenario: ex4
+given the balance of "account" is 1000
+when I open "account" in "account view"
+then the text of "balance field" is 1000
+
+Scenario: ex5
+given the field "<fieldname>" is unchecked
+when the field "<fieldname>" is unchecked
+then the field "<fieldname>" is unchecked
+
+given the field "<fieldname>" is checked
+when the field "<fieldname>" is checked
+then the field "<fieldname>" is checked
+
+Scenario: ex6
+when I assure the field "<fieldname>" is unchecked
+when I assure the field "<fieldname>" is checked
+
+Scenario: ex7
+given I choose "<fieldname>"
+when I choose "<fieldname>"
+then I choose "<fieldname>"
+
+given I select "<fieldname>"
+when I select "<fieldname>"
+then I select "<fieldname>"
+
+Scenario: ex8
+when I choose "<index>" by index in the field "<fieldname>"
+then I choose "<index>" by index in the field "<fieldname>"
+
+Scenario: ex9
+when I choose "<option>" referring to "<fieldname>"
+then I choose "<option>" referring to "<fieldname>"
+
+Scenario: ex10
+when I choose the option of value "<value>" in the field "<fieldname>"
+then I choose the option of value "<value>" in the field "<fieldname>" //value is string
+
+Scenario: ex11
+when I click on "<fieldname>"
+then I click on "<fieldname>"
+
+Scenario: ex12
+when I click on "<fieldname>" referring to "<label>"
+then I click on "<fieldname>" referring to "<label>" //label is string
+
+Scenario: ex13
+when I do not type any value into the field "<fieldname>"
+when I reset the value of the field "<fieldname>"
+
+Scenario: ex14
+given I go to "<webpage>"
+when I go to "<webpage>"
+then I go to "<webpage>"
+
+given I go to "<webpage>" with the parameters "<parameters>"
+when I go to "<webpage>" with the parameters "<parameters>"
+then I go to "<webpage>" with the parameters "<parameters>"
+
+given "<webpage>" is displayed
+when "<webpage>" is displayed
+then "<webpage>" is displayed
+
+Scenario: ex15
+when I set "<value>" in the field "<fieldname>"
+then I set "<value>" in the field "<fieldname>"
+
+when I try to set "<value>" in the field "<fieldname>"
+then I try to set "<value>" in the field "<fieldname>"
+
+Scenario: ex16
+when I set "<value>" in the field referring to "<fieldname>"
+then I set "<value>" in the field referring to "<fieldname>"
+
+Scenario: ex17
+when I type "<value 1>" and choose "<value 2>" in the field "<fieldname>"
+then I type "<value 1>" and choose "<value 2>" in the field "<fieldname>"
+
+Scenario: ex18
+then "<content>" will be displayed
+then "<content>" will not be displayed
+
+Scenario: ex19
+then will be displayed in the field "<fieldname>" the value "<value>"
+
+then will not be displayed in the field "<fieldname>" the value "<value>"
+
+then will be displayed the value "<value>" in the field "<fieldname>" referring to "<another fieldname>"
+
+then will not be displayed the value "<value>" in the field "<fieldname>" referring to "<another fieldname>"
+
+then will not be displayed the value "<value>" in the field "<fieldname>" referring to "<another fieldname>"
+
+given "<fieldname>" is not visible
+when "<fieldname>" is not visible
+then "<fieldname>" is not visible
+
+given "<value>" referring to "<fieldname>" is not visible
+when "<value>" referring to "<fieldname>" is not visible
+then "<value>" referring to "<fieldname>" is not visible
+
+given I wait the field "<fieldname>" be visible, clickable and enable
+when I wait the field "<fieldname>" be visible, clickable and enable
+then I wait the field "<fieldname>" be visible, clickable and enable
+
+given I wait the field "<fieldname>" referring to "<another fieldname>" be visible, clickable and enable
+when I wait the field "<fieldname>" referring to "<another fieldname>" be visible, clickable and enable
+then I wait the field "<fieldname>" referring to "<another fieldname>" be visible, clickable and enable
+
+given the element "<fieldname>" is visible and disable
+when the element "<fieldname>" is visible and disable
+then the element "<fieldname>" is visible and disable
+
+given the element "<fieldname>" referring to "<another fieldname>" is visible and disable
+when the element "<fieldname>" referring to "<another fieldname>" is visible and disable
+then the element "<fieldname>" referring to "<another fieldname>" is visible and disable
+
+when I set the value of the field "<fieldname>"
+then I set the value of the field "<fieldname>"
+
+given I obtain the value from the field "<fieldname>"
+when I obtain the value from the field "<fieldname>"
+then I obtain the value from the field "<fieldname>"
+
+Scenario: ex20
+when I set "<value>" in the field "<fieldname>" and trigger the event "<event>"
+then I set "<value>" in the field "<fieldname>" and trigger the event "<event>"
+
+when I type a random number in the field "<fieldname>"
+
+Scenario: ex21
+given I click on the row "<row>" of the tree "<fieldname>"
+when I click on the row "<row>" of the tree "<fieldname>"
+then I click on the row "<row>" of the tree "<fieldname>"
+
+Scenario: ex22
+given I type a random number with the prefix "<prefix>" in the field "<fieldname>"
+when I type a random number with the prefix "<prefix>" in the field "<fieldname>"
+then I type a random number with the prefix "<prefix>" in the field "<fieldname>"
+
+Scenario: ex23
+given I set "<value>"
+when I set "<value>"
+
+when I set the field "<fieldname>"
+
+when I set the fields "<fieldnames>"
+
+Scenario: ex24
+given I select from the dataset "<dataset>"
+when I select from the dataset "<dataset>"
+
+Scenario: ex25
+given I set the key "<key>" with the value "<value>"
+when I set the key "<key>" with the value "<value>"
+then I set the key "<key>" with the value "<value>"
+
+Scenario: ex26
+given I define the variable "<variable>" with the value "<value>"
+when I define the variable "<variable>" with the value "<value>"
+then I define the variable "<variable>" with the value "<value>"
+
+when I print on the console the value of the variable "<variable>"
+then I print on the console the value of the variable "<variable>"
+
+when I print on the console the value of the variable "<variable>"
+
+Scenario: ex27
+given I set the value "<value>" in the dialog box
+when I set the value "<value>" in the dialog box
+then I set the value "<value>" in the dialog box
+
+then will be displayed "<message>" in the dialog box
+
+Scenario: ex28
+
+when I move the mouse over "<fieldname>"
+
+Scenario: ex29
+when I click on the row "<row>" of the table "<table>" referring to "<fieldname>"
+then I click on the row "<row>" of the table "<table>" referring to "<fieldname>"
+
+when I store the cell "<cell>" of the table "<table>" in "<place>"
+then I store the cell "<cell>" of the table "<table>" in "<place>"
+
+when I store the column "<column>" of the table "<table>" in "<place>"
+then I store the column "<column>" of the table "<table>" in "<place>"
+
+when I compare the text of the table cell "<table text>" with "<text>"
+then I compare the text of the table cell "<table text>" with "<text>"
+
+when I compare the text of the table column "<table text>" with "<text>"
+then I compare the text of the table column "<table text>" with "<text>"
+
+when I click on the cell "<cell>" of the table "<table>"
+then I click on the cell "<cell>" of the table "<table>"
+
+when I click on the column "<column>" of the table "<table>"
+then I click on the column "<column>" of the table "<table>"
+
+when I choose the option "<option>" in the cell of the table "<table>"
+then I choose the option "<option>" in the cell of the table "<table>"
+
+when I choose the option "<option>" in the column of the table "<table>"
+then I choose the option "<option>" in the column of the table "<table>"
+
+when I type the text "<text>" in the cell of the table "<table>"
+then I type the text "<text>" in the cell of the table "<table>"
+
+when I type the text "<text>" in the column of the table "<table>"
+then I type the text "<text>" in the column of the table "<table>"
+
+

@@ -1,0 +1,274 @@
+model BrowserWindow using widgets
+/*
+Scenario: go to
+Given "page" is  displayed
+When I go to "page"
+Then "page" is  displayed
+*/
+
+Scenario: N1 scroll  right
+Given "page" is  displayed
+When I go to  "page"
+Then #"page" is  displayed
+
+Scenario: N2 go to
+Given #"page" is  displayed
+When I go to #"page"
+Then #"page" is  displayed
+
+/*
+Scenario: DoNotgo to
+Given "page" is not  displayed
+When I do not go to "page"
+Then "page" is not  displayed
+*/
+
+Scenario: N3 DoNotgo to
+Given "page" is not  displayed
+When I do not go to "page"
+Then #"page" is not  displayed
+
+Scenario: N4 DoNotgo to
+Given #"page" is not  displayed
+When I do not go to #"page"
+Then #"page" is not  displayed
+
+/*
+Scenario: page-go to
+Given the page "<Any page>" is  displayed
+When I go to on the page "<Any page>"
+Then the page "<Any page>" is  displayed
+*/
+
+Scenario: N5 page-scroll right
+Given the page "page" is  displayed
+When I go to  "page"
+Then the page "page" is  displayed
+
+Scenario: N6 go to
+Given #"page" is  displayed
+When I go to #"page"
+Then #"page" is  displayed
+
+/*
+Scenario: page-DoNotgo to
+Given the page "<Any page>" is not  displayed
+When I do not go to the page "<Any page>"
+Then the page "<Any page>" is  displayed
+*/
+
+Scenario: N7 page-scroll right
+Given the page "page" is not  displayed
+When I do not go to "page"
+Then the page "page" is not  displayed
+
+Scenario: N8 go to
+Given #"page" is not  displayed
+When I do not go to #"page"
+Then #"page" is not  displayed
+
+/*
+Scenario: go to
+Given "title" is  displayed
+When I go to "title"
+Then "title" is  displayed
+*/
+
+Scenario: N9 scroll  right
+Given "title" is  displayed
+When I go to  "title"
+Then #"title" is  displayed
+
+Scenario: N10 go to
+Given #"title" is  displayed
+When I go to #"title"
+Then #"title" is  displayed
+
+/*
+Scenario: DoNotgo to
+Given "title" is not  displayed
+When I do not go to "title"
+Then "title" is not  displayed
+*/
+
+Scenario: N11 DoNotgo to
+Given "title" is not  displayed
+When I do not go to "title"
+Then #"title" is not  displayed
+
+Scenario: N12 DoNotgo to
+Given #"title" is not  displayed
+When I do not go to #"title"
+Then #"title" is not  displayed
+
+/*
+Scenario: title-go to
+Given the title "<Any page>" is  displayed
+When I go to on the title "<Any page>"
+Then the title "<Any page>" is  displayed
+*/
+
+Scenario: N13 title-scroll right
+Given the title "title" is  displayed
+When I go to  "title"
+Then the title "title" is  displayed
+
+Scenario: N14 go to
+Given #"title" is  displayed
+When I go to #"title"
+Then #"title" is  displayed
+
+/*
+Scenario: title-DoNotgo to
+Given the title "<Any page>" is not  displayed
+When I do not go to the title "<Any page>"
+Then the title "<Any page>" is  displayed
+*/
+
+Scenario: N15 title-scroll right
+Given the title "title" is not  displayed
+When I do not go to "title"
+Then the title "title" is not  displayed
+
+Scenario: N16 go to
+Given #"title" is not  displayed
+When I do not go to #"title"
+Then #"title" is not  displayed
+
+//Negative Test cases
+
+/*
+Scenario: go to
+Given "page" is  replaced
+When I go to "page"
+Then "page" is  replaced
+*/
+
+Scenario: N1 scroll  right
+Given "page" is  replaced
+When I go to  "page"
+Then #"page" is  replaced
+
+Scenario: N2 go to
+Given #"page" is  replaced
+When I go to #"page"
+Then #"page" is  replaced
+
+/*
+Scenario: DoNotgo to
+Given "page" is not  replaced
+When I do not go to "page"
+Then "page" is not  replaced
+*/
+
+Scenario: N3 DoNotgo to
+Given "page" is not  replaced
+When I do not go to "page"
+Then #"page" is not  replaced
+
+Scenario: N4 DoNotgo to
+Given #"page" is not  replaced
+When I do not go to #"page"
+Then #"page" is not  replaced
+
+/*
+Scenario: page-go to
+Given the page "<Any page>" is  replaced
+When I go to on the page "<Any page>"
+Then the page "<Any page>" is  replaced
+*/
+
+Scenario: N5 page-scroll right
+Given the page "page" is  replaced
+When I go to  "page"
+Then the page "page" is  replaced
+
+Scenario: N6 go to
+Given #"page" is  replaced
+When I go to #"page"
+Then #"page" is  replaced
+
+/*
+Scenario: page-DoNotgo to
+Given the page "<Any page>" is not  replaced
+When I do not go to the page "<Any page>"
+Then the page "<Any page>" is  replaced
+*/
+
+Scenario: N7 page-scroll right
+Given the page "page" is not  replaced
+When I do not go to "page"
+Then the page "page" is not  replaced
+
+Scenario: N8 go to
+Given #"page" is not  replaced
+When I do not go to #"page"
+Then #"page" is not  replaced
+
+/*
+Scenario: go to
+Given "title" is  replaced
+When I go to "title"
+Then "title" is  replaced
+*/
+
+Scenario: N9 scroll  right
+Given "title" is  replaced
+When I go to  "title"
+Then #"title" is  replaced
+
+Scenario: N10 go to
+Given #"title" is  replaced
+When I go to #"title"
+Then #"title" is  replaced
+
+/*
+Scenario: DoNotgo to
+Given "title" is not  replaced
+When I do not go to "title"
+Then "title" is not  replaced
+*/
+
+Scenario: N11 DoNotgo to
+Given "title" is not  replaced
+When I do not go to "title"
+Then #"title" is not  replaced
+
+Scenario: N12 DoNotgo to
+Given #"title" is not  replaced
+When I do not go to #"title"
+Then #"title" is not  replaced
+
+/*
+Scenario: title-go to
+Given the title "<Any page>" is  replaced
+When I go to on the title "<Any page>"
+Then the title "<Any page>" is  replaced
+*/
+
+Scenario: N13 title-scroll right
+Given the title "title" is  replaced
+When I go to  "title"
+Then the title "title" is  replaced
+
+Scenario: N14 go to
+Given #"title" is  replaced
+When I go to #"title"
+Then #"title" is  replaced
+
+/*
+Scenario: title-DoNotgo to
+Given the title "<Any page>" is not  replaced
+When I do not go to the title "<Any page>"
+Then the title "<Any page>" is  replaced
+*/
+
+Scenario: N15 title-scroll right
+Given the title "title" is not  replaced
+When I do not go to "title"
+Then the title "title" is not  replaced
+
+Scenario: N16 go to
+Given #"title" is not  replaced
+When I do not go to #"title"
+Then #"title" is not  replaced

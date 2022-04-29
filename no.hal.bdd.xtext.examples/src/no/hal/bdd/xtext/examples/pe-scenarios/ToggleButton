@@ -1,0 +1,206 @@
+model ToggleButton using widgets
+/*
+Scenario: switch ['on']
+Given "Toggle button" is switched on
+When I switch ['on'] "Toggle button"
+Then "Toggle button" is switched on
+*/
+
+Scenario: N1 switch on
+Given "Toggle button" is switched on
+When I switch ['on']  "Toggle button"
+Then #"Toggle button" is switched on
+
+Scenario: N2 switch on
+Given #"ToggleButton" is switched on
+When I switch ['on'] #"ToggleButton"
+Then #"Toggle Button" is switched on
+
+/*
+Scenario: DoNotswitch ['on']
+Given "Toggle button" is not switched on
+When I do not switch ['on'] "Toggle button"
+Then "Toggle button" is switched on
+*/
+
+Scenario: N3 DoNotswitch on
+Given "Toggle button" is not switched on
+When I do not switch ['on'] "Toggle button"
+Then #"Toggle button" is not switched on
+
+Scenario: N4 DoNotswitch on
+Given #"ToggleButton" is not switched on
+When I do not switch ['on'] #"ToggleButton"
+Then #"ToggleButton" is not switched on
+
+/*
+Scenario: ToggleButton-switch ['on']
+Given the ToggleButton "<tab name>" is switched on
+When I switch ['on'] the ToggleButton "<tab name>"
+Then the ToggleButton "<tab name>" is switched on
+*/
+
+Scenario: N5 ToggleButton-switch on
+Given the ToggleButton "ToggleButton" is switched on
+When I switch ['on'] the ToggleButton "ToggleButton"
+Then the ToggleButton "ToggleButton" is switched on
+
+Scenario: N6 switch on
+Given #"ToggleButton" is switched on
+When I switch ['on'] #"ToggleButton"
+Then #"ToggleButton" is switched on
+
+/*
+Scenario: ToggleButton-DoNotswitch ['on']
+Given the ToggleButton "<tab name>" is not switched on
+When I do not switch ['on'] the ToggleButton "<tab name>"
+Then the ToggleButton "<tab name>" is switched on
+*/
+
+Scenario: N7 ToggleButton-switch on
+Given the ToggleButton "ToggleButton" is not switched on
+When I do not switch ['on'] the ToggleButton "ToggleButton"
+Then the ToggleButton "ToggleButton" is switched on
+
+Scenario: N8 switch on
+Given #"ToggleButton" is not switched on
+When I do not switch ['on'] #"ToggleButton"
+Then #"ToggleButton" is switched on
+
+/*
+Scenario: switch off
+Given "Toggle button" is switched off
+When I switch off "Toggle button"
+Then "Toggle button" is switched off
+*/
+
+Scenario: N9 switch off
+Given "Toggle button" is switched off
+When I switch ['off'] "Toggle button"
+Then #"Toggle button" is switched off
+
+Scenario: N10 switch off
+Given #"Togglebutton" is switched off
+When I switch ['off'] #"Togglebutton"
+Then #"Togglebutton" is switched off
+
+/*
+Scenario: DoNot switch off
+Given "Toggle button" is not switched off
+When I do not switch off "Toggle button"
+Then "Toggle button" is switched off
+*/
+
+Scenario: N11 DoNot switch off
+Given "Toggle button" is not switched off
+When I do not switch ['off'] "Toggle button"
+Then #"Toggle button" is switched off
+
+Scenario: N12 DDoNot switch off
+Given #"Togglebutton" is not switched off
+When I do not switch ['off'] #"Togglebutton"
+Then #"Togglebutton" is switched off
+
+/*
+Scenario: ToggleButton-switch off
+Given the Togglebutton "<tab name>" is switched off
+When I switch off the Togglebutton "<tab name>"
+Then the Togglebutton "<tab name>" is switched off
+*/
+
+Scenario: N13 ToggleButton-switch off
+Given the ToggleButton "Togglebutton" is switched off
+When I switch ['off'] the ToggleButton "Togglebutton"
+Then the ToggleButton "Togglebutton" is switched off
+
+Scenario: N14 switch off
+Given #"Togglebutton" is switched off
+When I switch ['off'] #"Togglebutton"
+Then #"Togglebutton" is switched off
+
+/*
+Scenario: ToggleButton-DoNotswitch off
+Given the Togglebutton "<tab name>" is not switched off
+When I do not switch off the Togglebutton "<tab name>"
+Then the Togglebutton "<tab name>" is switched off
+*/
+
+Scenario: N15 ToggleButton-switch off
+Given the ToggleButton "Togglebutton" is not switched off
+When I do not switch ['off'] the ToggleButton "Togglebutton"
+Then the ToggleButton "Togglebutton" is switched off
+
+Scenario: N16 switch off
+Given #"Togglebutton" is not switched off
+When I do not switch ['off'] #"Togglebutton"
+Then #"Togglebutton" is switched off
+
+// Negative Test cases
+
+/*
+Scenario: press ['on']
+Given "Toggle button" is pressed on
+When I press ['on'] "Toggle button"
+Then "Toggle button" is pressed on
+*/
+
+Scenario: N1 press on
+Given "Toggle button" is pressed on
+When I press ['on']  "Toggle button"
+Then #"Toggle button" is pressed on
+
+Scenario: N2 press on
+Given #"ToggleButton" is pressed on
+When I press ['on'] #"ToggleButton"
+Then #"Toggle Button" is pressed on
+
+/*
+Scenario: DoNotpress ['on']
+Given "Toggle button" is not pressed on
+When I do not press ['on'] "Toggle button"
+Then "Toggle button" is pressed on
+*/
+
+Scenario: N3 DoNotpress on
+Given "Toggle button" is not pressed on
+When I do not press ['on'] "Toggle button"
+Then #"Toggle button" is not pressed on
+
+Scenario: N4 DoNotpress on
+Given #"ToggleButton" is not pressed on
+When I do not press ['on'] #"ToggleButton"
+Then #"ToggleButton" is not pressed on
+
+/*
+Scenario: ToggleButton-press ['on']
+Given the ToggleButton "<tab name>" is pressed on
+When I press ['on'] the ToggleButton "<tab name>"
+Then the ToggleButton "<tab name>" is pressed on
+*/
+
+Scenario: N5 ToggleButton-press on
+Given the ToggleButton "ToggleButton" is pressed on
+When I press ['on'] the ToggleButton "ToggleButton"
+Then the ToggleButton "ToggleButton" is pressed on
+
+Scenario: N6 press on
+Given #"ToggleButton" is pressed on
+When I press ['on'] #"ToggleButton"
+Then #"ToggleButton" is pressed on
+
+/*
+Scenario: ToggleButton-DoNotpress ['on']
+Given the ToggleButton "<tab name>" is not pressed on
+When I do not press ['on'] the ToggleButton "<tab name>"
+Then the ToggleButton "<tab name>" is pressed on
+*/
+
+Scenario: N7 ToggleButton-press on
+Given the ToggleButton "ToggleButton" is not pressed on
+When I do not press ['on'] the ToggleButton "ToggleButton"
+Then the ToggleButton "ToggleButton" is pressed on
+
+Scenario: N8 press on
+Given #"ToggleButton" is not pressed on
+When I do not press ['on'] #"ToggleButton"
+Then #"ToggleButton" is pressed on

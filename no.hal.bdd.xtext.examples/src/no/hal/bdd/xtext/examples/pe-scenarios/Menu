@@ -1,0 +1,535 @@
+model Menu using widgets
+/*
+Scenario: option-select
+Given the option "<option name>" is unselected
+When I select the option "<option name>"
+Then the option "<option name>" is selected
+*/
+
+Scenario: N1 option-select
+Given the option "List of items" is unselected
+When I select the option "List of items"
+Then the option "List of items" is selected
+
+Scenario: N2 select
+Given #"List of items" is unselected
+When I select #"List of items"
+Then #"List of items" is selected
+
+/*
+Scenario: option-DoNotselect
+Given the option "<option name>" is not selected
+When I do not select the option "<option name>"
+Then the option "<option name>" is unselected
+*/
+
+Scenario: N3 option-DoNotselect
+Given the option "List of items" is not selected
+When I do not select the option "List of items"
+Then the option "List of items" is unselected
+
+Scenario: N4 DoNotselect
+Given #"List of items" is not selected
+When I do not select #"List of items"
+Then #"List of items" is unselected
+
+/*
+Scenario: Menu-select
+Given the Menu "<option name>" is unselected
+When I select the Menu "<option name>"
+Then the Menu "<option name>" is selected
+*/
+
+Scenario: N5 Menu-select
+Given the Menu "List of items" is unselected
+When I select the Menu "List of items"
+Then the Menu "List of items" is selected
+
+Scenario: N6 select
+Given #"List of items" is unselected
+When I select #"List of items"
+Then #"List of items" is selected
+
+/*
+Scenario: Menu-DoNotselect
+Given the Menu "<option name>" is not selected
+When I do not select the Menu "<option name>"
+Then the Menu "<option name>" is unselected
+*/
+
+Scenario: N7 Menu-select
+Given the Menu "List of items" is not selected
+When I do not select the Menu "List of items"
+Then the Menu "List of items" is unselected
+
+Scenario: N8 select
+Given #"List of items" is not selected
+When I do not select #"List of items"
+Then #"List of items" is unselected
+
+
+/*
+Scenario: option-click
+Given the option "<option name>" is not clicked
+When I click the option "<option name>"
+Then the option "<option name>" is clicked
+*/
+
+Scenario: N9 option-click
+Given the option "List of items" is not clicked
+When I click the option "List of items"
+Then the option "List of items" is clicked
+
+Scenario: N10 click
+Given #"List of items" is not clicked
+When I click #"List of items"
+Then #"List of items" is clicked
+
+/*
+Scenario: option-DoNotclick
+Given the option "<option name>" is not clicked
+When I do not clicked the option "<option name>"
+Then the option "<option name>" is not clicked
+*/
+
+Scenario: N11 option-DoNotclick
+Given the option "List of items" is not clicked
+When I do not click the option "List of items"
+Then the option "List of items" is not clicked
+
+Scenario: N12 DoNotclick
+Given #"List of items" is not clicked
+When I do not click #"List of items"
+Then #"List of items" is not clicked
+
+/*
+Scenario: Menu-click
+Given the Menu "<option name>" is not clicked
+When I click the Menu "<option name>"
+Then the Menu "<option name>" is clicked
+*/
+
+Scenario: N13 Menu-click
+Given the Menu "List of items" is not clicked
+When I click the Menu "List of items"
+Then the Menu "List of items" is clicked
+
+Scenario: N14 click
+Given #"List of items" is not clicked
+When I click #"List of items"
+Then #"List of items" is clicked
+
+/*
+Scenario: Menu-DoNotclick
+Given the Menu "<option name>" is not clicked
+When I do not clicked the Menu "<option name>"
+Then the Menu "<option name>" is not clicked
+*/
+
+Scenario: N15 Menu-click
+Given the Menu "List of items" is not clicked
+When I do not click the Menu "List of items"
+Then the Menu "List of items" is not clicked
+
+Scenario: N16 click
+Given #"List of items" is not clicked
+When I do not click #"List of items"
+Then #"List of items" is not clicked
+
+
+/*
+Scenario: Field-option-select
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is selected
+*/
+
+Scenario: N17 Field-option-select
+Given the option "Morning" for the field "Availability" is not selected
+When I select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is selected
+
+Scenario: N18 option-select
+Given the option "Morning" for #"Availability" is not selected
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected
+
+Scenario: N19 Field-select
+Given #"Morning" for the field "Availability" is not selected
+When I select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is selected
+
+Scenario: N20 select
+Given #"Morning" for #"Availability" is not selected
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected
+
+/*
+Scenario: Field-option-DoNotselect
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not selected
+*/
+
+Scenario: N21 Field-option-DoNotselect
+Given the option "Morning" for the field "Availability" is not selected
+When I do not select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not selected
+
+Scenario: N22 option-DoNotselect
+Given the option "Morning" for #"Availability" is not selected
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected
+
+Scenario: N23 Field-DoNotselect
+Given #"Morning" for the field "Availability" is not selected
+When I do not select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not selected
+
+Scenario: N24 DoNotselect
+Given #"Morning" for #"Availability" is not selected
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected
+
+
+/*
+Scenario: Field-option-click
+Given the option "<option>" for the field "<fieldname>" is not clicked
+When I click the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is clicked
+*/
+
+Scenario: N25 Field-option-click
+Given the option "Morning" for the field "Availability" is not clicked
+When I click the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is clicked
+
+Scenario: N26 option-click
+Given the option "Morning" for #"Availability" is not clicked
+When I click the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is clicked
+
+Scenario: N27 Field-click
+Given #"Morning" for the field "Availability" is not clicked
+When I click #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is clicked
+
+Scenario: N28 click
+Given #"Morning" for #"Availability" is not clicked
+When I click #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is clicked
+
+/*
+Scenario: Field-option-DoNotclick
+Given the option "<option>" for the field "<fieldname>" is not clicked
+When I do not click the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not clicked
+*/
+
+Scenario: N29 Field-option-DoNotclick
+Given the option "Morning" for the field "Availability" is not clicked
+When I do not click the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not clicked
+
+Scenario: N30 option-DoNotclick
+Given the option "Morning" for #"Availability" is not clicked
+When I do not click the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not clicked
+
+Scenario: N31 Field-DoNotclick
+Given #"Morning" for the field "Availability" is not clicked
+When I do not click #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not clicked
+
+Scenario: N32 DoNotclick
+Given #"Morning" for #"Availability" is not clicked
+When I do not click #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not clicked
+
+
+/*
+Scenario: Menu-option-select
+Given the option "<option>" for the Menu "<fieldname>" is not selected
+When I select the option "<option>" for the Menu "<fieldname>"
+Then the option "<option>" for the Menu "<fieldname>" is selected
+*/
+
+Scenario: N33 Menu-option-select
+Given the option "Morning" for the Menu "Availability" is not selected
+When I select the option "Morning" for the Menu "Availability"
+Then the option "Morning" for the Menu "Availability" is selected
+
+Scenario: N34 option-select
+Given the option "Morning" for #"Availability" is not selected
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected
+
+Scenario: N35 Menu-select
+Given #"Morning" for the Menu "Availability" is not selected
+When I select #"Morning" for the Menu "Availability"
+Then #"Morning" for the Menu "Availability" is selected
+
+Scenario: N36 select
+Given #"Morning" for #"Availability" is not selected
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected
+
+/*
+Scenario: Menu-option-DoNotselect
+Given the option "<option>" for the Menu "<fieldname>" is not selected
+When I do not select the option "<option>" for the Menu "<fieldname>"
+Then the option "<option>" for the Menu "<fieldname>" is not selected
+*/
+
+Scenario: N37 Menu-option-DoNotselect
+Given the option "Morning" for the Menu "Availability" is not selected
+When I do not select the option "Morning" for the Menu "Availability"
+Then the option "Morning" for the Menu "Availability" is not selected
+
+Scenario: N38 option-DoNotselect
+Given the option "Morning" for #"Availability" is not selected
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected
+
+Scenario: N39 Menu-DoNotselect
+Given #"Morning" for the Menu "Availability" is not selected
+When I do not select #"Morning" for the Menu "Availability"
+Then #"Morning" for the Menu "Availability" is not selected
+
+Scenario: N40 DoNotselect
+Given #"Morning" for #"Availability" is not selected
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected
+
+
+/*
+Scenario: Menu-option-click
+Given the option "<option>" for the Menu "<fieldname>" is not clicked
+When I click the option "<option>" for the Menu "<fieldname>"
+Then the option "<option>" for the Menu "<fieldname>" is clicked
+*/
+
+Scenario: N41 Menu-option-click
+Given the option "Morning" for the Menu "Availability" is not clicked
+When I click the option "Morning" for the Menu "Availability"
+Then the option "Morning" for the Menu "Availability" is clicked
+
+Scenario: N42 option-click
+Given the option "Morning" for #"Availability" is not clicked
+When I click the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is clicked
+
+Scenario: N43 Menu-click
+Given #"Morning" for the Menu "Availability" is not clicked
+When I click #"Morning" for the Menu "Availability"
+Then #"Morning" for the Menu "Availability" is clicked
+
+Scenario: N44 click
+Given #"Morning" for #"Availability" is not clicked
+When I click #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is clicked
+
+/*
+Scenario: Menu-option-DoNotclick
+Given the option "<option>" for the Menu "<fieldname>" is not clicked
+When I do not click the option "<option>" for the Menu "<fieldname>"
+Then the option "<option>" for the Menu "<fieldname>" is not clicked
+*/
+
+Scenario: N45 Menu-option-DoNotclick
+Given the option "Morning" for the Menu "Availability" is not clicked
+When I do not click the option "Morning" for the Menu "Availability"
+Then the option "Morning" for the Menu "Availability" is not clicked
+
+Scenario: N46 option-DoNotclick
+Given the option "Morning" for #"Availability" is not clicked
+When I do not click the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not clicked
+
+Scenario: N47 Menu-DoNotclick
+Given #"Morning" for the Menu "Availability" is not clicked
+When I do not click #"Morning" for the Menu "Availability"
+Then #"Morning" for the Menu "Availability" is not clicked
+
+Scenario: N48 DoNotclick
+Given #"Morning" for #"Availability" is not clicked
+When I do not click #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not clicked
+
+// Negative Test cases
+
+/*
+Scenario: option-open
+Given the option "<option name>" is not opened
+When I open the option "<option name>"
+Then the option "<option name>" is opened
+*/
+
+Scenario: N1 option-open
+Given the option "List of items" is not opened
+When I open the option "List of items"
+Then the option "List of items" is opened
+
+Scenario: N2 open
+Given #"List of items" is not opened
+When I open #"List of items"
+Then #"List of items" is opened
+
+/*
+Scenario: option-DoNotopen
+Given the option "<option name>" is not opened
+When I do not open the option "<option name>"
+Then the option "<option name>" is not opened
+*/
+
+Scenario: N3 option-DoNotopen
+Given the option "List of items" is not opened
+When I do not open the option "List of items"
+Then the option "List of items" is not opened
+
+Scenario: N4 DoNotopen
+Given #"List of items" is not opened
+When I do not open #"List of items"
+Then #"List of items" is not opened
+
+/*
+Scenario: Menu-open
+Given the Menu "<option name>" is not opened
+When I open the Menu "<option name>"
+Then the Menu "<option name>" is opened
+*/
+
+Scenario: N5 Menu-open
+Given the Menu "List of items" is not opened
+When I open the Menu "List of items"
+Then the Menu "List of items" is opened
+
+Scenario: N6 open
+Given #"List of items" is not opened
+When I open #"List of items"
+Then #"List of items" is opened
+
+/*
+Scenario: Menu-DoNotopen
+Given the Menu "<option name>" is not opened
+When I do not open the Menu "<option name>"
+Then the Menu "<option name>" is not opened
+*/
+
+Scenario: N7 Menu-open
+Given the Menu "List of items" is not opened
+When I do not open the Menu "List of items"
+Then the Menu "List of items" is not opened
+
+Scenario: N8 open
+Given #"List of items" is not opened
+When I do not open #"List of items"
+Then #"List of items" is not opened
+
+/*
+Scenario: Field-option-open
+Given the option "<option>" for the field "<fieldname>" is not opened
+When I open the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is opened
+*/
+
+Scenario: N9 Field-option-open
+Given the option "Morning" for the field "Availability" is not opened
+When I open the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is opened
+
+Scenario: N10 option-open
+Given the option "Morning" for #"Availability" is not opened
+When I open the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is opened
+
+Scenario: N11 Field-open
+Given #"Morning" for the field "Availability" is not opened
+When I open #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is opened
+
+Scenario: N12 open
+Given #"Morning" for #"Availability" is not opened
+When I open #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is opened
+
+/*
+Scenario: Field-option-DoNotopen
+Given the option "<option>" for the field "<fieldname>" is not opened
+When I do not open the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not opened
+*/
+
+Scenario: N13 Field-option-DoNotopen
+Given the option "Morning" for the field "Availability" is not opened
+When I do not open the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not opened
+
+Scenario: N14 option-DoNotopen
+Given the option "Morning" for #"Availability" is not opened
+When I do not open the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not opened
+
+Scenario: N15 Field-DoNotopen
+Given #"Morning" for the field "Availability" is not opened
+When I do not open #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not opened
+
+Scenario: N16 DoNotopen
+Given #"Morning" for #"Availability" is not opened
+When I do not open #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not opened
+
+/*
+Scenario: Menu-option-open
+Given the option "<option>" for the Menu "<fieldname>" is not opened
+When I open the option "<option>" for the Menu "<fieldname>"
+Then the option "<option>" for the Menu "<fieldname>" is opened
+*/
+
+Scenario: N17 Menu-option-open
+Given the option "Morning" for the Menu "Availability" is not opened
+When I open the option "Morning" for the Menu "Availability"
+Then the option "Morning" for the Menu "Availability" is opened
+
+Scenario: N18 option-open
+Given the option "Morning" for #"Availability" is not opened
+When I open the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is opened
+
+Scenario: N19 Menu-open
+Given #"Morning" for the Menu "Availability" is not opened
+When I open #"Morning" for the Menu "Availability"
+Then #"Morning" for the Menu "Availability" is opened
+
+Scenario: N20 open
+Given #"Morning" for #"Availability" is not opened
+When I open #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is opened
+
+/*
+Scenario: Menu-option-DoNotopen
+Given the option "<option>" for the Menu "<fieldname>" is not opened
+When I do not open the option "<option>" for the Menu "<fieldname>"
+Then the option "<option>" for the Menu "<fieldname>" is not opened
+*/
+
+Scenario: N21 Menu-option-DoNotopen
+Given the option "Morning" for the Menu "Availability" is not opened
+When I do not open the option "Morning" for the Menu "Availability"
+Then the option "Morning" for the Menu "Availability" is not opened
+
+Scenario: N22 option-DoNotopen
+Given the option "Morning" for #"Availability" is not opened
+When I do not open the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not opened
+
+Scenario: N23 Menu-DoNotopen
+Given #"Morning" for the Menu "Availability" is not opened
+When I do not open #"Morning" for the Menu "Availability"
+Then #"Morning" for the Menu "Availability" is not opened
+
+Scenario: N24 DoNotopen
+Given #"Morning" for #"Availability" is not opened
+When I do not open #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not opened

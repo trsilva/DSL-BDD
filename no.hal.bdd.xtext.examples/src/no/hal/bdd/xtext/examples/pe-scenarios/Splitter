@@ -1,0 +1,175 @@
+model Splitter using widgets
+/*
+Scenario: drag to the right
+Given "page" is  dragged to the right
+When I drag to the right "page"
+Then "page" is  dragged to the right
+*/
+
+Scenario: N1 drag  right
+Given "page" is  dragged to the right
+When I drag to the right  "page"
+Then #"page" is  dragged to the right
+
+Scenario: N2 drag to the right
+Given #"page" is  dragged to the right
+When I drag to the right #"page"
+Then #"page" is  dragged to the right
+
+/*
+Scenario: DoNotdrag to the right
+Given "page" is not  dragged to the right
+When I do not drag to the right "page"
+Then "page" is not  dragged to the right
+*/
+
+Scenario: N3 DoNotdrag to the right
+Given "page" is not  dragged to the right
+When I do not drag to the right "page"
+Then #"page" is not  dragged to the right
+
+Scenario: N4 DoNotdrag to the right
+Given #"page" is not  dragged to the right
+When I do not drag to the right #"page"
+Then #"page" is not  dragged to the right
+
+
+/*
+Scenario: drag to the left
+Given "page" is  dragged to the left
+When I drag to the left "page"
+Then "page" is  dragged to the left
+*/
+
+Scenario: N5 drag to the left
+Given "page" is  dragged to the left
+When I drag to the left  "page"
+Then #"page" is  dragged to the left
+
+Scenario: N6 drag to the left
+Given #"page" is  dragged to the left
+When I drag to the left #"page"
+Then #"page" is  dragged to the left
+
+/*
+Scenario: DoNotdrag to the left
+Given "page" is not  dragged to the left
+When I do not drag to the left "page"
+Then "page" is not  dragged to the left
+*/
+
+Scenario: N7 DoNotdrag to the left
+Given "page" is not  dragged to the left
+When I do not drag to the left "page"
+Then #"page" is not  dragged to the left
+
+Scenario: N8 DoNotdrag to the left
+Given #"page" is not  dragged to the left
+When I do not drag to the left #"page"
+Then #"page" is not  dragged to the left
+
+/*
+Scenario: drag to the up
+Given "page" is  dragged to the up
+When I drag to the up "page"
+Then "page" is  dragged to the up
+*/
+
+Scenario: N9 drag  up
+Given "page" is  dragged to the up
+When I drag up  "page"
+Then #"page" is  dragged to the up
+
+Scenario: N10 drag to the up
+Given #"page" is  dragged to the up
+When I drag  up #"page"
+Then #"page" is  dragged to the up
+
+/*
+Scenario: DoNotdrag to the up
+Given "page" is not  dragged to the up
+When I do not drag to the up "page"
+Then "page" is not  dragged to the up
+*/
+
+Scenario: N11 DoNotdrag to the up
+Given "page" is not  dragged to the up
+When I do not drag  up "page"
+Then #"page" is not  dragged to the up
+
+Scenario: N12 DoNotdrag to the up
+Given #"page" is not  dragged to the up
+When I do not drag  up #"page"
+Then #"page" is not  dragged to the up
+
+
+/*
+Scenario: drag to the down
+Given "page" is  dragged to the down
+When I drag to the down "page"
+Then "page" is  dragged to the down
+*/
+
+Scenario: N13 drag to the down
+Given "page" is  dragged to the down
+When I drag  down  "page"
+Then #"page" is  dragged to the down
+
+Scenario: N14 drag to the down
+Given #"page" is  dragged to the down
+When I drag down #"page"
+Then #"page" is  dragged to the down
+
+/*
+Scenario: DoNotdrag to the down
+Given "page" is not  dragged to the down
+When I do not drag to the down "page"
+Then "page" is not  dragged to the down
+*/
+
+Scenario: N15 DoNotdrag to the down
+Given "page" is not  dragged to the down
+When I do not drag  down "page"
+Then #"page" is not  dragged to the down
+
+Scenario: N16 DoNotdrag to the down
+Given #"page" is not  dragged to the down
+When I do not drag  down #"page"
+Then #"page" is not  dragged to the down
+
+
+//Negative Test cases
+
+/*
+Scenario: drag to the right
+Given "page" is  pulled to the right
+When I drag to the right "page"
+Then "page" is  pulled to the right
+*/
+
+Scenario: N1 drag  right
+Given "page" is  pulled to the right
+When I drag to the right  "page"
+Then #"page" is  pulled to the right
+
+Scenario: N2 drag to the right
+Given #"page" is  pulled to the right
+When I drag to the right #"page"
+Then #"page" is  pulled to the right
+
+/*
+Scenario: DoNotdrag to the right
+Given "page" is not  pulled to the right
+When I do not drag to the right "page"
+Then "page" is not  pulled to the right
+*/
+
+Scenario: N3 DoNotdrag to the right
+Given "page" is not  pulled to the right
+When I do not drag to the right "page"
+Then #"page" is not  pulled to the right
+
+Scenario: N4 DoNotdrag to the right
+Given #"page" is not  pulled to the right
+When I do not drag to the right #"page"
+Then #"page" is not  pulled to the right

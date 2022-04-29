@@ -1,0 +1,479 @@
+model WindowDialog using widgets
+
+/*
+Scenario: confirm
+Given "WindowDialog" is confirmed
+When I confirm "WindowDialog"
+Then "WindowDialog" is confirmed
+*/
+
+Scenario: N1 confirm
+Given "WindowDialog" is confirmed
+When I confirm "WindowDialog"
+Then #"WindowDialog" is confirmed
+
+Scenario: N2 confirm
+Given #"WindowDialog" is confirmed
+When I confirm #"WindowDialog"
+Then #"WindowDialog" is confirmed
+
+/*
+Scenario: DoNotconfirm
+Given "WindowDialog" is not confirmed
+When I do not confirm "WindowDialog"
+Then "WindowDialog" is not confirmed
+*/
+
+Scenario: N3 DoNotconfirm
+Given "WindowDialog" is not confirmed
+When I do not confirm "WindowDialog"
+Then #"WindowDialog" is not confirmed
+
+Scenario: N4 DoNotconfirm
+Given #"WindowDialog" is not confirmed
+When I do not confirm #"WindowDialog"
+Then #"WindowDialog" is not confirmed
+
+/*
+Scenario: WindowDialog-confirm
+Given the WindowDialog "<tab name>" is confirmed
+When I confirm the WindowDialog "<tab name>"
+Then the WindowDialog "<tab name>" is confirmed
+*/
+
+Scenario: N5 WindowDialog-confirm
+Given the WindowDialog "WindowDialog" is confirmed
+When I confirm the WindowDialog "WindowDialog"
+Then the WindowDialog "WindowDialog" is confirmed
+
+Scenario: N6 confirm
+Given #"WindowDialog" is confirmed
+When I confirm #"WindowDialog"
+Then #"WindowDialog" is confirmed
+
+/*
+Scenario: WindowDialog-DoNotconfirm
+Given the WindowDialog "<tab name>" is not confirmed
+When I do not confirm the WindowDialog "<tab name>"
+Then the WindowDialog "<tab name>" is confirmed
+*/
+
+Scenario: N7 WindowDialog-confirm
+Given the WindowDialog "WindowDialog" is not confirmed
+When I do not confirm the WindowDialog "WindowDialog"
+Then the WindowDialog "WindowDialog" is not confirmed
+
+Scenario: N8 confirm
+Given #"WindowDialog" is not confirmed
+When I do not confirm #"WindowDialog"
+Then #"WindowDialog" is not confirmed
+
+/*
+Scenario: cancel
+Given "WindowDialog" is canceled
+When I cancel "WindowDialog"
+Then "WindowDialog" is canceled
+*/
+
+Scenario: N9 cancel
+Given "WindowDialog" is canceled
+When I cancel "WindowDialog"
+Then #"WindowDialog" is canceled
+
+Scenario: N10 cancel
+Given #"WindowDialog" is canceled
+When I cancel #"WindowDialog"
+Then #"WindowDialog" is canceled
+
+/*
+Scenario: DoNotcancel
+Given "WindowDialog" is not canceled
+When I do not cancel "WindowDialog"
+Then "WindowDialog" is not canceled
+*/
+
+Scenario: N11 DoNotcancel
+Given "WindowDialog" is not canceled
+When I do not cancel "WindowDialog"
+Then #"WindowDialog" is not canceled
+
+Scenario: N12 DoNotcancel
+Given #"WindowDialog" is not canceled
+When I do not cancel #"WindowDialog"
+Then #"WindowDialog" is not canceled
+
+/*
+Scenario: WindowDialog-cancel
+Given the WindowDialog "<tab name>" is canceled
+When I cancel the WindowDialog "<tab name>"
+Then the WindowDialog "<tab name>" is canceled
+*/
+
+Scenario: N13 WindowDialog-cancel
+Given the WindowDialog "WindowDialog" is canceled
+When I cancel the WindowDialog "WindowDialog"
+Then the WindowDialog "WindowDialog" is canceled
+
+Scenario: N14 cancel
+Given #"WindowDialog" is canceled
+When I cancel #"WindowDialog"
+Then #"WindowDialog" is canceled
+
+/*
+Scenario: WindowDialog-DoNotcancel
+Given the WindowDialog "<tab name>" is not canceled
+When I do not cancel the WindowDialog "<tab name>"
+Then the WindowDialog "<tab name>" is canceled
+*/
+
+Scenario: N15 WindowDialog-cancel
+Given the WindowDialog "WindowDialog" is not canceled
+When I do not cancel the WindowDialog "WindowDialog"
+Then the WindowDialog "WindowDialog" is not canceled
+
+Scenario: N16 cancel
+Given #"WindowDialog" is not canceled
+When I do not cancel #"WindowDialog"
+Then #"WindowDialog" is not canceled
+
+/*
+Scenario: close
+Given "WindowDialog" is closed
+When I close "WindowDialog"
+Then "WindowDialog" is closed
+*/
+
+Scenario: N17 close
+Given "WindowDialog" is closed
+When I close "WindowDialog"
+Then #"WindowDialog" is closed
+
+Scenario: N18 close
+Given #"WindowDialog" is closed
+When I close #"WindowDialog"
+Then #"WindowDialog" is closed
+
+/*
+Scenario: DoNotclose
+Given "WindowDialog" is not closed
+When I do not close "WindowDialog"
+Then "WindowDialog" is not closed
+*/
+
+Scenario: N19 DoNotclose
+Given "WindowDialog" is not closed
+When I do not close "WindowDialog"
+Then #"WindowDialog" is not closed
+
+Scenario: N20 DoNotclose
+Given #"WindowDialog" is not closed
+When I do not close #"WindowDialog"
+Then #"WindowDialog" is not closed
+
+/*
+Scenario: WindowDialog-close
+Given the WindowDialog "<tab name>" is closed
+When I close the WindowDialog "<tab name>"
+Then the WindowDialog "<tab name>" is closed
+*/
+
+Scenario: N21 WindowDialog-close
+Given the WindowDialog "WindowDialog" is closed
+When I close the WindowDialog "WindowDialog"
+Then the WindowDialog "WindowDialog" is closed
+
+Scenario: N22 close
+Given #"WindowDialog" is closed
+When I close #"WindowDialog"
+Then #"WindowDialog" is closed
+
+/*
+Scenario: WindowDialog-DoNotclose
+Given the WindowDialog "<tab name>" is not closed
+When I do not close the WindowDialog "<tab name>"
+Then the WindowDialog "<tab name>" is closed
+*/
+
+Scenario: N23 WindowDialog-close
+Given the WindowDialog "WindowDialog" is not closed
+When I do not close the WindowDialog "WindowDialog"
+Then the WindowDialog "WindowDialog" is not closed
+
+Scenario: N24 close
+Given #"WindowDialog" is not closed
+When I do not close #"WindowDialog"
+Then #"WindowDialog" is not closed
+
+/*
+Scenario: display
+Given "content" is displayed
+When I close "content"
+Then "content" is not displayed
+*/
+
+Scenario: N25 display
+Given "content" is displayed
+When I close "content"
+Then #"content" is not displayed
+
+Scenario: N26 close
+Given #"content" is displayed
+When I close #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: DoNotclose
+Given "content" is not displayed
+When I do not close "content"
+Then "content" is not displayed
+*/
+
+Scenario: N27 DoNotclose
+Given "content" is not displayed
+When I do not close "content"
+Then #"content" is not displayed
+
+Scenario: N28 DoNotclose
+Given #"content" is not displayed
+When I do not close #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-close
+Given the content "<tab name>" is displayed
+When I close the content "<tab name>"
+Then the content "<tab name>" is not displayed
+*/
+
+Scenario: N29 content-close
+Given the content "content" is displayed
+When I close the content "content"
+Then the content "content" is not displayed
+
+Scenario: N30 close
+Given #"content" is displayed
+When I close #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-DoNotclose
+Given the content "<tab name>" is  displayed
+When I do not close the content "<tab name>"
+Then the content "<tab name>" is  displayed
+*/
+
+Scenario: N31 content-close
+Given the content "content" is  displayed
+When I do not close the content "content"
+Then the content "content" is  displayed
+
+Scenario: N32 close
+Given #"content" is displayed
+When I do not close #"content"
+Then #"content" is displayed
+
+/*
+Scenario: display
+Given "content" is displayed
+When I cancel "content"
+Then "content" is not displayed
+*/
+
+Scenario: N33 display
+Given "content" is displayed
+When I cancel "content"
+Then #"content" is not displayed
+
+Scenario: N34 cancel
+Given #"content" is displayed
+When I cancel #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: DoNotcancel
+Given "content" is not displayed
+When I do not cancel "content"
+Then "content" is not displayed
+*/
+
+Scenario: N35 DoNotcancel
+Given "content" is not displayed
+When I do not cancel "content"
+Then #"content" is not displayed
+
+Scenario: N36 DoNotcancel
+Given #"content" is not displayed
+When I do not cancel #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-cancel
+Given the content "<tab name>" is displayed
+When I cancel the content "<tab name>"
+Then the content "<tab name>" is not displayed
+*/
+
+Scenario: N37 content-cancel
+Given the content "content" is displayed
+When I cancel the content "content"
+Then the content "content" is not displayed
+
+Scenario: N38 cancel
+Given #"content" is displayed
+When I cancel #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-DoNotcancel
+Given the content "<tab name>" is  displayed
+When I do not cancel the content "<tab name>"
+Then the content "<tab name>" is  displayed
+*/
+
+Scenario: N39 content-cancel
+Given the content "content" is  displayed
+When I do not cancel the content "content"
+Then the content "content" is  displayed
+
+Scenario: N40 cancel
+Given #"content" is displayed
+When I do not cancel #"content"
+Then #"content" is displayed
+
+/*
+Scenario: display
+Given "content" is displayed
+When I confirm "content"
+Then "content" is  displayed
+*/
+
+Scenario: N41 display
+Given "content" is displayed
+When I confirm "content"
+Then #"content" is  displayed
+
+Scenario: N42 confirm
+Given #"content" is displayed
+When I confirm #"content"
+Then #"content" is  displayed
+
+/*
+Scenario: DoNotconfirm
+Given "content" is not displayed
+When I do not confirm "content"
+Then "content" is not displayed
+*/
+
+Scenario: N43 DoNotconfirm
+Given "content" is not displayed
+When I do not confirm "content"
+Then #"content" is not displayed
+
+Scenario: N44 DoNotconfirm
+Given #"content" is not displayed
+When I do not confirm #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-confirm
+Given the content "<tab name>" is displayed
+When I confirm the content "<tab name>"
+Then the content "<tab name>" is  displayed
+*/
+
+Scenario: N45 content-confirm
+Given the content "content" is displayed
+When I confirm the content "content"
+Then the content "content" is  displayed
+
+Scenario: N46 confirm
+Given #"content" is displayed
+When I confirm #"content"
+Then #"content" is  displayed
+
+/*
+Scenario: content-DoNotconfirm
+Given the content "<tab name>" is  displayed
+When I do not confirm the content "<tab name>"
+Then the content "<tab name>" is not displayed
+*/
+
+Scenario: N47 content-confirm
+Given the content "content" is  displayed
+When I do not confirm the content "content"
+Then the content "content" is not displayed
+
+Scenario: N48 confirm
+Given #"content" is displayed
+When I do not confirm #"content"
+Then #"content" is not displayed
+
+//Negative Test cases 
+
+/*
+Scenario: extract
+Given "WindowDialog" is extracted
+When I extract "WindowDialog"
+Then "WindowDialog" is extracted
+*/
+
+Scenario: N1 extract
+Given "WindowDialog" is extracted
+When I extract "WindowDialog"
+Then #"WindowDialog" is extracted
+
+Scenario: N2 extract
+Given #"WindowDialog" is extracted
+When I extract #"WindowDialog"
+Then #"WindowDialog" is extracted
+
+/*
+Scenario: DoNotextract
+Given "WindowDialog" is not extracted
+When I do not extract "WindowDialog"
+Then "WindowDialog" is not extracted
+*/
+
+Scenario: N3 DoNotextract
+Given "WindowDialog" is not extracted
+When I do not extract "WindowDialog"
+Then #"WindowDialog" is not extracted
+
+Scenario: N4 DoNotextract
+Given #"WindowDialog" is not extracted
+When I do not extract #"WindowDialog"
+Then #"WindowDialog" is not extracted
+
+/*
+Scenario: WindowDialog-extract
+Given the WindowDialog "<tab name>" is extracted
+When I extract the WindowDialog "<tab name>"
+Then the WindowDialog "<tab name>" is extracted
+*/
+
+Scenario: N5 WindowDialog-extract
+Given the WindowDialog "WindowDialog" is extracted
+When I extract the WindowDialog "WindowDialog"
+Then the WindowDialog "WindowDialog" is extracted
+
+Scenario: N6 extract
+Given #"WindowDialog" is extracted
+When I extract #"WindowDialog"
+Then #"WindowDialog" is extracted
+
+/*
+Scenario: WindowDialog-DoNotextract
+Given the WindowDialog "<tab name>" is not extracted
+When I do not extract the WindowDialog "<tab name>"
+Then the WindowDialog "<tab name>" is extracted
+*/
+
+Scenario: N7 WindowDialog-extract
+Given the WindowDialog "WindowDialog" is not extracted
+When I do not extract the WindowDialog "WindowDialog"
+Then the WindowDialog "WindowDialog" is not extracted
+
+Scenario: N8 extract
+Given #"WindowDialog" is not extracted
+When I do not extract #"WindowDialog"
+Then #"WindowDialog" is not extracted

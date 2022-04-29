@@ -1,0 +1,286 @@
+model Slider using widgets
+/*
+Scenario: value-set to
+Given the value "<value name>" is not set
+When I set to the value "<value name>"
+Then the value "<value name>" is set
+*/
+
+Scenario: N1 value-set 
+Given the value "Slider" is not set
+When I set to the value "Slider"
+Then the value "Slider" is set
+
+Scenario: N2 set 
+Given #"Slider" is not set
+When I set to #"Slider"
+Then #"Slider" is set
+
+/*
+Scenario: value-DoNotset to
+Given the value "<value name>" is not set
+When I do not set to the value "<value name>"
+Then the value "<value name>" is not set
+*/
+
+Scenario: N3 value-DoNotset 
+Given the value "Slider" is not set
+When I do not set to the value "Slider"
+Then the value "Slider" is not set
+
+Scenario: N4 DoNotset 
+Given #"Slider" is not set
+When I do not set to #"Slider"
+Then #"Slider" is not set
+
+/*
+Scenario: Slider-set to
+Given the Slider "<value name>" is not set
+When I set to the Slider "<value name>"
+Then the Slider "<value name>" is set
+*/
+
+Scenario: N5 Slider-set 
+Given the Slider "Slider" is not set
+When I set to the Slider "Slider"
+Then the Slider "Slider" is set
+
+Scenario: N6 set 
+Given #"Slider" is not set
+When I set to #"Slider"
+Then #"Slider" is set
+
+/*
+Scenario: Slider-DoNotset to
+Given the Slider "<value name>" is not set
+When I do not set to the Slider "<value name>"
+Then the Slider "<value name>" is not set
+*/
+
+Scenario: N7 Slider-set 
+Given the Slider "Slider" is not set
+When I do not set to the Slider "Slider"
+Then the Slider "Slider" is not set
+
+Scenario: N8 set 
+Given #"Slider" is not set
+When I do not set to #"Slider"
+Then #"Slider" is not set
+
+/*
+Scenario: Field-value-adjust 
+Given the value "<value>" for the field "<fieldname>" is not adjusted
+When I adjust  the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is adjusted
+*/
+
+Scenario: N9 Field-value-adjust 
+Given the value "Number" for the field "Handle" is not adjusted
+When I adjust  the value "Number" for the field "Handle"
+Then the value "Number" for the field "Handle" is adjusted
+
+Scenario: N10 value-adjust 
+Given the value "Number" for #"Handle" is not adjusted
+When I adjust  the value "Number" for #"Handle"
+Then the value "Number" for #"Handle" is adjusted
+
+Scenario: N11 Field-adjust 
+Given #"Number" for the field "Handle" is not adjusted
+When I adjust  #"Number" for the field "Handle"
+Then #"Number" for the field "Handle" is adjusted
+
+Scenario: N12 adjust 
+Given #"Number" for #"Handle" is not adjusted
+When I adjust  #"Number" for #"Handle"
+Then #"Number" for #"Handle" is adjusted
+
+/*
+Scenario: Field-value-DoNotadjust 
+Given the value "<value>" for the field "<fieldname>" is not adjusted
+When I do not adjust  the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is not adjusted
+*/
+
+Scenario: N13 Field-value-DoNotadjust 
+Given the value "Number" for the field "Handle" is not adjusted
+When I do not adjust  the value "Number" for the field "Handle"
+Then the value "Number" for the field "Handle" is not adjusted
+
+Scenario: N14 value-DoNotadjust 
+Given the value "Number" for #"Handle" is not adjusted
+When I do not adjust  the value "Number" for #"Handle"
+Then the value "Number" for #"Handle" is not adjusted
+
+Scenario: N15 Field-DoNotadjust 
+Given #"Number" for the field "Handle" is not adjusted
+When I do not adjust  #"Number" for the field "Handle"
+Then #"Number" for the field "Handle" is not adjusted
+
+Scenario: N16 DoNotadjust 
+Given #"Number" for #"Handle" is not adjusted
+When I do not adjust  #"Number" for #"Handle"
+Then #"Number" for #"Handle" is not adjusted
+
+/*
+Scenario: Slider-value-adjust
+Given the value "<value>" for the Slider "<fieldname>" is not adjusted
+When I adjust the value "<value>" for the Slider "<fieldname>"
+Then the value "<value>" for the Slider "<fieldname>" is adjusted
+*/
+
+Scenario: N17 Slider-value-adjust
+Given the value "Number" for the Slider "Handle" is not adjusted
+When I adjust the value "Number" for the Slider "Handle"
+Then the value "Number" for the Slider "Handle" is adjusted
+
+Scenario: N18 value-adjust
+Given the value "Number" for #"Handle" is not adjusted
+When I adjust the value "Number" for #"Handle"
+Then the value "Number" for #"Handle" is adjusted
+
+Scenario: N19 Slider-adjust
+Given #"Number" for the Slider "Handle" is not adjusted
+When I adjust #"Number" for the Slider "Handle"
+Then #"Number" for the Slider "Handle" is adjusted
+
+Scenario: N20 adjust
+Given #"Number" for #"Handle" is not adjusted
+When I adjust #"Number" for #"Handle"
+Then #"Number" for #"Handle" is adjusted
+
+/*
+Scenario: Slider-value-DoNotadjust
+Given the value "<value>" for the Slider "<fieldname>" is not adjusted
+When I do not adjust the value "<value>" for the Slider "<fieldname>"
+Then the value "<value>" for the Slider "<fieldname>" is not adjusted
+*/
+
+Scenario: N21 Slider-value-DoNotadjust
+Given the value "Number" for the Slider "Handle" is not adjusted
+When I do not adjust the value "Number" for the Slider "Handle"
+Then the value "Number" for the Slider "Handle" is not adjusted
+
+Scenario: N22 value-DoNotadjust
+Given the value "Number" for #"Handle" is not adjusted
+When I do not adjust the value "Number" for #"Handle"
+Then the value "Number" for #"Handle" is not adjusted
+
+Scenario: N23 Slider-DoNotadjust
+Given #"Number" for the Slider "Handle" is not adjusted
+When I do not adjust #"Number" for the Slider "Handle"
+Then #"Number" for the Slider "Handle" is not adjusted
+
+Scenario: N24 DoNotadjust
+Given #"Number" for #"Handle" is not adjusted
+When I do not adjust #"Number" for #"Handle"
+Then #"Number" for #"Handle" is not adjusted
+
+// Negative Test cases 
+
+/*
+Scenario: Field-value-remove 
+Given the value "<value>" for the field "<fieldname>" is not removed
+When I remove  the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is removed
+*/
+
+Scenario: N1 Field-value-remove 
+Given the value "Number" for the field "Handle" is not removed
+When I remove  the value "Number" for the field "Handle"
+Then the value "Number" for the field "Handle" is removed
+
+Scenario: N02 value-remove 
+Given the value "Number" for #"Handle" is not removed
+When I remove  the value "Number" for #"Handle"
+Then the value "Number" for #"Handle" is removed
+
+Scenario: N03 Field-remove 
+Given #"Number" for the field "Handle" is not removed
+When I remove  #"Number" for the field "Handle"
+Then #"Number" for the field "Handle" is removed
+
+Scenario: N04 remove 
+Given #"Number" for #"Handle" is not removed
+When I remove  #"Number" for #"Handle"
+Then #"Number" for #"Handle" is removed
+
+/*
+Scenario: Field-value-DoNotremove 
+Given the value "<value>" for the field "<fieldname>" is not removed
+When I do not remove  the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is not removed
+*/
+
+Scenario: N05 Field-value-DoNotremove 
+Given the value "Number" for the field "Handle" is not removed
+When I do not remove  the value "Number" for the field "Handle"
+Then the value "Number" for the field "Handle" is not removed
+
+Scenario: N06 value-DoNotremove 
+Given the value "Number" for #"Handle" is not removed
+When I do not remove  the value "Number" for #"Handle"
+Then the value "Number" for #"Handle" is not removed
+
+Scenario: N07 Field-DoNotremove 
+Given #"Number" for the field "Handle" is not removed
+When I do not remove  #"Number" for the field "Handle"
+Then #"Number" for the field "Handle" is not removed
+
+Scenario: N08 DoNotremove 
+Given #"Number" for #"Handle" is not removed
+When I do not remove  #"Number" for #"Handle"
+Then #"Number" for #"Handle" is not removed
+
+/*
+Scenario: Slider-value-remove
+Given the value "<value>" for the Slider "<fieldname>" is not removed
+When I remove the value "<value>" for the Slider "<fieldname>"
+Then the value "<value>" for the Slider "<fieldname>" is removed
+*/
+
+Scenario: N09 Slider-value-remove
+Given the value "Number" for the Slider "Handle" is not removed
+When I remove the value "Number" for the Slider "Handle"
+Then the value "Number" for the Slider "Handle" is removed
+
+Scenario: N10 value-remove
+Given the value "Number" for #"Handle" is not removed
+When I remove the value "Number" for #"Handle"
+Then the value "Number" for #"Handle" is removed
+
+Scenario: N11 Slider-remove
+Given #"Number" for the Slider "Handle" is not removed
+When I remove #"Number" for the Slider "Handle"
+Then #"Number" for the Slider "Handle" is removed
+
+Scenario: N12 remove
+Given #"Number" for #"Handle" is not removed
+When I remove #"Number" for #"Handle"
+Then #"Number" for #"Handle" is removed
+
+/*
+Scenario: Slider-value-DoNotremove
+Given the value "<value>" for the Slider "<fieldname>" is not removed
+When I do not remove the value "<value>" for the Slider "<fieldname>"
+Then the value "<value>" for the Slider "<fieldname>" is not removed
+*/
+
+Scenario: N13 Slider-value-DoNotremove
+Given the value "Number" for the Slider "Handle" is not removed
+When I do not remove the value "Number" for the Slider "Handle"
+Then the value "Number" for the Slider "Handle" is not removed
+
+Scenario: N14 value-DoNotremove
+Given the value "Number" for #"Handle" is not removed
+When I do not remove the value "Number" for #"Handle"
+Then the value "Number" for #"Handle" is not removed
+
+Scenario: N15 Slider-DoNotremove
+Given #"Number" for the Slider "Handle" is not removed
+When I do not remove #"Number" for the Slider "Handle"
+Then #"Number" for the Slider "Handle" is not removed
+
+Scenario: N16 DoNotremove
+Given #"Number" for #"Handle" is not removed
+When I do not remove #"Number" for #"Handle"
+Then #"Number" for #"Handle" is not removed

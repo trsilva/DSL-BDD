@@ -1,0 +1,612 @@
+
+model ScrollBar using widgets
+/*
+Scenario: scroll to the right
+Given "page" is  scrolled to the right
+When I scroll to the right "page"
+Then "page" is  scrolled to the right
+*/
+
+Scenario: N01 scroll  right
+Given "page" is  scrolled to the right
+When I scroll to the right  "page"
+Then #"page" is  scrolled to the right
+
+Scenario: N02 scroll to the right
+Given #"page" is  scrolled to the right
+When I scroll to the right #"page"
+Then #"page" is  scrolled to the right
+
+/*
+Scenario: DoNotscroll to the right
+Given "page" is not  scrolled to the right
+When I do not scroll to the right "page"
+Then "page" is not  scrolled to the right
+*/
+
+Scenario: N03 DoNotscroll to the right
+Given "page" is not  scrolled to the right
+When I do not scroll to the right "page"
+Then #"page" is not  scrolled to the right
+
+Scenario: N04 DoNotscroll to the right
+Given #"page" is not  scrolled to the right
+When I do not scroll to the right #"page"
+Then #"page" is not  scrolled to the right
+
+/*
+Scenario: page-scroll to the right
+Given the page "<tab name>" is  scrolled to the right
+When I scroll to the right on the page "<tab name>"
+Then the page "<tab name>" is  scrolled to the right
+*/
+
+Scenario: N05 page-scroll right
+Given the page "page" is  scrolled to the right
+When I scroll to the right  "page"
+Then the page "page" is  scrolled to the right
+
+Scenario: N06 scroll to the right
+Given #"page" is  scrolled to the right
+When I scroll to the right #"page"
+Then #"page" is  scrolled to the right
+
+/*
+Scenario: page-DoNotscroll to the right
+Given the page "<tab name>" is not  scrolled to the right
+When I do not scroll to the right the page "<tab name>"
+Then the page "<tab name>" is  scrolled to the right
+*/
+
+Scenario: N07 page-scroll right
+Given the page "page" is not  scrolled to the right
+When I do not scroll to the right "page"
+Then the page "page" is not  scrolled to the right
+
+Scenario: N08 scroll to the right
+Given #"page" is not  scrolled to the right
+When I do not scroll to the right #"page"
+Then #"page" is not  scrolled to the right
+
+/*
+Scenario: scroll to the left
+Given "page" is  scrolled to the left
+When I scroll to the left "page"
+Then "page" is  scrolled to the left
+*/
+
+Scenario: N09 scroll to the left
+Given "page" is  scrolled to the left
+When I scroll to the left  "page"
+Then #"page" is  scrolled to the left
+
+Scenario: N10 scroll to the left
+Given #"page" is  scrolled to the left
+When I scroll to the left #"page"
+Then #"page" is  scrolled to the left
+
+/*
+Scenario: DoNotscroll to the left
+Given "page" is not  scrolled to the left
+When I do not scroll to the left "page"
+Then "page" is not  scrolled to the left
+*/
+
+Scenario: N11 DoNotscroll to the left
+Given "page" is not  scrolled to the left
+When I do not scroll to the left "page"
+Then #"page" is not  scrolled to the left
+
+Scenario: N12 DoNotscroll to the left
+Given #"page" is not  scrolled to the left
+When I do not scroll to the left #"page"
+Then #"page" is not  scrolled to the left
+
+/*
+Scenario: page-scroll to the left
+Given the page "<tab name>" is  scrolled to the left
+When I scroll to the left on the page "<tab name>"
+Then the page "<tab name>" is  scrolled to the left
+*/
+
+Scenario: N13 page-scroll left
+Given the page "page" is  scrolled to the left
+When I scroll to the left  "page"
+Then the page "page" is  scrolled to the left
+
+Scenario: N14 scroll to the left
+Given #"page" is  scrolled to the left
+When I scroll to the left #"page"
+Then #"page" is  scrolled to the left
+
+/*
+Scenario: page-DoNotscroll to the left
+Given the page "<tab name>" is not  scrolled to the left
+When I do not scroll to the left the page "<tab name>"
+Then the page "<tab name>" is  scrolled to the left
+*/
+
+Scenario: N15 page-scroll left
+Given the page "page" is not  scrolled to the left
+When I do not scroll to the left "page"
+Then the page "page" is not  scrolled to the left
+
+Scenario: N16 scroll to the left
+Given #"page" is not  scrolled to the left
+When I do not scroll to the left #"page"
+Then #"page" is not  scrolled to the left
+
+/*
+Scenario: scroll up
+Given "page" is  scrolled up
+When I scroll up "page"
+Then "page" is  scrolled up
+*/
+
+Scenario: N17 scroll  up
+Given "page" is  scrolled up
+When I scroll up  "page"
+Then #"page" is  scrolled up
+
+Scenario: N18 scroll up
+Given #"page" is  scrolled up
+When I scroll up #"page"
+Then #"page" is  scrolled up
+
+/*
+Scenario: DoNotscroll up
+Given "page" is not  scrolled up
+When I do not scroll up "page"
+Then "page" is not  scrolled up
+*/
+
+Scenario: N19 DoNotscroll up
+Given "page" is not  scrolled up
+When I do not scroll up "page"
+Then #"page" is not  scrolled up
+
+Scenario: N20 DoNotscroll up
+Given #"page" is not  scrolled up
+When I do not scroll  up #"page"
+Then #"page" is not  scrolled up
+
+/*
+Scenario: page-scroll up
+Given the page "<tab name>" is  scrolled up
+When I scroll up on the page "<tab name>"
+Then the page "<tab name>" is  scrolled up
+*/
+
+Scenario: N21 page-scroll up
+Given the page "page" is  scrolled up
+When I scroll up  "page"
+Then the page "page" is  scrolled up
+
+Scenario: N22 scroll up
+Given #"page" is  scrolled up
+When I scroll up #"page"
+Then #"page" is  scrolled up
+
+/*
+Scenario: page-DoNotscroll up
+Given the page "<tab name>" is not  scrolled up
+When I do not scroll up the page "<tab name>"
+Then the page "<tab name>" is  scrolled up
+*/
+
+Scenario: N23 page-scroll up
+Given the page "page" is not  scrolled up
+When I do not scroll up "page"
+Then the page "page" is not  scrolled up
+
+Scenario: N24 scroll up
+Given #"page" is not  scrolled up
+When I do not scroll up #"page"
+Then #"page" is not  scrolled up
+
+/*
+Scenario: scroll down
+Given "page" is  scrolled down
+When I scroll down "page"
+Then "page" is  scrolled down
+*/
+
+Scenario: N25 scroll down
+Given "page" is  scrolled down
+When I scroll down  "page"
+Then #"page" is  scrolled down
+
+Scenario: N26 scroll down
+Given #"page" is  scrolled down
+When I scroll down #"page"
+Then #"page" is  scrolled down
+
+/*
+Scenario: DoNotscroll down
+Given "page" is not  scrolled down
+When I do not scroll down "page"
+Then "page" is not  scrolled down
+*/
+
+Scenario: N27 DoNotscroll down
+Given "page" is not  scrolled down
+When I do not scroll down "page"
+Then #"page" is not  scrolled down
+
+Scenario: N28 DoNotscroll down
+Given #"page" is not  scrolled down
+When I do not scroll down #"page"
+Then #"page" is not  scrolled down
+
+/*
+Scenario: page-scroll down
+Given the page "<tab name>" is  scrolled down
+When I scroll down on the page "<tab name>"
+Then the page "<tab name>" is  scrolled down
+*/
+
+Scenario: N29 page-scroll down
+Given the page "page" is  scrolled down
+When I scroll down  "page"
+Then the page "page" is  scrolled down
+
+Scenario: N30 scroll down
+Given #"page" is  scrolled down
+When I scroll down #"page"
+Then #"page" is  scrolled down
+
+/*
+Scenario: page-DoNotscroll down
+Given the page "<tab name>" is not  scrolled down
+When I do not scroll down the page "<tab name>"
+Then the page "<tab name>" is  scrolled down
+*/
+
+Scenario: N31 page-scroll down
+Given the page "page" is not  scrolled down
+When I do not scroll down "page"
+Then the page "page" is not  scrolled down
+
+Scenario: N32 scroll down
+Given #"page" is not  scrolled down
+When I do not scroll down #"page"
+Then #"page" is not  scrolled down
+
+/*
+Scenario: ScrollBar-page-scroll to the right
+Given the page "<page>" for the ScrollBar "<fieldname>" is not scroll to the right
+When I scroll to the right the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is scroll to the right
+*/
+
+Scenario: N33 ScrollBar-page-scroll  right
+Given the page "Welcome page" for the ScrollBar "Web page" is not scrolled to the right
+When I scroll to the right "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is scrolled to the right
+
+Scenario: N34 page-scroll  right
+Given the page "Welcome page" for #"Web page" is not scrolled to the right
+When I scroll to the right #"Welcome page" for  #"Web page"
+Then the page "Welcome page" for #"Web page" is scrolled to the right
+
+Scenario: N35 ScrollBar-scroll  right
+Given #"Welcome page" for the ScrollBar "Web page" is not scrolled to the right
+When I scroll to the right #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is scrolled to the right
+
+Scenario: N36 scroll to the right
+Given #"Welcome page" for #"Web page" is not scrolled to the right
+When I scroll to the right #"Welcome page" for #"Web page"
+Then #"Welcome page" for #"Web page" is scrolled to the right
+
+/*
+Scenario: ScrollBar-page-DoNotscroll to the right
+Given the page "<page>" for the ScrollBar "<fieldname>" is not scroll to the right
+When I do not scroll to the right the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is not scroll to the right
+*/
+
+Scenario: N37 ScrollBar-page-DoNotscroll right
+Given the page "Welcome page" for the ScrollBar "Web page" is not scrolled to the right
+When I do not scroll to the right "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is not scrolled to the right
+
+Scenario: N38 page-DoNotscroll right
+Given the page "Welcome page" for #"Web page" is not scrolled to the right
+When I do not scroll to the right #"Welcome page" for #"Web page"
+Then the page "Welcome page" for #"Web page" is not scrolled to the right
+
+Scenario: N39 ScrollBar-DoNotscroll right
+Given #"Welcome page" for the ScrollBar "Web page" is not scrolled to the right
+When I do not scroll to the right #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is not scrolled to the right
+
+Scenario: N40 DoNotscroll to the right
+Given #"Welcome page" for #"Web page" is not scrolled to the right
+When I do not scroll to the right #"Welcome page" for #"Web page"
+Then #"Welcome page" for #"Web page" is not scrolled to the right
+
+/*
+Scenario: ScrollBar-page-scroll to the left
+Given the page "<page>" for the ScrollBar "<fieldname>" is not scroll to the left
+When I scroll to the left the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is scroll to the left
+*/
+
+Scenario: N41 ScrollBar-page-scroll left
+Given the page "Welcome page" for the ScrollBar "Web page" is not scrolled to the left
+When I scroll to the left "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is scrolled to the left
+
+Scenario: N42 page-scroll left
+Given the page "Welcome page" for #"Web page" is not scrolled to the left
+When I scroll to the left # "Welcome page" for #"Web page"
+Then the page "Welcome page" for #"Web page" is scrolled to the left
+
+Scenario: N43 ScrollBar-scroll  left
+Given #"Welcome page" for the ScrollBar "Web page" is not scrolled to the left
+When I scroll to the left #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is scrolled to the left
+
+Scenario: N44 scroll to the left
+Given #"Welcome page" for #"Web page" is not scrolled to the left
+When I scroll to the left #"Welcome page" for #"Web page"
+Then #"Welcome page" for #"Web page" is scrolled to the left
+
+/*
+Scenario: ScrollBar-page-DoNotscroll to the left
+Given the page "<page>" for the ScrollBar "<fieldname>" is not scroll to the left
+When I do not scroll to the left the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is not scroll to the left
+*/
+
+Scenario: N45 ScrollBar-page-DoNotscroll left
+Given the page "Welcome page" for the ScrollBar "Web page" is not scrolled to the left
+When I do not scroll to the left  "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is not scrolled to the left
+
+Scenario: N46 page-DoNotscroll left
+Given the page "Welcome page" for #"Web page" is not scrolled to the left
+When I do not scroll to the left "Welcome page" for #"Web page"
+Then the page "Welcome page" for #"Web page" is not scrolled to the left
+
+Scenario: N47 ScrollBar-DoNotscroll left
+Given #"Welcome page" for the ScrollBar "Web page" is not scrolled to the left
+When I do not scroll to the left #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is not scrolled to the left
+
+Scenario: N48 DoNotscroll to the left
+Given #"Welcome page" for #"Web page" is not scrolled to the left
+When I do not scroll to the left #"Welcome page" for #"Web page"
+Then #"Welcome page" for #"Web page" is not scrolled to the left
+
+/*
+Scenario: ScrollBar-page-scroll up
+Given the page "<page>" for the ScrollBar "<fieldname>" is not scroll up
+When I scroll up the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is scroll up
+*/
+
+Scenario: N49 ScrollBar-page-scroll  up
+Given the page "Welcome page" for the ScrollBar "Web page" is not scrolled up
+When I scroll up the page "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is scrolled up
+
+Scenario: N50 page-scroll up
+Given the page "Welcome page" for #"Web page" is not scrolled  up
+When I scroll up the page "Welcome page" for #"Web page"
+Then the page "Welcome page" for #"Web page" is scrolled  up
+
+Scenario: N51 ScrollBar-scroll  up
+Given #"Welcome page" for the ScrollBar "Web page" is not scrolled  up
+When I scroll  up #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is scrolled up
+
+Scenario: N52 scroll up
+Given #"Welcome page" for #"Web page" is not scrolled up
+When I scroll up #"Welcome page" for #"Web page"
+Then #"Welcome page" for #"Web page" is scrolled up
+
+/*
+Scenario: ScrollBar-page-DoNotscroll up
+Given the page "<page>" for the ScrollBar "<fieldname>" is not scroll up
+When I do not scroll up the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is not scroll up
+*/
+
+Scenario: N53 ScrollBar-page-DoNotscroll up
+Given the page "Welcome page" for the ScrollBar "Web page" is not scrolled up
+When I do not scroll up the page "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is not scrolled up
+
+Scenario: N54 page-DoNotscroll up
+Given the page "Welcome page" for #"Web page" is not scrolled up
+When I do not scroll up the page "Welcome page" for #"Web page"
+Then the page "Welcome page" for #"Web page" is not scrolled up
+
+Scenario: N55 ScrollBar-DoNotscroll up
+Given #"Welcome page" for the ScrollBar "Web page" is not scrolled up
+When I do not scroll up #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is not scrolled up
+
+Scenario: N56 DoNotscroll up
+Given #"Welcome page" for #"Web page" is not scrolled up
+When I do not scroll up #"Welcome page" for #"Web page"
+Then #"Welcome page" of #"Web page" is not scrolled up
+
+/*
+Scenario: ScrollBar-page-scroll down
+Given the page "<page>" for the ScrollBar "<fieldname>" is not scroll down
+When I scroll down the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is scroll down
+*/
+
+Scenario: N56 ScrollBar-page-scroll down
+Given the page "Welcome page" for the ScrollBar "Web page" is not scrolled down
+When I scroll down the page "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is scrolled down
+
+Scenario: N57 page-scroll down
+Given the page "Welcome page" for #"Web page" is not scrolled down
+When I scroll down the page "Welcome page" for #"Web page"
+Then the page "Welcome page" for #"Web page" is scrolled down
+
+Scenario: N58 ScrollBar-scroll down
+Given #"Welcome page" for the ScrollBar "Web page" is not scrolled down
+When I scroll down #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is scrolled down
+
+Scenario: N59 scroll down
+Given #"Welcome page" for #"Web page" is not scrolled down
+When I scroll down #"Welcome page" for #"Web page"
+Then #"Welcome page" for #"Web page" is scrolled down
+
+/*
+Scenario: ScrollBar-page-DoNotscroll down
+Given the page "<page>" for the ScrollBar "<fieldname>" is not scroll down
+When I do not scroll down the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is not scroll down
+*/
+
+Scenario: N60 ScrollBar-page-DoNotscroll down
+Given the page "Welcome page" for the ScrollBar "Web page" is not scrolled down
+When I do not scroll down the page "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is not scrolled down
+
+Scenario: N61 page-DoNotscroll down
+Given the page "Welcome page" for #"Web page" is not scrolled down
+When I do not scroll down the page "Welcome page" for #"Web page"
+Then the page "Welcome page" for #"Web page" is not scrolled down
+
+Scenario: N62 ScrollBar-DoNotscroll down
+Given #"Welcome page" for the ScrollBar "Web page" is not scrolled down
+When I do not scroll down #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is not scrolled down
+
+Scenario: N63 DoNotscroll down
+Given #"Welcome page" for #"Web page" is not scrolled down
+When I do not scroll down #"Welcome page" for #"Web page"
+Then #"Welcome page" for #"Web page" is not scrolled down
+
+//Negative Test Cases
+/*
+Scenario: push to the right
+Given "page" is  pushed to the right
+When I push to the right "page"
+Then "page" is  pushed to the right
+*/
+
+Scenario: N01 push  right
+Given "page" is  pushed to the right
+When I push to the right  "page"
+Then #"page" is  pushed to the right
+
+Scenario: N02 push to the right
+Given #"page" is  pushed to the right
+When I push to the right #"page"
+Then #"page" is  pushed to the right
+
+/*
+Scenario: DoNotpush to the right
+Given "page" is not  pushed to the right
+When I do not push to the right "page"
+Then "page" is not  pushed to the right
+*/
+
+Scenario: N03 DoNotpush to the right
+Given "page" is not  pushed to the right
+When I do not push to the right "page"
+Then #"page" is not  pushed to the right
+
+Scenario: N04 DoNotpush to the right
+Given #"page" is not  pushed to the right
+When I do not push to the right #"page"
+Then #"page" is not  pushed to the right
+
+/*
+Scenario: page-push to the right
+Given the page "<tab name>" is  pushed to the right
+When I push to the right on the page "<tab name>"
+Then the page "<tab name>" is  pushed to the right
+*/
+
+Scenario: N05 page-push right
+Given the page "page" is  pushed to the right
+When I push to the right  "page"
+Then the page "page" is  pushed to the right
+
+Scenario: N06 push to the right
+Given #"page" is  pushed to the right
+When I push to the right #"page"
+Then #"page" is  pushed to the right
+
+/*
+Scenario: page-DoNotpush to the right
+Given the page "<tab name>" is not  pushed to the right
+When I do not push to the right the page "<tab name>"
+Then the page "<tab name>" is  pushed to the right
+*/
+
+Scenario: N07 page-push right
+Given the page "page" is not  pushed to the right
+When I do not push to the right "page"
+Then the page "page" is not  pushed to the right
+
+Scenario: N08 push to the right
+Given #"page" is not  pushed to the right
+When I do not push to the right #"page"
+Then #"page" is not  pushed to the right
+
+/*
+Scenario: ScrollBar-page-push to the right
+Given the page "<page>" for the ScrollBar "<fieldname>" is not push to the right
+When I push to the right the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is push to the right
+*/
+
+Scenario: N09 ScrollBar-page-push  right
+Given the page "Welcome page" for the ScrollBar "Web page" is not pushed to the right
+When I push to the right "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is pushed to the right
+
+Scenario: N10 page-push  right
+Given the page "Welcome page" for #"Web page" is not pushed to the right
+When I push to the right #"Welcome page" for  #"Web page"
+Then the page "Welcome page" for #"Web page" is pushed to the right
+
+Scenario: N11 ScrollBar-push  right
+Given #"Welcome page" for the ScrollBar "Web page" is not pushed to the right
+When I push to the right #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is pushed to the right
+
+Scenario: N12 push to the right
+Given #"Welcome page" for #"Web page" is not pushed to the right
+When I push to the right #"Welcome page" for #"Web page"
+Then #"Welcome page" for #"Web page" is pushed to the right
+
+/*
+Scenario: ScrollBar-page-DoNotpush to the right
+Given the page "<page>" for the ScrollBar "<fieldname>" is not push to the right
+When I do not push to the right the page "<page>" for the ScrollBar "<fieldname>"
+Then the page "<page>" for the ScrollBar "<fieldname>" is not push to the right
+*/
+
+Scenario: N13 ScrollBar-page-DoNotpush right
+Given the page "Welcome page" for the ScrollBar "Web page" is not pushed to the right
+When I do not push to the right "Welcome page" for the ScrollBar "Web page"
+Then the page "Welcome page" for the ScrollBar "Web page" is not pushed to the right
+
+Scenario: N14 page-DoNotpush right
+Given the page "Welcome page" for #"Web page" is not pushed to the right
+When I do not push to the right #"Welcome page" for #"Web page"
+Then the page "Welcome page" for #"Web page" is not pushed to the right
+
+Scenario: N15 ScrollBar-DoNotpush right
+Given #"Welcome page" for the ScrollBar "Web page" is not pushed to the right
+When I do not push to the right #"Welcome page" for the ScrollBar "Web page"
+Then #"Welcome page" for the ScrollBar "Web page" is not pushed to the right
+
+Scenario: N16 DoNotpush to the right
+Given #"Welcome page" for #"Web page" is not pushed to the right
+When I do not push to the right #"Welcome page" for #"Web page"
+Then #"Welcome page" for #"Web page" is not pushed to the right

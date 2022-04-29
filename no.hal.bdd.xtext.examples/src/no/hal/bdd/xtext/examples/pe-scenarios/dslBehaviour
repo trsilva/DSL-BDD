@@ -1,0 +1,5 @@
+model dslBehaviour using widgets
+
+entity location{
+  properties: text
+ }

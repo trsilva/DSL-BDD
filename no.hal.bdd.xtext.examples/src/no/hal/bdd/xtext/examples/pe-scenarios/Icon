@@ -1,0 +1,139 @@
+model Icon using widgets
+
+/*
+Scenario: click
+Given "My Profile" is clicked
+When I click "My Profile"
+Then "My Profile" is clicked
+*/
+
+Scenario: N1 click
+Given "My Profile" is clicked
+When I click "My Profile"
+Then #"My Profile" is clicked
+
+Scenario: N2 click
+Given #"My Profile" is clicked
+When I click #"My Profile"
+Then #"My Profile" is clicked
+
+/*
+Scenario: DoNotclick
+Given "My Profile" is not clicked
+When I do not click "My Profile"
+Then "My Profile" is not clicked
+*/
+
+Scenario: N3 DoNotclick
+Given "My Profile" is not clicked
+When I do not click "My Profile"
+Then #"My Profile" is not clicked
+
+Scenario: N4 DoNotclick
+Given #"My Profile" is not clicked
+When I do not click #"My Profile"
+Then #"My Profile" is not clicked
+
+/*
+Scenario: Icon-click
+Given the Icon "<tab name>" is clicked
+When I click the Icon "<tab name>"
+Then the Icon "<tab name>" is clicked
+*/
+
+Scenario: N5 Icon-click
+Given the Icon "My Profile" is clicked
+When I click the Icon "My Profile"
+Then the Icon "My Profile" is clicked
+
+Scenario: N6 click
+Given #"My Profile" is clicked
+When I click #"My Profile"
+Then #"My Profile" is clicked
+
+/*
+Scenario: Icon-DoNotclick
+Given the Icon "<tab name>" is not clicked
+When I do not click the Icon "<tab name>"
+Then the Icon "<tab name>" is clicked
+*/
+
+Scenario: N7 Icon-click
+Given the Icon "My Profile" is not clicked
+When I do not click the Icon "My Profile"
+Then the Icon "My Profile" is not clicked
+
+Scenario: N8 click
+Given #"My Profile" is not clicked
+When I do not click #"My Profile"
+Then #"My Profile" is not clicked
+
+// Negative Test case
+
+/*
+Scenario: click
+Given "My Profile" is hit
+When I click "My Profile"
+Then "My Profile" is hit
+*/
+
+Scenario: N1 click
+Given "My Profile" is hit
+When I click "My Profile"
+Then #"My Profile" is hit
+
+Scenario: N2 click
+Given #"My Profile" is hit
+When I click #"My Profile"
+Then #"My Profile" is hit
+
+/*
+Scenario: DoNotclick
+Given "My Profile" is not hit
+When I do not click "My Profile"
+Then "My Profile" is not hit
+*/
+
+Scenario: N3 DoNotclick
+Given "My Profile" is not hit
+When I do not click "My Profile"
+Then #"My Profile" is not hit
+
+Scenario: N4 DoNotclick
+Given #"My Profile" is not hit
+When I do not click #"My Profile"
+Then #"My Profile" is not hit
+
+/*
+Scenario: Icon-click
+Given the Icon "<tab name>" is hit
+When I click the Icon "<tab name>"
+Then the Icon "<tab name>" is hit
+*/
+
+Scenario: N5 Icon-click
+Given the Icon "My Profile" is hit
+When I click the Icon "My Profile"
+Then the Icon "My Profile" is hit
+
+Scenario: N6 click
+Given #"My Profile" is hit
+When I click #"My Profile"
+Then #"My Profile" is hit
+
+/*
+Scenario: Icon-DoNotclick
+Given the Icon "<tab name>" is not hit
+When I do not click the Icon "<tab name>"
+Then the Icon "<tab name>" is hit
+*/
+
+Scenario: N7 Icon-click
+Given the Icon "My Profile" is not hit
+When I do not click the Icon "My Profile"
+Then the Icon "My Profile" is not hit
+
+Scenario: N8 click
+Given #"My Profile" is not hit
+When I do not click #"My Profile"
+Then #"My Profile" is not hit

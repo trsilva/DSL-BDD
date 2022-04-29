@@ -1,0 +1,709 @@
+
+model TextField using widgets
+/*
+Scenario: value-type
+Given the value "<value name>" is not typed
+When I type the value "<value name>"
+Then the value "<value name>" is typed
+*/
+
+Scenario: N1 value-type
+Given the value "TextField" is not typed
+When I type the value "TextField"
+Then the value "TextField" is typed
+
+Scenario: N2 type
+Given #"TextField" is not typed
+When I type #"TextField"
+Then #"TextField" is typed
+
+/*
+Scenario: value-DoNottype
+Given the value "<value name>" is not typed
+When I do not type the value "<value name>"
+Then the value "<value name>" is not typed
+*/
+
+Scenario: N3 value-DoNottype
+Given the value "TextField" is not typed
+When I do not type the value "TextField"
+Then the value "TextField" is not typed
+
+Scenario: N4 DoNottype
+Given #"TextField" is not typed
+When I do not type #"TextField"
+Then #"TextField" is not typed
+
+/*
+Scenario: TextField-type
+Given the TextField "<value name>" is not typed
+When I type the TextField "<value name>"
+Then the TextField "<value name>" is typed
+*/
+
+Scenario: N5 TextField-type
+Given the TextField "TextField" is not typed
+When I type the TextField "TextField"
+Then the TextField "TextField" is typed
+
+Scenario: N6 type
+Given #"TextField" is not typed
+When I type #"TextField"
+Then #"TextField" is typed
+
+/*
+Scenario: TextField-DoNottype
+Given the TextField "<value name>" is not typed
+When I do not type the TextField "<value name>"
+Then the TextField "<value name>" is not typed
+*/
+
+Scenario: N7 TextField-type
+Given the TextField "TextField" is not typed
+When I do not type the TextField "TextField"
+Then the TextField "TextField" is not typed
+
+Scenario: N8 type
+Given #"TextField" is not typed
+When I do not type #"TextField"
+Then #"TextField" is not typed
+
+/*
+Scenario: value-set
+Given the value "<value name>" is not set
+When I set the value "<value name>"
+Then the value "<value name>" is set
+*/
+
+Scenario: N9 value-set
+Given the value "TextField" is not set
+When I set the value "TextField"
+Then the value "TextField" is set
+
+Scenario: N10 set
+Given #"TextField" is not set
+When I set #"TextField"
+Then #"TextField" is set
+
+/*
+Scenario: value-DoNotset
+Given the value "<value name>" is not set
+When I do not set the value "<value name>"
+Then the value "<value name>" is not set
+*/
+
+Scenario: N11 value-DoNotset
+Given the value "TextField" is not set
+When I do not set the value "TextField"
+Then the value "TextField" is not set
+
+Scenario: N12 DoNotset
+Given #"TextField" is not set
+When I do not set #"TextField"
+Then #"TextField" is not set
+
+/*
+Scenario: TextField-set
+Given the TextField "<value name>" is not set
+When I set the TextField "<value name>"
+Then the TextField "<value name>" is set
+*/
+
+Scenario: N13 TextField-set
+Given the TextField "TextField" is not set
+When I set the TextField "TextField"
+Then the TextField "TextField" is set
+
+Scenario: N14 set
+Given #"TextField" is not set
+When I set #"TextField"
+Then #"TextField" is set
+
+/*
+Scenario: TextField-DoNotset
+Given the TextField "<value name>" is not set
+When I do not set the TextField "<value name>"
+Then the TextField "<value name>" is not set
+*/
+
+Scenario: N15 TextField-set
+Given the TextField "TextField" is not set
+When I do not set the TextField "TextField"
+Then the TextField "TextField" is not set
+
+Scenario: N16 set
+Given #"TextField" is not set
+When I do not set #"TextField"
+Then #"TextField" is not set
+
+/*
+Scenario: value-fill in with
+Given the value "<value name>" is not filled in
+When I fill in with the value "<value name>"
+Then the value "<value name>" is filled in
+*/
+
+Scenario: N17 value-fill in with
+Given the value "TextField" is not filled in
+When I fill in with the value "TextField"
+Then the value "TextField" is filled in
+
+Scenario: N18 fill in with
+Given #"TextField" is not filled in
+When I fill in with #"TextField"
+Then #"TextField" is filled in
+
+/*
+Scenario: value-DoNotfill in with
+Given the value "<value name>" is not filled in
+When I do not fill in the value "<value name>"
+Then the value "<value name>" is not filled in
+*/
+
+Scenario: N19 value-DoNotfill in with
+Given the value "TextField" is not filled in
+When I do not fill in the value "TextField"
+Then the value "TextField" is not filled in
+
+Scenario: N20 DoNotfill in with
+Given #"TextField" is not filled in
+When I do not fill in #"TextField"
+Then #"TextField" is not filled in
+
+/*
+Scenario: TextField-fill in with
+Given the TextField "<value name>" is not filled in
+When I fill in with the TextField "<value name>"
+Then the TextField "<value name>" is filled in
+*/
+
+Scenario: N21 TextField-fill in with
+Given the TextField "TextField" is not filled in
+When I fill in with the TextField "TextField"
+Then the TextField "TextField" is filled in
+
+Scenario: N22 fill in with
+Given #"TextField" is not filled in
+When I fill in with #"TextField"
+Then #"TextField" is filled in
+
+/*
+Scenario: TextField-DoNotfill in with
+Given the TextField "<value name>" is not filled in
+When I do not fill in the TextField "<value name>"
+Then the TextField "<value name>" is not filled in
+*/
+
+Scenario: N23 TextField-fill in with
+Given the TextField "TextField" is not filled in
+When I do not fill in the TextField "TextField"
+Then the TextField "TextField" is not filled in
+
+Scenario: N24 fill in with
+Given #"TextField" is not filled in
+When I do not fill in #"TextField"
+Then #"TextField" is not filled in
+
+
+/*
+Scenario: Field-value-type
+Given the value "<value>" for the field "<fieldname>" is not typed
+When I type the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is typed
+*/
+
+Scenario: N25 Field-value-type
+Given the value "Password" for the field "Text Field" is not typed
+When I type the value "Password" for the field "Text Field"
+Then the value "Password" for the field "Text Field" is typed
+
+Scenario: N26 value-type
+Given the value "Password" for #"Text Field" is not typed
+When I type the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is typed
+
+Scenario: N27 Field-type
+Given #"Password" for the field "Text Field" is not typed
+When I type #"Password" for the field "Text Field"
+Then #"Password" for the field "Text Field" is typed
+
+Scenario: N28 type
+Given #"Password" for #"Text Field" is not typed
+When I type #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is typed
+
+/*
+Scenario: Field-value-DoNottype
+Given the value "<value>" for the field "<fieldname>" is not typed
+When I do not type the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is not typed
+*/
+
+Scenario: N29 Field-value-DoNottype
+Given the value "Password" for the field "Text Field" is not typed
+When I do not type the value "Password" for the field "Text Field"
+Then the value "Password" for the field "Text Field" is not typed
+
+Scenario: N30 value-DoNottype
+Given the value "Password" for #"Text Field" is not typed
+When I do not type the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is not typed
+
+Scenario: N31 Field-DoNottype
+Given #"Password" for the field "Text Field" is not typed
+When I do not type #"Password" for the field "Text Field"
+Then #"Password" for the field "Text Field" is not typed
+
+Scenario: N32 DoNottype
+Given #"Password" for #"Text Field" is not typed
+When I do not type #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is not typed
+
+/*
+Scenario: Field-value-set
+Given the value "<value>" for the field "<fieldname>" is not set
+When I set the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is set
+*/
+
+Scenario: N33 Field-value-set
+Given the value "Password" for the field "Text Field" is not set
+When I set the value "Password" for the field "Text Field"
+Then the value "Password" for the field "Text Field" is set
+
+Scenario: N34 value-set
+Given the value "Password" for #"Text Field" is not set
+When I set the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is set
+
+Scenario: N35 Field-set
+Given #"Password" for the field "Text Field" is not set
+When I set #"Password" for the field "Text Field"
+Then #"Password" for the field "Text Field" is set
+
+Scenario: N36 set
+Given #"Password" for #"Text Field" is not set
+When I set #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is set
+
+/*
+Scenario: Field-value-DoNotset
+Given the value "<value>" for the field "<fieldname>" is not set
+When I do not set the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is not set
+*/
+
+Scenario: N37 Field-value-DoNotset
+Given the value "Password" for the field "Text Field" is not set
+When I do not set the value "Password" for the field "Text Field"
+Then the value "Password" for the field "Text Field" is not set
+
+Scenario: N38 value-DoNotset
+Given the value "Password" for #"Text Field" is not set
+When I do not set the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is not set
+
+Scenario: N39 Field-DoNotset
+Given #"Password" for the field "Text Field" is not set
+When I do not set #"Password" for the field "Text Field"
+Then #"Password" for the field "Text Field" is not set
+
+Scenario: N40 DoNotset
+Given #"Password" for #"Text Field" is not set
+When I do not set #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is not set
+
+/*
+Scenario: Field-value-fill in with
+Given the value "<value>" for the field "<fieldname>" is not filled in
+When I fill in with the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is filled in
+*/
+
+Scenario: N41 Field-value-fill in with
+Given the value "Password" for the field "Text Field" is not filled in
+When I fill in with the value "Password" for the field "Text Field"
+Then the value "Password" for the field "Text Field" is filled in
+
+Scenario: N42 value-fill in with
+Given the value "Password" for #"Text Field" is not filled in
+When I fill in with the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is filled in
+
+Scenario: N43 Field-fill in with
+Given #"Password" for the field "Text Field" is not filled in
+When I fill in with #"Password" for the field "Text Field"
+Then #"Password" for the field "Text Field" is filled in
+
+Scenario: N44 fill in with
+Given #"Password" for #"Text Field" is not filled in
+When I fill in with #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is filled in
+
+/*
+Scenario: Field-value-DoNotfill in with
+Given the value "<value>" for the field "<fieldname>" is not filled in
+When I do not fill in with the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is not filled in
+*/
+
+Scenario: N45 Field-value-DoNotfill in with
+Given the value "Password" for the field "Text Field" is not filled in
+When I do not fill in with the value "Password" for the field "Text Field"
+Then the value "Password" for the field "Text Field" is not filled in
+
+Scenario: N46 value-DoNotfill in with
+Given the value "Password" for #"Text Field" is not filled in
+When I do not fill in with the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is not filled in
+
+Scenario: N47 Field-DoNotfill in with
+Given #"Password" for the field "Text Field" is not filled in
+When I do not fill in with #"Password" for the field "Text Field"
+Then #"Password" for the field "Text Field" is not filled in
+
+Scenario: N48 DoNotfill in with
+Given #"Password" for #"Text Field" is not filled in
+When I do not fill in with #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is not filled in
+
+
+/*
+Scenario: TextField-value-type
+Given the value "<value>" for the TextField "<fieldname>" is not typed
+When I type the value "<value>" for the TextField "<fieldname>"
+Then the value "<value>" for the TextField "<fieldname>" is typed
+*/
+
+Scenario: N49 TextField-value-type
+Given the value "Password" for the TextField "Text Field" is not typed
+When I type the value "Password" for the TextField "Text Field"
+Then the value "Password" for the TextField "Text Field" is typed
+
+Scenario: N50 value-type
+Given the value "Password" for #"Text Field" is not typed
+When I type the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is typed
+
+Scenario: N51 TextField-type
+Given #"Password" for the TextField "Text Field" is not typed
+When I type #"Password" for the TextField "Text Field"
+Then #"Password" for the TextField "Text Field" is typed
+
+Scenario: N52 type
+Given #"Password" for #"Text Field" is not typed
+When I type #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is typed
+
+/*
+Scenario: TextField-value-DoNottype
+Given the value "<value>" for the TextField "<fieldname>" is not typed
+When I do not type the value "<value>" for the TextField "<fieldname>"
+Then the value "<value>" for the TextField "<fieldname>" is not typed
+*/
+
+Scenario: N53 TextField-value-DoNottype
+Given the value "Password" for the TextField "Text Field" is not typed
+When I do not type the value "Password" for the TextField "Text Field"
+Then the value "Password" for the TextField "Text Field" is not typed
+
+Scenario: N54 value-DoNottype
+Given the value "Password" for #"Text Field" is not typed
+When I do not type the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is not typed
+
+Scenario: N55 TextField-DoNottype
+Given #"Password" for the TextField "Text Field" is not typed
+When I do not type #"Password" for the TextField "Text Field"
+Then #"Password" for the TextField "Text Field" is not typed
+
+Scenario: N56 DoNottype
+Given #"Password" for #"Text Field" is not typed
+When I do not type #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is not typed
+
+/*
+Scenario: TextField-value-set
+Given the value "<value>" for the TextField "<fieldname>" is not set
+When I set the value "<value>" for the TextField "<fieldname>"
+Then the value "<value>" for the TextField "<fieldname>" is set
+*/
+
+Scenario: N67 TextField-value-set
+Given the value "Password" for the TextField "Text Field" is not set
+When I set the value "Password" for the TextField "Text Field"
+Then the value "Password" for the TextField "Text Field" is set
+
+Scenario: N68 value-set
+Given the value "Password" for #"Text Field" is not set
+When I set the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is set
+
+Scenario: N69 TextField-set
+Given #"Password" for the TextField "Text Field" is not set
+When I set #"Password" for the TextField "Text Field"
+Then #"Password" for the TextField "Text Field" is set
+
+Scenario: N70 set
+Given #"Password" for #"Text Field" is not set
+When I set #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is set
+
+/*
+Scenario: TextField-value-DoNotset
+Given the value "<value>" for the TextField "<fieldname>" is not set
+When I do not set the value "<value>" for the TextField "<fieldname>"
+Then the value "<value>" for the TextField "<fieldname>" is not set
+*/
+
+Scenario: N71 TextField-value-DoNotset
+Given the value "Password" for the TextField "Text Field" is not set
+When I do not set the value "Password" for the TextField "Text Field"
+Then the value "Password" for the TextField "Text Field" is not set
+
+Scenario: N72 value-DoNotset
+Given the value "Password" for #"Text Field" is not set
+When I do not set the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is not set
+
+Scenario: N73 TextField-DoNotset
+Given #"Password" for the TextField "Text Field" is not set
+When I do not set #"Password" for the TextField "Text Field"
+Then #"Password" for the TextField "Text Field" is not set
+
+Scenario: N74 DoNotset
+Given #"Password" for #"Text Field" is not set
+When I do not set #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is not set
+
+/*
+Scenario: TextField-value-fill in with
+Given the value "<value>" for the TextField "<fieldname>" is not filled in
+When I fill in with the value "<value>" for the TextField "<fieldname>"
+Then the value "<value>" for the TextField "<fieldname>" is filled in
+*/
+
+Scenario: N75 TextField-value-fill in with
+Given the value "Password" for the TextField "Text Field" is not filled in
+When I fill in with the value "Password" for the TextField "Text Field"
+Then the value "Password" for the TextField "Text Field" is filled in
+
+Scenario: N76 value-fill in with
+Given the value "Password" for #"Text Field" is not filled in
+When I fill in with the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is filled in
+
+Scenario: N77 TextField-fill in with
+Given #"Password" for the TextField "Text Field" is not filled in
+When I fill in with #"Password" for the TextField "Text Field"
+Then #"Password" for the TextField "Text Field" is filled in
+
+Scenario: N78 fill in with
+Given #"Password" for #"Text Field" is not filled in
+When I fill in with #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is filled in
+
+/*
+Scenario: TextField-value-DoNotfill in with
+Given the value "<value>" for the TextField "<fieldname>" is not filled in
+When I do not fill in with the value "<value>" for the TextField "<fieldname>"
+Then the value "<value>" for the TextField "<fieldname>" is not filled in
+*/
+
+Scenario: N79 TextField-value-DoNotfill in with
+Given the value "Password" for the TextField "Text Field" is not filled in
+When I do not fill in with the value "Password" for the TextField "Text Field"
+Then the value "Password" for the TextField "Text Field" is not filled in
+
+Scenario: N80 value-DoNotfill in with
+Given the value "Password" for #"Text Field" is not filled in
+When I do not fill in with the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is not filled in
+
+Scenario: N81 TextField-DoNotfill in with
+Given #"Password" for the TextField "Text Field" is not filled in
+When I do not fill in with #"Password" for the TextField "Text Field"
+Then #"Password" for the TextField "Text Field" is not filled in
+
+Scenario: N82 DoNotfill in with
+Given #"Password" for #"Text Field" is not filled in
+When I do not fill in with #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is not filled in
+
+//Negative Test cases
+
+/*
+Scenario: value-read
+Given the value "<value name>" is not read
+When I read the value "<value name>"
+Then the value "<value name>" is read
+*/
+
+Scenario: N1 value-read
+Given the value "TextField" is not read
+When I read the value "TextField"
+Then the value "TextField" is read
+
+Scenario: N2 read
+Given #"TextField" is not read
+When I read #"TextField"
+Then #"TextField" is read
+
+/*
+Scenario: value-DoNotread
+Given the value "<value name>" is not read
+When I do not read the value "<value name>"
+Then the value "<value name>" is not read
+*/
+
+Scenario: N3 value-DoNotread
+Given the value "TextField" is not read
+When I do not read the value "TextField"
+Then the value "TextField" is not read
+
+Scenario: N4 DoNotread
+Given #"TextField" is not read
+When I do not read #"TextField"
+Then #"TextField" is not read
+
+/*
+Scenario: TextField-read
+Given the TextField "<value name>" is not read
+When I read the TextField "<value name>"
+Then the TextField "<value name>" is read
+*/
+
+Scenario: N5 TextField-read
+Given the TextField "TextField" is not read
+When I read the TextField "TextField"
+Then the TextField "TextField" is read
+
+Scenario: N6 read
+Given #"TextField" is not read
+When I read #"TextField"
+Then #"TextField" is read
+
+/*
+Scenario: TextField-DoNotread
+Given the TextField "<value name>" is not read
+When I do not read the TextField "<value name>"
+Then the TextField "<value name>" is not read
+*/
+
+Scenario: N7 TextField-read
+Given the TextField "TextField" is not read
+When I do not read the TextField "TextField"
+Then the TextField "TextField" is not read
+
+Scenario: N8 read
+Given #"TextField" is not read
+When I do not read #"TextField"
+Then #"TextField" is not read
+
+/*
+Scenario: Field-value-read
+Given the value "<value>" for the field "<fieldname>" is not read
+When I read the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is read
+*/
+
+Scenario: N9 Field-value-read
+Given the value "Password" for the field "Text Field" is not read
+When I read the value "Password" for the field "Text Field"
+Then the value "Password" for the field "Text Field" is read
+
+Scenario: N10 value-read
+Given the value "Password" for #"Text Field" is not read
+When I read the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is read
+
+Scenario: N11 Field-read
+Given #"Password" for the field "Text Field" is not read
+When I read #"Password" for the field "Text Field"
+Then #"Password" for the field "Text Field" is read
+
+Scenario: N12 read
+Given #"Password" for #"Text Field" is not read
+When I read #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is read
+
+/*
+Scenario: Field-value-DoNotread
+Given the value "<value>" for the field "<fieldname>" is not read
+When I do not read the value "<value>" for the field "<fieldname>"
+Then the value "<value>" for the field "<fieldname>" is not read
+*/
+
+Scenario: N13 Field-value-DoNotread
+Given the value "Password" for the field "Text Field" is not read
+When I do not read the value "Password" for the field "Text Field"
+Then the value "Password" for the field "Text Field" is not read
+
+Scenario: N14 value-DoNotread
+Given the value "Password" for #"Text Field" is not read
+When I do not read the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is not read
+
+Scenario: N15 Field-DoNotread
+Given #"Password" for the field "Text Field" is not read
+When I do not read #"Password" for the field "Text Field"
+Then #"Password" for the field "Text Field" is not read
+
+Scenario: N16 DoNotread
+Given #"Password" for #"Text Field" is not read
+When I do not read #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is not read
+
+/*
+Scenario: TextField-value-read
+Given the value "<value>" for the TextField "<fieldname>" is not read
+When I read the value "<value>" for the TextField "<fieldname>"
+Then the value "<value>" for the TextField "<fieldname>" is read
+*/
+
+Scenario: N17 TextField-value-read
+Given the value "Password" for the TextField "Text Field" is not read
+When I read the value "Password" for the TextField "Text Field"
+Then the value "Password" for the TextField "Text Field" is read
+
+Scenario: N18 value-read
+Given the value "Password" for #"Text Field" is not read
+When I read the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is read
+
+Scenario: N19 TextField-read
+Given #"Password" for the TextField "Text Field" is not read
+When I read #"Password" for the TextField "Text Field"
+Then #"Password" for the TextField "Text Field" is read
+
+Scenario: N20 read
+Given #"Password" for #"Text Field" is not read
+When I read #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is read
+
+/*
+Scenario: TextField-value-DoNotread
+Given the value "<value>" for the TextField "<fieldname>" is not read
+When I do not read the value "<value>" for the TextField "<fieldname>"
+Then the value "<value>" for the TextField "<fieldname>" is not read
+*/
+
+Scenario: N21 TextField-value-DoNotread
+Given the value "Password" for the TextField "Text Field" is not read
+When I do not read the value "Password" for the TextField "Text Field"
+Then the value "Password" for the TextField "Text Field" is not read
+
+Scenario: N22 value-DoNotread
+Given the value "Password" for #"Text Field" is not read
+When I do not read the value "Password" for #"Text Field"
+Then the value "Password" for #"Text Field" is not read
+
+Scenario: N23 TextField-DoNotread
+Given #"Password" for the TextField "Text Field" is not read
+When I do not read #"Password" for the TextField "Text Field"
+Then #"Password" for the TextField "Text Field" is not read
+
+Scenario: N24 DoNotread
+Given #"Password" for #"Text Field" is not read
+When I do not read #"Password" for #"Text Field"
+Then #"Password" for #"Text Field" is not read

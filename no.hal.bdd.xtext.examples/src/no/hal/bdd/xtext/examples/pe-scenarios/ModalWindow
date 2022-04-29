@@ -1,0 +1,547 @@
+model ModalWindow using widgets
+
+/*
+Scenario: confirm
+Given "ModalWindow" is confirmed
+When I confirm "ModalWindow"
+Then "ModalWindow" is confirmed
+*/
+
+Scenario: N1 confirm
+Given "ModalWindow" is confirmed
+When I confirm "ModalWindow"
+Then #"ModalWindow" is confirmed
+
+Scenario: N2 confirm
+Given #"ModalWindow" is confirmed
+When I confirm #"ModalWindow"
+Then #"ModalWindow" is confirmed
+
+/*
+Scenario: DoNotconfirm
+Given "ModalWindow" is not confirmed
+When I do not confirm "ModalWindow"
+Then "ModalWindow" is not confirmed
+*/
+
+Scenario: N3 DoNotconfirm
+Given "ModalWindow" is not confirmed
+When I do not confirm "ModalWindow"
+Then #"ModalWindow" is not confirmed
+
+Scenario: N4 DoNotconfirm
+Given #"ModalWindow" is not confirmed
+When I do not confirm #"ModalWindow"
+Then #"ModalWindow" is not confirmed
+
+/*
+Scenario: ModalWindow-confirm
+Given the ModalWindow "<tab name>" is confirmed
+When I confirm the ModalWindow "<tab name>"
+Then the ModalWindow "<tab name>" is confirmed
+*/
+
+Scenario: N5 ModalWindow-confirm
+Given the ModalWindow "ModalWindow" is confirmed
+When I confirm the ModalWindow "ModalWindow"
+Then the ModalWindow "ModalWindow" is confirmed
+
+Scenario: N6 confirm
+Given #"ModalWindow" is confirmed
+When I confirm #"ModalWindow"
+Then #"ModalWindow" is confirmed
+
+/*
+Scenario: ModalWindow-DoNotconfirm
+Given the ModalWindow "<tab name>" is not confirmed
+When I do not confirm the ModalWindow "<tab name>"
+Then the ModalWindow "<tab name>" is confirmed
+*/
+
+Scenario: N7 ModalWindow-confirm
+Given the ModalWindow "ModalWindow" is not confirmed
+When I do not confirm the ModalWindow "ModalWindow"
+Then the ModalWindow "ModalWindow" is not confirmed
+
+Scenario: N8 confirm
+Given #"ModalWindow" is not confirmed
+When I do not confirm #"ModalWindow"
+Then #"ModalWindow" is not confirmed
+
+/*
+Scenario: cancel
+Given "ModalWindow" is canceled
+When I cancel "ModalWindow"
+Then "ModalWindow" is canceled
+*/
+
+Scenario: N9 cancel
+Given "ModalWindow" is canceled
+When I cancel "ModalWindow"
+Then #"ModalWindow" is canceled
+
+Scenario: N10 cancel
+Given #"ModalWindow" is canceled
+When I cancel #"ModalWindow"
+Then #"ModalWindow" is canceled
+
+/*
+Scenario: DoNotcancel
+Given "ModalWindow" is not canceled
+When I do not cancel "ModalWindow"
+Then "ModalWindow" is not canceled
+*/
+
+Scenario: N11 DoNotcancel
+Given "ModalWindow" is not canceled
+When I do not cancel "ModalWindow"
+Then #"ModalWindow" is not canceled
+
+Scenario: N12 DoNotcancel
+Given #"ModalWindow" is not canceled
+When I do not cancel #"ModalWindow"
+Then #"ModalWindow" is not canceled
+
+/*
+Scenario: ModalWindow-cancel
+Given the ModalWindow "<tab name>" is canceled
+When I cancel the ModalWindow "<tab name>"
+Then the ModalWindow "<tab name>" is canceled
+*/
+
+Scenario: N13 ModalWindow-cancel
+Given the ModalWindow "ModalWindow" is canceled
+When I cancel the ModalWindow "ModalWindow"
+Then the ModalWindow "ModalWindow" is canceled
+
+Scenario: N14 cancel
+Given #"ModalWindow" is canceled
+When I cancel #"ModalWindow"
+Then #"ModalWindow" is canceled
+
+/*
+Scenario: ModalWindow-DoNotcancel
+Given the ModalWindow "<tab name>" is not canceled
+When I do not cancel the ModalWindow "<tab name>"
+Then the ModalWindow "<tab name>" is canceled
+*/
+
+Scenario: N15 ModalWindow-cancel
+Given the ModalWindow "ModalWindow" is not canceled
+When I do not cancel the ModalWindow "ModalWindow"
+Then the ModalWindow "ModalWindow" is not canceled
+
+Scenario: N16 cancel
+Given #"ModalWindow" is not canceled
+When I do not cancel #"ModalWindow"
+Then #"ModalWindow" is not canceled
+
+/*
+Scenario: close
+Given "ModalWindow" is closed
+When I close "ModalWindow"
+Then "ModalWindow" is closed
+*/
+
+Scenario: N17 close
+Given "ModalWindow" is closed
+When I close "ModalWindow"
+Then #"ModalWindow" is closed
+
+Scenario: N18 close
+Given #"ModalWindow" is closed
+When I close #"ModalWindow"
+Then #"ModalWindow" is closed
+
+/*
+Scenario: DoNotclose
+Given "ModalWindow" is not closed
+When I do not close "ModalWindow"
+Then "ModalWindow" is not closed
+*/
+
+Scenario: N19 DoNotclose
+Given "ModalWindow" is not closed
+When I do not close "ModalWindow"
+Then #"ModalWindow" is not closed
+
+Scenario: N20 DoNotclose
+Given #"ModalWindow" is not closed
+When I do not close #"ModalWindow"
+Then #"ModalWindow" is not closed
+
+/*
+Scenario: ModalWindow-close
+Given the ModalWindow "<tab name>" is closed
+When I close the ModalWindow "<tab name>"
+Then the ModalWindow "<tab name>" is closed
+*/
+
+Scenario: N21 ModalWindow-close
+Given the ModalWindow "ModalWindow" is closed
+When I close the ModalWindow "ModalWindow"
+Then the ModalWindow "ModalWindow" is closed
+
+Scenario: N22 close
+Given #"ModalWindow" is closed
+When I close #"ModalWindow"
+Then #"ModalWindow" is closed
+
+/*
+Scenario: ModalWindow-DoNotclose
+Given the ModalWindow "<tab name>" is not closed
+When I do not close the ModalWindow "<tab name>"
+Then the ModalWindow "<tab name>" is closed
+*/
+
+Scenario: N23 ModalWindow-close
+Given the ModalWindow "ModalWindow" is not closed
+When I do not close the ModalWindow "ModalWindow"
+Then the ModalWindow "ModalWindow" is not closed
+
+Scenario: N24 close
+Given #"ModalWindow" is not closed
+When I do not close #"ModalWindow"
+Then #"ModalWindow" is not closed
+
+/*
+Scenario: display
+Given "content" is displayed
+When I close "content"
+Then "content" is not displayed
+*/
+
+Scenario: N25 display
+Given "content" is displayed
+When I close "content"
+Then #"content" is not displayed
+
+Scenario: N26 close
+Given #"content" is displayed
+When I close #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: DoNotclose
+Given "content" is not displayed
+When I do not close "content"
+Then "content" is not displayed
+*/
+
+Scenario: N27 DoNotclose
+Given "content" is not displayed
+When I do not close "content"
+Then #"content" is not displayed
+
+Scenario: N28 DoNotclose
+Given #"content" is not displayed
+When I do not close #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-close
+Given the content "<tab name>" is displayed
+When I close the content "<tab name>"
+Then the content "<tab name>" is not displayed
+*/
+
+Scenario: N29 content-close
+Given the content "content" is displayed
+When I close the content "content"
+Then the content "content" is not displayed
+
+Scenario: N30 close
+Given #"content" is displayed
+When I close #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-DoNotclose
+Given the content "<tab name>" is  displayed
+When I do not close the content "<tab name>"
+Then the content "<tab name>" is  displayed
+*/
+
+Scenario: N31 content-close
+Given the content "content" is  displayed
+When I do not close the content "content"
+Then the content "content" is  displayed
+
+Scenario: N32 close
+Given #"content" is displayed
+When I do not close #"content"
+Then #"content" is displayed
+
+/*
+Scenario: display
+Given "content" is displayed
+When I cancel "content"
+Then "content" is not displayed
+*/
+
+Scenario: N33 display
+Given "content" is displayed
+When I cancel "content"
+Then #"content" is not displayed
+
+Scenario: N34 cancel
+Given #"content" is displayed
+When I cancel #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: DoNotcancel
+Given "content" is not displayed
+When I do not cancel "content"
+Then "content" is not displayed
+*/
+
+Scenario: N35 DoNotcancel
+Given "content" is not displayed
+When I do not cancel "content"
+Then #"content" is not displayed
+
+Scenario: N36 DoNotcancel
+Given #"content" is not displayed
+When I do not cancel #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-cancel
+Given the content "<tab name>" is displayed
+When I cancel the content "<tab name>"
+Then the content "<tab name>" is not displayed
+*/
+
+Scenario: N37 content-cancel
+Given the content "content" is displayed
+When I cancel the content "content"
+Then the content "content" is not displayed
+
+Scenario: N38 cancel
+Given #"content" is displayed
+When I cancel #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-DoNotcancel
+Given the content "<tab name>" is  displayed
+When I do not cancel the content "<tab name>"
+Then the content "<tab name>" is  displayed
+*/
+
+Scenario: N39 content-cancel
+Given the content "content" is  displayed
+When I do not cancel the content "content"
+Then the content "content" is  displayed
+
+Scenario: N40 cancel
+Given #"content" is displayed
+When I do not cancel #"content"
+Then #"content" is displayed
+
+/*
+Scenario: display
+Given "content" is displayed
+When I confirm "content"
+Then "content" is  displayed
+*/
+
+Scenario: N41 display
+Given "content" is displayed
+When I confirm "content"
+Then #"content" is  displayed
+
+Scenario: N42 confirm
+Given #"content" is displayed
+When I confirm #"content"
+Then #"content" is  displayed
+
+/*
+Scenario: DoNotconfirm
+Given "content" is not displayed
+When I do not confirm "content"
+Then "content" is not displayed
+*/
+
+Scenario: N43 DoNotconfirm
+Given "content" is not displayed
+When I do not confirm "content"
+Then #"content" is not displayed
+
+Scenario: N44 DoNotconfirm
+Given #"content" is not displayed
+When I do not confirm #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-confirm
+Given the content "<tab name>" is displayed
+When I confirm the content "<tab name>"
+Then the content "<tab name>" is  displayed
+*/
+
+Scenario: N45 content-confirm
+Given the content "content" is displayed
+When I confirm the content "content"
+Then the content "content" is  displayed
+
+Scenario: N46 confirm
+Given #"content" is displayed
+When I confirm #"content"
+Then #"content" is  displayed
+
+/*
+Scenario: content-DoNotconfirm
+Given the content "<tab name>" is  displayed
+When I do not confirm the content "<tab name>"
+Then the content "<tab name>" is not displayed
+*/
+
+Scenario: N47 content-confirm
+Given the content "content" is  displayed
+When I do not confirm the content "content"
+Then the content "content" is not displayed
+
+Scenario: N48 confirm
+Given #"content" is displayed
+When I do not confirm #"content"
+Then #"content" is not displayed
+
+//Negative Test cases
+
+/*
+Scenario: hit
+Given "ModalWindow" is hit
+When I hit "ModalWindow"
+Then "ModalWindow" is hit
+*/
+
+Scenario: N1 hit
+Given "ModalWindow" is hit
+When I hit "ModalWindow"
+Then #"ModalWindow" is hit
+
+Scenario: N2 hit
+Given #"ModalWindow" is hit
+When I hit #"ModalWindow"
+Then #"ModalWindow" is hit
+
+/*
+Scenario: DoNothit
+Given "ModalWindow" is not hit
+When I do not hit "ModalWindow"
+Then "ModalWindow" is not hit
+*/
+
+Scenario: N3 DoNothit
+Given "ModalWindow" is not hit
+When I do not hit "ModalWindow"
+Then #"ModalWindow" is not hit
+
+Scenario: N4 DoNothit
+Given #"ModalWindow" is not hit
+When I do not hit #"ModalWindow"
+Then #"ModalWindow" is not hit
+
+/*
+Scenario: ModalWindow-hit
+Given the ModalWindow "<tab name>" is hit
+When I hit the ModalWindow "<tab name>"
+Then the ModalWindow "<tab name>" is hit
+*/
+
+Scenario: N5 ModalWindow-hit
+Given the ModalWindow "ModalWindow" is hit
+When I hit the ModalWindow "ModalWindow"
+Then the ModalWindow "ModalWindow" is hit
+
+Scenario: N6 hit
+Given #"ModalWindow" is hit
+When I hit #"ModalWindow"
+Then #"ModalWindow" is hit
+
+/*
+Scenario: ModalWindow-DoNothit
+Given the ModalWindow "<tab name>" is not hit
+When I do not hit the ModalWindow "<tab name>"
+Then the ModalWindow "<tab name>" is hit
+*/
+
+Scenario: N7 ModalWindow-hit
+Given the ModalWindow "ModalWindow" is not hit
+When I do not hit the ModalWindow "ModalWindow"
+Then the ModalWindow "ModalWindow" is not hit
+
+Scenario: N8 hit
+Given #"ModalWindow" is not hit
+When I do not hit #"ModalWindow"
+Then #"ModalWindow" is not hit
+
+/*
+Scenario: display
+Given "content" is displayed
+When I hit "content"
+Then "content" is  displayed
+*/
+
+Scenario: N9 display
+Given "content" is displayed
+When I hit "content"
+Then #"content" is  displayed
+
+Scenario: N10 hit
+Given #"content" is displayed
+When I hit #"content"
+Then #"content" is  displayed
+
+/*
+Scenario: DoNothit
+Given "content" is not displayed
+When I do not hit "content"
+Then "content" is not displayed
+*/
+
+Scenario: N11 DoNothit
+Given "content" is not displayed
+When I do not hit "content"
+Then #"content" is not displayed
+
+Scenario: N12 DoNothit
+Given #"content" is not displayed
+When I do not hit #"content"
+Then #"content" is not displayed
+
+/*
+Scenario: content-hit
+Given the content "<tab name>" is displayed
+When I hit the content "<tab name>"
+Then the content "<tab name>" is  displayed
+*/
+
+Scenario: N13 content-hit
+Given the content "content" is displayed
+When I hit the content "content"
+Then the content "content" is  displayed
+
+Scenario: N14 hit
+Given #"content" is displayed
+When I hit #"content"
+Then #"content" is  displayed
+
+/*
+Scenario: content-DoNothit
+Given the content "<tab name>" is  displayed
+When I do not hit the content "<tab name>"
+Then the content "<tab name>" is not displayed
+*/
+
+Scenario: N15 content-hit
+Given the content "content" is  displayed
+When I do not hit the content "content"
+Then the content "content" is not displayed
+
+Scenario: N16 hit
+Given #"content" is displayed
+When I do not hit #"content"
+Then #"content" is not displayed

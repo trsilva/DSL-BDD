@@ -1,0 +1,885 @@
+model DropdownList using widgets
+
+/*
+Scenario: option-select
+Given the option "<option name>" is unselected
+When I select the option "<option name>"
+Then the option "<option name>" is selected
+*/
+
+Scenario: N1 option-select
+Given the option "DropdownList" is unselected
+When I select the option "DropdownList"
+Then the option "DropdownList" is selected
+
+Scenario: N2 select
+Given #"DropdownList" is unselected
+When I select #"DropdownList"
+Then #"DropdownList" is selected
+
+/*
+Scenario: option-DoNotselect
+Given the option "<option name>" is not selected
+When I do not select the option "<option name>"
+Then the option "<option name>" is unselected
+*/
+
+Scenario: N3 option-DoNotselect
+Given the option "DropdownList" is not selected
+When I do not select the option "DropdownList"
+Then the option "DropdownList" is unselected
+
+Scenario: N4 DoNotselect
+Given #"DropdownList" is not selected
+When I do not select #"DropdownList"
+Then #"DropdownList" is unselected
+
+/*
+Scenario: DropdownList-select
+Given the DropdownList "<option name>" is unselected
+When I select the DropdownList "<option name>"
+Then the DropdownList "<option name>" is selected
+*/
+
+Scenario: N5 DropdownList-select
+Given the DropdownList "DropdownList" is unselected
+When I select the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is selected
+
+Scenario: N6 select
+Given #"DropdownList" is unselected
+When I select #"DropdownList"
+Then #"DropdownList" is selected
+
+/*
+Scenario: DropdownList-DoNotselect
+Given the DropdownList "<option name>" is not selected
+When I do not select the DropdownList "<option name>"
+Then the DropdownList "<option name>" is unselected
+*/
+
+Scenario: N7 DropdownList-select
+Given the DropdownList "DropdownList" is not selected
+When I do not select the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is unselected
+
+Scenario: N8 select
+Given #"DropdownList" is not selected
+When I do not select #"DropdownList"
+Then #"DropdownList" is unselected
+
+/*
+Scenario: option-choose
+Given the option "<option name>" is not chosen
+When I choose the option "<option name>"
+Then the option "<option name>" is chosen
+*/
+
+Scenario: N9 option-choose
+Given the option "DropdownList" is not chosen
+When I choose the option "DropdownList"
+Then the option "DropdownList" is chosen
+
+Scenario: N10 choose
+Given #"DropdownList" is not chosen
+When I choose #"DropdownList"
+Then #"DropdownList" is chosen
+
+/*
+Scenario: option-DoNotchoose
+Given the option "<option name>" is not chosen
+When I do not choose the option "<option name>"
+Then the option "<option name>" is not chosen
+*/
+
+Scenario: N11 option-DoNotchoose
+Given the option "DropdownList" is not chosen
+When I do not choose the option "DropdownList"
+Then the option "DropdownList" is not chosen
+
+Scenario: N12 DoNotchoose
+Given #"DropdownList" is not chosen
+When I do not choose #"DropdownList"
+Then #"DropdownList" is not chosen
+
+/*
+Scenario: DropdownList-choose
+Given the DropdownList "<option name>" is not chosen
+When I choose the DropdownList "<option name>"
+Then the DropdownList "<option name>" is chosen
+*/
+
+Scenario: N13 DropdownList-choose
+Given the DropdownList "DropdownList" is not chosen
+When I choose the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is chosen
+
+Scenario: N14 choose
+Given #"DropdownList" is not chosen
+When I choose #"DropdownList"
+Then #"DropdownList" is chosen
+
+/*
+Scenario: DropdownList-DoNotchoose
+Given the DropdownList "<option name>" is not chosen
+When I do not choose the DropdownList "<option name>"
+Then the DropdownList "<option name>" is not chosen
+*/
+
+Scenario: N15 DropdownList-choose
+Given the DropdownList "DropdownList" is not chosen
+When I do not choose the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is not chosen
+
+Scenario: N16 choose
+Given #"DropdownList" is not chosen
+When I do not choose #"DropdownList"
+Then #"DropdownList" is not chosen
+
+/*
+Scenario: option-pick
+Given the option "<option name>" is not picked
+When I pick the option "<option name>"
+Then the option "<option name>" is picked
+*/
+
+Scenario: N17 option-pick
+Given the option "DropdownList" is not picked
+When I pick the option "DropdownList"
+Then the option "DropdownList" is picked
+
+Scenario: N18 pick
+Given #"DropdownList" is not picked
+When I pick #"DropdownList"
+Then #"DropdownList" is picked
+
+/*
+Scenario: option-DoNotpick
+Given the option "<option name>" is not picked
+When I do not picked the option "<option name>"
+Then the option "<option name>" is not picked
+*/
+
+Scenario: N19 option-DoNotpick
+Given the option "DropdownList" is not picked
+When I do not pick the option "DropdownList"
+Then the option "DropdownList" is not picked
+
+Scenario: N20 DoNotpick
+Given #"DropdownList" is not picked
+When I do not pick #"DropdownList"
+Then #"DropdownList" is not picked
+
+/*
+Scenario: DropdownList-pick
+Given the DropdownList "<option name>" is not picked
+When I pick the DropdownList "<option name>"
+Then the DropdownList "<option name>" is picked
+*/
+
+Scenario: N21 DropdownList-pick
+Given the DropdownList "DropdownList" is not picked
+When I pick the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is picked
+
+Scenario: N22 pick
+Given #"DropdownList" is not picked
+When I pick #"DropdownList"
+Then #"DropdownList" is picked
+
+/*
+Scenario: DropdownList-DoNotpick
+Given the DropdownList "<option name>" is not picked
+When I do not picked the DropdownList "<option name>"
+Then the DropdownList "<option name>" is not picked
+*/
+
+Scenario: N23 DropdownList-pick
+Given the DropdownList "DropdownList" is not picked
+When I do not pick the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is not picked
+
+Scenario: N24 pick
+Given #"DropdownList" is not picked
+When I do not pick #"DropdownList"
+Then #"DropdownList" is not picked
+
+
+/*
+Scenario: Field-option-select
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is selected
+*/
+
+Scenario: N25 Field-option-select
+Given the option "Morning" for the field "Availability" is not selected
+When I select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is selected
+
+Scenario: N26 option-select
+Given the option "Morning" for #"Availability" is not selected
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected
+
+Scenario: N27 Field-select
+Given #"Morning" for the field "Availability" is not selected
+When I select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is selected
+
+Scenario: N28 select
+Given #"Morning" for #"Availability" is not selected
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected
+
+/*
+Scenario: Field-option-DoNotselect
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not selected
+*/
+
+Scenario: N29 Field-option-DoNotselect
+Given the option "Morning" for the field "Availability" is not selected
+When I do not select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not selected
+
+Scenario: N30 option-DoNotselect
+Given the option "Morning" for #"Availability" is not selected
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected
+
+Scenario: N31 Field-DoNotselect
+Given #"Morning" for the field "Availability" is not selected
+When I do not select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not selected
+
+Scenario: N32 DoNotselect
+Given #"Morning" for #"Availability" is not selected
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected
+
+/*
+Scenario: Field-option-choose
+Given the option "<option>" for the field "<fieldname>" is not chosen
+When I choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is chosen
+*/
+
+Scenario: N33 Field-option-choose
+Given the option "Morning" for the field "Availability" is not chosen
+When I choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is chosen
+
+Scenario: N34 option-choose
+Given the option "Morning" for #"Availability" is not chosen
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen
+
+Scenario: N35 Field-choose
+Given #"Morning" for the field "Availability" is not chosen
+When I choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is chosen
+
+Scenario: N36 choose
+Given #"Morning" for #"Availability" is not chosen
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen
+
+/*
+Scenario: Field-option-DoNotchoose
+Given the option "<option>" for the field "<fieldname>" is not chosen
+When I do not choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not chosen
+*/
+
+Scenario: N37 Field-option-DoNotchoose
+Given the option "Morning" for the field "Availability" is not chosen
+When I do not choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not chosen
+
+Scenario: N38 option-DoNotchoose
+Given the option "Morning" for #"Availability" is not chosen
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen
+
+Scenario: N39 Field-DoNotchoose
+Given #"Morning" for the field "Availability" is not chosen
+When I do not choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not chosen
+
+Scenario: N40 DoNotchoose
+Given #"Morning" for #"Availability" is not chosen
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen
+
+/*
+Scenario: Field-option-pick
+Given the option "<option>" for the field "<fieldname>" is not picked
+When I pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is picked
+*/
+
+Scenario: N41 Field-option-pick
+Given the option "Morning" for the field "Availability" is not picked
+When I pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is picked
+
+Scenario: N42 option-pick
+Given the option "Morning" for #"Availability" is not picked
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked
+
+Scenario: N43 Field-pick
+Given #"Morning" for the field "Availability" is not picked
+When I pick #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is picked
+
+Scenario: N44 pick
+Given #"Morning" for #"Availability" is not picked
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked
+
+/*
+Scenario: Field-option-DoNotpick
+Given the option "<option>" for the field "<fieldname>" is not picked
+When I do not pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not picked
+*/
+
+Scenario: N45 Field-option-DoNotpick
+Given the option "Morning" for the field "Availability" is not picked
+When I do not pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not picked
+
+Scenario: N46 option-DoNotpick
+Given the option "Morning" for #"Availability" is not picked
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked
+
+Scenario: N47 Field-DoNotpick
+Given #"Morning" for the field "Availability" is not picked
+When I do not pick #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not picked
+
+Scenario: N48 DoNotpick
+Given #"Morning" for #"Availability" is not picked
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked
+
+
+/*
+Scenario: DropdownList-option-select
+Given the option "<option>" for the DropdownList "<fieldname>" is not selected
+When I select the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is selected
+*/
+
+Scenario: N49 DropdownList-option-select
+Given the option "Morning" for the DropdownList "Availability" is not selected
+When I select the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is selected
+
+Scenario: N50 option-select
+Given the option "Morning" for #"Availability" is not selected
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected
+
+Scenario: N51 DropdownList-select
+Given #"Morning" for the DropdownList "Availability" is not selected
+When I select #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is selected
+
+Scenario: N52 select
+Given #"Morning" for #"Availability" is not selected
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected
+
+/*
+Scenario: DropdownList-option-DoNotselect
+Given the option "<option>" for the DropdownList "<fieldname>" is not selected
+When I do not select the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is not selected
+*/
+
+Scenario: N53 DropdownList-option-DoNotselect
+Given the option "Morning" for the DropdownList "Availability" is not selected
+When I do not select the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is not selected
+
+Scenario: N54 option-DoNotselect
+Given the option "Morning" for #"Availability" is not selected
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected
+
+Scenario: N55 DropdownList-DoNotselect
+Given #"Morning" for the DropdownList "Availability" is not selected
+When I do not select #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is not selected
+
+Scenario: N56 DoNotselect
+Given #"Morning" for #"Availability" is not selected
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected
+
+/*
+Scenario: DropdownList-option-choose
+Given the option "<option>" for the DropdownList "<fieldname>" is not chosen
+When I choose the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is chosen
+*/
+
+Scenario: N57 DropdownList-option-choose
+Given the option "Morning" for the DropdownList "Availability" is not chosen
+When I choose the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is chosen
+
+Scenario: N58 option-choose
+Given the option "Morning" for #"Availability" is not chosen
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen
+
+Scenario: N59 DropdownList-choose
+Given #"Morning" for the DropdownList "Availability" is not chosen
+When I choose #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is chosen
+
+Scenario: N60 choose
+Given #"Morning" for #"Availability" is not chosen
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen
+
+/*
+Scenario: DropdownList-option-DoNotchoose
+Given the option "<option>" for the DropdownList "<fieldname>" is not chosen
+When I do not choose the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is not chosen
+*/
+
+Scenario: N61 DropdownList-option-DoNotchoose
+Given the option "Morning" for the DropdownList "Availability" is not chosen
+When I do not choose the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is not chosen
+
+Scenario: N62 option-DoNotchoose
+Given the option "Morning" for #"Availability" is not chosen
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen
+
+Scenario: N63 DropdownList-DoNotchoose
+Given #"Morning" for the DropdownList "Availability" is not chosen
+When I do not choose #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is not chosen
+
+Scenario: N64 DoNotchoose
+Given #"Morning" for #"Availability" is not chosen
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen
+
+/*
+Scenario: DropdownList-option-pick
+Given the option "<option>" for the DropdownList "<fieldname>" is not picked
+When I pick the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is picked
+*/
+
+Scenario: N65 DropdownList-option-pick
+Given the option "Morning" for the DropdownList "Availability" is not picked
+When I pick the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is picked
+
+Scenario: N66 option-pick
+Given the option "Morning" for #"Availability" is not picked
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked
+
+Scenario: N67 DropdownList-pick
+Given #"Morning" for the DropdownList "Availability" is not picked
+When I pick #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is picked
+
+Scenario: N68 pick
+Given #"Morning" for #"Availability" is not picked
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked
+
+/*
+Scenario: DropdownList-option-DoNotpick
+Given the option "<option>" for the DropdownList "<fieldname>" is not picked
+When I do not pick the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is not picked
+*/
+
+Scenario: N69 DropdownList-option-DoNotpick
+Given the option "Morning" for the DropdownList "Availability" is not picked
+When I do not pick the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is not picked
+
+Scenario: N70 option-DoNotpick
+Given the option "Morning" for #"Availability" is not picked
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked
+
+Scenario: N71 DropdownList-DoNotpick
+Given #"Morning" for the DropdownList "Availability" is not picked
+When I do not pick #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is not picked
+
+Scenario: N72 DoNotpick
+Given #"Morning" for #"Availability" is not picked
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked
+
+// Negative Test case
+
+/*
+Scenario: option-select
+Given the option "<option name>" is not added
+When I select the option "<option name>"
+Then the option "<option name>" is added
+*/
+
+Scenario: N1 option-select
+Given the option "DropdownList" is not added
+When I select the option "DropdownList"
+Then the option "DropdownList" is added
+
+Scenario: N2 select
+Given #"DropdownList" is not added
+When I select #"DropdownList"
+Then #"DropdownList" is added
+
+/*
+Scenario: option-DoNotselect
+Given the option "<option name>" is not added
+When I do not select the option "<option name>"
+Then the option "<option name>" is not added
+*/
+
+Scenario: N3 option-DoNotselect
+Given the option "DropdownList" is not added
+When I do not select the option "DropdownList"
+Then the option "DropdownList" is not added
+
+Scenario: N4 DoNotselect
+Given #"DropdownList" is not added
+When I do not select #"DropdownList"
+Then #"DropdownList" is not added
+
+/*
+Scenario: DropdownList-select
+Given the DropdownList "<option name>" is not added
+When I select the DropdownList "<option name>"
+Then the DropdownList "<option name>" is added
+*/
+
+Scenario: N5 DropdownList-select
+Given the DropdownList "DropdownList" is not added
+When I select the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is added
+
+Scenario: N6 select
+Given #"DropdownList" is not added
+When I select #"DropdownList"
+Then #"DropdownList" is added
+
+/*
+Scenario: DropdownList-DoNotselect
+Given the DropdownList "<option name>" is not added
+When I do not select the DropdownList "<option name>"
+Then the DropdownList "<option name>" is not added
+*/
+
+Scenario: N7 DropdownList-select
+Given the DropdownList "DropdownList" is not added
+When I do not select the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is not added
+
+Scenario: N8 select
+Given #"DropdownList" is not added
+When I do not select #"DropdownList"
+Then #"DropdownList" is not added
+
+/*
+Scenario: Field-option-select
+Given the option "<option>" for the field "<fieldname>" is not added
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is added
+*/
+
+Scenario: N9 Field-option-select
+Given the option "Morning" for the field "Availability" is not added
+When I select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is added
+
+Scenario: N10 option-select
+Given the option "Morning" for #"Availability" is not added
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is added
+
+Scenario: N11 Field-select
+Given #"Morning" for the field "Availability" is not added
+When I select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is added
+
+Scenario: N12 select
+Given #"Morning" for #"Availability" is not added
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is added
+
+/*
+Scenario: Field-option-DoNotselect
+Given the option "<option>" for the field "<fieldname>" is not added
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not added
+*/
+
+Scenario: N13 Field-option-DoNotselect
+Given the option "Morning" for the field "Availability" is not added
+When I do not select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not added
+
+Scenario: N14 option-DoNotselect
+Given the option "Morning" for #"Availability" is not added
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not added
+
+Scenario: N15 Field-DoNotselect
+Given #"Morning" for the field "Availability" is not added
+When I do not select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not added
+
+Scenario: N16 DoNotselect
+Given #"Morning" for #"Availability" is not added
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not added
+
+/*
+Scenario: DropdownList-option-select
+Given the option "<option>" for the DropdownList "<fieldname>" is not added
+When I select the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is added
+*/
+
+Scenario: N17 DropdownList-option-select
+Given the option "Morning" for the DropdownList "Availability" is not added
+When I select the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is added
+
+Scenario: N18 option-select
+Given the option "Morning" for #"Availability" is not added
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is added
+
+Scenario: N19 DropdownList-select
+Given #"Morning" for the DropdownList "Availability" is not added
+When I select #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is added
+
+Scenario: N20 select
+Given #"Morning" for #"Availability" is not added
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is added
+
+/*
+Scenario: DropdownList-option-DoNotselect
+Given the option "<option>" for the DropdownList "<fieldname>" is not added
+When I do not select the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is not added
+*/
+
+Scenario: N21 DropdownList-option-DoNotselect
+Given the option "Morning" for the DropdownList "Availability" is not added
+When I do not select the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is not added
+
+Scenario: N22 option-DoNotselect
+Given the option "Morning" for #"Availability" is not added
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not added
+
+Scenario: N23 DropdownList-DoNotselect
+Given #"Morning" for the DropdownList "Availability" is not added
+When I do not select #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is not added
+
+Scenario: N24 DoNotselect
+Given #"Morning" for #"Availability" is not added
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not added
+
+/*
+Scenario: option-add
+Given the option "<option name>" is not selected
+When I add the option "<option name>"
+Then the option "<option name>" is selected
+*/
+
+Scenario: N1 option-add
+Given the option "DropdownList" is not selected
+When I add the option "DropdownList"
+Then the option "DropdownList" is selected
+
+Scenario: N2 add
+Given #"DropdownList" is not selected
+When I add #"DropdownList"
+Then #"DropdownList" is selected
+
+/*
+Scenario: option-DoNotadd
+Given the option "<option name>" is not selected
+When I do not add the option "<option name>"
+Then the option "<option name>" is not selected
+*/
+
+Scenario: N3 option-DoNotadd
+Given the option "DropdownList" is not selected
+When I do not add the option "DropdownList"
+Then the option "DropdownList" is not selected
+
+Scenario: N4 DoNotadd
+Given #"DropdownList" is not selected
+When I do not add #"DropdownList"
+Then #"DropdownList" is not selected
+
+/*
+Scenario: DropdownList-add
+Given the DropdownList "<option name>" is not selected
+When I add the DropdownList "<option name>"
+Then the DropdownList "<option name>" is selected
+*/
+
+Scenario: N5 DropdownList-add
+Given the DropdownList "DropdownList" is not selected
+When I add the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is selected
+
+Scenario: N6 add
+Given #"DropdownList" is not selected
+When I add #"DropdownList"
+Then #"DropdownList" is selected
+
+/*
+Scenario: DropdownList-DoNotadd
+Given the DropdownList "<option name>" is not selected
+When I do not add the DropdownList "<option name>"
+Then the DropdownList "<option name>" is not selected
+*/
+
+Scenario: N7 DropdownList-add
+Given the DropdownList "DropdownList" is not selected
+When I do not add the DropdownList "DropdownList"
+Then the DropdownList "DropdownList" is not selected
+
+Scenario: N8 add
+Given #"DropdownList" is not selected
+When I do not add #"DropdownList"
+Then #"DropdownList" is not selected
+
+/*
+Scenario: Field-option-add
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I add the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is selected
+*/
+
+Scenario: N9 Field-option-add
+Given the option "Morning" for the field "Availability" is not selected
+When I add the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is selected
+
+Scenario: N10 option-add
+Given the option "Morning" for #"Availability" is not selected
+When I add the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected
+
+Scenario: N11 Field-add
+Given #"Morning" for the field "Availability" is not selected
+When I add #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is selected
+
+Scenario: N12 add
+Given #"Morning" for #"Availability" is not selected
+When I add #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected
+
+/*
+Scenario: Field-option-DoNotadd
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I do not add the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not selected
+*/
+
+Scenario: N13 Field-option-DoNotadd
+Given the option "Morning" for the field "Availability" is not selected
+When I do not add the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not selected
+
+Scenario: N14 option-DoNotadd
+Given the option "Morning" for #"Availability" is not selected
+When I do not add the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected
+
+Scenario: N15 Field-DoNotadd
+Given #"Morning" for the field "Availability" is not selected
+When I do not add #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not selected
+
+Scenario: N16 DoNotadd
+Given #"Morning" for #"Availability" is not selected
+When I do not add #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected
+
+/*
+Scenario: DropdownList-option-add
+Given the option "<option>" for the DropdownList "<fieldname>" is not selected
+When I add the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is selected
+*/
+
+Scenario: N17 DropdownList-option-add
+Given the option "Morning" for the DropdownList "Availability" is not selected
+When I add the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is selected
+
+Scenario: N18 option-add
+Given the option "Morning" for #"Availability" is not selected
+When I add the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected
+
+Scenario: N19 DropdownList-add
+Given #"Morning" for the DropdownList "Availability" is not selected
+When I add #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is selected
+
+Scenario: N20 add
+Given #"Morning" for #"Availability" is not selected
+When I add #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected
+
+/*
+Scenario: DropdownList-option-DoNotadd
+Given the option "<option>" for the DropdownList "<fieldname>" is not selected
+When I do not add the option "<option>" for the DropdownList "<fieldname>"
+Then the option "<option>" for the DropdownList "<fieldname>" is not selected
+*/
+
+Scenario: N21 DropdownList-option-DoNotadd
+Given the option "Morning" for the DropdownList "Availability" is not selected
+When I do not add the option "Morning" for the DropdownList "Availability"
+Then the option "Morning" for the DropdownList "Availability" is not selected
+
+Scenario: N22 option-DoNotadd
+Given the option "Morning" for #"Availability" is not selected
+When I do not add the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected
+
+Scenario: N23 DropdownList-DoNotadd
+Given #"Morning" for the DropdownList "Availability" is not selected
+When I do not add #"Morning" for the DropdownList "Availability"
+Then #"Morning" for the DropdownList "Availability" is not selected
+
+Scenario: N24 DoNotadd
+Given #"Morning" for #"Availability" is not selected
+When I do not add #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected

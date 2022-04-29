@@ -1,0 +1,867 @@
+model ListBox using widgets
+/*
+Scenario: Field-AllOptions-Pick
+Given all the options are not picked for the field "<fieldname>"
+When I pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is picked for the field "<fieldname>"
+*/
+
+Scenario: N1
+Given all the options for the field "Availability" are not picked 
+When I pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is picked 
+
+Scenario: N2
+Given all the options for #"Availability" are not picked 
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked 
+
+Scenario: N3 
+Given all the options for the field "Availability" are not picked 
+When I pick #"Morning" for the field "Availability"
+Then #"Morning"  for the field "Availability" is picked 
+
+Scenario: N4 
+Given all the options for #"Availability" are not picked 
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked 
+
+/*
+Scenario: Field-AllOptions-DoNotPick
+Given all the options are not picked for the field "<fieldname>"
+When I do not pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not picked for the field "<fieldname>"
+*/
+
+Scenario: N5 
+Given all the options for the field "Availability" are not picked 
+When I do not pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not picked 
+
+Scenario: N6
+Given all the options for #"Availability" are not picked 
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked 
+
+Scenario: N7
+Given all the options for the field "Availability" are not picked 
+When I do not pick #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not picked 
+
+Scenario: N8 
+Given all the options for #"Availability" are not picked 
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked 
+
+/*
+Scenario: Field-Option-Pick
+Given the option "<option>" is not picked for the field "<fieldname>"
+When I pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is picked for the field "<fieldname>"
+*/
+
+Scenario: N9 
+Given the option "Morning" for the field "Availability" is not picked 
+When I pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is picked 
+
+Scenario: N10 
+Given the option "Morning" for #"Availability" is not picked 
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked 
+
+Scenario: N11
+Given #"Morning" for the field "Availability" is not picked 
+When I pick #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is picked 
+
+Scenario: N12
+Given #"Morning" for #"Availability" is not picked 
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked 
+
+/*
+Scenario: Field-Option-DoNotPick
+Given the option "<option>" is not picked for the field "<fieldname>"
+When I do not pick the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not picked for the field "<fieldname>"
+*/
+
+Scenario: N13 
+Given the option "Morning" for the field "Availability" is not picked 
+When I do not pick the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not picked 
+
+Scenario: N15
+Given the option "Morning" for #"Availability" is not picked 
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked 
+
+Scenario: N16 
+Given #"Morning" for the field "Availability" is not picked 
+When I do not pick #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not picked 
+
+Scenario: N17 
+Given #"Morning" for #"Availability" is not picked 
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked 
+
+/*
+Scenario: ListBox-AllOptions-Pick
+Given all the options are not picked for the ListBox "<fieldname>"
+When I pick the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is picked for the ListBox "<fieldname>"
+*/
+
+Scenario: N18 
+Given all the options for the ListBox "Availability" are not picked 
+When I pick the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is picked 
+
+Scenario: N19 
+Given all the options for #"Availability" are not picked 
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked 
+
+Scenario: N20 
+Given all the options for the ListBox "Availability" are not picked 
+When I pick #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is picked 
+
+Scenario: N21 
+Given all the options for #"Availability" are not picked 
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked 
+
+/*
+Scenario: ListBox-AllOptions-DoNotPick
+Given all the options are not picked for the ListBox "<fieldname>"
+When I do not pick the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is not picked for the ListBox "<fieldname>"
+*/
+
+Scenario: N22 
+Given all the options for the ListBox "Availability" are not picked 
+When I do not pick the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is not picked 
+
+Scenario: N23 
+Given all the options for #"Availability" are not picked 
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked 
+
+Scenario: N24 
+Given all the options for the ListBox "Availability" are not picked 
+When I do not pick #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is not picked 
+
+Scenario: N25 
+Given all the options for #"Availability" are not picked 
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked 
+
+/*
+Scenario: ListBox-Option-Pick
+Given the option "<option>" is not picked for the ListBox "<fieldname>"
+When I pick the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is picked for the ListBox "<fieldname>"
+*/
+
+Scenario: N26 
+Given the option "Morning" for the ListBox "Availability" is not picked 
+When I pick the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is picked 
+
+Scenario: N27 
+Given the option "Morning" for #"Availability" is not picked 
+When I pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is picked 
+
+Scenario: N28
+Given #"Morning" for the ListBox "Availability" is not picked 
+When I pick #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is picked 
+
+Scenario: N29 
+Given #"Morning" for #"Availability" is not picked 
+When I pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is picked 
+
+/*
+Scenario: ListBox-Option-DoNotPick
+Given the option "<option>" is not picked for the ListBox "<fieldname>"
+When I do not pick the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is not picked for the ListBox "<fieldname>"
+*/
+
+Scenario: N30 
+Given the option "Morning" for the ListBox "Availability" is not picked 
+When I do not pick the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is not picked 
+
+Scenario: N31 
+Given the option "Morning" for #"Availability" is not picked 
+When I do not pick the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not picked 
+
+Scenario: N32
+Given #"Morning" for the ListBox "Availability" is not picked 
+When I do not pick #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is not picked 
+
+Scenario: N33 
+Given #"Morning" for #"Availability" is not picked 
+When I do not pick #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not picked 
+
+/*
+Scenario: Field-AllOptions-Select
+Given all the options are not selected for the field "<fieldname>"
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is selected for the field "<fieldname>"
+*/
+
+Scenario: N34
+Given all the options for the field "Availability" are not selected 
+When I select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is selected 
+
+Scenario: N35 
+Given all the options for #"Availability" are not selected 
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected 
+
+Scenario: N36 
+Given all the options for the field "Availability" are not selected 
+When I select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is selected 
+
+Scenario: N37
+Given all the options for #"Availability" are not selected 
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected 
+
+/*
+Scenario: Field-AllOptions-DoNotSelect
+Given all the options are not selected for the field "<fieldname>"
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not selected for the field "<fieldname>"
+*/
+
+Scenario: N38
+Given all the options for the field "Availability" are not selected 
+When I do not select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not selected 
+
+Scenario: N39 
+Given all the options for #"Availability" are not selected 
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected 
+
+Scenario: N121 
+Given all the options for the field "Availability" are not selected 
+When I do not select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not  selected 
+
+Scenario: N40
+Given all the options for #"Availability" are not selected 
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected 
+
+/*
+Scenario: Field-Option-Select
+Given the option "<option>" is not selected for the field "<fieldname>"
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is selected for the field "<fieldname>"
+*/
+
+Scenario: N41
+Given the option "Morning" for the field "Availability" is not selected 
+When I select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is selected 
+
+Scenario: N42 
+Given the option "Morning" for #"Availability" is not selected 
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected 
+
+Scenario: N43
+Given #"Morning" for the field "Availability" is not selected 
+When I select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is selected 
+
+Scenario: N44 
+Given #"Morning" for #"Availability" is not selected 
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected 
+
+/*
+Scenario: Field-Option-DoNotSelect
+Given the option "<option>" is not selected for the field "<fieldname>"
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not selected for the field "<fieldname>"
+*/
+
+Scenario: N45 
+Given the option "Morning" for the field "Availability" is not selected 
+When I do not select the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not selected 
+
+Scenario: N46
+Given the option "Morning" for #"Availability" is not selected 
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected 
+
+Scenario: N47
+Given #"Morning" for the field "Availability" is not selected 
+When I do not select #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not selected 
+
+Scenario: N48 
+Given #"Morning" for #"Availability" is not selected 
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected 
+
+/*
+Scenario: ListBox-AllOptions-Select
+Given all the options are not selected for the ListBox "<fieldname>"
+When I select the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is selected for the ListBox "<fieldname>"
+*/
+
+Scenario: N49 
+Given all the options for the ListBox "Availability" are not selected 
+When I select the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is selected 
+
+Scenario: N50 
+Given all the options for #"Availability" are not selected 
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected 
+
+Scenario: N51 
+Given all the options for the ListBox "Availability" are not selected 
+When I select #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is selected 
+
+Scenario: N52 
+Given all the options for #"Availability" are not selected 
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected 
+
+/*
+Scenario: ListBox-AllOptions-DoNotSelect
+Given all the options are not selected for the ListBox "<fieldname>"
+When I do not select the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is not selected for the ListBox "<fieldname>"
+*/
+
+Scenario: N53 
+Given all the options for the ListBox "Availability" are not selected 
+When I do not select the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is not selected 
+
+Scenario: N54 
+Given all the options for #"Availability" are not selected 
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected 
+
+Scenario: N55 
+Given all the options for the ListBox "Availability" are not selected 
+When I do not select #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is not selected 
+
+Scenario: N56 
+Given all the options for #"Availability" are not selected 
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected 
+
+/*
+Scenario: ListBox-Option-Select
+Given the option "<option>" is not selected for the ListBox "<fieldname>"
+When I select the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is selected for the ListBox "<fieldname>"
+*/
+
+Scenario: N57 
+Given the option "Morning" for the ListBox "Availability" is not selected 
+When I select the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is selected 
+
+Scenario: N58
+Given the option "Morning" for #"Availability" is not selected 
+When I select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is selected 
+
+Scenario: N59 
+Given #"Morning" for the ListBox "Availability" is not selected 
+When I select #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is selected 
+
+Scenario: N60 
+Given #"Morning" for #"Availability" is not selected 
+When I select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is selected 
+
+/*
+Scenario: ListBox-Option-DoNotSelect
+Given the option "<option>" is not selected for the ListBox "<fieldname>"
+When I do not select the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is not selected for the ListBox "<fieldname>"
+*/
+
+Scenario: N61 
+Given the option "Morning" for the ListBox "Availability" is not selected 
+When I do not select the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is not selected 
+
+Scenario: N62 
+Given the option "Morning" for #"Availability" is not selected 
+When I do not select the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not selected 
+
+Scenario: N63 
+Given #"Morning" for the ListBox "Availability" is not selected 
+When I do not select #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is not selected 
+
+Scenario: N64
+Given #"Morning" for #"Availability" is not selected 
+When I do not select #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not selected 
+
+/*
+Scenario: Field-AllOptions-Choose
+Given all the options are not chosen for the field "<fieldname>"
+When I choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is chosen for the field "<fieldname>"
+*/
+
+Scenario: N65 
+Given all the options for the field "Availability" are not chosen 
+When I choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is chosen 
+
+Scenario: N66 
+Given all the options for #"Availability" are not chosen 
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen 
+
+Scenario: N67 
+Given all the options for the field "Availability" are not chosen 
+When I choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is chosen 
+
+Scenario: N68 
+Given all the options for #"Availability" are not chosen 
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen 
+
+/*
+Scenario: Field-AllOptions-DoNotChoose
+Given all the options are not chosen for the field "<fieldname>"
+When I do not choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not chosen for the field "<fieldname>"
+*/
+
+Scenario: N69 
+Given all the options for the field "Availability" are not chosen 
+When I do not choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not chosen 
+
+Scenario: N70 
+Given all the options for #"Availability" are not chosen 
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen 
+
+Scenario: N71 
+Given all the options for the field "Availability" are not chosen 
+When I do not choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not chosen 
+
+Scenario: N72
+Given all the options for #"Availability" are not chosen 
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen 
+
+/*
+Scenario: Field-Option-Choose
+Given the option "<option>" is not chosen for the field "<fieldname>"
+When I choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is chosen for the field "<fieldname>"
+*/
+
+Scenario: N73 
+Given the option "Morning" for the field "Availability" is not chosen 
+When I choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is chosen 
+
+Scenario: N74
+Given the option "Morning" for #"Availability" is not chosen 
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen 
+
+Scenario: N75 
+Given #"Morning" for the field "Availability" is not chosen 
+When I choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is chosen 
+
+Scenario: N76 
+Given #"Morning" for #"Availability" is not chosen 
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen 
+
+/*
+Scenario: Field-Option-DoNotChoose
+Given the option "<option>" is not chosen for the field "<fieldname>"
+When I do not choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not chosen for the field "<fieldname>"
+*/
+
+Scenario: N77 
+Given the option "Morning" for the field "Availability" is not chosen 
+When I do not choose the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not chosen 
+
+Scenario: N78 
+Given the option "Morning" for #"Availability" is not chosen 
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen 
+
+Scenario: N79 
+Given #"Morning" for the field "Availability" is not chosen 
+When I do not choose #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not chosen 
+
+Scenario: N80 
+Given #"Morning" for #"Availability" is not chosen 
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen 
+
+/*
+Scenario: ListBox-AllOptions-Choose
+Given all the options are not chosen for the ListBox "<fieldname>"
+When I choose the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is chosen for the ListBox "<fieldname>"
+*/
+
+Scenario: N81 
+Given all the options for the ListBox "Availability" are not chosen 
+When I choose the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is chosen 
+
+Scenario: N82 
+Given all the options for #"Availability" are not chosen 
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen 
+
+Scenario: N83 
+Given all the options for the ListBox "Availability" are not chosen 
+When I choose #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is chosen 
+
+Scenario: N84 
+Given all the options for #"Availability" are not chosen 
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen 
+
+/*
+Scenario: ListBox-AllOptions-DoNotChoose
+Given all the options are not chosen for the ListBox "<fieldname>"
+When I do not choose the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is not chosen for the ListBox "<fieldname>"
+*/
+
+Scenario: N85
+Given all the options for the ListBox "Availability" are not chosen 
+When I do not choose the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is not chosen 
+
+Scenario: N86 
+Given all the options for #"Availability" are not chosen 
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen 
+
+Scenario: N87 
+Given all the options for the ListBox "Availability" are not chosen 
+When I do not choose #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is not chosen 
+
+Scenario: N88 
+Given all the options for #"Availability" are not chosen 
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen 
+
+/*
+Scenario: ListBox-Option-Choose
+Given the option "<option>" is not chosen for the ListBox "<fieldname>"
+When I choose the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is chosen for the ListBox "<fieldname>"
+*/
+
+Scenario: N89 
+Given the option "Morning" for the ListBox "Availability"  is not chosen 
+When I choose the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is chosen 
+
+Scenario: N90 
+Given the option "Morning" for #"Availability" is not chosen 
+When I choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is chosen 
+
+Scenario: N91 
+Given #"Morning" for the ListBox "Availability" is not chosen 
+When I choose #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is chosen 
+
+Scenario: N92 
+Given #"Morning" for #"Availability" is not chosen 
+When I choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is chosen 
+
+/*
+Scenario: ListBox-Option-DoNotChoose
+Given the option "<option>" is not chosen for the ListBox "<fieldname>"
+When I do not choose the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is not chosen for the ListBox "<fieldname>"
+*/
+
+Scenario: N93 
+Given the option "Morning" for the ListBox "Availability" is not chosen 
+When I do not choose the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is not chosen 
+
+Scenario: N94 
+Given the option "Morning" for #"Availability" is not chosen 
+When I do not choose the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not chosen 
+
+Scenario: N95
+Given #"Morning" for the ListBox "Availability" is not chosen 
+When I do not choose #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is not chosen 
+
+Scenario: N96
+Given #"Morning" for #"Availability" is not chosen 
+When I do not choose #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not chosen 
+
+//Negative Test cases
+
+/*
+Scenario: Field-AllOptions-remove
+Given all the options are not removed for the field "<fieldname>"
+When I remove the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is removed for the field "<fieldname>"
+*/
+
+Scenario: N1
+Given all the options for the field "Availability" are not removed 
+When I remove the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is removed 
+
+Scenario: N2
+Given all the options for #"Availability" are not removed 
+When I remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is removed 
+
+Scenario: N3 
+Given all the options for the field "Availability" are not removed 
+When I remove #"Morning" for the field "Availability"
+Then #"Morning"  for the field "Availability" is removed 
+
+Scenario: N4 
+Given all the options for #"Availability" are not removed 
+When I remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is removed 
+
+/*
+Scenario: Field-AllOptions-DoNotremove
+Given all the options are not removed for the field "<fieldname>"
+When I do not remove the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not removed for the field "<fieldname>"
+*/
+
+Scenario: N5 
+Given all the options for the field "Availability" are not removed 
+When I do not remove the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not removed 
+
+Scenario: N6
+Given all the options for #"Availability" are not removed 
+When I do not remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not removed 
+
+Scenario: N7
+Given all the options for the field "Availability" are not removed 
+When I do not remove #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not removed 
+
+Scenario: N8 
+Given all the options for #"Availability" are not removed 
+When I do not remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not removed 
+
+/*
+Scenario: Field-Option-remove
+Given the option "<option>" is not removed for the field "<fieldname>"
+When I remove the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is removed for the field "<fieldname>"
+*/
+
+Scenario: N9 
+Given the option "Morning" for the field "Availability" is not removed 
+When I remove the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is removed 
+
+Scenario: N10 
+Given the option "Morning" for #"Availability" is not removed 
+When I remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is removed 
+
+Scenario: N11
+Given #"Morning" for the field "Availability" is not removed 
+When I remove #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is removed 
+
+Scenario: N12
+Given #"Morning" for #"Availability" is not removed 
+When I remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is removed 
+
+/*
+Scenario: Field-Option-DoNotremove
+Given the option "<option>" is not removed for the field "<fieldname>"
+When I do not remove the option "<option>" for the field "<fieldname>"
+Then the option "<option>" is not removed for the field "<fieldname>"
+*/
+
+Scenario: N13 
+Given the option "Morning" for the field "Availability" is not removed 
+When I do not remove the option "Morning" for the field "Availability"
+Then the option "Morning" for the field "Availability" is not removed 
+
+Scenario: N15
+Given the option "Morning" for #"Availability" is not removed 
+When I do not remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not removed 
+
+Scenario: N16 
+Given #"Morning" for the field "Availability" is not removed 
+When I do not remove #"Morning" for the field "Availability"
+Then #"Morning" for the field "Availability" is not removed 
+
+Scenario: N17 
+Given #"Morning" for #"Availability" is not removed 
+When I do not remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not removed 
+
+/*
+Scenario: ListBox-AllOptions-remove
+Given all the options are not removed for the ListBox "<fieldname>"
+When I remove the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is removed for the ListBox "<fieldname>"
+*/
+
+Scenario: N18 
+Given all the options for the ListBox "Availability" are not removed 
+When I remove the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is removed 
+
+Scenario: N19 
+Given all the options for #"Availability" are not removed 
+When I remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is removed 
+
+Scenario: N20 
+Given all the options for the ListBox "Availability" are not removed 
+When I remove #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is removed 
+
+Scenario: N21 
+Given all the options for #"Availability" are not removed 
+When I remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is removed 
+
+/*
+Scenario: ListBox-AllOptions-DoNotremove
+Given all the options are not removed for the ListBox "<fieldname>"
+When I do not remove the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is not removed for the ListBox "<fieldname>"
+*/
+
+Scenario: N22 
+Given all the options for the ListBox "Availability" are not removed 
+When I do not remove the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is not removed 
+
+Scenario: N23 
+Given all the options for #"Availability" are not removed 
+When I do not remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not removed 
+
+Scenario: N24 
+Given all the options for the ListBox "Availability" are not removed 
+When I do not remove #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is not removed 
+
+Scenario: N25 
+Given all the options for #"Availability" are not removed 
+When I do not remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not removed 
+
+/*
+Scenario: ListBox-Option-remove
+Given the option "<option>" is not removed for the ListBox "<fieldname>"
+When I remove the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is removed for the ListBox "<fieldname>"
+*/
+
+Scenario: N26 
+Given the option "Morning" for the ListBox "Availability" is not removed 
+When I remove the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is removed 
+
+Scenario: N27 
+Given the option "Morning" for #"Availability" is not removed 
+When I remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is removed 
+
+Scenario: N28
+Given #"Morning" for the ListBox "Availability" is not removed 
+When I remove #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is removed 
+
+Scenario: N29 
+Given #"Morning" for #"Availability" is not removed 
+When I remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is removed 
+
+/*
+Scenario: ListBox-Option-DoNotremove
+Given the option "<option>" is not removed for the ListBox "<fieldname>"
+When I do not remove the option "<option>" for the ListBox "<fieldname>"
+Then the option "<option>" is not removed for the ListBox "<fieldname>"
+*/
+
+Scenario: N30 
+Given the option "Morning" for the ListBox "Availability" is not removed 
+When I do not remove the option "Morning" for the ListBox "Availability"
+Then the option "Morning" for the ListBox "Availability" is not removed 
+
+Scenario: N31 
+Given the option "Morning" for #"Availability" is not removed 
+When I do not remove the option "Morning" for #"Availability"
+Then the option "Morning" for #"Availability" is not removed 
+
+Scenario: N32
+Given #"Morning" for the ListBox "Availability" is not removed 
+When I do not remove #"Morning" for the ListBox "Availability"
+Then #"Morning" for the ListBox "Availability" is not removed 
+
+Scenario: N33 
+Given #"Morning" for #"Availability" is not removed 
+When I do not remove #"Morning" for #"Availability"
+Then #"Morning" for #"Availability" is not removed 
+

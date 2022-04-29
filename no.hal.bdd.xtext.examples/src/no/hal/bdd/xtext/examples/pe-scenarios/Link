@@ -1,0 +1,708 @@
+model Link using widgets
+/*
+Scenario: option-select
+Given the option "<option name>" is unselected
+When I select the option "<option name>"
+Then the option "<option name>" is selected
+*/
+
+Scenario: N1 option-select
+Given the option "Link" is unselected
+When I select the option "Link"
+Then the option "Link" is selected
+
+Scenario: N2 select
+Given #"Link" is unselected
+When I select #"Link"
+Then #"Link" is selected
+
+/*
+Scenario: option-DoNotselect
+Given the option "<option name>" is not selected
+When I do not select the option "<option name>"
+Then the option "<option name>" is unselected
+*/
+
+Scenario: N3 option-DoNotselect
+Given the option "Link" is not selected
+When I do not select the option "Link"
+Then the option "Link" is unselected
+
+Scenario: N4 DoNotselect
+Given #"Link" is not selected
+When I do not select #"Link"
+Then #"Link" is unselected
+
+/*
+Scenario: Link-select
+Given the Link "<option name>" is unselected
+When I select the Link "<option name>"
+Then the Link "<option name>" is selected
+*/
+
+Scenario: N5 Link-select
+Given the Link "Link" is unselected
+When I select the Link "Link"
+Then the Link "Link" is selected
+
+Scenario: N6 select
+Given #"Link" is unselected
+When I select #"Link"
+Then #"Link" is selected
+
+/*
+Scenario: Link-DoNotselect
+Given the Link "<option name>" is not selected
+When I do not select the Link "<option name>"
+Then the Link "<option name>" is unselected
+*/
+
+Scenario: N7 Link-select
+Given the Link "Link" is not selected
+When I do not select the Link "Link"
+Then the Link "Link" is unselected
+
+Scenario: N8 select
+Given #"Link" is not selected
+When I do not select #"Link"
+Then #"Link" is unselected
+
+/*
+Scenario: option-choose
+Given the option "<option name>" is not chosen
+When I choose the option "<option name>"
+Then the option "<option name>" is chosen
+*/
+
+Scenario: N9 option-choose
+Given the option "Link" is not chosen
+When I choose the option "Link"
+Then the option "Link" is chosen
+
+Scenario: N10 choose
+Given #"Link" is not chosen
+When I choose #"Link"
+Then #"Link" is chosen
+
+/*
+Scenario: option-DoNotchoose
+Given the option "<option name>" is not chosen
+When I do not choose the option "<option name>"
+Then the option "<option name>" is not chosen
+*/
+
+Scenario: N11 option-DoNotchoose
+Given the option "Link" is not chosen
+When I do not choose the option "Link"
+Then the option "Link" is not chosen
+
+Scenario: N12 DoNotchoose
+Given #"Link" is not chosen
+When I do not choose #"Link"
+Then #"Link" is not chosen
+
+/*
+Scenario: Link-choose
+Given the Link "<option name>" is not chosen
+When I choose the Link "<option name>"
+Then the Link "<option name>" is chosen
+*/
+
+Scenario: N13 Link-choose
+Given the Link "Link" is not chosen
+When I choose the Link "Link"
+Then the Link "Link" is chosen
+
+Scenario: N14 choose
+Given #"Link" is not chosen
+When I choose #"Link"
+Then #"Link" is chosen
+
+/*
+Scenario: Link-DoNotchoose
+Given the Link "<option name>" is not chosen
+When I do not choose the Link "<option name>"
+Then the Link "<option name>" is not chosen
+*/
+
+Scenario: N15 Link-choose
+Given the Link "Link" is not chosen
+When I do not choose the Link "Link"
+Then the Link "Link" is not chosen
+
+Scenario: N16 choose
+Given #"Link" is not chosen
+When I do not choose #"Link"
+Then #"Link" is not chosen
+
+/*
+Scenario: option-click
+Given the option "<option name>" is not clicked
+When I click the option "<option name>"
+Then the option "<option name>" is clicked
+*/
+
+Scenario: N17 option-click
+Given the option "Link" is not clicked
+When I click the option "Link"
+Then the option "Link" is clicked
+
+Scenario: N18 click
+Given #"Link" is not clicked
+When I click #"Link"
+Then #"Link" is clicked
+
+/*
+Scenario: option-DoNotclick
+Given the option "<option name>" is not clicked
+When I do not clicked the option "<option name>"
+Then the option "<option name>" is not clicked
+*/
+
+Scenario: N19 option-DoNotclick
+Given the option "Link" is not clicked
+When I do not click the option "Link"
+Then the option "Link" is not clicked
+
+Scenario: N20 DoNotclick
+Given #"Link" is not clicked
+When I do not click #"Link"
+Then #"Link" is not clicked
+
+/*
+Scenario: Link-click
+Given the Link "<option name>" is not clicked
+When I click the Link "<option name>"
+Then the Link "<option name>" is clicked
+*/
+
+Scenario: N21 Link-click
+Given the Link "Link" is not clicked
+When I click the Link "Link"
+Then the Link "Link" is clicked
+
+Scenario: N22 click
+Given #"Link" is not clicked
+When I click #"Link"
+Then #"Link" is clicked
+
+/*
+Scenario: Link-DoNotclick
+Given the Link "<option name>" is not clicked
+When I do not clicked the Link "<option name>"
+Then the Link "<option name>" is not clicked
+*/
+
+Scenario: N23 Link-click
+Given the Link "Link" is not clicked
+When I do not click the Link "Link"
+Then the Link "Link" is not clicked
+
+Scenario: N24 click
+Given #"Link" is not clicked
+When I do not click #"Link"
+Then #"Link" is not clicked
+
+
+/*
+Scenario: Field-option-select
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is selected
+*/
+
+Scenario: N25 Field-option-select
+Given the option "Accept" for the field "Cookies" is not selected
+When I select the option "Accept" for the field "Cookies"
+Then the option "Accept" for the field "Cookies" is selected
+
+Scenario: N26 option-select
+Given the option "Accept" for #"Cookies" is not selected
+When I select the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is selected
+
+Scenario: N27 Field-select
+Given #"Accept" for the field "Cookies" is not selected
+When I select #"Accept" for the field "Cookies"
+Then #"Accept" for the field "Cookies" is selected
+
+Scenario: N28 select
+Given #"Accept" for #"Cookies" is not selected
+When I select #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is selected
+
+/*
+Scenario: Field-option-DoNotselect
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not selected
+*/
+
+Scenario: N29 Field-option-DoNotselect
+Given the option "Accept" for the field "Cookies" is not selected
+When I do not select the option "Accept" for the field "Cookies"
+Then the option "Accept" for the field "Cookies" is not selected
+
+Scenario: N30 option-DoNotselect
+Given the option "Accept" for #"Cookies" is not selected
+When I do not select the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is not selected
+
+Scenario: N31 Field-DoNotselect
+Given #"Accept" for the field "Cookies" is not selected
+When I do not select #"Accept" for the field "Cookies"
+Then #"Accept" for the field "Cookies" is not selected
+
+Scenario: N32 DoNotselect
+Given #"Accept" for #"Cookies" is not selected
+When I do not select #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is not selected
+
+/*
+Scenario: Field-option-choose
+Given the option "<option>" for the field "<fieldname>" is not chosen
+When I choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is chosen
+*/
+
+Scenario: N33 Field-option-choose
+Given the option "Accept" for the field "Cookies" is not chosen
+When I choose the option "Accept" for the field "Cookies"
+Then the option "Accept" for the field "Cookies" is chosen
+
+Scenario: N34 option-choose
+Given the option "Accept" for #"Cookies" is not chosen
+When I choose the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is chosen
+
+Scenario: N35 Field-choose
+Given #"Accept" for the field "Cookies" is not chosen
+When I choose #"Accept" for the field "Cookies"
+Then #"Accept" for the field "Cookies" is chosen
+
+Scenario: N36 choose
+Given #"Accept" for #"Cookies" is not chosen
+When I choose #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is chosen
+
+/*
+Scenario: Field-option-DoNotchoose
+Given the option "<option>" for the field "<fieldname>" is not chosen
+When I do not choose the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not chosen
+*/
+
+Scenario: N37 Field-option-DoNotchoose
+Given the option "Accept" for the field "Cookies" is not chosen
+When I do not choose the option "Accept" for the field "Cookies"
+Then the option "Accept" for the field "Cookies" is not chosen
+
+Scenario: N38 option-DoNotchoose
+Given the option "Accept" for #"Cookies" is not chosen
+When I do not choose the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is not chosen
+
+Scenario: N39 Field-DoNotchoose
+Given #"Accept" for the field "Cookies" is not chosen
+When I do not choose #"Accept" for the field "Cookies"
+Then #"Accept" for the field "Cookies" is not chosen
+
+Scenario: N40 DoNotchoose
+Given #"Accept" for #"Cookies" is not chosen
+When I do not choose #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is not chosen
+
+/*
+Scenario: Field-option-click
+Given the option "<option>" for the field "<fieldname>" is not clicked
+When I click the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is clicked
+*/
+
+Scenario: N41 Field-option-click
+Given the option "Accept" for the field "Cookies" is not clicked
+When I click the option "Accept" for the field "Cookies"
+Then the option "Accept" for the field "Cookies" is clicked
+
+Scenario: N42 option-click
+Given the option "Accept" for #"Cookies" is not clicked
+When I click the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is clicked
+
+Scenario: N43 Field-click
+Given #"Accept" for the field "Cookies" is not clicked
+When I click #"Accept" for the field "Cookies"
+Then #"Accept" for the field "Cookies" is clicked
+
+Scenario: N44 click
+Given #"Accept" for #"Cookies" is not clicked
+When I click #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is clicked
+
+/*
+Scenario: Field-option-DoNotclick
+Given the option "<option>" for the field "<fieldname>" is not clicked
+When I do not click the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not clicked
+*/
+
+Scenario: N45 Field-option-DoNotclick
+Given the option "Accept" for the field "Cookies" is not clicked
+When I do not click the option "Accept" for the field "Cookies"
+Then the option "Accept" for the field "Cookies" is not clicked
+
+Scenario: N46 option-DoNotclick
+Given the option "Accept" for #"Cookies" is not clicked
+When I do not click the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is not clicked
+
+Scenario: N47 Field-DoNotclick
+Given #"Accept" for the field "Cookies" is not clicked
+When I do not click #"Accept" for the field "Cookies"
+Then #"Accept" for the field "Cookies" is not clicked
+
+Scenario: N48 DoNotclick
+Given #"Accept" for #"Cookies" is not clicked
+When I do not click #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is not clicked
+
+
+/*
+Scenario: Link-option-select
+Given the option "<option>" for the Link "<fieldname>" is not selected
+When I select the option "<option>" for the Link "<fieldname>"
+Then the option "<option>" for the Link "<fieldname>" is selected
+*/
+
+Scenario: N49 Link-option-select
+Given the option "Accept" for the Link "Cookies" is not selected
+When I select the option "Accept" for the Link "Cookies"
+Then the option "Accept" for the Link "Cookies" is selected
+
+Scenario: N50 option-select
+Given the option "Accept" for #"Cookies" is not selected
+When I select the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is selected
+
+Scenario: N51 Link-select
+Given #"Accept" for the Link "Cookies" is not selected
+When I select #"Accept" for the Link "Cookies"
+Then #"Accept" for the Link "Cookies" is selected
+
+Scenario: N52 select
+Given #"Accept" for #"Cookies" is not selected
+When I select #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is selected
+
+/*
+Scenario: Link-option-DoNotselect
+Given the option "<option>" for the Link "<fieldname>" is not selected
+When I do not select the option "<option>" for the Link "<fieldname>"
+Then the option "<option>" for the Link "<fieldname>" is not selected
+*/
+
+Scenario: N53 Link-option-DoNotselect
+Given the option "Accept" for the Link "Cookies" is not selected
+When I do not select the option "Accept" for the Link "Cookies"
+Then the option "Accept" for the Link "Cookies" is not selected
+
+Scenario: N54 option-DoNotselect
+Given the option "Accept" for #"Cookies" is not selected
+When I do not select the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is not selected
+
+Scenario: N55 Link-DoNotselect
+Given #"Accept" for the Link "Cookies" is not selected
+When I do not select #"Accept" for the Link "Cookies"
+Then #"Accept" for the Link "Cookies" is not selected
+
+Scenario: N56 DoNotselect
+Given #"Accept" for #"Cookies" is not selected
+When I do not select #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is not selected
+
+/*
+Scenario: Link-option-choose
+Given the option "<option>" for the Link "<fieldname>" is not chosen
+When I choose the option "<option>" for the Link "<fieldname>"
+Then the option "<option>" for the Link "<fieldname>" is chosen
+*/
+
+Scenario: N57 Link-option-choose
+Given the option "Accept" for the Link "Cookies" is not chosen
+When I choose the option "Accept" for the Link "Cookies"
+Then the option "Accept" for the Link "Cookies" is chosen
+
+Scenario: N58 option-choose
+Given the option "Accept" for #"Cookies" is not chosen
+When I choose the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is chosen
+
+Scenario: N59 Link-choose
+Given #"Accept" for the Link "Cookies" is not chosen
+When I choose #"Accept" for the Link "Cookies"
+Then #"Accept" for the Link "Cookies" is chosen
+
+Scenario: N60 choose
+Given #"Accept" for #"Cookies" is not chosen
+When I choose #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is chosen
+
+/*
+Scenario: Link-option-DoNotchoose
+Given the option "<option>" for the Link "<fieldname>" is not chosen
+When I do not choose the option "<option>" for the Link "<fieldname>"
+Then the option "<option>" for the Link "<fieldname>" is not chosen
+*/
+
+Scenario: N61 Link-option-DoNotchoose
+Given the option "Accept" for the Link "Cookies" is not chosen
+When I do not choose the option "Accept" for the Link "Cookies"
+Then the option "Accept" for the Link "Cookies" is not chosen
+
+Scenario: N62 option-DoNotchoose
+Given the option "Accept" for #"Cookies" is not chosen
+When I do not choose the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is not chosen
+
+Scenario: N63 Link-DoNotchoose
+Given #"Accept" for the Link "Cookies" is not chosen
+When I do not choose #"Accept" for the Link "Cookies"
+Then #"Accept" for the Link "Cookies" is not chosen
+
+Scenario: N64 DoNotchoose
+Given #"Accept" for #"Cookies" is not chosen
+When I do not choose #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is not chosen
+
+/*
+Scenario: Link-option-click
+Given the option "<option>" for the Link "<fieldname>" is not clicked
+When I click the option "<option>" for the Link "<fieldname>"
+Then the option "<option>" for the Link "<fieldname>" is clicked
+*/
+
+Scenario: N65 Link-option-click
+Given the option "Accept" for the Link "Cookies" is not clicked
+When I click the option "Accept" for the Link "Cookies"
+Then the option "Accept" for the Link "Cookies" is clicked
+
+Scenario: N66 option-click
+Given the option "Accept" for #"Cookies" is not clicked
+When I click the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is clicked
+
+Scenario: N67 Link-click
+Given #"Accept" for the Link "Cookies" is not clicked
+When I click #"Accept" for the Link "Cookies"
+Then #"Accept" for the Link "Cookies" is clicked
+
+Scenario: N68 click
+Given #"Accept" for #"Cookies" is not clicked
+When I click #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is clicked
+
+/*
+Scenario: Link-option-DoNotclick
+Given the option "<option>" for the Link "<fieldname>" is not clicked
+When I do not click the option "<option>" for the Link "<fieldname>"
+Then the option "<option>" for the Link "<fieldname>" is not clicked
+*/
+
+Scenario: N69 Link-option-DoNotclick
+Given the option "Accept" for the Link "Cookies" is not clicked
+When I do not click the option "Accept" for the Link "Cookies"
+Then the option "Accept" for the Link "Cookies" is not clicked
+
+Scenario: N70 option-DoNotclick
+Given the option "Accept" for #"Cookies" is not clicked
+When I do not click the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is not clicked
+
+Scenario: N71 Link-DoNotclick
+Given #"Accept" for the Link "Cookies" is not clicked
+When I do not click #"Accept" for the Link "Cookies"
+Then #"Accept" for the Link "Cookies" is not clicked
+
+Scenario: N72 DoNotclick
+Given #"Accept" for #"Cookies" is not clicked
+When I do not click #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is not clicked
+
+//Negative Test cases
+
+/*
+Scenario: option-select
+Given the option "<option name>" is unselected
+When I select the option "<option name>"
+Then the option "<option name>" is selected
+*/
+
+Scenario: N1 option-select
+Given the option "Link" is unselected
+When I select the option "Link"
+Then the option "Link" is selected
+
+Scenario: N2 select
+Given #"Link" is unselected
+When I select #"Link"
+Then #"Link" is selected
+
+/*
+Scenario: option-DoNotselect
+Given the option "<option name>" is not selected
+When I do not select the option "<option name>"
+Then the option "<option name>" is unselected
+*/
+
+Scenario: N3 option-DoNotselect
+Given the option "Link" is not selected
+When I do not select the option "Link"
+Then the option "Link" is unselected
+
+Scenario: N4 DoNotselect
+Given #"Link" is not selected
+When I do not select #"Link"
+Then #"Link" is unselected
+
+/*
+Scenario: Link-select
+Given the Link "<option name>" is unselected
+When I select the Link "<option name>"
+Then the Link "<option name>" is selected
+*/
+
+Scenario: N5 Link-select
+Given the Link "Link" is unselected
+When I select the Link "Link"
+Then the Link "Link" is selected
+
+Scenario: N6 select
+Given #"Link" is unselected
+When I select #"Link"
+Then #"Link" is selected
+
+/*
+Scenario: Link-DoNotselect
+Given the Link "<option name>" is not selected
+When I do not select the Link "<option name>"
+Then the Link "<option name>" is unselected
+*/
+
+Scenario: N7 Link-select
+Given the Link "Link" is not selected
+When I do not select the Link "Link"
+Then the Link "Link" is unselected
+
+Scenario: N8 select
+Given #"Link" is not selected
+When I do not select #"Link"
+Then #"Link" is unselected
+
+/*
+Scenario: Field-option-select
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is selected
+*/
+
+Scenario: N9 Field-option-select
+Given the option "Accept" for the field "Cookies" is not selected
+When I select the option "Accept" for the field "Cookies"
+Then the option "Accept" for the field "Cookies" is selected
+
+Scenario: N10 option-select
+Given the option "Accept" for #"Cookies" is not selected
+When I select the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is selected
+
+Scenario: N11 Field-select
+Given #"Accept" for the field "Cookies" is not selected
+When I select #"Accept" for the field "Cookies"
+Then #"Accept" for the field "Cookies" is selected
+
+Scenario: N12 select
+Given #"Accept" for #"Cookies" is not selected
+When I select #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is selected
+
+/*
+Scenario: Field-option-DoNotselect
+Given the option "<option>" for the field "<fieldname>" is not selected
+When I do not select the option "<option>" for the field "<fieldname>"
+Then the option "<option>" for the field "<fieldname>" is not selected
+*/
+
+Scenario: N13 Field-option-DoNotselect
+Given the option "Accept" for the field "Cookies" is not selected
+When I do not select the option "Accept" for the field "Cookies"
+Then the option "Accept" for the field "Cookies" is not selected
+
+Scenario: N14 option-DoNotselect
+Given the option "Accept" for #"Cookies" is not selected
+When I do not select the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is not selected
+
+Scenario: N15 Field-DoNotselect
+Given #"Accept" for the field "Cookies" is not selected
+When I do not select #"Accept" for the field "Cookies"
+Then #"Accept" for the field "Cookies" is not selected
+
+Scenario: N16 DoNotselect
+Given #"Accept" for #"Cookies" is not selected
+When I do not select #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is not selected
+
+/*
+Scenario: Link-option-select
+Given the option "<option>" for the Link "<fieldname>" is not selected
+When I select the option "<option>" for the Link "<fieldname>"
+Then the option "<option>" for the Link "<fieldname>" is selected
+*/
+
+Scenario: N17 Link-option-select
+Given the option "Accept" for the Link "Cookies" is not selected
+When I select the option "Accept" for the Link "Cookies"
+Then the option "Accept" for the Link "Cookies" is selected
+
+Scenario: N18 option-select
+Given the option "Accept" for #"Cookies" is not selected
+When I select the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is selected
+
+Scenario: N19 Link-select
+Given #"Accept" for the Link "Cookies" is not selected
+When I select #"Accept" for the Link "Cookies"
+Then #"Accept" for the Link "Cookies" is selected
+
+Scenario: N20 select
+Given #"Accept" for #"Cookies" is not selected
+When I select #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is selected
+
+/*
+Scenario: Link-option-DoNotselect
+Given the option "<option>" for the Link "<fieldname>" is not selected
+When I do not select the option "<option>" for the Link "<fieldname>"
+Then the option "<option>" for the Link "<fieldname>" is not selected
+*/
+
+Scenario: N21 Link-option-DoNotselect
+Given the option "Accept" for the Link "Cookies" is not selected
+When I do not select the option "Accept" for the Link "Cookies"
+Then the option "Accept" for the Link "Cookies" is not selected
+
+Scenario: N22 option-DoNotselect
+Given the option "Accept" for #"Cookies" is not selected
+When I do not select the option "Accept" for #"Cookies"
+Then the option "Accept" for #"Cookies" is not selected
+
+Scenario: N23 Link-DoNotselect
+Given #"Accept" for the Link "Cookies" is not selected
+When I do not select #"Accept" for the Link "Cookies"
+Then #"Accept" for the Link "Cookies" is not selected
+
+Scenario: N24 DoNotselect
+Given #"Accept" for #"Cookies" is not selected
+When I do not select #"Accept" for #"Cookies"
+Then #"Accept" for #"Cookies" is not selected

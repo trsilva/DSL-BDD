@@ -1,0 +1,816 @@
+model NumericStepper using widgets
+/*
+Scenario: value-type
+Given the value "<any value>" is not typed
+When I type the value "<any value>"
+Then the value "<any value>" is typed
+*/
+
+Scenario: N1 value-type
+Given the value "NumericStepper" is not typed
+When I type the value "NumericStepper"
+Then the value "NumericStepper" is typed
+
+Scenario: N2 type
+Given #"NumericStepper" is not typed
+When I type #"NumericStepper"
+Then #"NumericStepper" is typed
+
+/*
+Scenario: value-DoNottype
+Given the value "<any value>" is not typed
+When I do not type the value "<any value>"
+Then the value "<any value>" is not typed
+*/
+
+Scenario: N3 value-DoNottype
+Given the value "NumericStepper" is not typed
+When I do not type the value "NumericStepper"
+Then the value "NumericStepper" is not typed
+
+Scenario: N4 DoNottype
+Given #"NumericStepper" is not typed
+When I do not type #"NumericStepper"
+Then #"NumericStepper" is not typed
+
+/*
+Scenario: NumericStepper-type
+Given the NumericStepper "<any value>" is not typed
+When I type the NumericStepper "<any value>"
+Then the NumericStepper "<any value>" is typed
+*/
+
+Scenario: N5 NumericStepper-type
+Given the NumericStepper "NumericStepper" is not typed
+When I type the NumericStepper "NumericStepper"
+Then the NumericStepper "NumericStepper" is typed
+
+Scenario: N6 type
+Given #"NumericStepper" is not typed
+When I type #"NumericStepper"
+Then #"NumericStepper" is typed
+
+/*
+Scenario: NumericStepper-DoNottype
+Given the NumericStepper "<any value>" is not typed
+When I do not type the NumericStepper "<any value>"
+Then the NumericStepper "<any value>" is not typed
+*/
+
+Scenario: N7 NumericStepper-type
+Given the NumericStepper "NumericStepper" is not typed
+When I do not type the NumericStepper "NumericStepper"
+Then the NumericStepper "NumericStepper" is not typed
+
+Scenario: N8 type
+Given #"NumericStepper" is not typed
+When I do not type #"NumericStepper"
+Then #"NumericStepper" is not typed
+
+/*
+Scenario: value-set
+Given the value "<any value>" is not set
+When I set the value "<any value>"
+Then the value "<any value>" is set
+*/
+
+Scenario: N9 value-set
+Given the value "NumericStepper" is not set
+When I set the value "NumericStepper"
+Then the value "NumericStepper" is set
+
+Scenario: N10 set
+Given #"NumericStepper" is not set
+When I set #"NumericStepper"
+Then #"NumericStepper" is set
+
+/*
+Scenario: value-DoNotset
+Given the value "<any value>" is not set
+When I do not set the value "<any value>"
+Then the value "<any value>" is not set
+*/
+
+Scenario: N11 value-DoNotset
+Given the value "NumericStepper" is not set
+When I do not set the value "NumericStepper"
+Then the value "NumericStepper" is not set
+
+Scenario: N12 DoNotset
+Given #"NumericStepper" is not set
+When I do not set #"NumericStepper"
+Then #"NumericStepper" is not set
+
+/*
+Scenario: NumericStepper-set
+Given the NumericStepper "<any value>" is not set
+When I set the NumericStepper "<any value>"
+Then the NumericStepper "<any value>" is set
+*/
+
+Scenario: N13 NumericStepper-set
+Given the NumericStepper "NumericStepper" is not set
+When I set the NumericStepper "NumericStepper"
+Then the NumericStepper "NumericStepper" is set
+
+Scenario: N14 set
+Given #"NumericStepper" is not set
+When I set #"NumericStepper"
+Then #"NumericStepper" is set
+
+/*
+Scenario: NumericStepper-DoNotset
+Given the NumericStepper "<any value>" is not set
+When I do not set the NumericStepper "<any value>"
+Then the NumericStepper "<any value>" is not set
+*/
+
+Scenario: N15 NumericStepper-set
+Given the NumericStepper "NumericStepper" is not set
+When I do not set the NumericStepper "NumericStepper"
+Then the NumericStepper "NumericStepper" is not set
+
+Scenario: N16 set
+Given #"NumericStepper" is not set
+When I do not set #"NumericStepper"
+Then #"NumericStepper" is not set
+
+/*
+Scenario: value-fill in with
+Given the value "<any value>" is not filled in
+When I fill in with the value "<any value>"
+Then the value "<any value>" is filled in
+*/
+
+Scenario: N17 value-fill in with
+Given the value "NumericStepper" is not filled in
+When I fill in with the value "NumericStepper"
+Then the value "NumericStepper" is filled in
+
+Scenario: N18 fill in with
+Given #"NumericStepper" is not filled in
+When I fill in with #"NumericStepper"
+Then #"NumericStepper" is filled in
+
+/*
+Scenario: value-DoNotfill in with
+Given the value "<any value>" is not filled in
+When I do not fill in the value "<any value>"
+Then the value "<any value>" is not filled in
+*/
+
+Scenario: N19 value-DoNotfill in with
+Given the value "NumericStepper" is not filled in
+When I do not fill in the value "NumericStepper"
+Then the value "NumericStepper" is not filled in
+
+Scenario: N20 DoNotfill in with
+Given #"NumericStepper" is not filled in
+When I do not fill in #"NumericStepper"
+Then #"NumericStepper" is not filled in
+
+/*
+Scenario: NumericStepper-fill in with
+Given the NumericStepper "<any value>" is not filled in
+When I fill in with the NumericStepper "<any value>"
+Then the NumericStepper "<any value>" is filled in
+*/
+
+Scenario: N21 NumericStepper-fill in with
+Given the NumericStepper "NumericStepper" is not filled in
+When I fill in with the NumericStepper "NumericStepper"
+Then the NumericStepper "NumericStepper" is filled in
+
+Scenario: N22 fill in with
+Given #"NumericStepper" is not filled in
+When I fill in with #"NumericStepper"
+Then #"NumericStepper" is filled in
+
+/*
+Scenario: NumericStepper-DoNotfill in with
+Given the NumericStepper "<any value>" is not filled in
+When I do not fill in the NumericStepper "<any value>"
+Then the NumericStepper "<any value>" is not filled in
+*/
+
+Scenario: N23 NumericStepper-fill in with
+Given the NumericStepper "NumericStepper" is not filled in
+When I do not fill in the NumericStepper "NumericStepper"
+Then the NumericStepper "NumericStepper" is not filled in
+
+Scenario: N24 fill in with
+Given #"NumericStepper" is not filled in
+When I do not fill in #"NumericStepper"
+Then #"NumericStepper" is not filled in
+
+
+/*
+Scenario: value-value-type
+Given the value "<value>" for the value "<valuename>" is not typed
+When I type the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is typed
+*/
+
+Scenario: N25 value-value-type
+Given the value "Number" for the value "Number Range" is not typed
+When I type the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is typed
+
+Scenario: N26 value-type
+Given the value "Number" for #"Number Range" is not typed
+When I type the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is typed
+
+Scenario: N27 value-type
+Given #"Number" for the value "Number Range" is not typed
+When I type #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is typed
+
+Scenario: N28 type
+Given #"Number" for #"Number Range" is not typed
+When I type #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is typed
+
+/*
+Scenario: value-value-DoNottype
+Given the value "<value>" for the value "<valuename>" is not typed
+When I do not type the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is not typed
+*/
+
+Scenario: N29 value-value-DoNottype
+Given the value "Number" for the value "Number Range" is not typed
+When I do not type the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is not typed
+
+Scenario: N30 value-DoNottype
+Given the value "Number" for #"Number Range" is not typed
+When I do not type the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not typed
+
+Scenario: N31 value-DoNottype
+Given #"Number" for the value "Number Range" is not typed
+When I do not type #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is not typed
+
+Scenario: N32 DoNottype
+Given #"Number" for #"Number Range" is not typed
+When I do not type #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not typed
+
+/*
+Scenario: value-value-set
+Given the value "<value>" for the value "<valuename>" is not set
+When I set the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is set
+*/
+
+Scenario: N33 value-value-set
+Given the value "Number" for the value "Number Range" is not set
+When I set the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is set
+
+Scenario: N34 value-set
+Given the value "Number" for #"Number Range" is not set
+When I set the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is set
+
+Scenario: N35 value-set
+Given #"Number" for the value "Number Range" is not set
+When I set #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is set
+
+Scenario: N36 set
+Given #"Number" for #"Number Range" is not set
+When I set #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is set
+
+/*
+Scenario: value-value-DoNotset
+Given the value "<value>" for the value "<valuename>" is not set
+When I do not set the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is not set
+*/
+
+Scenario: N37 value-value-DoNotset
+Given the value "Number" for the value "Number Range" is not set
+When I do not set the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is not set
+
+Scenario: N38 value-DoNotset
+Given the value "Number" for #"Number Range" is not set
+When I do not set the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not set
+
+Scenario: N37 value-DoNotset
+Given #"Number" for the value "Number Range" is not set
+When I do not set #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is not set
+
+Scenario: N38 DoNotset
+Given #"Number" for #"Number Range" is not set
+When I do not set #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not set
+
+/*
+Scenario: value-value-fill in with
+Given the value "<value>" for the value "<valuename>" is not filled in
+When I fill in with the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is filled in
+*/
+
+Scenario: N39 value-value-fill in with
+Given the value "Number" for the value "Number Range" is not filled in
+When I fill in with the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is filled in
+
+Scenario: N40 value-fill in with
+Given the value "Number" for #"Number Range" is not filled in
+When I fill in with the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is filled in
+
+Scenario: N41 value-fill in with
+Given #"Number" for the value "Number Range" is not filled in
+When I fill in with #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is filled in
+
+Scenario: N42 fill in with
+Given #"Number" for #"Number Range" is not filled in
+When I fill in with #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is filled in
+
+/*
+Scenario: value-value-DoNotfill in with
+Given the value "<value>" for the value "<valuename>" is not filled in
+When I do not fill in with the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is not filled in
+*/
+
+Scenario: N43 value-value-DoNotfill in with
+Given the value "Number" for the value "Number Range" is not filled in
+When I do not fill in with the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is not filled in
+
+Scenario: N44 value-DoNotfill in with
+Given the value "Number" for #"Number Range" is not filled in
+When I do not fill in with the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not filled in
+
+Scenario: N45 value-DoNotfill in with
+Given #"Number" for the value "Number Range" is not filled in
+When I do not fill in with #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is not filled in
+
+Scenario: N46 DoNotfill in with
+Given #"Number" for #"Number Range" is not filled in
+When I do not fill in with #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not filled in
+
+
+/*
+Scenario: NumericStepper-value-type
+Given the value "<value>" for the NumericStepper "<valuename>" is not typed
+When I type the value "<value>" for the NumericStepper "<valuename>"
+Then the value "<value>" for the NumericStepper "<valuename>" is typed
+*/
+
+Scenario: N47 NumericStepper-value-type
+Given the value "Number" for the NumericStepper "Number Range" is not typed
+When I type the value "Number" for the NumericStepper "Number Range"
+Then the value "Number" for the NumericStepper "Number Range" is typed
+
+Scenario: N48 value-type
+Given the value "Number" for #"Number Range" is not typed
+When I type the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is typed
+
+Scenario: N49 NumericStepper-type
+Given #"Number" for the NumericStepper "Number Range" is not typed
+When I type #"Number" for the NumericStepper "Number Range"
+Then #"Number" for the NumericStepper "Number Range" is typed
+
+Scenario: N50 type
+Given #"Number" for #"Number Range" is not typed
+When I type #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is typed
+
+/*
+Scenario: NumericStepper-value-DoNottype
+Given the value "<value>" for the NumericStepper "<valuename>" is not typed
+When I do not type the value "<value>" for the NumericStepper "<valuename>"
+Then the value "<value>" for the NumericStepper "<valuename>" is not typed
+*/
+
+Scenario: N51 NumericStepper-value-DoNottype
+Given the value "Number" for the NumericStepper "Number Range" is not typed
+When I do not type the value "Number" for the NumericStepper "Number Range"
+Then the value "Number" for the NumericStepper "Number Range" is not typed
+
+Scenario: N52 value-DoNottype
+Given the value "Number" for #"Number Range" is not typed
+When I do not type the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not typed
+
+Scenario: N53 NumericStepper-DoNottype
+Given #"Number" for the NumericStepper "Number Range" is not typed
+When I do not type #"Number" for the NumericStepper "Number Range"
+Then #"Number" for the NumericStepper "Number Range" is not typed
+
+Scenario: N54 DoNottype
+Given #"Number" for #"Number Range" is not typed
+When I do not type #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not typed
+
+/*
+Scenario: NumericStepper-value-set
+Given the value "<value>" for the NumericStepper "<valuename>" is not set
+When I set the value "<value>" for the NumericStepper "<valuename>"
+Then the value "<value>" for the NumericStepper "<valuename>" is set
+*/
+
+Scenario: N55 NumericStepper-value-set
+Given the value "Number" for the NumericStepper "Number Range" is not set
+When I set the value "Number" for the NumericStepper "Number Range"
+Then the value "Number" for the NumericStepper "Number Range" is set
+
+Scenario: N56 value-set
+Given the value "Number" for #"Number Range" is not set
+When I set the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is set
+
+Scenario: N57 NumericStepper-set
+Given #"Number" for the NumericStepper "Number Range" is not set
+When I set #"Number" for the NumericStepper "Number Range"
+Then #"Number" for the NumericStepper "Number Range" is set
+
+Scenario: N58 set
+Given #"Number" for #"Number Range" is not set
+When I set #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is set
+
+/*
+Scenario: NumericStepper-value-DoNotset
+Given the value "<value>" for the NumericStepper "<valuename>" is not set
+When I do not set the value "<value>" for the NumericStepper "<valuename>"
+Then the value "<value>" for the NumericStepper "<valuename>" is not set
+*/
+
+Scenario: N59 NumericStepper-value-DoNotset
+Given the value "Number" for the NumericStepper "Number Range" is not set
+When I do not set the value "Number" for the NumericStepper "Number Range"
+Then the value "Number" for the NumericStepper "Number Range" is not set
+
+Scenario: N60 value-DoNotset
+Given the value "Number" for #"Number Range" is not set
+When I do not set the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not set
+
+Scenario: N61 NumericStepper-DoNotset
+Given #"Number" for the NumericStepper "Number Range" is not set
+When I do not set #"Number" for the NumericStepper "Number Range"
+Then #"Number" for the NumericStepper "Number Range" is not set
+
+Scenario: N62 DoNotset
+Given #"Number" for #"Number Range" is not set
+When I do not set #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not set
+
+/*
+Scenario: NumericStepper-value-fill in with
+Given the value "<value>" for the NumericStepper "<valuename>" is not filled in
+When I fill in with the value "<value>" for the NumericStepper "<valuename>"
+Then the value "<value>" for the NumericStepper "<valuename>" is filled in
+*/
+
+Scenario: N63 NumericStepper-value-fill in with
+Given the value "Number" for the NumericStepper "Number Range" is not filled in
+When I fill in with the value "Number" for the NumericStepper "Number Range"
+Then the value "Number" for the NumericStepper "Number Range" is filled in
+
+Scenario: N64 value-fill in with
+Given the value "Number" for #"Number Range" is not filled in
+When I fill in with the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is filled in
+
+Scenario: N65 NumericStepper-fill in with
+Given #"Number" for the NumericStepper "Number Range" is not filled in
+When I fill in with #"Number" for the NumericStepper "Number Range"
+Then #"Number" for the NumericStepper "Number Range" is filled in
+
+Scenario: N66 fill in with
+Given #"Number" for #"Number Range" is not filled in
+When I fill in with #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is filled in
+
+/*
+Scenario: NumericStepper-value-DoNotfill in with
+Given the value "<value>" for the NumericStepper "<valuename>" is not filled in
+When I do not fill in with the value "<value>" for the NumericStepper "<valuename>"
+Then the value "<value>" for the NumericStepper "<valuename>" is not filled in
+*/
+
+Scenario: N67 NumericStepper-value-DoNotfill in with
+Given the value "Number" for the NumericStepper "Number Range" is not filled in
+When I do not fill in with the value "Number" for the NumericStepper "Number Range"
+Then the value "Number" for the NumericStepper "Number Range" is not filled in
+
+Scenario: N68 value-DoNotfill in with
+Given the value "Number" for #"Number Range" is not filled in
+When I do not fill in with the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not filled in
+
+Scenario: N69 NumericStepper-DoNotfill in with
+Given #"Number" for the NumericStepper "Number Range" is not filled in
+When I do not fill in with #"Number" for the NumericStepper "Number Range"
+Then #"Number" for the NumericStepper "Number Range" is not filled in
+
+Scenario: N70 DoNotfill in with
+Given #"Number" for #"Number Range" is not filled in
+When I do not fill in with #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not filled in
+
+/*
+Scenario: value-value-increase
+Given the value "<value>" for the value "<valuename>" is not increased
+When I increase the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is increased
+*/
+
+Scenario: N71 value-value-increase
+Given the value "Number" for the value "Number Range" is not increased
+When I increase the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is increased
+
+Scenario: N72 value-increase
+Given the value "Number" for #"Number Range" is not increased
+When I increase the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is increased
+
+Scenario: N73 value-increase
+Given #"Number" for the value "Number Range" is not increased
+When I increase #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is increased
+
+Scenario: N74 increase
+Given #"Number" for #"Number Range" is not increased
+When I increase #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is increased
+
+/*
+Scenario: value-value-DoNotincrease
+Given the value "<value>" for the value "<valuename>" is not increased
+When I do not increase the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is not increased
+*/
+
+Scenario: N75 value-value-DoNotincrease
+Given the value "Number" for the value "Number Range" is not increased
+When I do not increase the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is not increased
+
+Scenario: N76 value-DoNotincrease
+Given the value "Number" for #"Number Range" is not increased
+When I do not increase the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not increased
+
+Scenario: N77 value-DoNotincrease
+Given #"Number" for the value "Number Range" is not increased
+When I do not increase #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is not increased
+
+Scenario: N78 DoNotincrease
+Given #"Number" for #"Number Range" is not increased
+When I do not increase #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not increased
+
+/*
+Scenario: value-value-decrease
+Given the value "<value>" for the value "<valuename>" is not decreased
+When I decrease the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is decreased
+*/
+
+Scenario: N79 value-value-decrease
+Given the value "Number" for the value "Number Range" is not decreased
+When I decrease the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is decreased
+
+Scenario: N80 value-decrease
+Given the value "Number" for #"Number Range" is not decreased
+When I decrease the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is decreased
+
+Scenario: N81 value-decrease
+Given #"Number" for the value "Number Range" is not decreased
+When I decrease #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is decreased
+
+Scenario: N82 decrease
+Given #"Number" for #"Number Range" is not decreased
+When I decrease #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is decreased
+
+/*
+Scenario: value-value-DoNotdecrease
+Given the value "<value>" for the value "<valuename>" is not decreased
+When I do not decrease the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is not decreased
+*/
+
+Scenario: N83 value-value-DoNotdecrease
+Given the value "Number" for the value "Number Range" is not decreased
+When I do not decrease the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is not decreased
+
+Scenario: N84 value-DoNotdecrease
+Given the value "Number" for #"Number Range" is not decreased
+When I do not decrease the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not decreased
+
+Scenario: N85 value-DoNotdecrease
+Given #"Number" for the value "Number Range" is not decreased
+When I do not decrease #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is not decreased
+
+Scenario: N86 DoNotdecrease
+Given #"Number" for #"Number Range" is not decreased
+When I do not decrease #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not decreased
+
+//Negative Test cases
+
+/*
+Scenario: value-write
+Given the value "<any value>" is not written
+When I write the value "<any value>"
+Then the value "<any value>" is written
+*/
+
+Scenario: N1 value-write
+Given the value "NumericStepper" is not written
+When I write the value "NumericStepper"
+Then the value "NumericStepper" is written
+
+Scenario: N2 write
+Given #"NumericStepper" is not written
+When I write #"NumericStepper"
+Then #"NumericStepper" is written
+
+/*
+Scenario: value-DoNotwrite
+Given the value "<any value>" is not written
+When I do not write the value "<any value>"
+Then the value "<any value>" is not written
+*/
+
+Scenario: N3 value-DoNotwrite
+Given the value "NumericStepper" is not written
+When I do not write the value "NumericStepper"
+Then the value "NumericStepper" is not written
+
+Scenario: N4 DoNotwrite
+Given #"NumericStepper" is not written
+When I do not write #"NumericStepper"
+Then #"NumericStepper" is not written
+
+/*
+Scenario: NumericStepper-write
+Given the NumericStepper "<any value>" is not written
+When I write the NumericStepper "<any value>"
+Then the NumericStepper "<any value>" is written
+*/
+
+Scenario: N5 NumericStepper-write
+Given the NumericStepper "NumericStepper" is not written
+When I write the NumericStepper "NumericStepper"
+Then the NumericStepper "NumericStepper" is written
+
+Scenario: N6 write
+Given #"NumericStepper" is not written
+When I write #"NumericStepper"
+Then #"NumericStepper" is written
+
+/*
+Scenario: NumericStepper-DoNotwrite
+Given the NumericStepper "<any value>" is not written
+When I do not write the NumericStepper "<any value>"
+Then the NumericStepper "<any value>" is not written
+*/
+
+Scenario: N7 NumericStepper-write
+Given the NumericStepper "NumericStepper" is not written
+When I do not write the NumericStepper "NumericStepper"
+Then the NumericStepper "NumericStepper" is not written
+
+Scenario: N8 write
+Given #"NumericStepper" is not written
+When I do not write #"NumericStepper"
+Then #"NumericStepper" is not written
+
+/*
+Scenario: value-value-write
+Given the value "<value>" for the value "<valuename>" is not written
+When I write the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is written
+*/
+
+Scenario: N9 value-value-write
+Given the value "Number" for the value "Number Range" is not written
+When I write the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is written
+
+Scenario: N10 value-write
+Given the value "Number" for #"Number Range" is not written
+When I write the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is written
+
+Scenario: N11 value-write
+Given #"Number" for the value "Number Range" is not written
+When I write #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is written
+
+Scenario: N12 write
+Given #"Number" for #"Number Range" is not written
+When I write #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is written
+
+/*
+Scenario: value-value-DoNotwrite
+Given the value "<value>" for the value "<valuename>" is not written
+When I do not write the value "<value>" for the value "<valuename>"
+Then the value "<value>" for the value "<valuename>" is not written
+*/
+
+Scenario: N13 value-value-DoNotwrite
+Given the value "Number" for the value "Number Range" is not written
+When I do not write the value "Number" for the value "Number Range"
+Then the value "Number" for the value "Number Range" is not written
+
+Scenario: N14 value-DoNotwrite
+Given the value "Number" for #"Number Range" is not written
+When I do not write the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not written
+
+Scenario: N15 value-DoNotwrite
+Given #"Number" for the value "Number Range" is not written
+When I do not write #"Number" for the value "Number Range"
+Then #"Number" for the value "Number Range" is not written
+
+Scenario: N16 DoNotwrite
+Given #"Number" for #"Number Range" is not written
+When I do not write #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not written
+
+/*
+Scenario: NumericStepper-value-write
+Given the value "<value>" for the NumericStepper "<valuename>" is not written
+When I write the value "<value>" for the NumericStepper "<valuename>"
+Then the value "<value>" for the NumericStepper "<valuename>" is written
+*/
+
+Scenario: N18 NumericStepper-value-write
+Given the value "Number" for the NumericStepper "Number Range" is not written
+When I write the value "Number" for the NumericStepper "Number Range"
+Then the value "Number" for the NumericStepper "Number Range" is written
+
+Scenario: N19 value-write
+Given the value "Number" for #"Number Range" is not written
+When I write the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is written
+
+Scenario: N20 NumericStepper-write
+Given #"Number" for the NumericStepper "Number Range" is not written
+When I write #"Number" for the NumericStepper "Number Range"
+Then #"Number" for the NumericStepper "Number Range" is written
+
+Scenario: N21 write
+Given #"Number" for #"Number Range" is not written
+When I write #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is written
+
+/*
+Scenario: NumericStepper-value-DoNotwrite
+Given the value "<value>" for the NumericStepper "<valuename>" is not written
+When I do not write the value "<value>" for the NumericStepper "<valuename>"
+Then the value "<value>" for the NumericStepper "<valuename>" is not written
+*/
+
+Scenario: N22 NumericStepper-value-DoNotwrite
+Given the value "Number" for the NumericStepper "Number Range" is not written
+When I do not write the value "Number" for the NumericStepper "Number Range"
+Then the value "Number" for the NumericStepper "Number Range" is not written
+
+Scenario: N23 value-DoNotwrite
+Given the value "Number" for #"Number Range" is not written
+When I do not write the value "Number" for #"Number Range"
+Then the value "Number" for #"Number Range" is not written
+
+Scenario: N24 NumericStepper-DoNotwrite
+Given #"Number" for the NumericStepper "Number Range" is not written
+When I do not write #"Number" for the NumericStepper "Number Range"
+Then #"Number" for the NumericStepper "Number Range" is not written
+
+Scenario: N25 DoNotwrite
+Given #"Number" for #"Number Range" is not written
+When I do not write #"Number" for #"Number Range"
+Then #"Number" for #"Number Range" is not written

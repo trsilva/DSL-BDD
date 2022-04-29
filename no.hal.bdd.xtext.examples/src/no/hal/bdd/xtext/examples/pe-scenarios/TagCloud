@@ -1,0 +1,885 @@
+model TagCloud using widgets
+
+/*
+Scenario: word-select
+Given the word "<word name>" is unselected
+When I select the word "<word name>"
+Then the word "<word name>" is selected
+*/
+
+Scenario: N1 word-select
+Given the word "TagCloud" is unselected
+When I select the word "TagCloud"
+Then the word "TagCloud" is selected
+
+Scenario: N2 select
+Given #"TagCloud" is unselected
+When I select #"TagCloud"
+Then #"TagCloud" is selected
+
+/*
+Scenario: word-DoNotselect
+Given the word "<word name>" is not selected
+When I do not select the word "<word name>"
+Then the word "<word name>" is unselected
+*/
+
+Scenario: N3 word-DoNotselect
+Given the word "TagCloud" is not selected
+When I do not select the word "TagCloud"
+Then the word "TagCloud" is unselected
+
+Scenario: N4 DoNotselect
+Given #"TagCloud" is not selected
+When I do not select #"TagCloud"
+Then #"TagCloud" is unselected
+
+/*
+Scenario: TagCloud-select
+Given the TagCloud "<word name>" is unselected
+When I select the TagCloud "<word name>"
+Then the TagCloud "<word name>" is selected
+*/
+
+Scenario: N5 TagCloud-select
+Given the TagCloud "TagCloud" is unselected
+When I select the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is selected
+
+Scenario: N6 select
+Given #"TagCloud" is unselected
+When I select #"TagCloud"
+Then #"TagCloud" is selected
+
+/*
+Scenario: TagCloud-DoNotselect
+Given the TagCloud "<word name>" is not selected
+When I do not select the TagCloud "<word name>"
+Then the TagCloud "<word name>" is unselected
+*/
+
+Scenario: N7 TagCloud-select
+Given the TagCloud "TagCloud" is not selected
+When I do not select the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is unselected
+
+Scenario: N8 select
+Given #"TagCloud" is not selected
+When I do not select #"TagCloud"
+Then #"TagCloud" is unselected
+
+/*
+Scenario: word-choose
+Given the word "<word name>" is not chosen
+When I choose the word "<word name>"
+Then the word "<word name>" is chosen
+*/
+
+Scenario: N9 word-choose
+Given the word "TagCloud" is not chosen
+When I choose the word "TagCloud"
+Then the word "TagCloud" is chosen
+
+Scenario: N10 choose
+Given #"TagCloud" is not chosen
+When I choose #"TagCloud"
+Then #"TagCloud" is chosen
+
+/*
+Scenario: word-DoNotchoose
+Given the word "<word name>" is not chosen
+When I do not choose the word "<word name>"
+Then the word "<word name>" is not chosen
+*/
+
+Scenario: N11 word-DoNotchoose
+Given the word "TagCloud" is not chosen
+When I do not choose the word "TagCloud"
+Then the word "TagCloud" is not chosen
+
+Scenario: N12 DoNotchoose
+Given #"TagCloud" is not chosen
+When I do not choose #"TagCloud"
+Then #"TagCloud" is not chosen
+
+/*
+Scenario: TagCloud-choose
+Given the TagCloud "<word name>" is not chosen
+When I choose the TagCloud "<word name>"
+Then the TagCloud "<word name>" is chosen
+*/
+
+Scenario: N13 TagCloud-choose
+Given the TagCloud "TagCloud" is not chosen
+When I choose the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is chosen
+
+Scenario: N14 choose
+Given #"TagCloud" is not chosen
+When I choose #"TagCloud"
+Then #"TagCloud" is chosen
+
+/*
+Scenario: TagCloud-DoNotchoose
+Given the TagCloud "<word name>" is not chosen
+When I do not choose the TagCloud "<word name>"
+Then the TagCloud "<word name>" is not chosen
+*/
+
+Scenario: N15 TagCloud-choose
+Given the TagCloud "TagCloud" is not chosen
+When I do not choose the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is not chosen
+
+Scenario: N16 choose
+Given #"TagCloud" is not chosen
+When I do not choose #"TagCloud"
+Then #"TagCloud" is not chosen
+
+/*
+Scenario: word-pick
+Given the word "<word name>" is not picked
+When I pick the word "<word name>"
+Then the word "<word name>" is picked
+*/
+
+Scenario: N17 word-pick
+Given the word "TagCloud" is not picked
+When I pick the word "TagCloud"
+Then the word "TagCloud" is picked
+
+Scenario: N18 pick
+Given #"TagCloud" is not picked
+When I pick #"TagCloud"
+Then #"TagCloud" is picked
+
+/*
+Scenario: word-DoNotpick
+Given the word "<word name>" is not picked
+When I do not picked the word "<word name>"
+Then the word "<word name>" is not picked
+*/
+
+Scenario: N19 word-DoNotpick
+Given the word "TagCloud" is not picked
+When I do not pick the word "TagCloud"
+Then the word "TagCloud" is not picked
+
+Scenario: N20 DoNotpick
+Given #"TagCloud" is not picked
+When I do not pick #"TagCloud"
+Then #"TagCloud" is not picked
+
+/*
+Scenario: TagCloud-pick
+Given the TagCloud "<word name>" is not picked
+When I pick the TagCloud "<word name>"
+Then the TagCloud "<word name>" is picked
+*/
+
+Scenario: N21 TagCloud-pick
+Given the TagCloud "TagCloud" is not picked
+When I pick the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is picked
+
+Scenario: N22 pick
+Given #"TagCloud" is not picked
+When I pick #"TagCloud"
+Then #"TagCloud" is picked
+
+/*
+Scenario: TagCloud-DoNotpick
+Given the TagCloud "<word name>" is not picked
+When I do not picked the TagCloud "<word name>"
+Then the TagCloud "<word name>" is not picked
+*/
+
+Scenario: N23 TagCloud-pick
+Given the TagCloud "TagCloud" is not picked
+When I do not pick the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is not picked
+
+Scenario: N24 pick
+Given #"TagCloud" is not picked
+When I do not pick #"TagCloud"
+Then #"TagCloud" is not picked
+
+/*
+Scenario: word-click
+Given the word "<word name>" is not clicked
+When I click the word "<word name>"
+Then the word "<word name>" is clicked
+*/
+
+Scenario: N25 word-click
+Given the word "TagCloud" is not clicked
+When I click the word "TagCloud"
+Then the word "TagCloud" is clicked
+
+Scenario: N26 click
+Given #"TagCloud" is not clicked
+When I click #"TagCloud"
+Then #"TagCloud" is clicked
+
+/*
+Scenario: word-DoNotclick
+Given the word "<word name>" is not clicked
+When I do not clicked the word "<word name>"
+Then the word "<word name>" is not clicked
+*/
+
+Scenario: N27 word-DoNotclick
+Given the word "TagCloud" is not clicked
+When I do not click the word "TagCloud"
+Then the word "TagCloud" is not clicked
+
+Scenario: N28 DoNotclick
+Given #"TagCloud" is not clicked
+When I do not click #"TagCloud"
+Then #"TagCloud" is not clicked
+
+/*
+Scenario: TagCloud-click
+Given the TagCloud "<word name>" is not clicked
+When I click the TagCloud "<word name>"
+Then the TagCloud "<word name>" is clicked
+*/
+
+Scenario: N29 TagCloud-click
+Given the TagCloud "TagCloud" is not clicked
+When I click the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is clicked
+
+Scenario: N30 click
+Given #"TagCloud" is not clicked
+When I click #"TagCloud"
+Then #"TagCloud" is clicked
+
+/*
+Scenario: TagCloud-DoNotclick
+Given the TagCloud "<word name>" is not clicked
+When I do not clicked the TagCloud "<word name>"
+Then the TagCloud "<word name>" is not clicked
+*/
+
+Scenario: N31 TagCloud-click
+Given the TagCloud "TagCloud" is not clicked
+When I do not click the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is not clicked
+
+Scenario: N32 click
+Given #"TagCloud" is not clicked
+When I do not click #"TagCloud"
+Then #"TagCloud" is not clicked
+
+
+/*
+Scenario: Field-word-select
+Given the word "<word>" for the field "<fieldname>" is not selected
+When I select the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is selected
+*/
+
+Scenario: N33 Field-word-select
+Given the word "Information" for the field "Text data" is not selected
+When I select the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is selected
+
+Scenario: N34 word-select
+Given the word "Information" for #"Text data" is not selected
+When I select the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is selected
+
+Scenario: N35 Field-select
+Given #"Information" for the field "Text data" is not selected
+When I select #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is selected
+
+Scenario: N36 select
+Given #"Information" for #"Text data" is not selected
+When I select #"Information" for #"Text data"
+Then #"Information" for #"Text data" is selected
+
+/*
+Scenario: Field-word-DoNotselect
+Given the word "<word>" for the field "<fieldname>" is not selected
+When I do not select the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is not selected
+*/
+
+Scenario: N37 Field-word-DoNotselect
+Given the word "Information" for the field "Text data" is not selected
+When I do not select the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is not selected
+
+Scenario: N38 word-DoNotselect
+Given the word "Information" for #"Text data" is not selected
+When I do not select the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not selected
+
+Scenario: N39 Field-DoNotselect
+Given #"Information" for the field "Text data" is not selected
+When I do not select #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is not selected
+
+Scenario: N40 DoNotselect
+Given #"Information" for #"Text data" is not selected
+When I do not select #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not selected
+
+/*
+Scenario: Field-word-choose
+Given the word "<word>" for the field "<fieldname>" is not chosen
+When I choose the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is chosen
+*/
+
+Scenario: N41 Field-word-choose
+Given the word "Information" for the field "Text data" is not chosen
+When I choose the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is chosen
+
+Scenario: N42 word-choose
+Given the word "Information" for #"Text data" is not chosen
+When I choose the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is chosen
+
+Scenario: N43 Field-choose
+Given #"Information" for the field "Text data" is not chosen
+When I choose #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is chosen
+
+Scenario: N44 choose
+Given #"Information" for #"Text data" is not chosen
+When I choose #"Information" for #"Text data"
+Then #"Information" for #"Text data" is chosen
+
+/*
+Scenario: Field-word-DoNotchoose
+Given the word "<word>" for the field "<fieldname>" is not chosen
+When I do not choose the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is not chosen
+*/
+
+Scenario: N45 Field-word-DoNotchoose
+Given the word "Information" for the field "Text data" is not chosen
+When I do not choose the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is not chosen
+
+Scenario: N46 word-DoNotchoose
+Given the word "Information" for #"Text data" is not chosen
+When I do not choose the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not chosen
+
+Scenario: N47 Field-DoNotchoose
+Given #"Information" for the field "Text data" is not chosen
+When I do not choose #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is not chosen
+
+Scenario: N48 DoNotchoose
+Given #"Information" for #"Text data" is not chosen
+When I do not choose #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not chosen
+
+/*
+Scenario: Field-word-pick
+Given the word "<word>" for the field "<fieldname>" is not picked
+When I pick the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is picked
+*/
+
+Scenario: N49 Field-word-pick
+Given the word "Information" for the field "Text data" is not picked
+When I pick the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is picked
+
+Scenario: N50 word-pick
+Given the word "Information" for #"Text data" is not picked
+When I pick the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is picked
+
+Scenario: N51 Field-pick
+Given #"Information" for the field "Text data" is not picked
+When I pick #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is picked
+
+Scenario: N52 pick
+Given #"Information" for #"Text data" is not picked
+When I pick #"Information" for #"Text data"
+Then #"Information" for #"Text data" is picked
+
+/*
+Scenario: Field-word-DoNotpick
+Given the word "<word>" for the field "<fieldname>" is not picked
+When I do not pick the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is not picked
+*/
+
+Scenario: N53 Field-word-DoNotpick
+Given the word "Information" for the field "Text data" is not picked
+When I do not pick the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is not picked
+
+Scenario: N54 word-DoNotpick
+Given the word "Information" for #"Text data" is not picked
+When I do not pick the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not picked
+
+Scenario: N55 Field-DoNotpick
+Given #"Information" for the field "Text data" is not picked
+When I do not pick #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is not picked
+
+Scenario: N56 DoNotpick
+Given #"Information" for #"Text data" is not picked
+When I do not pick #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not picked
+
+/*
+Scenario: Field-word-click
+Given the word "<word>" for the field "<fieldname>" is not clicked
+When I click the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is clicked
+*/
+
+Scenario: N57 Field-word-click
+Given the word "Information" for the field "Text data" is not clicked
+When I click the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is clicked
+
+Scenario: N58 word-click
+Given the word "Information" for #"Text data" is not clicked
+When I click the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is clicked
+
+Scenario: N59 Field-click
+Given #"Information" for the field "Text data" is not clicked
+When I click #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is clicked
+
+Scenario: N60 click
+Given #"Information" for #"Text data" is not clicked
+When I click #"Information" for #"Text data"
+Then #"Information" for #"Text data" is clicked
+
+/*
+Scenario: Field-word-DoNotclick
+Given the word "<word>" for the field "<fieldname>" is not clicked
+When I do not click the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is not clicked
+*/
+
+Scenario: N61 Field-word-DoNotclick
+Given the word "Information" for the field "Text data" is not clicked
+When I do not click the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is not clicked
+
+Scenario: N62 word-DoNotclick
+Given the word "Information" for #"Text data" is not clicked
+When I do not click the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not clicked
+
+Scenario: N63 Field-DoNotclick
+Given #"Information" for the field "Text data" is not clicked
+When I do not click #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is not clicked
+
+Scenario: N64 DoNotclick
+Given #"Information" for #"Text data" is not clicked
+When I do not click #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not clicked
+
+
+/*
+Scenario: TagCloud-word-select
+Given the word "<word>" for the TagCloud "<fieldname>" is not selected
+When I select the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is selected
+*/
+
+Scenario: N65 TagCloud-word-select
+Given the word "Information" for the TagCloud "Text data" is not selected
+When I select the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is selected
+
+Scenario: N66 word-select
+Given the word "Information" for #"Text data" is not selected
+When I select the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is selected
+
+Scenario: N67 TagCloud-select
+Given #"Information" for the TagCloud "Text data" is not selected
+When I select #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is selected
+
+Scenario: N68 select
+Given #"Information" for #"Text data" is not selected
+When I select #"Information" for #"Text data"
+Then #"Information" for #"Text data" is selected
+
+/*
+Scenario: TagCloud-word-DoNotselect
+Given the word "<word>" for the TagCloud "<fieldname>" is not selected
+When I do not select the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is not selected
+*/
+
+Scenario: N69 TagCloud-word-DoNotselect
+Given the word "Information" for the TagCloud "Text data" is not selected
+When I do not select the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is not selected
+
+Scenario: N70 word-DoNotselect
+Given the word "Information" for #"Text data" is not selected
+When I do not select the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not selected
+
+Scenario: N71 TagCloud-DoNotselect
+Given #"Information" for the TagCloud "Text data" is not selected
+When I do not select #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is not selected
+
+Scenario: N72 DoNotselect
+Given #"Information" for #"Text data" is not selected
+When I do not select #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not selected
+
+/*
+Scenario: TagCloud-word-choose
+Given the word "<word>" for the TagCloud "<fieldname>" is not chosen
+When I choose the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is chosen
+*/
+
+Scenario: N73 TagCloud-word-choose
+Given the word "Information" for the TagCloud "Text data" is not chosen
+When I choose the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is chosen
+
+Scenario: N74 word-choose
+Given the word "Information" for #"Text data" is not chosen
+When I choose the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is chosen
+
+Scenario: N75 TagCloud-choose
+Given #"Information" for the TagCloud "Text data" is not chosen
+When I choose #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is chosen
+
+Scenario: N76 choose
+Given #"Information" for #"Text data" is not chosen
+When I choose #"Information" for #"Text data"
+Then #"Information" for #"Text data" is chosen
+
+/*
+Scenario: TagCloud-word-DoNotchoose
+Given the word "<word>" for the TagCloud "<fieldname>" is not chosen
+When I do not choose the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is not chosen
+*/
+
+Scenario: N77 TagCloud-word-DoNotchoose
+Given the word "Information" for the TagCloud "Text data" is not chosen
+When I do not choose the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is not chosen
+
+Scenario: N78 word-DoNotchoose
+Given the word "Information" for #"Text data" is not chosen
+When I do not choose the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not chosen
+
+Scenario: N79 TagCloud-DoNotchoose
+Given #"Information" for the TagCloud "Text data" is not chosen
+When I do not choose #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is not chosen
+
+Scenario: N80 DoNotchoose
+Given #"Information" for #"Text data" is not chosen
+When I do not choose #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not chosen
+
+/*
+Scenario: TagCloud-word-pick
+Given the word "<word>" for the TagCloud "<fieldname>" is not picked
+When I pick the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is picked
+*/
+
+Scenario: N81 TagCloud-word-pick
+Given the word "Information" for the TagCloud "Text data" is not picked
+When I pick the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is picked
+
+Scenario: N82 word-pick
+Given the word "Information" for #"Text data" is not picked
+When I pick the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is picked
+
+Scenario: N83 TagCloud-pick
+Given #"Information" for the TagCloud "Text data" is not picked
+When I pick #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is picked
+
+Scenario: N84 pick
+Given #"Information" for #"Text data" is not picked
+When I pick #"Information" for #"Text data"
+Then #"Information" for #"Text data" is picked
+
+/*
+Scenario: TagCloud-word-DoNotpick
+Given the word "<word>" for the TagCloud "<fieldname>" is not picked
+When I do not pick the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is not picked
+*/
+
+Scenario: N85 TagCloud-word-DoNotpick
+Given the word "Information" for the TagCloud "Text data" is not picked
+When I do not pick the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is not picked
+
+Scenario: N86 word-DoNotpick
+Given the word "Information" for #"Text data" is not picked
+When I do not pick the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not picked
+
+Scenario: N87 TagCloud-DoNotpick
+Given #"Information" for the TagCloud "Text data" is not picked
+When I do not pick #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is not picked
+
+Scenario: N88 DoNotpick
+Given #"Information" for #"Text data" is not picked
+When I do not pick #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not picked
+
+/*
+Scenario: TagCloud-word-click
+Given the word "<word>" for the TagCloud "<fieldname>" is not clicked
+When I click the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is clicked
+*/
+
+Scenario: N89 TagCloud-word-click
+Given the word "Information" for the TagCloud "Text data" is not clicked
+When I click the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is clicked
+
+Scenario: N90 word-click
+Given the word "Information" for #"Text data" is not clicked
+When I click the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is clicked
+
+Scenario: N91 TagCloud-click
+Given #"Information" for the TagCloud "Text data" is not clicked
+When I click #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is clicked
+
+Scenario: N92 click
+Given #"Information" for #"Text data" is not clicked
+When I click #"Information" for #"Text data"
+Then #"Information" for #"Text data" is clicked
+
+/*
+Scenario: TagCloud-word-DoNotclick
+Given the word "<word>" for the TagCloud "<fieldname>" is not clicked
+When I do not click the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is not clicked
+*/
+
+Scenario: N93 TagCloud-word-DoNotclick
+Given the word "Information" for the TagCloud "Text data" is not clicked
+When I do not click the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is not clicked
+
+Scenario: N94 word-DoNotclick
+Given the word "Information" for #"Text data" is not clicked
+When I do not click the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not clicked
+
+Scenario: N95 TagCloud-DoNotclick
+Given #"Information" for the TagCloud "Text data" is not clicked
+When I do not click #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is not clicked
+
+Scenario: N96 DoNotclick
+Given #"Information" for #"Text data" is not clicked
+When I do not click #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not clicked
+
+//Negative Test cases
+
+/*
+Scenario: word-read
+Given the word "<word>" is not read
+When I read the word "<word>"
+Then the word "<word>" is read
+*/
+
+Scenario: N1 word-read
+Given the word "TagCloud" is not read
+When I read the word "TagCloud"
+Then the word "TagCloud" is read
+
+Scenario: N2 read
+Given #"TagCloud" is not read
+When I read #"TagCloud"
+Then #"TagCloud" is read
+
+/*
+Scenario: word-DoNotread
+Given the word "<word>" is not read
+When I do not read the word "<word>"
+Then the word "<word>" is not read
+*/
+
+Scenario: N3 word-DoNotread
+Given the word "TagCloud" is not read
+When I do not read the word "TagCloud"
+Then the word "TagCloud" is not read
+
+Scenario: N4 DoNotread
+Given #"TagCloud" is not read
+When I do not read #"TagCloud"
+Then #"TagCloud" is not read
+
+/*
+Scenario: TagCloud-read
+Given the TagCloud "<word>" is not read
+When I read the TagCloud "<word>"
+Then the TagCloud "<word>" is read
+*/
+
+Scenario: N5 TagCloud-read
+Given the TagCloud "TagCloud" is not read
+When I read the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is read
+
+Scenario: N6 read
+Given #"TagCloud" is not read
+When I read #"TagCloud"
+Then #"TagCloud" is read
+
+/*
+Scenario: TagCloud-DoNotread
+Given the TagCloud "<word>" is not read
+When I do not read the TagCloud "<word>"
+Then the TagCloud "<word>" is not read
+*/
+
+Scenario: N7 TagCloud-read
+Given the TagCloud "TagCloud" is not read
+When I do not read the TagCloud "TagCloud"
+Then the TagCloud "TagCloud" is not read
+
+Scenario: N8 read
+Given #"TagCloud" is not read
+When I do not read #"TagCloud"
+Then #"TagCloud" is not read
+
+/*
+Scenario: Field-word-read
+Given the word "<word>" for the field "<fieldname>" is not read
+When I read the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is read
+*/
+
+Scenario: N9 Field-word-read
+Given the word "Information" for the field "Text data" is not read
+When I read the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is read
+
+Scenario: N10 word-read
+Given the word "Information" for #"Text data" is not read
+When I read the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is read
+
+Scenario: N11 Field-read
+Given #"Information" for the field "Text data" is not read
+When I read #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is read
+
+Scenario: N12 read
+Given #"Information" for #"Text data" is not read
+When I read #"Information" for #"Text data"
+Then #"Information" for #"Text data" is read
+
+/*
+Scenario: Field-word-DoNotread
+Given the word "<word>" for the field "<fieldname>" is not read
+When I do not read the word "<word>" for the field "<fieldname>"
+Then the word "<word>" for the field "<fieldname>" is not read
+*/
+
+Scenario: N13 Field-word-DoNotread
+Given the word "Information" for the field "Text data" is not read
+When I do not read the word "Information" for the field "Text data"
+Then the word "Information" for the field "Text data" is not read
+
+Scenario: N14 word-DoNotread
+Given the word "Information" for #"Text data" is not read
+When I do not read the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not read
+
+Scenario: N15 Field-DoNotread
+Given #"Information" for the field "Text data" is not read
+When I do not read #"Information" for the field "Text data"
+Then #"Information" for the field "Text data" is not read
+
+Scenario: N16 DoNotread
+Given #"Information" for #"Text data" is not read
+When I do not read #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not read
+
+/*
+Scenario: TagCloud-word-read
+Given the word "<word>" for the TagCloud "<fieldname>" is not read
+When I read the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is read
+*/
+
+Scenario: N17 TagCloud-word-read
+Given the word "Information" for the TagCloud "Text data" is not read
+When I read the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is read
+
+Scenario: N18 word-read
+Given the word "Information" for #"Text data" is not read
+When I read the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is read
+
+Scenario: N19 TagCloud-read
+Given #"Information" for the TagCloud "Text data" is not read
+When I read #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is read
+
+Scenario: N20 read
+Given #"Information" for #"Text data" is not read
+When I read #"Information" for #"Text data"
+Then #"Information" for #"Text data" is read
+
+/*
+Scenario: TagCloud-word-DoNotread
+Given the word "<word>" for the TagCloud "<fieldname>" is not read
+When I do not read the word "<word>" for the TagCloud "<fieldname>"
+Then the word "<word>" for the TagCloud "<fieldname>" is not read
+*/
+
+Scenario: N21 TagCloud-word-DoNotread
+Given the word "Information" for the TagCloud "Text data" is not read
+When I do not read the word "Information" for the TagCloud "Text data"
+Then the word "Information" for the TagCloud "Text data" is not read
+
+Scenario: N22 word-DoNotread
+Given the word "Information" for #"Text data" is not read
+When I do not read the word "Information" for #"Text data"
+Then the word "Information" for #"Text data" is not read
+
+Scenario: N23 TagCloud-DoNotread
+Given #"Information" for the TagCloud "Text data" is not read
+When I do not read #"Information" for the TagCloud "Text data"
+Then #"Information" for the TagCloud "Text data" is not read
+
+Scenario: N24 DoNotread
+Given #"Information" for #"Text data" is not read
+When I do not read #"Information" for #"Text data"
+Then #"Information" for #"Text data" is not read
