@@ -4,10 +4,10 @@ Bundle-ManifestVersion: 2
 Bundle-Name: no.hal.bdd.xtext.ui
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: dk.sdu.bdd.xtext.ui;singleton:=true
+Bundle-SymbolicName: no.hal.bdd.xtext.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: dk.sdu.bdd.xtext,
- dk.sdu.bdd.xtext.ide,
+Require-Bundle: no.hal.bdd.xtext,
+ no.hal.bdd.xtext.ide,
  org.eclipse.xtext.ui,
  org.eclipse.xtext.ui.shared,
  org.eclipse.xtext.ui.codetemplates.ui,

@@ -3,6 +3,7 @@
  */
 package no.hal.bdd.ui;
 
+import no.hal.bdd.ui.AbstractBddDslUiModule;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor;
 

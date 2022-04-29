@@ -4,7 +4,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: no.hal.bdd.xtext
 Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
-Bundle-SymbolicName: dk.sdu.bdd.xtext;singleton:=true
+Bundle-SymbolicName: no.hal.bdd.xtext; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase,

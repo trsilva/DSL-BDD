@@ -2,7 +2,7 @@ model widgets
 
 entity widget {
 	actions: move
-	states: displayed, shown, available, enabled, disabled
+	states: displayed, shown, available, enabled/disabled
 }
 
 entity field is widget {

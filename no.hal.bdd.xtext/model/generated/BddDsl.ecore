@@ -45,29 +45,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Scenario">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preStateE" eType="#//ScenarioState"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="preState" eType="#//ScenarioState"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//ScenarioAction"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="postState" eType="#//ScenarioState"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actionE" eType="#//ScenarioAction"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preState1" eType="#//ScenarioState"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action1" eType="#//ScenarioAction"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="postState1" eType="#//ScenarioState"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preStateE1" eType="#//ScenarioState"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preState2" eType="#//ScenarioState"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action2" eType="#//ScenarioAction"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="postState2" eType="#//ScenarioState"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ScenarioState">
@@ -87,7 +69,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EntityStatePhrase" eSuperTypes="#//StatePhrase">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="property" eType="#//PropertyDef"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="#//EntityRef"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//StateName"/>
@@ -124,7 +105,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VerbAction" eSuperTypes="#//ActionPhrase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//ActionRef"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="#//EntityRef"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ActionRef">
@@ -132,8 +113,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="argument" eType="#//PropertyValue"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="preposition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="#//EntityDef"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VerifyAction" eSuperTypes="#//ActionPhrase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="state" eType="#//StatePhrase"

@@ -5,6 +5,7 @@ package no.hal.bdd.tests;
 
 import com.google.inject.Inject;
 import no.hal.bdd.bddDsl.Model;
+import no.hal.bdd.tests.BddDslInjectorProvider;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;

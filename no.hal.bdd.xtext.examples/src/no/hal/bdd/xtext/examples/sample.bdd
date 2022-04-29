@@ -7,11 +7,11 @@ entity account {
 }
 
 Scenario: Withdrawing money - transaction succeeded
-Given the balance of the account "1787461" is 1000
+Given the balance for the account "1787461" is 1000
 	which means
 		Given the BrowserWindow "Account Balance" is displayed
 		When I click on "See the balance"
-		Then the value of the TextField "Balance" is "1000"
+		Then the value for the TextField "Balance" is "1000"
 When I transfer 1000 from the account "1787461"
 	which means
 		Given the BrowserWindow "SEPA Transfer" is displayed
@@ -21,4 +21,4 @@ Then the account "1787461" is void
 	which means
 		Given the BrowserWindow "Account Balance" is displayed
 		When I click on "See the balance"
-		Then the value of the TextField "Balance" is "0"
+		Then the value for the TextField "Balance" is "0"
