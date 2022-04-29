@@ -99,7 +99,6 @@ entity TextArea is widget {
 	actions: type, set, fill [in]
 	states: typed, set, filled
 	properties: text
-	
 }
 
 entity BrowserWindow is widget {
